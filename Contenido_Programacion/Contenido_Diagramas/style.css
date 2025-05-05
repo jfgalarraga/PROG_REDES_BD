@@ -1,0 +1,420 @@
+.drag-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dropzone {
+    width: 300px;
+    height: 300px;
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.draggable {
+    cursor: grab;
+    max-width: 100px;
+    max-height: 100px;
+    margin: 10px;
+}
+
+.carousel-item img {
+    max-height: 200px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.carousel-caption {
+    position: static;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.draggable-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.intro-text {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.intro-text h2 {
+    color: #007bff;
+}
+
+.intro-text p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.example button {
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.example button:hover {
+    background-color: #005bb5;
+}
+#diagram-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#diagram img {
+    max-width: 100%;
+}
+
+.question-container {
+    margin-bottom: 20px;
+}
+.btn {
+    width: 100%;
+    margin: 10px 0;
+}
+.result-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.zoom-container img {
+    transition: transform 0.3s ease; /* Animación suave */
+  }
+
+  .zoom-container:hover img {
+    transform: scale(1.1); /* Zoom al 110% */
+  }
+
+  .juega:hover {
+    background-color: #040B14 ;
+    border-color: #040B14;
+  }
+
+  .botonStart {
+    background-color: #1E242C; /* Color base */
+    color: white; /* Texto blanco para contraste */
+    border: none; /* Sin bordes */
+    margin-top: 10px;
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave en el cambio de color */
+}
+    .botonStart:hover {
+    background-color: #2BC5D4; /* Color al pasar el mouse */
+}
+
+#console {
+    background-color: #040B14;
+    color: #2BC5D4 ;
+    font-family: monospace;
+    padding-top: 10px;
+    border-radius: 5px;
+    height: 150px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#inputField {
+    background-color: transparent;
+    color: #2BC5D4 ;
+    font-family: monospace;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-top: auto;
+}
+
+.botones-velocidad {
+    background-color: #1E242C; /* Color base */
+    color: white; /* Texto blanco para contraste */
+    border: none; /* Sin bordes */
+   
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave en el cambio de color */
+}
+
+.botonStart {
+    background-color: #1E242C; /* Color base */
+    color: white; /* Texto blanco para contraste */
+    border: none; /* Sin bordes */
+    margin-top: 10px;
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave en el cambio de color */
+}
+
+.botonStart2 {
+    background-color: #1E242C; /* Color base */
+    color: white; /* Texto blanco para contraste */
+    border: none; /* Sin bordes */
+    margin-top: 20px;
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave en el cambio de color */
+    width: 100%;
+
+}
+
+.botones-velocidad:hover, .botonStart:hover, .botonStart2:hover {
+    background-color: #2BC5D4; /* Color al pasar el mouse */
+}
+
+
+.table-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.poligono, .rombo, .rectangulo, .elipse {
+    fill: #2BC5D4 ;
+    stroke-width: 2px; 
+    transition: fill 0.3s ease;
+}
+
+
+.resaltar {
+    fill: #040B14;
+
+}
+
+.texto-mediano {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    fill: #ffffff;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+.texto-pequeño {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    fill: #292F37;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+.texto-mediano-resaltado {
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    fill: #ffffff;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+.texto-pequeño-resaltado {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    fill: #040B14;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+.question-container {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo suave */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilo para los párrafos de preguntas */
+  .question-container p {
+    font-weight: bold; /* Negrita */
+    font-size: 16px; /* Tamaño adecuado */
+    color: #333; /* Texto oscuro */
+    line-height: 1.5;
+    margin-bottom: 15px; /* Espacio debajo de la pregunta */
+    border-left: 4px solid #007bff; /* Línea a la izquierda */
+    padding-left: 10px; /* Espaciado después de la línea */
+  }
+  
+  /* Estilo para las opciones de respuesta */
+  .form-check {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-check-input {
+    margin-right: 10px;
+    accent-color: #007bff; /* Color para los radios */
+  }
+  
+  .form-check-label {
+    font-size: 14px;
+    color: #555; /* Texto gris para las opciones */
+  }
+  
+  /* Estilo para los elementos de la lista de opciones */
+.form-check input[type="radio"]:checked + .form-check-label {
+    font-weight: bold; /* Resaltar la opción seleccionada */
+    color: #007bff; /* Cambiar el color de la opción seleccionada */
+  }
+  
+  .form-check input[type="radio"]:not(:checked) + .form-check-label {
+    cursor: pointer; /* Cambiar el cursor cuando no está seleccionado */
+  }
+
+
+
+.ul-dflujo {
+    list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+}
+
+.li-dflujo {
+    background-color: #2BC5D4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.li-dflujo:hover {
+    background-color: #040B14;
+}
+
+.iframe-dflujo {
+    width: 100%;
+    height: 1200px;
+    border: none;
+   
+}
+
+
+.table-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.table thead {
+    background-color: #1E242C !important; /* Azul oscuro para la cabecera */
+    color: white !important; /* Texto blanco en la cabecera */
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #F4FAFD; /* Blanco y celeste muy claro para filas pares */
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #FFFFFF; /* Blanco para las filas impares */
+}
+
+.table tbody tr:hover {
+    background-color: #2BC5D4; /* Celeste claro en hover */
+    color: white; /* Texto blanco al hacer hover */
+}
+
+.table td {
+    color: #040B14; /* Texto en color azul oscuro para las celdas */
+}
+
+.tool-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tool-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .tool-img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    background-color: #f9f9f9;
+    object-fit: cover;
+  }
+  
+  .tool-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .tool-item p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Hover effect para las imágenes */
+.testimonial-img-hover {
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-img-hover:hover {
+    transform: scale(1.1); /* Aumenta el tamaño un 10% al pasar el ratón */
+  }
+  
+  /* Botón de cierre */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Botón de cierre cuando se pasa el ratón */
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

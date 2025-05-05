@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Service Details - iPortfolio Bootstrap Template</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+    .responsive-iframe-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* Relación de aspecto 16:9 */
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  
+    .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  
+    /* Opcional: Mejoras visuales */
+    @media (max-width: 768px) {
+      .responsive-iframe-container {
+        padding-top: 75%; /* Relación de aspecto 4:3 para pantallas más pequeñas */
+      }
+    }
+  </style>
+  </head>
+
+  <body class="service-details-page">
+    <header id="header" class="header dark-background d-flex flex-column">
+    
+      <i class="header-toggle d-xl-none bi bi-list"></i>
+  
+      <div class="profile-img">
+        <img src="../VANNE/img/perfil.jpg" alt="" class="img-fluid rounded-circle">
+      </div>
+  
+      <a href="../VANNE/index.html" class="logo d-flex align-items-center justify-content-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Redes</h1>
+      </a>
+  
+
+      
+  
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../VANNE/index.html"><i class="bi bi-house navicon"></i>Inicio</a></li>
+<li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>I. Capa Física</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+  <ul>
+    <li><a href="../VANNE/index.html#introduccion"><i class="bi bi-book navicon"></i>Introducción</a></li>
+    <li><a href="../VANNE/index.html#about"><i class="bi bi-file-earmark-text navicon"></i>¿Qué es la Capa Física?</a></li>
+    <li><a href="../VANNE/index.html#funciones"><i class="bi bi-gear navicon"></i>Funciones Principales</a></li>
+    <li><a href="../VANNE/index.html#caracteristicas"><i class="bi bi-star navicon"></i>Características</a></li>
+    <li><a href="../VANNE/index.html#componentes"><i class="bi bi-diagram-3 navicon"></i>Componentes</a></li> 
+    <li><a href="../VANNE/index.html#cuestionario"><i class="bi bi-list-task navicon"></i>Cuestionario</a></li>
+  </ul>
+</li>
+<li class="dropdown"><a href="../VANNE/mediosGuiados.html"><i class="bi bi-menu-button navicon"></i> <span>II. Medios Guiados</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+  <ul>
+    <li><a href="../VANNE/parTrenzado.html"><i class="bi bi-lightning navicon"></i>Par Trenzado</a></li>
+    <li><a href="../VANNE/coaxial.html"><i class="bi bi-router navicon"></i>Cable Coaxial</a></li>
+    <li><a href="../VANNE/fibra.html"><i class="bi bi-globe navicon"></i>Fibra Óptica</a></li>
+    <li><a href="../VANNE/tabla.html"><i class="bi bi-hdd-stack navicon"></i>Características</a></li>
+  </ul>
+  </li>
+<li class="dropdown"><a href="./portfolio-details.html" class="active"><i class="bi bi-menu-button navicon"></i> <span>III. Medios No Guiados</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+  <ul>
+    <li><a href="./service-details.html"><i class="bi bi-info-circle navicon"></i>Introducción</a></li>
+    <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Temario</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="./temario/definicion.html"><i class="bi bi-book-half navicon"></i>Definición</a></li>
+        <li><a href="./temario/tipos.html"><i class="bi bi-diagram-2 navicon"></i>Tipos</a></li>
+        <li><a href="./temario/futuro.html"><i class="bi bi-cloud-arrow-up navicon"></i>Futuro</a></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+<li class="dropdown"><a href="#ejercicios"><i class="bi bi-pencil navicon"></i> <span>IV. Ejercicios</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+  <ul>
+    <li><a href="../VANNE/ejercicio1.html"><i class="bi bi-clipboard-check navicon"></i>Ejercicio 1</a></li>
+    <li><a href="../VANNE/ejercicio2.html"><i class="bi bi-clipboard-check navicon"></i>Ejercicio 2</a></li>
+  </ul>
+</li>
+<li><a href="../YO/juegos.html"><i class="bi bi-controller navicon"></i>V. Juegos</a></li>
+<li><a href="../YO/videos.html"><i class="bi bi-play-circle navicon"></i>VI. Videos</a></li>
+
+          
+        </ul>
+      </nav> 
+      <style>
+.botones-centrales {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px auto; /* Centrado */
+  max-width: 80%; /* Ancho máximo del contenedor */
+  padding: 20px; /* Espaciado interno */
+  gap: 20px; /* Espaciado entre los botones */
+  margin-top: -4%;
+}
+
+.boton-izquierdo a,
+.boton-derecho a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  color: #fff;
+  background-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  width: 100%; /* Ajusta automáticamente el tamaño */
+  text-align: center;
+}
+
+.boton-izquierdo a:hover,
+.boton-derecho a:hover {
+  background-color: #0056b3; /* Azul más oscuro */
+  transform: translateY(-3px); /* Elevación */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.boton-izquierdo a i,
+.boton-derecho a i {
+  font-size: 20px; /* Tamaño del ícono */
+}
+
+.boton-izquierdo a i.me-2 {
+  margin-right: 8px; /* Espaciado entre ícono y texto */
+}
+
+.boton-derecho a i.ms-2 {
+  margin-left: 8px; /* Espaciado entre texto e ícono */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .botones-centrales {
+    flex-direction: column; /* Apila los botones verticalmente */
+    align-items: stretch; /* Asegura que los botones ocupen el ancho completo */
+    gap: 10px; /* Reduce el espaciado entre botones */
+  }
+
+  .boton-izquierdo a,
+  .boton-derecho a {
+    font-size: 16px; /* Reduce ligeramente el texto */
+    padding: 10px 20px;
+  }
+}
+
+      </style>
+    </header>
+
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title dark-background">
+        <div
+          class="container d-lg-flex justify-content-between align-items-center"
+        >
+          <h1 class="mb-2 mb-lg-0">Medios No Guiados</h1>
+          <nav class="breadcrumbs">
+            <ol>
+              <li><a style="color: white;">Medios no Guiados</a></li>
+              <li class="current"><a href="#">Felicitaciones</a></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <!-- End Page Title -->
+      <div class="container-fluid">
+        <iframe
+          src="HappyBirthday-main/index.html"
+          style="width: 105.9%; height: 850px; border: none; overflow: hidden; margin-left: -5%;"
+          loading="lazy"
+          title="Contenido Externo"
+        ></iframe>
+      </div>
+      <div class="botones-centrales">
+        <div class="boton-izquierdo">
+          <a 
+            href="./portfolio-details.html" 
+            class="btn btn-primary btn-lg shadow-lg d-flex align-items-center justify-content-center"
+          >
+            <i class="bi bi-arrow-left-circle me-2"></i> Volver a Empezar
+          </a>
+        </div>
+        <div class="boton-derecho">
+          <a 
+            href="./juegos.html" 
+            class="btn btn-primary btn-lg shadow-lg d-flex align-items-center justify-content-center"
+          >
+            Recorrer más Secciones <i class="bi bi-arrow-right-circle ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </main>
+
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

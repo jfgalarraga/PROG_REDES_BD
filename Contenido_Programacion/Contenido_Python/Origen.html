@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Proyecto Aplicaciones Web</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.png" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="#" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Programación</h1>
+    </a>
+
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+
+
+        <li><a href="../../index.html"><i class="bi bi-house navicon"></i>Home Page</a></li>
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Algoritmos</span> <i
+              class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="../Contenido_Programacion/portfolio-details.html"><i
+                  class="bi bi-file-earmark-text navicon"></i>¿Qué es un Algoritmo?</a></li>
+            <li><a href="../Contenido_Programacion/ConceptosBasicos.html"><i class="bi bi-book navicon"></i>Conceptos
+                Básicos</a></li>
+            <li><a href="../Contenido_Programacion/ConceptosBasicos1.html"><i class="bi bi-book navicon"></i>Funciones
+                Matematicas</a></li>
+            <li><a href="../Contenido_Programacion/ConceptosBasicos2.html"><i class="bi bi-book navicon"></i>Manejo de
+                Cadenas</a></li>
+            <li><a href="../Contenido_Programacion/ConceptosBasicos.html"><i class="bi bi-gear navicon"></i>Ejercicios
+                de Aprendizaje</a></li>
+            <li><a href="../Contenido_Programacion/Evaluacion.html"><i class="bi bi-star navicon"></i>Cuestionario</a>
+            </li>
+
+
+
+
+
+          </ul>
+        </li>
+
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Diagramas</span> <i
+              class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="../Contenido_Diagramas/Introduccion.html"><i class="bi bi-person navicon"></i>Introducción</a>
+            </li>
+            <li><a href="../Contenido_Diagramas/Componentes.html"><i class="bi bi-person navicon"></i>Resumen</a></li>
+            <li><a href="../Contenido_Diagramas/Diagramas.html"><i class="bi bi-person navicon"></i>Contruyendo</a></li>
+            <li><a href="../Contenido_Diagramas/Comprueba.html"><i class="bi bi-person navicon"></i>Conociemientos</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Python</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>              
+             <li><a href="Origen.html"><i class="bi bi-person navicon"></i>I. Origen</a></li>
+             <li><a href="Tutoriales.html"><i class="bi bi-person navicon"></i>II. Tutoriales</a></li>
+             <li><a href="Ejemplos.html"><i class="bi bi-person navicon"></i>III. Ejemplos</a></li> 
+             <li><a href="Pruebas.html"><i class="bi bi-person navicon"></i>IV. Pruebas</a></li>  
+             <li><a href="Servicios.html"><i class="bi bi-person navicon"></i>V. Servicios</a></li> 
+             <li><a href="Algoritmos.html"><i class="bi bi-person navicon"></i>VI. Algoritmos</a></li> 
+
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Asistente star -->
+
+<!--Modal  -->
+
+<div class="modal fade" id="responseModal" tabindex="-1" aria-labelledby="responseModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+      <div class="modal-content mb-0 ">
+          
+        <div class="container">
+          <div class="row">
+            <div class=" col-xs-11 col-lg-11 col-md-11" ></div>
+            
+            <div class=" col-xs-1 col-lg-1 col-md-1  mt-2 mr-6">
+              <button type="button" class="btn-close mr-5" data-bs-dismiss="modal" aria-label="Close"></button>  
+            </div>
+          </div>
+
+          <div class="row">
+            <div class=" col-lg-1 col-md-1 mt-3 pr-0">
+              <img src="assetsBot/robot.png" alt="Icono" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+            </div>
+            <div class=" col-lg-11 col-md-11  pl-0">
+              <div class="modal-body mb-0" id="responseText"></div>
+            </div>
+          </div>
+        </div> 
+      </div>
+     
+  </div>
+</div>  
+<!--Moda END -->
+
+<button id="questionButton" class="btn btn-primary " data-aos="fade-up" ></button>
+
+<div  id="questionMenu" class="speech-bubble card">
+<ul class="list-group list-group-flush" id="questionList">
+  <!-- Preguntas generadas dinámicamente -->
+</ul>
+</div>
+
+<!-- Asistente end -->
+ <!-- Navbar Start -->
+ <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style=" font-family: 'Poppins', sans-serif;">
+   
+  <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5" >
+      <h2  class="m-0" style="color:#06BBCC; font-family: 'Poppins', sans-serif;" ><i class="fa fa-book me-3" style="color:#06BBCC;"></i >Programación</h2>
+  </a>
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="Principal.html" class="nav-item nav-link">
+            </a>
+
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto p-4 p-lg-0">
+  
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown">PROGRAMACIÓN</a>
+              <div class="dropdown-menu fade-down m-0">
+                
+                <a href="../Contenido_Programacion/portfolio-details.html"
+                  class="dropdown-item">I.Algoritmos</a>
+                <a href="../Contenido_Diagramas/Introduccion.html"
+                  class="dropdown-item">II.Diagramas</a>
+                <a href="../Contenido_Python/Origen.html" class="dropdown-item">III.Python</a>
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown">REDES</a>
+              <div class="dropdown-menu fade-down m-0">
+                <a href="../../Contenido_Redes/INTERNET-SERVICIOS/INTERNET-SERVICIOS/index.html" class="dropdown-item">I.Internet</a>
+                <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item">II.Medios de conexión</a>
+                <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item">III.Redes LAN</a>
+              </div>
+            </div>
+  
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown">BASE DE DATOS</a>
+              <div class="dropdown-menu fade-down m-0">
+                <a href="../..//Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html" class="dropdown-item">I.Access</a>
+
+                <a href="../..//Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html" class="dropdown-item">II.Visual Basic
+                  Access</a>
+                  <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+                  class="dropdown-item">III.Mysql(Workbench)</a>
+              </div>
+            </div>
+  
+          </div>
+  
+       
+          
+      </div>
+      <a href="../../index.html" class="btn btn-primary py-4 px-lg-6 d-none d-lg-block" style="background-color:#06BBCC; border: #06BBCC; 
+        border-radius: 0%;">Principal<i class="fa fa-arrow-right ms-3"></i></a>
+  </div>
+</nav>
+<!-- Navbar End -->
+    
+
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Acerca de Python</h2>
+        <p>Python es un lenguaje de programación de alto nivel, ampliamente utilizado en desarrollo web, análisis de
+          datos, inteligencia artificial, automatización y más. Su sintaxis sencilla y su gran comunidad lo han
+          convertido en uno de los lenguajes más populares y fáciles de aprender, tanto para principiantes como para
+          expertos.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row text-center">
+          <!-- Imagen 1 -->
+          <div class="col-lg-6">
+            <img src="assets/img/Imagen2.gif" class="img-fluid" alt="Imagen 1" style="max-width: 80%; height: auto;">
+          </div>
+          <!-- Imagen 2 -->
+          <div class="col-lg-6">
+            <img src="assets/img/Imagen5.gif" class="img-fluid" alt="Imagen 2" style="max-width: 80%; height: auto;">
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Origen de Python -->
+      <div class="container my-5" data-aos="fade-up" data-aos-delay="200">
+        <h3>El Origen de Python</h3>
+        <p class="py-3">
+          Python fue creado a finales de los años 80 por <strong>Guido van Rossum</strong> en los Países Bajos, con el
+          objetivo
+          de diseñar un lenguaje sencillo, fácil de usar y potente. La primera versión oficial, <strong>Python
+            1.0</strong>,
+          fue lanzada en 1991, destacándose por características como manejo de excepciones, funciones y módulos.
+        </p>
+        <p class="py-3">
+          El nombre "Python" se inspira en el programa británico <strong>"Monty Python's Flying Circus"</strong>,
+          reflejando el
+          deseo de que el lenguaje fuera divertido de usar. Hoy en día, Python es uno de los lenguajes más populares del
+          mundo
+          por su versatilidad y facilidad de aprendizaje.
+        </p>
+      </div>
+
+
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/python_codigo.jpg" class="img-fluid" alt="Python Logo">
+            <img src="assets/img/Imagen1.gif" class="img-fluid" alt="Python Animation"
+              style="max-width: 40%; height: auto;">
+
+          </div>
+          <div class="col-lg-8 content">
+            <h2>Python: Un Lenguaje Versátil y Potente</h2>
+            <p class="fst-italic py-3">
+              Python destaca por su simplicidad y claridad, lo que lo hace ideal tanto para quienes recién comienzan a
+              programar como para desarrolladores experimentados. Con su sintaxis minimalista y legible, puedes escribir
+              código de manera más rápida y con menos errores.
+            </p>
+            <p class="py-3">
+              Además de ser fácil de aprender, Python cuenta con una vasta comunidad de usuarios y desarrolladores. Esto
+              significa que, al aprender Python, tendrás acceso a una gran cantidad de recursos, bibliotecas y
+              frameworks que facilitan el desarrollo de aplicaciones en una amplia variedad de áreas.
+            </p>
+
+
+
+    </section><!-- /About Section -->
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-4 justify-content-center text-center">
+        <div class="col-lg-12">
+
+          <div class="row text-start">
+            <div class="col-lg-6">
+              <h3>Principales Áreas de Aplicación</h3>
+              <ul style="list-style-type: none; padding: 0;">
+                <li><strong>Desarrollo Web:</strong> Frameworks como Django y Flask.</li>
+                <li><strong>Automatización:</strong> Scripts para tareas repetitivas.</li>
+                <li><strong>Data Science:</strong> Análisis y visualización de datos.</li>
+                <li><strong>Inteligencia Artificial:</strong> Modelos de machine learning.</li>
+                <li><strong>Desarrollo de Juegos:</strong> Bibliotecas como Pygame.</li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <h3>¿Por qué aprender Python?</h3>
+              <ul style="list-style-type: none; padding: 0;">
+                <li><strong>Fácil de aprender:</strong> Sintaxis simple y clara.</li>
+                <li><strong>Versátil:</strong> Aplicaciones en múltiples áreas.</li>
+                <li><strong>Gran Comunidad:</strong> Soporte y recursos gratuitos.</li>
+                <li><strong>Alta demanda:</strong> Popular en la industria tecnológica.</li>
+                <li><strong>Muchas herramientas:</strong> Bibliotecas y frameworks.</li>
+              </ul>
+            </div>
+          </div>
+          
+
+          <h3>¿Cómo empezar a aprender Python?</h3>
+          <p class="py-3">
+            Instala Python y un editor de texto. Aprende a escribir un "Hola Mundo" y avanza a conceptos como
+            estructuras de datos, control de flujo y POO. Practica en sitios como <strong>LeetCode</strong>,
+            <strong>HackerRank</strong> o <strong>Codewars</strong>.
+          </p>
+
+          <h3>Ejemplo de Código Python</h3>
+          <div class="terminal">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <pre class="terminal-body"><code class="python">
+      # Imprime "Hola Mundo"
+      print("Hola Mundo")
+              </code></pre>
+          </div>
+
+          <p class="py-3">
+            Este programa básico es solo el comienzo. Con Python, puedes explorar programación orientada a objetos,
+            bases de datos y desarrollar aplicaciones completas.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Línea de Tiempo -->
+    <div class="container my-5" data-aos="fade-up" data-aos-delay="200">
+      <h3 class="text-center">Línea de Tiempo de Python</h3>
+      <div class="timeline">
+        <!-- Evento 1 -->
+        <div class="timeline-event">
+          <div class="timeline-content">
+            <h4>1989 - Inicio del Proyecto</h4>
+            <p>Guido van Rossum comienza a desarrollar Python como un proyecto para su tiempo libre.</p>
+          </div>
+        </div>
+        <!-- Evento 2 -->
+        <div class="timeline-event">
+          <div class="timeline-content">
+            <h4>1991 - Primer Lanzamiento</h4>
+            <p>Se lanza Python 1.0 con características como manejo de excepciones, funciones y módulos.</p>
+          </div>
+        </div>
+        <!-- Evento 3 -->
+        <div class="timeline-event">
+          <div class="timeline-content">
+            <h4>2000 - Lanzamiento de Python 2.0</h4>
+            <p>Introducción de la recolección automática de basura y mejoras en la sintaxis.</p>
+          </div>
+        </div>
+        <!-- Evento 4 -->
+        <div class="timeline-event">
+          <div class="timeline-content">
+            <h4>2008 - Python 3.0</h4>
+            <p>Se lanza Python 3.0 con cambios importantes en la sintaxis, aunque no es retrocompatible.</p>
+          </div>
+        </div>
+        <!-- Evento 5 -->
+        <div class="timeline-event">
+          <div class="timeline-content">
+            <h4>2020 - Retiro de Python 2</h4>
+            <p>Finaliza el soporte oficial para Python 2, consolidándose Python 3 como la versión estándar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End storyline Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Habilidades Necesarias para Aprender Python</h2>
+        <p>Estas son las habilidades clave que pueden ayudarte a dominar Python de manera más eficiente.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>Lógica de Programación</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Conocimientos Básicos de Matemáticas</span> <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Uso de Terminal/CLI</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>Conocimientos Básicos de Algoritmos</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Uso de Herramientas de Depuración</span> <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Curiosidad y Resolución de Problemas</span> <i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+  </main>
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights
+            Reserved</span>
+        </p>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
+          href="https://themewagon.com">ThemeWagon</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
+<script >
+
+  document.addEventListener('DOMContentLoaded', function () {
+      // Array de preguntas, respuestas, imágenes y videos
+      const qaArray = [
+          {
+              question: "¿Cómo se leen datos del teclado en Python?",
+              response: "Se usa la función input(). Esto devuelve una cadena de texto nombre = input('¿Cuál es tu nombre?')print('Hola, ' + nombre)",
+              image: "",
+              video: ""
+          },
+          {
+              question: "¿Por qué debería elegir Python sobre otros lenguajes de programación?",
+              response: "Python es fácil de aprender debido a su sintaxis simple y clara. Es muy versátil, se usa en desarrollo web, análisis de datos, inteligencia artificial, automatización, y más. Además, tiene una comunidad grande y muchas bibliotecas que facilitan tareas complejas.",
+              image: "",
+              video: ""
+          },
+          {
+              question: "Por qué se dice que Python es un lenguaje interpretado?",
+              response: "PPython es un lenguaje interpretado porque el código fuente no se compila directamente a código de máquina. En lugar de eso, el código es leído e interpretado por el intérprete de Python, lo que facilita la ejecución y prueba rápida de programas.",
+              image: "",
+              video: ""
+          },
+
+      ];
+  
+      // Referencias a elementos del DOM
+      const questionList = document.getElementById('questionList');
+      const questionButton = document.getElementById('questionButton');
+      const questionMenu = document.getElementById('questionMenu');
+      const responseText = document.getElementById('responseText');
+  
+      // Generar las preguntas en el menú
+      qaArray.forEach((item, index) => {
+          const listItem = document.createElement('li');
+          listItem.className = 'list-group-item question mb-1 list-group-item-action';
+          listItem.style.cssText = 'border: solid 0px #7c2e2e; border-radius: 15px; background-color: #181d38; color: white;';
+          listItem.setAttribute('data-bs-toggle', 'list');
+          listItem.setAttribute('role', 'tab');
+          listItem.setAttribute('data-index', index);
+          listItem.textContent = item.question;
+          questionList.appendChild(listItem);
+      });
+  
+      // Mostrar/Ocultar el menú
+      questionButton.addEventListener('click', function () {
+          questionMenu.style.display = questionMenu.style.display === 'none' || questionMenu.style.display === '' ? 'block' : 'none';
+      });
+  
+      // Delegación de eventos para manejar clics en las preguntas
+      questionList.addEventListener('click', function (event) {
+          if (event.target && event.target.classList.contains('question')) {
+              const index = event.target.getAttribute('data-index');
+              const selectedQA = qaArray[index];
+  
+              let content = `
+                  <div class="container section-title" data-aos="fade-up">
+                      <h2>${selectedQA.question}</h2>
+                      <p>${selectedQA.response}</p>
+                  </div>
+              `;
+  
+              // Agregar imagen si existe
+              if (selectedQA.image) {
+                  content += `
+                      <div class="container">
+                          <div class="row mt-3">
+                              <div class="col-lg-4 col-md-4"></div>
+                              <div class="col-lg-4 col-md-4">
+                                  <img src="${selectedQA.image}" alt="Imagen relacionada" class="img-fluid mb-3">
+                              </div>
+                          </div>
+                      </div>
+                  `;
+              }
+  
+              // Agregar video si existe
+              if (selectedQA.video) {
+                  content += `
+                      <div class="container">
+                          <div class="row mt-1">
+                              <video controls class="w-100">
+                                  <source src="${selectedQA.video}" type="video/mp4">
+                              </video>
+                          </div>
+                      </div>
+                  `;
+              }
+  
+              responseText.innerHTML = content;
+  
+              // Mostrar el modal y ocultar el menú
+              const responseModal = new bootstrap.Modal(document.getElementById('responseModal'));
+              responseModal.show();
+              questionMenu.style.display = 'none';
+          }
+      });
+  });
+    </script>
+  
+</body>
+
+</html>

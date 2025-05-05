@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona la respuesta correcta</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .quiz-container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: #a2badc;
+        }
+
+
+        .exercise {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #4c75af, #4352a0);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #4356a0, #385a8e);
+            transform: translateY(-2px);
+        }
+
+        select {
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #a2badc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .icon {
+            margin-left: 10px;
+            font-size: 18px;
+        }
+
+        .icon.correct {
+            color: green;
+        }
+
+        .icon.incorrect {
+            color: red;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <div class="exercise">
+        <p>Selecciona la opción correcta para completar:</p>
+
+        <!-- Pregunta 1 -->
+        <div id="questions1" class="question">
+            <p>1. El protocolo utilizado para la transmisión de datos en la capa de red es el <select id="q1" onchange="checkAnswer(1)">
+                <option value="">--Selecciona--</option>
+                <option value="TCP">TCP</option>
+                <option value="IP">IP</option>
+                <option value="UDP">UDP</option>
+            </select> 
+            <span id="icon-q1" class="icon"></span></p>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div id="questions2" class="question" style="display:none;">
+            <p>2. El estándar IEEE que define las redes Ethernet es el <select id="q2" onchange="checkAnswer(2)">
+                <option value="">--Selecciona--</option>
+                <option value="802.3">802.3</option>
+                <option value="802.11">802.11</option>
+                <option value="802.5">802.5</option>
+            </select> 
+            <span id="icon-q2" class="icon"></span></p>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div id="questions3" class="question" style="display:none;">
+            <p>3. El protocolo TCP es un protocolo <select id="q3" onchange="checkAnswer(3)">
+                <option value="">--Selecciona--</option>
+                <option value="orientado a conexión">orientado a conexión</option>
+                <option value="sin conexión">sin conexión</option>
+            </select>
+            <span id="icon-q3" class="icon"></span></p>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div id="questions4" class="question" style="display:none;">
+            <p>4. El número máximo de direcciones IP posibles en una red IPv4 es de <select id="q4" onchange="checkAnswer(4)">
+                <option value="">--Selecciona--</option>
+                <option value="2^32">2^32</option>
+                <option value="2^64">2^64</option>
+                <option value="2^128">2^128</option>
+            </select>
+            <span id="icon-q4" class="icon"></span></p>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div id="questions5" class="question" style="display:none;">
+            <p>5. El protocolo de enlace de datos utilizado en Ethernet es <select id="q5" onchange="checkAnswer(5)">
+                <option value="">--Selecciona--</option>
+                <option value="CSMA/CD">CSMA/CD</option>
+                <option value="ARP">ARP</option>
+                <option value="DHCP">DHCP</option>
+            </select>
+            <span id="icon-q5" class="icon"></span></p>
+        </div>
+
+        <div class="result" id="result"></div>
+
+        <div>
+            <button id="nextBtn" onclick="nextQuestion()">Siguiente</button>
+            <button id="retryBtn" style="display:none;" onclick="retryQuiz()">Intentar de nuevo</button>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    let currentQuestion = 1;
+    let totalQuestions = 5;
+    let correctAnswers = 0;
+
+    const answers = {
+        q1: "IP",
+        q2: "802.3",
+        q3: "orientado a conexión",
+        q4: "2^32",
+        q5: "CSMA/CD"
+    };
+
+    function nextQuestion() {
+        // Hide current question and show next question
+        document.getElementById(`questions${currentQuestion}`).style.display = "none";
+        currentQuestion++;
+
+        if (currentQuestion <= totalQuestions) {
+            document.getElementById(`questions${currentQuestion}`).style.display = "block";
+        } else {
+            checkResults();
+            document.getElementById("nextBtn").style.display = "none";
+            document.getElementById("retryBtn").style.display = "block";
+        }
+    }
+
+    function checkAnswer(questionNumber) {
+        const userAnswer = document.getElementById(`q${questionNumber}`).value;
+        const correctAnswer = answers[`q${questionNumber}`];
+        const iconElement = document.getElementById(`icon-q${questionNumber}`);
+
+        if (userAnswer === correctAnswer) {
+            iconElement.textContent = "✔";
+            iconElement.className = "icon correct";
+            correctAnswers++;
+        } else {
+            iconElement.textContent = "✘";
+            iconElement.className = "icon incorrect";
+        }
+    }
+
+    function checkResults() {
+        if (correctAnswers === totalQuestions) {
+            document.getElementById("result").textContent = "¡Todas las respuestas son correctas!";
+            document.getElementById("result").style.color = "#4CAF50";
+        } else {
+            document.getElementById("result").textContent = `Respuestas correctas: ${correctAnswers} de ${totalQuestions}. Intenta de nuevo.`;
+            document.getElementById("result").style.color = "#f44336";
+        }
+    }
+
+    function retryQuiz() {
+        currentQuestion = 1;
+        correctAnswers = 0;
+        document.getElementById("result").textContent = "";
+        document.getElementById("nextBtn").style.display = "block";
+        document.getElementById("retryBtn").style.display = "none";
+
+        for (let i = 1; i <= totalQuestions; i++) {
+            document.getElementById(`q${i}`).value = "";
+            document.getElementById(`icon-q${i}`).textContent = "";
+            document.getElementById(`icon-q${i}`).className = "icon";
+            document.getElementById(`questions${i}`).style.display = "none";
+        }
+
+        document.getElementById(`questions${currentQuestion}`).style.display = "block";
+    }
+
+    // Inicializa mostrando la primera pregunta
+    document.getElementById(`questions${currentQuestion}`).style.display = "block";
+</script>
+
+</body>
+</html>

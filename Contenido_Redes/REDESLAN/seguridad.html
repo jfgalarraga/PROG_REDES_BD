@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Tipos de Topologías</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+
+</head>
+
+<body class="index-page">
+
+
+  <header id="header" class="header dark-background d-flex flex-column">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="img/icono.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="#" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">REDES LAN</h1>
+    </a>
+
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="home.html" class="navitem"><i class="bi bi-house-fill navicon"></i> Home</a></li>
+        <li><a href="indexContenido.html" class="navitem"><i class="bi bi-router navicon"></i> ¿Qué es una Red LAN?</a></li>
+        <li><a href="Topologia.html" class="navitem"><i class="bi bi-diagram-3 navicon"></i> Topologías de red LAN</a></li>
+        <li><a href="Protocolos_Redes LAN.html" class="navitem"><i class="bi bi-plug navicon"></i> Protocolos de Comunicación</a></li>
+        <li><a href="seguridad.html" class="navitem"><i class="bi bi-shield-lock navicon"></i> Seguridad</a></li>        
+        <li><a href="Juegos.html" class="navitem"><i class="bi bi-controller navicon"></i>Juegos</a></li>
+        <li><a href="Ejercicio.html" class="navitem"><i class="bi bi-pencil-square navicon"></i>Ejercicio</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+
+  <main class="main">
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+  <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+    <h2 class="m-0 text-primary"><i class="fa fa-globe me-3"></i>Redes</h2>
+  </a>
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav ms-auto p-4 p-lg-0">
+
+
+      <!-- Menú Programación -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item  nav-link dropdown-toggle small-text"
+          data-bs-toggle="dropdown">Programación</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_Programacion/Contenido_Programacion/portfolio-details.html"
+            class="dropdown-item small-text">I. Algoritmos</a>
+          <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
+            class="dropdown-item small-text">II. Diagramas</a>
+          <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
+            class="dropdown-item small-text">III. Python</a>
+        </div>
+      </div>
+
+      <!-- Menú Redes -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">I. Medios de
+            conexión</a>
+          <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">II. Redes
+            Lan</a>
+            <a href="../../Contenido_Redes/INTERNET-SERVICIOS/INTERNET-SERVICIOS/index.html"
+            class="dropdown-item small-text">III. Internet</a>
+
+        </div>
+      </div>
+
+      <!-- Menú Base de Datos -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de
+          Datos</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
+            class="dropdown-item small-text">I. Access</a>
+            <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html"
+            class="dropdown-item small-text">II. Visual
+            Basic Access</a>
+          <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+            class="dropdown-item small-text">III. MySQL (Workbench)</a>
+
+        </div>
+      </div>
+
+  </div>
+  <a href="../../index.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i
+      class="fa fa-arrow-right ms-3"></i></a>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+
+
+<!-- Seguridad en Redes LAN Section -->
+<section id="security" class="security section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Seguridad en Redes LAN</h2>
+    <p>La seguridad en redes LAN (Local Area Network) es esencial para proteger los datos y dispositivos conectados. A continuación, exploraremos algunas de las medidas más importantes para garantizar la seguridad de una red LAN.</p>
+  </div><!-- End Section Title -->
+
+  <!-- Interactive Accordion -->
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="accordion" id="securityAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Cortafuegos (Firewall)
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#securityAccordion">
+          <div class="accordion-body">
+            <strong>Un firewall</strong> es la primera línea de defensa en una red LAN. Monitorea y filtra el tráfico entrante y saliente según las reglas predefinidas, asegurando que solo el tráfico autorizado pueda acceder a la red.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Control de Acceso
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#securityAccordion">
+          <div class="accordion-body">
+            <strong>El control de acceso</strong> asegura que solo los usuarios y dispositivos autorizados puedan acceder a la red LAN. Esto incluye el uso de autenticación multifactor (MFA) y políticas de contraseñas robustas.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Segmentación de Redes (VLANs)
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#securityAccordion">
+          <div class="accordion-body">
+            <strong>La segmentación de redes</strong> permite dividir una red LAN en varios segmentos o VLANs. Esto limita el alcance de los posibles ataques a una parte de la red, en lugar de comprometer toda la red.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Cifrado de Datos
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#securityAccordion">
+          <div class="accordion-body">
+            <strong>El cifrado de datos</strong> asegura que la información transmitida a través de la red LAN esté protegida y no pueda ser interceptada por atacantes. Protocolos como WPA3 garantizan una mayor seguridad en redes inalámbricas.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            Monitoreo Continuo
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#securityAccordion">
+          <div class="accordion-body">
+            <strong>El monitoreo continuo</strong> a través de sistemas de detección de intrusiones (IDS) permite identificar comportamientos sospechosos en tiempo real, ayudando a detener posibles ataques antes de que puedan causar daño.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            Actualización de Software y Parches
+          </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#securityAccordion">
+          <div class="accordion-body">
+            <strong>La actualización regular</strong> del software y hardware asegura que se apliquen parches de seguridad que corrigen vulnerabilidades conocidas, previniendo ataques de día cero.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Button Section -->
+  <div class="container mt-5 text-center">
+    <h3>¿Quieres saber más sobre cómo proteger tu red LAN?</h3>
+  </div>
+
+  <!-- Video Section -->
+  <div class="container mt-5" data-aos="fade-up" data-aos-delay="200">
+    <div class="row gy-4 justify-content-center">
+      <div class="col-lg-8">
+        <video width="100%" controls autoplay muted>
+          <source src="img/Seguridad en Red Lan.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section><!-- /Seguridad en Redes LAN Section -->
+
+<section id="security" class="security section bg-light">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Estrategias de Seguridad para Redes LAN</h2>
+    <p>La seguridad de una red LAN es fundamental para proteger la transmisión de datos y prevenir accesos no autorizados. Aquí te mostramos las medidas clave para mejorar la seguridad de tu red LAN.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4 justify-content-center">
+
+      <!-- Block for Segmentación de Redes y VLANs -->
+      <div class="col-lg-4">
+        <div class="security-block" data-aos="fade-up">
+          <div class="icon-container">
+            <i class="fas fa-network-wired fa-3x" style="color: #3498db;"></i>
+          </div>
+          <h5 class="block-title" style="color: #3498db;">Segmentación de Redes y VLANs</h5>
+          <br>
+          <p class="block-text">Divide tu red en subredes o VLANs para mejorar la seguridad y limitar el acceso a información sensible.</p>
+          <button class="btn btn-outline-primary btn-sm" onclick="toggleSlide('segmentation')">Ver detalles</button>
+          <div class="details-slide" id="segmentation">
+            <p>Segmentar la red mediante VLANs limita el acceso a recursos de forma eficaz, asegurando que solo los dispositivos necesarios puedan acceder a determinadas secciones de la red.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Block for Autenticación y Control de Acceso -->
+      <div class="col-lg-4">
+        <div class="security-block" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon-container">
+            <i class="fas fa-user-lock fa-3x" style="color: #dbd334;"></i>
+          </div>
+          <h5 class="block-title" style="color: #dbd334;">Autenticación y Control de Acceso</h5>
+          <p class="block-text">Implementa autenticación fuerte y controla el acceso de los usuarios para garantizar la seguridad en tu red.</p>
+          <button class="btn btn-outline-primary btn-sm" onclick="toggleSlide('authentication')">Ver detalles</button>
+          <div class="details-slide" id="authentication">
+            <p>La autenticación multifactor (MFA) y el control de acceso basado en roles (RBAC) son esenciales para asegurar que solo usuarios autorizados tengan acceso a datos sensibles.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Block for Cifrado de Datos -->
+      <div class="col-lg-4">
+        <div class="security-block" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon-container">
+            <i class="fas fa-lock fa-3x" style="color: #34db34;"></i>
+          </div>
+          <h5 class="block-title" style="color: #34db34;">Cifrado de Datos</h5>
+          <br>
+          <p class="block-text">Protege los datos mediante cifrado, asegurando que la información sensible esté segura, incluso si es interceptada.</p>
+          <button class="btn btn-outline-primary btn-sm" onclick="toggleSlide('encryption')">Ver detalles</button>
+          <div class="details-slide" id="encryption">
+            <p>El uso de tecnologías como VPN y cifrado de extremo a extremo ayuda a garantizar la privacidad y seguridad de los datos transmitidos a través de la red.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Block for Firewall y Filtrado de Paquetes -->
+      <div class="col-lg-4">
+        <div class="security-block" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon-container">
+            <i class="fas fa-shield-alt fa-3x" style="color: #9534db;"></i>
+          </div>
+          <h5 class="block-title" style="color: #9534db;">Firewall y Filtrado de Paquetes</h5>
+          <br>
+          <p class="block-text">Usa firewalls y filtros de paquetes para proteger la red de accesos no deseados y ataques externos.</p>
+          <button class="btn btn-outline-primary btn-sm" onclick="toggleSlide('firewall')">Ver detalles</button>
+          <div class="details-slide" id="firewall">
+            <p>Los firewalls ayudan a controlar el tráfico de entrada y salida de la red. El filtrado de paquetes puede bloquear accesos no autorizados y prevenir posibles ataques.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Block for Monitoreo y Auditoría de la Red -->
+      <div class="col-lg-4">
+        <div class="security-block" data-aos="fade-up" data-aos-delay="400">
+          <div class="icon-container">
+            <i class="fas fa-chart-line fa-3x" style="color: #34dbd3;"></i>
+          </div>
+          <h5 class="block-title" style="color: #34dbd3;">Monitoreo y Auditoría de la Red</h5>
+          <br>
+          <p class="block-text">Monitorea continuamente la red para detectar actividades sospechosas y realizar auditorías periódicas de seguridad.</p>
+          <button class="btn btn-outline-primary btn-sm" onclick="toggleSlide('monitoring')">Ver detalles</button>
+          <div class="details-slide" id="monitoring">
+            <p>El monitoreo de tráfico y las auditorías regulares permiten identificar vulnerabilidades o comportamientos anómalos, lo que facilita la detección temprana de amenazas.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Block for Protección contra Amenazas Internas -->
+      <div class="col-lg-4">
+        <div class="security-block" data-aos="fade-up" data-aos-delay="500">
+          <div class="icon-container">
+            <i class="fas fa-user-shield fa-3x" style="color: #db6c34;"></i>
+          </div>
+          <h5 class="block-title" style="color: #db6c34;">Protección contra Amenazas Internas</h5>
+          <p class="block-text">Implementa políticas para prevenir y detectar amenazas dentro de la red, como empleados o usuarios malintencionados.</p>
+          <button class="btn btn-outline-primary btn-sm" onclick="toggleSlide('internal_threats')">Ver detalles</button>
+          <div class="details-slide" id="internal_threats">
+            <p>El monitoreo del comportamiento de los usuarios y las auditorías de acceso son cruciales para identificar actividades sospechosas internas.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Block for Control de Acceso y Privilegios de Usuario -->
+
+    </div>
+  </div>
+</section>
+
+
+<script>
+function toggleSlide(id) {
+  var slide = document.getElementById(id);
+  slide.style.display = slide.style.display === "block" ? "none" : "block";
+}
+
+</script>
+
+<style>
+.security {
+  padding: 60px 0;
+}
+
+.security .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.security .security-block {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.security .security-block:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.security .icon-container {
+  margin-bottom: 20px;
+}
+
+.security .block-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.security .block-text {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.security .details-slide {
+  display: none;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.security .btn-outline-primary {
+  margin-top: 10px;
+}
+
+.security .btn-sm {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .security .security-block {
+    margin-bottom: 20px;
+  }
+}
+</style>
+
+<!-- Section Content -->
+<div id="simulacion-seguridad" class="container-fluid"
+  style="position: relative; z-index: 2; text-align: center; color: #fff; padding: 50px; overflow: hidden;">
+  <!-- Video de Fondo -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;">
+    <video autoplay loop muted style="width: 100%; height: 100%; object-fit: cover;">
+      <source src="./img/Fondo Tecnológico HD - Mundo Digital.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+  </div>
+
+  <!-- Contenido de la Sección -->
+  <div class="section-title" data-aos="fade-up"
+    style="position: relative; z-index: 2; background: rgba(0, 0, 0, 0.5); padding: 50px; border-radius: 15px; display: inline-block;">
+    <!-- Ícono de Seguridad -->
+    <div style="font-size: 4rem; margin-bottom: 20px;">
+      🔒
+    </div>
+    <!-- Texto y Botón -->
+    <h2 style="color: white;">¡Simulación de Seguridad en Redes!</h2>
+    <p>Aplica medidas de seguridad y protege tu red simulada de posibles amenazas.</p>
+    <a href="Juegos/proto.html"
+      class="btn btn-primary btn-lg" style="font-size: 1.5rem; padding: 1rem 2rem;">¡Comienza la Simulación!</a>
+  </div>
+</div>
+
+
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

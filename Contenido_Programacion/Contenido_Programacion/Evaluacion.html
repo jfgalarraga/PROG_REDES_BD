@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Evaluación</title>
+</head>
+<body>
+    <button class="btn salir-btn" onclick="salir()">SALIR</button>
+    <div class="contenedor">
+        <h2>Evaluación</h2>
+
+        <!-- Pantalla inicial -->
+        <div id="pantalla-inicial">
+            <h2>Responde por favor estas preguntas de selección múltiple</h2>
+            <h2>¿Iniciamos?</h2>
+            <button class="btn" onclick="comenzarJuego()">COMENZAR A JUGAR</button>
+        </div>
+
+        <!-- Pantalla juego -->
+        <div class="pantalla-juego" id="pantalla-juego" style="display:none;">
+            <h2 id="pregunta"></h2>
+            <div class="opciones">
+                <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                    <div class="letra" id="l0">A</div>
+                    <div class="nombre" id="n0"></div>
+                </div>
+                <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                    <div class="letra" id="l1">B</div>
+                    <div class="nombre" id="n1"></div>
+                </div>
+                <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                    <div class="letra" id="l2">C</div>
+                    <div class="nombre" id="n2"></div>
+                </div>
+                <div class="opcion" id="op3" onclick="comprobarRespuesta(3)">
+                    <div class="letra" id="l3">D</div>
+                    <div class="nombre" id="n3"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pantalla final -->
+<div id="pantalla-final" style="display:none;">
+    <h2>CORRECTAS: <span id="numCorrectas" class="numeroCirculo">0</span></h2>
+    <h2>INCORRECTAS: <span id="numIncorrectas" class="numeroCirculo">0</span></h2>
+    <button class="btn" onclick="volverAlInicio()">VOLVER AL INICIO</button>
+    <button class="btn" onclick="mostrarSolucionario()">VER SOLUCIONARIO</button>
+</div>
+
+<!-- Pantalla del solucionario -->
+<div id="pantalla-solucionario" style="display:none;">
+    <h2>Solucionario</h2>
+    <div id="contenido-solucionario"></div>
+    <button class="btn" onclick="cerrarSolucionario()">CERRAR</button>
+</div>
+    </div>
+    <script src="js/scriptE.js"></script>
+    
+</body>
+</html>

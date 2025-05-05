@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Aplicaciones Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>APLICACIÓN DE TECNOLOGÍAS WEB</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Cursos</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/codigo.jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                    style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <!---->
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Transforma tus ideas
+                                </h5>
+                                <h1 class="display-3 text-white animated slideInDown">Todo gran proyecto empieza con una
+                                    línea de código.</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Conoce los fundamentos y la estructura de la
+                                    programación. </p>
+
+                                <a href="./courses.html#programacion" class="btn btn-light py-md-3 px-md-5 animated slideInRight">¡Iniciar ya!</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/redes.jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                    style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Conecta el mundo</h5>
+                                <h1 class="display-3 text-white animated slideInDown">¿Cómo funcionan las redes que
+                                    conectan al mundo?</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Descubre cómo funcionan las conexiones que mueven
+                                    la información al mundo</p>
+                                <a href="./courses.html#redes"
+                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">¡Iniciar ya!</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/baseDatos.png" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                    style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Organiza y analiza
+                                </h5>
+                                <h1 class="display-3 text-white animated slideInDown">Gestiona Bases de Datos como un
+                                    Experto</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Aprende a estructurar, almacenar y consultar datos
+                                    eficientemente.</p>
+                                <a href="./courses.html#baseDatos"
+                                    class="btn btn-light py-md-3 px-md-5 animated slideInRight">¡Iniciar ya!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Service Start -->
+    <div class="servicios" id="servicios">
+        <div class="container-xxl py-5">
+            <div class="container text-center">
+                <h1 class="mb-5">¿Qué voy a aprender?</h1>
+                <div class="row g-4">
+                    <!-- Programación -->
+                    <div class="col-lg-4 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item text-center pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-code text-primary mb-4"></i>
+                                <h5 class="mb-3">Programación</h5>
+                                <button class="btn btn-primary" onclick="toggleContent('programacion')">Ver más</button>
+                                <div id="programacion" class="d-none mt-3">
+                                    <p>Diagramas de flujo para estructurar ideas.</p>
+                                    <p>Programación básica en Python.</p>
+                                    <p>Algoritmos esenciales para resolver problemas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Redes -->
+                    <div class="col-lg-4 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item text-center pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-network-wired text-primary mb-4"></i>
+                                <h5 class="mb-3">Redes</h5>
+                                <button class="btn btn-primary" onclick="toggleContent('redes')">Ver más</button>
+                                <div id="redes" class="d-none mt-3">
+                                    <p>Tipos de medios de conexión.</p>
+                                    <p>Estructura y diseño de redes LAN.</p>
+                                    <p>Internet y servicios fundamentales.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Base de Datos -->
+                    <div class="col-lg-4 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item text-center pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-database text-primary mb-4"></i>
+                                <h5 class="mb-3">Base de Datos</h5>
+                                <button class="btn btn-primary" onclick="toggleContent('basedatos')">Ver más</button>
+                                <div id="basedatos" class="d-none mt-3">
+                                    <p>Diseño de bases de datos en Access.</p>
+                                    <p>Integración con Visual Basic.</p>
+                                    <p>RDBMS y consultas en MySQL (Workbench).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Encabezado principal centrado -->
+                <div class="col-12 text-center">
+                    <h6 class="section-title bg-white text-center text-primary d-inline-block px-3">Beneficios</h6>
+                    <h1 class="mb-4">¿Por qué aprender estos temas?</h1>
+                    <p class="mb-4">Explora cómo estas habilidades pueden potenciar tu futuro profesional y personal.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-5 align-items-center">
+                <!-- Imagen lado izquierdo -->
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="position-relative">
+                        <img class="img-fluid rounded-3 shadow" src="img/exito.jpg" alt="Beneficios del aprendizaje"
+                            style="width: 100%; object-fit: cover;">
+                    </div>
+                </div>
+
+                <!-- Contenido lado derecho -->
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                    <div class="accordion" id="benefitsAccordion">
+                        <!-- Beneficio: Programación -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    🌟 Programación
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#benefitsAccordion">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Resuelve problemas complejos y crea soluciones innovadoras.</li>
+                                        <li>Diseña software que impacte en la vida de las personas.</li>
+                                        <li>Abre puertas a carreras tecnológicas bien remuneradas.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Beneficio: Redes -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    🌐 Redes
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#benefitsAccordion">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Conecta al mundo mediante infraestructuras digitales.</li>
+                                        <li>Desarrolla conocimientos en ciberseguridad y conectividad.</li>
+                                        <li>Optimiza la gestión de redes empresariales.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Beneficio: Bases de Datos -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    📊 Bases de Datos
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#benefitsAccordion">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Analiza grandes volúmenes de datos para tomar decisiones.</li>
+                                        <li>Diseña sistemas eficientes de almacenamiento de información.</li>
+                                        <li>Apoya el crecimiento estratégico de organizaciones.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón de acción -->
+                    <div class="text-center mt-4">
+                        <a class="btn btn-primary py-3 px-5" href="./courses.html">¡Comienza ahora!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About End -->
+
+<!-- Recursos a Utilizar Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Recursos</h6>
+            <h1 class="mb-5">Herramientas y Tecnologías</h1>
+            <p class="mb-5">Conoce algunas de las herramientas y tecnologías que utilizaremos en el curso. Además, revisa las guías de descarga e instalación.</p>
+        </div>
+        <div class="row g-4 justify-content-center">  <!-- Agregado justify-content-center -->
+            <!-- Recurso 1 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item bg-light text-center uniform-card mx-auto" onclick="toggleInfo(this)">  <!-- Agregado mx-auto -->
+                    <div class="overflow-hidden">
+                        <img class="img-fluid mx-auto d-block" src="img/visual-studio-code.png" alt="Visual Studio Code">  <!-- Centrado -->
+                    </div>
+                    <div class="p-4">
+                        <h5 class="mb-0">Visual Studio Code</h5>
+                        <small>Editor de código</small>
+                        <div class="info mt-3" style="display: none;">
+                            <p>Un editor ligero y versátil con soporte para extensiones, ideal para proyectos web y de programación en general.</p>
+                            <a href="Recursos_Documentacion/GuiaIntalacion_VScode.pdf" class="btn-guide" target="_blank">Guía de instalación</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recurso 3 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="team-item bg-light text-center uniform-card mx-auto" onclick="toggleInfo(this)">  <!-- Agregado mx-auto -->
+                    <div class="overflow-hidden">
+                        <img class="img-fluid mx-auto d-block" src="img/python.png" alt="Python">  <!-- Centrado -->
+                    </div>
+                    <div class="p-4">
+                        <h5 class="mb-0">Python</h5>
+                        <small>Lenguaje de programación</small>
+                        <div class="info mt-3" style="display: none;">
+                            <p>Un lenguaje fácil de aprender y muy usado para desarrollo web, análisis de datos e inteligencia artificial.</p>
+                            <a href="Recursos_Documentacion/GuiaInstalacion_Phyton.pdf" class="btn-guide" target="_blank">Guía de instalación</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recurso 4 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="team-item bg-light text-center uniform-card mx-auto" onclick="toggleInfo(this)">  <!-- Agregado mx-auto -->
+                    <div class="overflow-hidden">
+                        <img class="img-fluid mx-auto d-block" src="img/pseint.png" alt="PSeint">  <!-- Centrado -->
+                    </div>
+                    <div class="p-4">
+                        <h5 class="mb-0">PSeint</h5>
+                        <small>Pseudocódigo y diagramas de flujo</small>
+                        <div class="info mt-3" style="display: none;">
+                            <p>Herramienta educativa para aprender lógica de programación mediante pseudocódigo y diagramas.</p>
+                            <a href="Recursos_Documentacion/GuiaInstalacion_PSeint.pdf" class="btn-guide" target="_blank">Guía de instalación</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Recursos a Utilizar End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-0 mt-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+
+            <div class="row g-5">
+
+
+                <div class="col-lg-4 col-md-4 ml-0 mb-0">
+                    <h4 class="text-white mb-2">Dirección</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Av. Gral. Rumiñahui S/N, Sangolquí 171103
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-3 mb-0">
+                    <h4 class="text-white mb-2">Telefono</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(02) 398-9400</p>
+
+
+                </div>
+
+                <div class="col-lg-4 col-md-4 mb-0">
+                    <h4 class="text-white mb-2">Soporte</h4>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>lacarrillo6@espe.edu.ec</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>baortiz7@espe.edu.ec</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-8 text-center text-md-start mb-2 mb-md-0">
+                        Proyecto Parcial 2 - APLICACION DE TECNOLOGIAS WEB
+                        &copy; <a class="border-bottom" target="_blank"
+                            href="https://www.espe.edu.ec/ingenieria-en-tecnologias-de-la-informacion/"> | Ingeniería en
+                            TIC-Universidad de las Fuerzas Armadas ESPE</a>.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        <!-- Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
+                        Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>-->
+                    </div>
+                    <div class="col-md-4 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="courses.html">Cursos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

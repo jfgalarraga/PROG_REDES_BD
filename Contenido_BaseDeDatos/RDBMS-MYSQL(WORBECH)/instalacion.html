@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>RDBMS-MYSQL(WORKBENCH)</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+
+        <div class="profile-img">
+            <img src="assets/img/logo_wb.png" alt="" class="img-fluid rounded-circle">
+        </div>
+
+        <a href="indexContenido.html" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename">Instalación</h1>
+        </a>
+
+
+        
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <!-- Inicio -->
+                <li><a href="indexContenido.html"><i class="bi bi-house-door navicon"></i>Inicio</a></li>
+
+                <!-- Conceptos Básicos -->
+                <li class="dropdown">
+                    <a href="fundamental.html"><i class="bi bi-lightbulb navicon"></i>Conceptos Básicos</a>
+                </li>
+
+                <!-- Instalación -->
+                <li class="dropdown">
+                    <a href="instalacion.html"><i class="bi bi-plug navicon"></i>Instalación</a>
+                </li>
+
+                <!-- Videos de apoyo -->
+                <li class="dropdown">
+                    <a href="videos_apoyo.html"><i class="bi bi-film navicon"></i> <span>Videos de apoyo</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i>
+                    </a>
+                    <ul>
+                        <li><a href="videos_apoyo.html#introduccion-mysql"><i
+                                    class="bi bi-database navicon"></i>Introducción a MySQL</a></li>
+                        <li><a href="videos_apoyo.html#instalacion-workbench-server"><i
+                                    class="bi bi-laptop navicon"></i>Instalación de <br> Workbench y Server</a></li>
+                        <li><a href="videos_apoyo.html#creacion-bases-tablas"><i
+                                    class="bi bi-table navicon"></i>Creación de Bases de <br> Datos y Tablas</a></li>
+                        <li><a href="videos_apoyo.html#consultas-basicas"><i class="bi bi-search navicon"></i>Consultas
+                                Básicas</a></li>
+                        <li><a href="videos_apoyo.html#roles-permisos"><i class="bi bi-shield-lock navicon"></i>Roles y
+                                Permisos</a></li>
+                        <li><a href="videos_apoyo.html#ejercicio-practico"><i class="bi bi-pencil navicon"></i>Buenas
+                                Prácticas en <br> MySQL</a></li>
+                    </ul>
+                </li>
+
+                <!-- Desafíos y Retos -->
+                <li class="dropdown">
+                    <a href="desafios_retos.html"><i class="bi bi-flag navicon"></i> <span>Desafíos y Retos</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i>
+                    </a>
+                    <ul>
+                        <li><a href="desafios_retos.html#desafio-consultas-sql"><i
+                                    class="bi bi-file-earmark-code navicon"></i>Desafío
+                                de Consultas<br>SQL</a></li>
+                        <li><a href="desafios_retos.html#game-workbench"><i class="bi bi-diagram-2 navicon"></i>Desafío
+                                de MySQL
+                                <br>Workbench</a></li>
+                        <li><a href="desafios_retos.html#trivia_base_datos"><i
+                                    class="bi bi-question-circle navicon"></i>Trivia
+                                Interactiva</a></li>
+                    </ul>
+                </li>
+
+
+                <!-- Examen Final -->
+                <li class="dropdown">
+                    <a href="examen.html"><i class="bi bi-file-earmark-text navicon"></i>Examen Final</a>
+                </li>
+
+                <!-- Certificado -->
+                <li class="dropdown">
+                    <a href="certificado.html"><i class="bi bi-award navicon"></i>Certificado</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="main">
+
+        <!-- Navbar Start -->
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+                <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Base de datos</h2>
+              </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <!-- Enlace Inicio 
+            <a href="indexContenido.html" class="nav-item nav-link small-text">Inicio</a>-->
+
+                    <!-- Menú Programación -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class=" nav-item  nav-link dropdown-toggle small-text"
+                            data-bs-toggle="dropdown">Programación</a>
+                        <div class="dropdown-menu fade-down m-0">
+                            <a href="../../Contenido_Programacion/Contenido_Programacion/portfolio-details.html"
+                                class="dropdown-item small-text">I.Algoritmos</a>
+                            <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
+                                class="dropdown-item small-text">II.Diagramas</a>
+                            <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
+                                class="dropdown-item small-text">III.Python</a>
+                        </div>
+                    </div>
+
+                    <!-- Menú Redes -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class=" nav-item nav-link dropdown-toggle small-text"
+                            data-bs-toggle="dropdown">Redes</a>
+                        <div class="dropdown-menu fade-down m-0">
+                            <a href="../../Contenido_Redes/INTERNET-SERVICIOS/index.html"
+                                class="dropdown-item small-text">I.Internet</a>
+                            <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html"
+                                class="dropdown-item small-text">II.Medios de conexión</a>
+                            <a href="../../Contenido_Redes/REDESLAN/indexContenido.html"
+                                class="dropdown-item small-text">III.Redes Lan</a>
+
+                        </div>
+                    </div>
+
+                    <!-- Menú Base de Datos -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base
+                            de Datos</a>
+                        <div class="dropdown-menu fade-down m-0">
+                            <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
+                                class="dropdown-item small-text">I.Access</a>
+
+                            <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html"
+                                class="dropdown-item small-text">II.Visual
+                                Basic Access</a>
+
+                                <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+                                class="dropdown-item small-text">III.MySQL (Workbench)</a>
+                        </div>
+                    </div>
+
+                </div>
+               
+
+            </div>
+            <a href="../../index.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- About Section -->
+        <section id="conceptos" class="about section py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4 display-4" style="font-family: 'Poppins', sans-serif; color: #ff6347;">
+                    Pasos para la Instalación de MySQL Workbench</h2>
+                <p class="fst-italic text-center mb-5" style="font-size: 1.2rem; color: #4caf50;">
+                    Aquí te mostramos los pasos para instalar MySQL Workbench en tu computadora.
+                </p>
+
+                <div class="row g-4">
+                    <!-- Columna 1 -->
+                    <div class="col-lg-6 wow animate__animated animate__fadeInLeft" data-wow-duration="1s">
+                        <div class="card shadow-sm border-0 rounded-4 h-100">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-4">
+                                    <img src="assets/img/instalacion_workbench_2.webp" alt="MySQL Workbench"
+                                        class="img-fluid rounded-start">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">Instalar MySQL Workbench</h5>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-3"><i class="bi bi-chevron-right text-primary"></i>
+                                                <strong>Descargar MySQL Workbench:</strong>
+                                                <span>Visita el sitio web oficial de MySQL y descarga el instalador
+                                                    adecuado para tu sistema operativo.</span>
+                                            </li>
+                                            <li class="mb-3"><i class="bi bi-chevron-right text-primary"></i>
+                                                <strong>Ejecutar el Instalador:</strong>
+                                                <span>Una vez descargado el archivo, haz doble clic para iniciar el
+                                                    proceso de instalación.</span>
+                                            </li>
+                                            <li class="mb-3"><i class="bi bi-chevron-right text-primary"></i>
+                                                <strong>Seleccionar Componentes:</strong>
+                                                <span>Durante la instalación, selecciona los componentes que deseas
+                                                    instalar, como el servidor MySQL, Workbench y otros servicios
+                                                    relacionados.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna 2 -->
+                    <div class="col-lg-6 wow animate__animated animate__fadeInRight" data-wow-duration="1s">
+                        <div class="card shadow-sm border-0 rounded-4 h-100">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-4">
+                                    <img src="assets/img/instalacion_workbench_1.PNG" alt="Configuración"
+                                        class="img-fluid rounded-start">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">Configurar y Verificar</h5>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-3"><i class="bi bi-chevron-right text-primary"></i>
+                                                <strong>Configurar Contraseña:</strong>
+                                                <span>En la instalación, establece una contraseña segura para el usuario
+                                                    root de MySQL. Esta será necesaria para acceder a la base de
+                                                    datos.</span>
+                                            </li>
+                                            <li class="mb-3"><i class="bi bi-chevron-right text-primary"></i>
+                                                <strong>Finalizar la Instalación:</strong>
+                                                <span>Una vez configurado todo, haz clic en "Instalar" para completar la
+                                                    instalación de MySQL Workbench.</span>
+                                            </li>
+                                            <li class="mb-3"><i class="bi bi-chevron-right text-primary"></i>
+                                                <strong>Verificar la Instalación:</strong>
+                                                <span>Al finalizar, abre MySQL Workbench y verifica que se haya
+                                                    instalado correctamente. Conéctate a la base de datos utilizando la
+                                                    contraseña que configuraste.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container my-5">
+                    <h1 class="text-center mb-4">Instalación de MySQL Workbench</h1>
+                    <div class="timeline">
+                        <div class="row">
+                            <!-- Step 1 -->
+                            <div class="col-12 mb-4">
+                                <div class="card">
+                                    <div class="card-body d-flex">
+                                        <div class="me-3">
+                                            <span class="badge bg-primary rounded-pill">Paso 1</span>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title">Descargar el instalador</h5>
+                                            <p class="card-text">Visita el sitio oficial de MySQL y descarga el
+                                                instalador desde <a href="https://dev.mysql.com/downloads/workbench/"
+                                                    target="_blank">este enlace</a>.</p>
+                                            <!-- Link to add an image -->
+                                            <p><a href="assets/img/instalacion1.png" target="_blank">Ver imagen</a></p>
+                                            <img src="assets/img/instalacion1.png" class="img-fluid"
+                                                alt="Imagen Paso 1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Step 2 -->
+                            <div class="col-12 mb-4">
+                                <div class="card">
+                                    <div class="card-body d-flex">
+                                        <div class="me-3">
+                                            <span class="badge bg-primary rounded-pill">Paso 2</span>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title">Ejecutar el instalador</h5>
+                                            <p class="card-text">Abre el archivo descargado y selecciona la opción
+                                                "Install MySQL Products".</p>
+                                            <!-- Link to add an image -->
+                                            <p><a href="assets/img/step2.png" target="_blank">Ver imagen</a></p>
+                                            <img src="assets/img/step2.png" class="img-fluid" alt="Imagen Paso 2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Step 3 -->
+                            <div class="col-12 mb-4">
+                                <div class="card">
+                                    <div class="card-body d-flex">
+                                        <div class="me-3">
+                                            <span class="badge bg-primary rounded-pill">Paso 3</span>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title">Seleccionar productos</h5>
+                                            <p class="card-text">Elige "MySQL Workbench" en la lista de productos y haz
+                                                clic en "Next".</p>
+                                            <!-- Link to add an image -->
+                                            <p><a href="assets/img/select_product.png" target="_blank">Ver imagen</a>
+                                            </p>
+                                            <img src="assets/img/select_product.png" class="img-fluid"
+                                                alt="Imagen Paso 3">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Step 4 -->
+                            <div class="col-12 mb-4">
+                                <div class="card">
+                                    <div class="card-body d-flex">
+                                        <div class="me-3">
+                                            <span class="badge bg-primary rounded-pill">Paso 4</span>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title">Instalar y configurar</h5>
+                                            <p class="card-text">Haz clic en "Execute" para iniciar la instalación y
+                                                sigue las instrucciones para configurar el software.</p>
+                                            <!-- Link to add an image -->
+                                            <p><a href="assets/img/instalar.png" target="_blank">Ver imagen</a></p>
+                                            <img src="assets/img/instalar.png" class="img-fluid" alt="Imagen Paso 4">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Step 5 -->
+                            <div class="col-12 mb-4">
+                                <div class="card">
+                                    <div class="card-body d-flex">
+                                        <div class="me-3">
+                                            <span class="badge bg-primary rounded-pill">Paso 5</span>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title">Finalizar instalación</h5>
+                                            <p class="card-text">Una vez completado, abre MySQL Workbench desde el menú
+                                                de inicio y verifica que funciona correctamente.</p>
+                                            <!-- Link to add an image -->
+                                            <p><a href="assets/img/step5.png" target="_blank">Ver imagen</a></p>
+                                            <img src="assets/img/step5.png"" class=" img-fluid" alt="Imagen Paso 5">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+</body>
+
+</html>
+
+
+<div class="container my-5">
+    <h1 class="text-center mb-4">Comandos Básicos de MySQL</h1>
+    <div class="row">
+
+        <!-- Comando: Crear Base de Datos -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Crear Base de Datos</h5>
+                    <pre><code>CREATE DATABASE nombre_de_tu_base_de_datos;</code></pre>
+                    <p class="card-text">Crea una nueva base de datos en el servidor MySQL.</p>
+                    <div class="d-flex justify-content-between">
+                        <span class="badge bg-success">Comando SQL</span>
+                        <button class="btn btn-outline-info" data-bs-toggle="collapse" href="#feedback1" role="button"
+                            aria-expanded="false" aria-controls="feedback1">Ver
+                            Retroalimentación</button>
+                    </div>
+                    <div class="collapse mt-2" id="feedback1">
+                        <div class="card card-body">
+                            Este comando creará una base de datos vacía que podrás usar para almacenar
+                            tablas y otros objetos. Asegúrate de que el nombre de la base de datos no
+                            contenga espacios ni caracteres especiales.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comando: Eliminar Base de Datos -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Eliminar Base de Datos</h5>
+                    <pre><code>DROP DATABASE nombre_de_tu_base_de_datos;</code></pre>
+                    <p class="card-text">Elimina una base de datos existente y todos sus contenidos.</p>
+                    <div class="d-flex justify-content-between">
+                        <span class="badge bg-danger">Comando SQL</span>
+                        <button class="btn btn-outline-info" data-bs-toggle="collapse" href="#feedback2" role="button"
+                            aria-expanded="false" aria-controls="feedback2">Ver
+                            Retroalimentación</button>
+                    </div>
+                    <div class="collapse mt-2" id="feedback2">
+                        <div class="card card-body">
+                            Usar este comando eliminará permanentemente la base de datos y no podrá
+                            deshacerse. Asegúrate de tener copias de seguridad antes de ejecutar este
+                            comando.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comando: Crear Tabla -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Crear Tabla</h5>
+                    <pre><code>CREATE TABLE nombre_de_tu_tabla ( id INT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(100), edad INT );</code></pre>
+                    <p class="card-text">Este comando crea una tabla con tres columnas: id, nombre y
+                        edad.</p>
+                    <div class="d-flex justify-content-between">
+                        <span class="badge bg-success">Comando SQL</span>
+                        <button class="btn btn-outline-info" data-bs-toggle="collapse" href="#feedback3" role="button"
+                            aria-expanded="false" aria-controls="feedback3">Ver
+                            Retroalimentación</button>
+                    </div>
+                    <div class="collapse mt-2" id="feedback3">
+                        <div class="card card-body">
+                            Al usar este comando, la tabla será creada con una columna de identificación
+                            que se incrementa automáticamente y dos columnas de texto: una para el
+                            nombre y otra para la edad.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comando: Eliminar Tabla -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Eliminar Tabla</h5>
+                    <pre><code>DROP TABLE nombre_de_tu_tabla;</code></pre>
+                    <p class="card-text">Elimina una tabla específica de la base de datos.</p>
+                    <div class="d-flex justify-content-between">
+                        <span class="badge bg-danger">Comando SQL</span>
+                        <button class="btn btn-outline-info" data-bs-toggle="collapse" href="#feedback4" role="button"
+                            aria-expanded="false" aria-controls="feedback4">Ver
+                            Retroalimentación</button>
+                    </div>
+                    <div class="collapse mt-2" id="feedback4">
+                        <div class="card card-body">
+                            Este comando eliminará la tabla y todo su contenido de la base de datos. No
+                            se puede deshacer, así que usa este comando con precaución.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comando: Insertar Datos -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Insertar Datos</h5>
+                    <pre><code>INSERT INTO nombre_de_tu_tabla (nombre, edad) VALUES ('Juan Pérez', 30);</code></pre>
+                    <p class="card-text">Este comando inserta un nuevo registro en la tabla.</p>
+                    <div class="d-flex justify-content-between">
+                        <span class="badge bg-success">Comando SQL</span>
+                        <button class="btn btn-outline-info" data-bs-toggle="collapse" href="#feedback5" role="button"
+                            aria-expanded="false" aria-controls="feedback5">Ver
+                            Retroalimentación</button>
+                    </div>
+                    <div class="collapse mt-2" id="feedback5">
+                        <div class="card card-body">
+                            Este comando agrega un nuevo registro a la tabla. Los valores deben
+                            coincidir con los tipos de datos de las columnas (por ejemplo, nombre como
+                            texto y edad como número).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comando: Consultar Datos -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Consultar Datos</h5>
+                    <pre><code>SELECT * FROM nombre_de_tu_tabla;</code></pre>
+                    <p class="card-text">Este comando muestra todos los registros de una tabla.</p>
+                    <div class="d-flex justify-content-between">
+                        <span class="badge bg-info">Comando SQL</span>
+                        <button class="btn btn-outline-info" data-bs-toggle="collapse" href="#feedback6" role="button"
+                            aria-expanded="false" aria-controls="feedback6">Ver
+                            Retroalimentación</button>
+                    </div>
+                    <div class="collapse mt-2" id="feedback6">
+                        <div class="card card-body">
+                            Este comando selecciona y muestra todos los registros de la tabla
+                            especificada. Si deseas filtrar los resultados, puedes usar cláusulas
+                            adicionales como WHERE.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="container">
+    <h2 class="mb-3">Simulación de MySQL Workbench</h2>
+
+    <div class="mb-3">
+        <h4>Consulta SQL en ejecución:</h4>
+        <pre id="consulta"
+            class="bg-light text-dark p-3 border rounded">Aquí se mostrará la consulta SQL ejecutada...</pre>
+    </div>
+
+    <!-- Botones de ejecución -->
+    <div class="row mb-2 align-items-center">
+        <div class="col-md-6">
+            <p><strong>1. Crear la base de datos:</strong></p>
+            <button class="btn btn-primary"
+                onclick="ejecutarSQL('createDB', 'CREATE DATABASE rutas_turisticas;')">Ejecutar CREATE DATABASE</button>
+        </div>
+        <div class="col-md-6">
+            <pre id="createDB" class="bg-white text-dark p-3 border rounded">Esperando ejecución...</pre>
+        </div>
+    </div>
+
+    <div class="row mb-2 align-items-center">
+        <div class="col-md-6">
+            <p><strong>2. Usar la base de datos:</strong></p>
+            <button class="btn btn-primary" onclick="ejecutarSQL('useDB', 'USE rutas_turisticas;')">Ejecutar USE
+                DATABASE</button>
+        </div>
+        <div class="col-md-6">
+            <pre id="useDB" class="bg-white text-dark p-3 border rounded">Esperando ejecución...</pre>
+        </div>
+    </div>
+
+    <div class="row mb-2 align-items-center">
+        <div class="col-md-6">
+            <p><strong>3. Crear la tabla 'lugar':</strong></p>
+            <button class="btn btn-primary"
+                onclick="ejecutarSQL('createTable', 'CREATE TABLE lugar (id_lugar INT PRIMARY KEY AUTO_INCREMENT, nombre VARCHAR(100), descripcion TEXT, ubicacion VARCHAR(150), tipo VARCHAR(50));')">Ejecutar
+                CREATE TABLE</button>
+        </div>
+        <div class="col-md-6">
+            <pre id="createTable" class="bg-white text-dark p-3 border rounded">Esperando ejecución...</pre>
+        </div>
+    </div>
+
+    <div class="row mb-2 align-items-center">
+        <div class="col-md-6">
+            <p><strong>4. Insertar datos:</strong></p>
+            <button class="btn btn-primary"
+                onclick="ejecutarSQL('insertData', 'INSERT INTO lugar (nombre, descripcion, ubicacion, tipo) VALUES (\'Cascada Azul\', \'Hermosa cascada rodeada de naturaleza\', \'Coordenadas XYZ\', \'Naturaleza\');')">Ejecutar
+                INSERT INTO</button>
+        </div>
+        <div class="col-md-6">
+            <pre id="insertData" class="bg-white text-dark p-3 border rounded">Esperando ejecución...</pre>
+        </div>
+    </div>
+
+    <div class="row mb-2 align-items-center">
+        <div class="col-md-6">
+            <p><strong>5. Consultar datos:</strong></p>
+            <button class="btn btn-primary" onclick="ejecutarSQL('selectData', 'SELECT * FROM lugar;')">Ejecutar
+                SELECT</button>
+        </div>
+        <div class="col-md-6">
+            <pre id="selectData" class="bg-white text-dark p-3 border rounded">Esperando ejecución...</pre>
+        </div>
+    </div>
+
+    <div class="row mb-2 align-items-center">
+        <div class="col-md-6">
+            <p><strong>6. Actualizar datos:</strong></p>
+            <button class="btn btn-warning"
+                onclick="ejecutarSQL('updateData', 'UPDATE lugar SET nombre=\'Cascada Verde\' WHERE id_lugar=1;')">Ejecutar
+                UPDATE</button>
+        </div>
+        <div class="col-md-6">
+            <pre id="updateData" class="bg-white text-dark p-3 border rounded">Esperando ejecución...</pre>
+        </div>
+    </div>
+
+    <div class="row mb-2 align-items-center">
+        <div class="col-md-6">
+            <p><strong>7. Eliminar datos:</strong></p>
+            <button class="btn btn-danger"
+                onclick="ejecutarSQL('deleteData', 'DELETE FROM lugar WHERE id_lugar=1;')">Ejecutar DELETE</button>
+        </div>
+        <div class="col-md-6">
+            <pre id="deleteData" class="bg-white text-dark p-3 border rounded">Esperando ejecución...</pre>
+        </div>
+    </div>
+
+    <div class="row mb-2 align-items-center">
+        <div class="col-md-6">
+            <p><strong>8. Eliminar la base de datos:</strong></p>
+            <button class="btn btn-danger" onclick="ejecutarSQL('dropDB', 'DROP DATABASE rutas_turisticas;')">Ejecutar
+                DROP DATABASE</button>
+        </div>
+        <div class="col-md-6">
+            <pre id="dropDB" class="bg-white text-dark p-3 border rounded">Esperando ejecución...</pre>
+        </div>
+    </div>
+
+</section>
+
+<script>
+    function ejecutarSQL(comando, sqlQuery) {
+        console.log("Ejecutando:", sqlQuery); // Para verificar en la consola si el botón responde
+        document.getElementById("consulta").innerText = sqlQuery;
+
+        let resultado = document.getElementById(comando);
+        if (!resultado) {
+            console.error("Elemento no encontrado:", comando);
+            return;
+        }
+
+        let mensajes = {
+            'createDB': "Base de datos 'rutas_turisticas' creada con éxito.",
+            'useDB': "Usando la base de datos 'rutas_turisticas'.",
+            'createTable': "Tabla 'lugar' creada con éxito.",
+            'insertData': "Dato insertado en la tabla 'lugar'.",
+            'selectData': "Mostrando datos de la tabla 'lugar':\n\nID | Nombre        | Descripción                            | Ubicación        | Tipo\n----------------------------------------------------------------------------\n1  | Cascada Azul | Hermosa cascada rodeada de naturaleza | Coordenadas XYZ | Naturaleza",
+            'updateData': "Dato actualizado en la tabla 'lugar'.",
+            'deleteData': "Dato eliminado de la tabla 'lugar'.",
+            'dropDB': "Base de datos 'rutas_turisticas' eliminada."
+        };
+
+        resultado.innerText = mensajes[comando] || "Acción no reconocida.";
+    }
+</script>
+
+
+
+
+
+
+
+
+<!-- Imagen o Video -->
+<div class="row text-center mt-5">
+    <div class="col-12">
+        <img src="assets/gifts/workbench_instalacion.gif" alt="Instalación de MySQL Workbench"
+            class="img-fluid rounded shadow-sm" style="max-width: 80%;">
+    </div>
+</div>
+
+<!-- Botón Interactivo -->
+<div class="row justify-content-center mt-4">
+    <div class="col-auto">
+        <button class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#videoModal">
+            ¡Mira el video para más detalles!
+        </button>
+    </div>
+</div>
+
+<!-- Modal para Video -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="videoModalLabel">Instalación de MySQL Workbench</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Video en un elemento <video> -->
+                <video id="videoElement" width="100%" height="315" controls>
+                    <source src="assets/videos/instalar_workbench.mp4" type="video/mp4">
+                    Tu navegador no soporta el formato de video.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script para controlar el video -->
+<script>
+    var videoModal = document.getElementById('videoModal');
+    var videoElement = document.getElementById('videoElement');
+
+    // Cuando el modal se abra, reproduce el video
+    videoModal.addEventListener('shown.bs.modal', function () {
+        videoElement.play();  // Reproduce el video
+    });
+
+    // Cuando el modal se cierre, pausa el video
+    videoModal.addEventListener('hidden.bs.modal', function () {
+        videoElement.pause();  // Pausa el video
+        videoElement.currentTime = 0;  // Reinicia el video al inicio
+    });
+</script>
+
+
+<section class="container">
+    <h2 class="mb-3">Ejercicio Práctico de SQL</h2>
+    <p>Escribe consultas SQL para administrar la base de datos de lugares turísticos. Haz clic en los pasos para ver las
+        instrucciones correspondientes.</p>
+
+    <!-- Sección de explicaciones con un fondo más oscuro y borde resaltado -->
+    <section id="explanationSection" class="mt-3">
+        <h3>Explicación de los Pasos:</h3>
+        <div id="stepExplanation" class="bg-light p-3 rounded border"
+            style="background-color: #f8f9fa; border-left: 5px solid #007bff;">
+            <p>Selecciona un paso para ver su explicación detallada.</p>
+        </div>
+    </section>
+
+    <!-- Paso a paso dinámico con instrucciones -->
+    <div class="row">
+        <!-- Columna para los botones -->
+        <div class="col-md-3">
+            <div class="btn-group-vertical w-100">
+                <button class="btn btn-outline-primary step-btn" id="step1" onclick="showStep(1)">Paso 1: Crear la base
+                    de datos</button>
+                <button class="btn btn-outline-primary step-btn" id="step2" onclick="showStep(2)">Paso 2: Usar la base
+                    de datos</button>
+                <button class="btn btn-outline-primary step-btn" id="step3" onclick="showStep(3)">Paso 3: Crear la tabla
+                    'lugar'</button>
+                <button class="btn btn-outline-primary step-btn" id="step4" onclick="showStep(4)">Paso 4: Insertar datos
+                    en 'lugar'</button>
+                <button class="btn btn-outline-primary step-btn" id="step5" onclick="showStep(5)">Paso 5: Consultar
+                    datos de 'lugar'</button>
+                <button class="btn btn-outline-primary step-btn" id="step6" onclick="showStep(6)">Paso 6: Actualizar un
+                    dato en 'lugar'</button>
+                <button class="btn btn-outline-primary step-btn" id="step7" onclick="showStep(7)">Paso 7: Eliminar un
+                    dato de 'lugar'</button>
+                <button class="btn btn-outline-primary step-btn" id="step8" onclick="showStep(8)">Paso 8: Eliminar la
+                    base de datos</button>
+            </div>
+        </div>
+
+        <!-- Columna para las instrucciones -->
+        <div class="col-md-9">
+            <div id="stepInstructions" class="mb-3">
+                <p>Haz clic en los pasos para ver las instrucciones y ejemplos.</p>
+            </div>
+
+            <div class="mb-3">
+                <label for="sqlInput" class="form-label">Escribe tu consulta SQL:</label>
+                <textarea id="sqlInput" class="form-control" rows="3"
+                    placeholder="Ejemplo: CREATE DATABASE rutas_turisticas;"></textarea>
+            </div>
+
+            <!-- Botón para ejecutar la consulta -->
+            <button class="btn btn-primary" onclick="ejecutarSQLPractico()">Ejecutar</button>
+
+            <div class="mt-4">
+                <h4>Resultado:</h4>
+                <pre id="salida" class="bg-white text-dark p-3 border rounded">Esperando ejecución...</pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function showStep(step) {
+        const instructions = document.getElementById('stepInstructions');
+        const explanation = document.getElementById('stepExplanation');
+        const buttons = document.querySelectorAll('.step-btn');
+
+        // Resaltar el paso actual
+        buttons.forEach(button => button.classList.remove('btn-primary'));
+        buttons.forEach(button => button.classList.add('btn-outline-primary'));
+
+        // Cambiar color de botón del paso actual
+        const currentButton = document.getElementById(`step${step}`);
+        currentButton.classList.remove('btn-outline-primary');
+        currentButton.classList.add('btn-primary');
+
+        // Mostrar instrucciones en la columna de instrucciones
+        switch (step) {
+            case 1:
+                instructions.innerHTML = `
+                    <h5>Paso 1: Crear la base de datos</h5>
+                    <p>Escribe la siguiente consulta SQL para crear la base de datos:</p>
+                    <code>CREATE DATABASE rutas_turisticas;</code>
+                `;
+                explanation.innerHTML = `
+                    <p>Este paso consiste en crear una nueva base de datos llamada 'rutas_turisticas'. Una base de datos es un contenedor para almacenar información de manera estructurada.</p>
+                `;
+                break;
+            case 2:
+                instructions.innerHTML = `
+                    <h5>Paso 2: Usar la base de datos</h5>
+                    <p>Escribe la siguiente consulta SQL para usar la base de datos:</p>
+                    <code>USE rutas_turisticas;</code>
+                `;
+                explanation.innerHTML = `
+                    <p>En este paso, seleccionamos la base de datos que acabamos de crear para realizar las operaciones sobre ella.</p>
+                `;
+                break;
+            case 3:
+                instructions.innerHTML = `
+                    <h5>Paso 3: Crear la tabla 'lugar'</h5>
+                    <p>Escribe la siguiente consulta SQL para crear la tabla 'lugar':</p>
+                    <code>CREATE TABLE lugar (id_lugar INT PRIMARY KEY AUTO_INCREMENT, nombre VARCHAR(100), descripcion TEXT, ubicacion VARCHAR(150), tipo VARCHAR(50));</code>
+                `;
+                explanation.innerHTML = `
+                    <p>Este paso crea una tabla llamada 'lugar', que almacenará información sobre los lugares turísticos. La tabla tiene varias columnas para guardar el nombre, descripción, ubicación y tipo de lugar.</p>
+                `;
+                break;
+            case 4:
+                instructions.innerHTML = `
+                    <h5>Paso 4: Insertar datos en la tabla 'lugar'</h5>
+                    <p>Escribe la siguiente consulta SQL para insertar datos:</p>
+                    <code>INSERT INTO lugar (nombre, descripcion, ubicacion, tipo) VALUES ('Cascada Azul', 'Hermosa cascada rodeada de naturaleza', 'Coordenadas XYZ', 'Naturaleza');</code>
+                `;
+                explanation.innerHTML = `
+                    <p>Este paso inserta un lugar turístico en la tabla 'lugar'. Los datos incluyen el nombre del lugar, su descripción, su ubicación y su tipo (por ejemplo, naturaleza o playa).</p>
+                `;
+                break;
+            case 5:
+                instructions.innerHTML = `
+                    <h5>Paso 5: Consultar datos de la tabla 'lugar'</h5>
+                    <p>Escribe la siguiente consulta SQL para ver los datos:</p>
+                    <code>SELECT * FROM lugar;</code>
+                `;
+                explanation.innerHTML = `
+                    <p>Este paso muestra todos los registros de la tabla 'lugar'. Se utiliza la consulta SELECT para extraer los datos almacenados.</p>
+                `;
+                break;
+            case 6:
+                instructions.innerHTML = `
+                    <h5>Paso 6: Actualizar un dato en la tabla 'lugar'</h5>
+                    <p>Escribe la siguiente consulta SQL para actualizar un dato:</p>
+                    <code>UPDATE lugar SET nombre='Cascada Verde' WHERE id_lugar=1;</code>
+                `;
+                explanation.innerHTML = `
+                    <p>Este paso actualiza el nombre del lugar con el ID 1, cambiando su nombre de 'Cascada Azul' a 'Cascada Verde'.</p>
+                `;
+                break;
+            case 7:
+                instructions.innerHTML = `
+                    <h5>Paso 7: Eliminar un dato de la tabla 'lugar'</h5>
+                    <p>Escribe la siguiente consulta SQL para eliminar un dato:</p>
+                    <code>DELETE FROM lugar WHERE id_lugar=1;</code>
+                `;
+                explanation.innerHTML = `
+                    <p>Este paso elimina un registro de la tabla 'lugar' utilizando el ID del lugar. En este caso, se elimina el lugar con ID 1.</p>
+                `;
+                break;
+            case 8:
+                instructions.innerHTML = `
+                    <h5>Paso 8: Eliminar la base de datos</h5>
+                    <p>Escribe la siguiente consulta SQL para eliminar la base de datos:</p>
+                    <code>DROP DATABASE rutas_turisticas;</code>
+                `;
+                explanation.innerHTML = `
+                    <p>Este paso elimina completamente la base de datos 'rutas_turisticas' y todos los datos almacenados en ella.</p>
+                `;
+                break;
+            default:
+                instructions.innerHTML = `<p>Selecciona un paso para ver las instrucciones.</p>`;
+                explanation.innerHTML = `<p>Selecciona un paso para ver la explicación detallada.</p>`;
+        }
+    }
+
+    function ejecutarSQLPractico() {
+        let consulta = document.getElementById("sqlInput").value.trim().toUpperCase();
+        let salida = document.getElementById("salida");
+        let respuesta = "";
+
+        if (consulta.startsWith("CREATE DATABASE RUTAS_TURISTICAS")) {
+            dbCreated = true;
+            respuesta = "✅ Base de datos 'rutas_turisticas' creada con éxito.";
+        }
+        else if (consulta.startsWith("USE RUTAS_TURISTICAS")) {
+            if (dbCreated) {
+                respuesta = "✅ Usando la base de datos 'rutas_turisticas'.";
+            } else {
+                respuesta = "⚠️ Error: La base de datos no existe. Primero ejecuta CREATE DATABASE.";
+            }
+        }
+        else if (consulta.startsWith("CREATE TABLE LUGAR")) {
+            if (dbCreated) {
+                respuesta = "✅ Tabla 'lugar' creada con éxito.";
+            } else {
+                respuesta = "⚠️ Error: Usa la base de datos antes de crear la tabla.";
+            }
+        } else if (consulta.startsWith("INSERT INTO LUGAR")) {
+            respuesta = "✅ Datos insertados correctamente en la tabla 'lugar'.";
+        } else if (consulta.startsWith("SELECT * FROM LUGAR")) {
+            respuesta = "✅ Consulta realizada correctamente. No hay datos aún.";
+        } else if (consulta.startsWith("UPDATE LUGAR")) {
+            respuesta = "✅ Datos actualizados correctamente.";
+        } else if (consulta.startsWith("DELETE FROM LUGAR")) {
+            respuesta = "✅ Dato eliminado correctamente.";
+        } else if (consulta.startsWith("DROP DATABASE RUTAS_TURISTICAS")) {
+            dbCreated = false;
+            respuesta = "✅ Base de datos 'rutas_turisticas' eliminada.";
+        } else {
+            respuesta = "⚠️ Error: Consulta SQL no válida.";
+        }
+
+        salida.textContent = respuesta;
+    }
+</script>
+
+
+
+
+
+<!-- Sección de Juego Interactivo -->
+<div class="row justify-content-center mt-5">
+    <div class="col-12">
+        <div class="card shadow-lg border-primary">
+            <div class="card-header bg-gradient text-white text-center"
+                style="background: linear-gradient(90deg, #007bff, #6610f2);">
+                <h3>¡Pon a prueba tus conocimientos sobre MySQL!</h3>
+                <p class="mb-0">Completa las preguntas y demuestra tu experiencia</p>
+            </div>
+            <div class="card-body">
+                <h4 id="question" class="text-center">¿Qué paso corresponde al siguiente en el proceso
+                    de instalación?</h4>
+
+                <div class="row justify-content-center mt-4">
+                    <div class="col-6">
+                        <button class="btn btn-outline-primary w-100 mb-3" onclick="checkAnswer('A')">A.
+                            Ejecutar el instalador</button>
+                        <button class="btn btn-outline-primary w-100 mb-3" onclick="checkAnswer('B')">B.
+                            Descargar MySQL Workbench</button>
+                        <button class="btn btn-outline-primary w-100 mb-3" onclick="checkAnswer('C')">C.
+                            Reiniciar el equipo</button>
+                    </div>
+                </div>
+
+                <p id="gameResult" class="text-center mt-4" style="font-size: 1.2rem; font-weight: bold;"></p>
+
+                <div id="nextQuestion" class="text-center mt-4" style="display: none;">
+                    <button class="btn btn-success" onclick="loadNextQuestion()">Siguiente
+                        pregunta</button>
+                </div>
+
+                <div id="finalMessage" class="text-center mt-4" style="display: none;">
+                    <h5>¡Muy bien! Has completado el quiz.</h5>
+                    <p class="text-success">¡Eres un experto en MySQL!</p>
+                    <button class="btn btn-primary" onclick="restartQuiz()">Volver a intentar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const questions = [
+        {
+            text: "¿Qué paso corresponde al siguiente en el proceso de instalación?",
+            options: [
+                "Ejecutar el instalador",
+                "Descargar MySQL Workbench",
+                "Reiniciar el equipo"
+            ],
+            correct: "A"
+        },
+        {
+            text: "¿Qué herramienta permite gestionar gráficamente las bases de datos?",
+            options: [
+                "MySQL Workbench",
+                "Notepad++",
+                "Visual Studio Code"
+            ],
+            correct: "A"
+        },
+        {
+            text: "¿Qué comando se utiliza para crear una base de datos en MySQL?",
+            options: [
+                "CREATE DATABASE",
+                "ADD DATABASE",
+                "INIT DATABASE"
+            ],
+            correct: "A"
+        }
+    ];
+
+    let currentQuestionIndex = 0;
+
+    function loadNextQuestion() {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            const question = questions[currentQuestionIndex];
+            document.getElementById("question").innerText = question.text;
+            const buttons = document.querySelectorAll("button[onclick^=\"checkAnswer\"]");
+            buttons.forEach((btn, index) => {
+                btn.innerText = `${String.fromCharCode(65 + index)}. ${question.options[index]}`;
+                btn.className = "btn btn-outline-primary w-100 mb-3";
+                btn.disabled = false;
+            });
+            document.getElementById("gameResult").innerText = "";
+            document.getElementById("nextQuestion").style.display = "none";
+        } else {
+            document.getElementById("question").style.display = "none";
+            document.getElementById("nextQuestion").style.display = "none";
+            document.getElementById("finalMessage").style.display = "block";
+        }
+    }
+
+    function checkAnswer(answer) {
+        const question = questions[currentQuestionIndex];
+        let resultText = "";
+        const buttons = document.querySelectorAll("button[onclick^=\"checkAnswer\"]");
+        if (answer === question.correct) {
+            resultText = "¡Correcto!";
+            document.getElementById("gameResult").className = "text-center mt-4 text-success";
+        } else {
+            resultText = "Incorrecto. Intenta otra vez.";
+            document.getElementById("gameResult").className = "text-center mt-4 text-danger";
+        }
+        document.getElementById("gameResult").innerText = resultText;
+        buttons.forEach(btn => btn.disabled = true);
+        if (answer === question.correct) {
+            document.getElementById("nextQuestion").style.display = "block";
+        }
+    }
+
+    function restartQuiz() {
+        currentQuestionIndex = 0;
+        document.getElementById("question").style.display = "block";
+        document.getElementById("finalMessage").style.display = "none";
+        loadNextQuestion();
+    }
+
+    // Load the first question on page load
+    loadNextQuestion();
+</script>
+
+</div>
+</section>
+<!-- /About Section -->
+
+
+
+
+
+</main>
+
+<footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+        <div class="copyright text-center ">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights
+                    Reserved</span></p>
+        </div>
+        <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you've purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
+                href="https://themewagon.com">ThemeWagon</a>
+        </div>
+    </div>
+
+</footer>
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/typed.js/typed.umd.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,615 @@
+/********** Template CSS **********/
+:root {
+    --primary: #06BBCC;
+    --light: #F0FBFC;
+    --dark: #181d38;
+}
+
+.fw-medium {
+    font-weight: 600 !important;
+}
+
+.fw-semi-bold {
+    font-weight: 700 !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 0px;
+}
+
+
+/*** Navbar ***/
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-light .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+.navbar-light .navbar-brand,
+.navbar-light a.btn {
+    height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.navbar-light.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+
+
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        margin-top: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .dropdown-menu.fade-down {
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        transform: rotateX(0deg);
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+    .img-thumbnail {
+        max-width: 100px; /* Hace que la imagen ocupe el 100% del ancho disponible */
+        height: auto;    /* Mantiene la proporción de la imagen */
+        margin-top: 2px; /* Espacio superior entre la imagen y el texto */
+    }
+    
+    
+      .kahoot-box {
+        background-color: #f9f9f9;
+        border: 2px solid #ddd;
+        border-radius: 40px;
+        padding: 40px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;  /* Agregado para usar Flexbox */
+        justify-content: space-between;  /* Espacio entre los elementos */
+        align-items: flex-start;  /* Alinea los elementos al principio */
+        max-width: 2000px;
+        margin-top: 18px;
+        transition: box-shadow 0.3s ease;
+      }
+    
+      .kahoot-box:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+    
+      .kahoot-content {
+        flex: 1;
+        margin-right: 20px; /* Espacio entre el formulario y la imagen */
+      }
+    
+      .kahoot-image img {
+        max-width: 300px;  /* Ajusta el tamaño de la imagen */
+        border-radius: 8px;
+      }
+    
+      .kahoot-box .question {
+        margin-bottom: 20px;
+      }
+    
+      .kahoot-box .question p {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+    
+      .kahoot-box .answer {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+    
+      .kahoot-box .answer input {
+        margin-right: 10px;
+      }
+    
+      .feedback {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    
+      .feedback p {
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+      }
+    
+      .feedback p.correct {
+        color: #4CAF50;
+        background-color: #d4edda;
+      }
+    
+      .feedback p.incorrect {
+        color: #DC3545;
+        background-color: #f8d7da;
+      }
+      .col-lg-8.content {
+        margin: 0 auto; /* Centrar horizontalmente el contenedor si es necesario */
+        text-align: justify; /* Justificar el texto */
+      }      
+      
+      .col-lg-8.content .row {
+        justify-content: center; /* Centrar las columnas internas si es necesario */
+      }
+
+      /* PARA EL PROBLEMA DEL ALGORTIMO  */
+      .steps .step-image {
+        width: 80px; /* Ajusta el ancho deseado */
+        height: 80px; /* Asegúrate de que el alto sea igual al ancho para mantener la forma circular */
+        border-radius: 50%; /* Convierte las imágenes en círculos */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+        display: block; /* Asegura que se comporte como un bloque para el centrado */
+        object-fit: cover; /* Asegura que la imagen se recorte correctamente dentro del círculo */
+      }   
+      /* Estilo de los juegos de arrastrar */
+      .step-image {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        cursor: move;
+      }
+    
+      .dropzone {
+        width: 120px;
+        height: 120px;
+        border: 2px dashed #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f9f9f9;
+        margin: 10px;
+        transition: border-color 0.3s ease;
+      }
+    
+      .dropzone.correct {
+        border-color: rgb(19, 210, 89);
+        border-width: 5px; /* Increase the border width */
+        border-style: solid;
+      }
+      
+      .dropzone.incorrect {
+        border-color: red;
+        border-width: 5px; /* Increase the border width */
+        border-style: solid;
+      }
+    
+      #checkOrder {
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    
+      #checkOrder:hover {
+        background-color: #45a049;
+      }
+
+      
+      /* Puntuacion Final de todo */
+    .score-container {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        background-color: #f1f1f1;
+        padding: 10px;
+        border-radius: 8px;
+        border: 2px solid #ddd;
+      }
+      .rounded-small-image {
+        border-radius: 20px;   /* Bordes redondeados */
+        max-width: 100%;       /* Se ajusta al 100% del contenedor */
+        width: 100%;           /* Asegura que la imagen sea responsiva */
+        height: auto;          /* Mantén la proporción */
+        display: block;        /* Asegura que se comporte como un bloque */
+        margin: 10px auto;     /* Centrado con margen superior e inferior */
+        justify-content: center;
+        margin-left: 10px;
+    }
+    
+    .result-box {
+        margin-top: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
+    /* Estilo de los juegos de arrastrar */
+    /* ESTILOS DE VIDEO DE FUNDAMENTOS */
+    
+    .video-container {
+        display: flex;
+        flex-direction: column; /* Alinea los elementos en columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        background-color: #f0f0f0; /* Ejemplo de color de fondo */
+        padding: 20px; /* Ejemplo de relleno interno */
+        border-radius: 10px; /* Ejemplo de bordes redondeados */
+    }
+    
+    .video-container video {
+        max-width: 100%; /* Asegura que el video sea responsivo */
+        border: 2px solid #ddd; /* Ejemplo de borde */
+        border-radius: 10px; /* Bordes redondeados */
+    }
+    
+    .video-message {
+        margin-bottom: 10px; /* Espacio entre el mensaje y el video */
+        font-size: 16px; /* Tamaño de fuente del mensaje */
+        color: #333; /* Color del texto del mensaje */
+    }
+    .custom-video {
+        max-width: 100%; /* Asegura que el video sea responsivo */
+        border: 2px solid #ddd; /* Ejemplo de borde */
+        border-radius: 10px; /* Bordes redondeados */
+        background-color: #000; /* Fondo negro */
+        padding: 10px; /* Espacio interno */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    }
+    
+    
+    /* contenedores de los ejemplos de los codigos */
+    .example-container {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 5px;
+        
+    }
+
+    
+    .code-box {
+        border: 2px solid #000;
+        padding: 30px;
+        background-color: #212a4a;
+        color: #ffffff;
+        display: inline-block;
+        text-align: left;
+        border-radius: 20px;
+    }
+    
+    .code-box pre {
+        margin: 0;
+    }
+    
+    .code-number {
+        color: red;
+    }
+   /* FIN decontenedores de los ejemplos de los codigos */ 
+
+
+ /* JUEGO DE SELECCIONAR */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.game-container {
+    display: flex;
+    justify-content: space-between;  /* Alineación horizontal entre las columnas */
+    align-items: stretch;         /* Alineación de las columnas en la parte superior */
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 900px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    height: auto; /* Permite que el contenedor se ajuste según el contenido */
+}
+
+/* Columnas para preguntas y respuestas */
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1; /* Asegura que ambas columnas tengan el mismo ancho */
+    padding: 10px;
+    background-color: #f9f9fc;
+    border: 1px solid #e0e0e5;
+    border-radius: 8px;
+    height: auto; /* Permite que las columnas crezcan según el contenido */
+    max-height: 500px; /* Limita la altura máxima de las columnas */
+    overflow-y: auto; /* Agrega desplazamiento si el contenido excede la altura */
+}
+
+/* Asegura el espacio entre las columnas */
+.column:first-child {
+    margin-right: 20px; /* Añade espacio entre la primera columna y la segunda */
+}
+
+/* Items (respuestas y preguntas) */
+.item {
+    background-color: #eaf3ff;
+    border: 1px solid #a4c8ff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s;
+    word-wrap: break-word; /* Asegura que el texto largo se ajuste dentro del contenedor */
+}
+
+.item:hover {
+    background-color: #d7e9ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para preguntas y respuestas correctas o incorrectas */
+.item.correct {
+    background-color: #c8f7c5;
+    border: 1px solid #91d18b;
+    color: #2e7d32; /* Color verde oscuro para el texto */
+}
+
+.item.wrong {
+    background-color: #ffcccc;
+    border: 1px solid #f39c9c;
+    color: #d32f2f; /* Color rojo oscuro para el texto */
+}
+
+/* Estilo para la selección correcta de pregunta y respuesta */
+.item.selected {
+    background-color: #FFEB3B; /* Color amarillo para la selección */
+    color: #333; /* Texto oscuro */
+    font-weight: bold; /* Asegura que la selección sea destacada */
+}
+
+/* Cuadro de mensajes */
+.message {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.message.correct {
+    background-color: #c8f7c5;
+    border-color: #91d18b;
+    color: #2e7d32;
+}
+
+.message.wrong {
+    background-color: #ffcccc;
+    border-color: #f39c9c;
+    color: #d32f2f;
+}
+
+/* Imagen */
+.unir-image img {
+    max-width: 270px;  /* Ajusta el tamaño de la imagen */
+    border-radius: 8px;
+}
+
+/* JUEGO DE SELECCIONAR */ 
+
+.portfolio-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+}
+
+.portfolio-content img {
+    margin: 0 auto;
+}
+
+      
+}
+
+
+/* BOTON VERIFICAR Y */
+.custom-btn {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .retry-btn {
+    margin-top: 10px; /* Adjust this value to increase/decrease the space between buttons */
+  
+}
+
+@media (min-width: 768px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 200px;
+    }
+}
+/* Estilo para el botón "Volver a intentar" */
+.retry-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+}
+
+.retry-button:hover {
+    background-color: #0056b3;
+}
+
+@media (min-width: 992px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 300px;
+    }
+}
+
+
+/* Ajustes para pantallas medianas */
+@media (max-width: 768px) {
+    .steps .step-image {
+        width: 50px;           /* Reduce el tamaño en pantallas más pequeñas */
+        height: 50px;          /* Mantiene la forma circular */
+    }
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 992px) {
+    .steps .step-image {
+        width: 80px;           /* Tamaño más grande en pantallas grandes */
+        height: 80px;
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+    .steps .step-image {
+        width: 50px;           /* Reduce el tamaño en pantallas pequeñas */
+        height: 50px;          /* Mantiene la forma circular */
+    }
+}
+
+/* Ajustes para pantallas medianas */
+@media (min-width: 481px) and (max-width: 768px) {
+    .steps .step-image {
+        width: 50px;           /* Ajuste de tamaño para pantallas medianas */
+        height: 50px;          /* Mantiene la forma circular */
+    }
+}
+
+
+/* Ajuste para pantallas medianas y grandes */
+@media (min-width: 601px) {
+    .rounded-small-image {
+        max-width: 240px;   /* Limita el tamaño máximo en pantallas medianas y grandes */
+        border-radius: 20px; /* Mantiene los bordes redondeados */
+    }
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 600px) {
+    .rounded-small-image {
+        max-width: 100%;    /* En pantallas pequeñas, ocupa todo el ancho disponible */
+        border-radius: 15px; /* Puedes reducir el radio de los bordes si lo deseas */
+    }
+}

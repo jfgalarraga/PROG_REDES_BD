@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Seguridad en Redes LAN</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #42a5f5, #558b2f);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            background: #333;
+            border-radius: 20px;
+            padding: 40px;
+            width: 80%;
+            max-width: 1000px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            color: #ffeb3b;
+        }
+
+        .device-container {
+            display: inline-block;
+            text-align: center;
+            margin: 20px;
+            padding: 10px;
+            border: 2px dashed #fff;
+            border-radius: 10px;
+            min-height: 150px;
+            background-color: #444;
+            width: 150px;
+            transition: transform 0.3s;
+        }
+
+        .device-container:hover {
+            transform: scale(1.1);
+        }
+
+        .device-image {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .security-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .security-item {
+            background-color: #008CBA;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            margin: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .security-item:active {
+            transform: scale(0.9);
+        }
+
+        .check-btn, .solution-btn, .home-btn {
+            background-color: #ffeb3b;
+            color: #333;
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s, transform 0.2s;
+            border: none;
+        }
+
+        .check-btn:hover, .solution-btn:hover, .home-btn:hover {
+            background-color: #fbc02d;
+            transform: scale(1.05);
+        }
+
+        .feedback {
+            margin-top: 20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .success {
+            color: #4caf50;
+        }
+
+        .warning {
+            color: #f44336;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .home-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: #ffeb3b;
+        color: #333;
+        font-size: 1.2rem;
+        padding: 12px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: bold;
+        border: none;
+        transition: background 0.3s, transform 0.2s;
+    }
+
+    .home-btn:hover {
+        background-color: #fbc02d;
+        transform: scale(1.05);
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Juego de Seguridad en Redes LAN</h1>
+        <p>Arrastra las medidas de seguridad a los dispositivos adecuados.</p>
+
+        <div class="device-container" id="router" ondrop="drop(event, 'router')" ondragover="allowDrop(event)">
+            <img src="../img/routers.jpg" class="device-image">
+        </div>
+
+        <div class="device-container" id="switch" ondrop="drop(event, 'switch')" ondragover="allowDrop(event)">
+            <img src="../img/Switches.jpg" class="device-image">
+        </div>
+
+        <div class="device-container" id="server" ondrop="drop(event, 'server')" ondragover="allowDrop(event)">
+            <img src="../img/servidores.jpg" class="device-image">
+        </div>
+
+        <div class="device-container" id="pc" ondrop="drop(event, 'pc')" ondragover="allowDrop(event)">
+            <img src="../img/pcs.jpg" class="device-image">
+        </div>
+
+        <div class="security-container">
+            <div class="security-item" id="segmentation" draggable="true" ondragstart="drag(event)">
+                Segmentación de Red
+            </div>
+            <div class="security-item" id="firewall" draggable="true" ondragstart="drag(event)">
+                Firewall
+            </div>
+            <div class="security-item" id="encryption" draggable="true" ondragstart="drag(event)">
+                Cifrado
+            </div>
+            <div class="security-item" id="authentication" draggable="true" ondragstart="drag(event)">
+                Autenticación
+            </div>
+        </div>
+
+        <button class="check-btn" onclick="checkSolution()">Verificar</button>
+        <button class="solution-btn hidden" id="solutionBtn" onclick="showSolution()">Ver solución</button>
+        <button class="home-btn" onclick="goHome()">🏠 Home</button>
+
+        <div class="feedback" id="feedback"></div>
+    </div>
+
+    <script>
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drop(event, deviceId) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text");
+            var security = document.getElementById(data);
+            var device = document.getElementById(deviceId);
+
+            if (!device.contains(security)) {
+                device.appendChild(security);
+            }
+        }
+
+        function checkSolution() {
+            var correct = true;
+
+            if (!document.getElementById("router").contains(document.getElementById("firewall"))) correct = false;
+            if (!document.getElementById("switch").contains(document.getElementById("segmentation"))) correct = false;
+            if (!document.getElementById("server").contains(document.getElementById("encryption"))) correct = false;
+            if (!document.getElementById("pc").contains(document.getElementById("authentication"))) correct = false;
+
+            if (correct) {
+                document.getElementById("feedback").innerHTML = "<p class='success'>¡Todo está correcto!</p>";
+                document.getElementById("solutionBtn").classList.add("hidden");
+            } else {
+                document.getElementById("feedback").innerHTML = "<p class='warning'>Algunos dispositivos no tienen la medida de seguridad correcta.</p>";
+                document.getElementById("solutionBtn").classList.remove("hidden");
+            }
+        }
+
+        function showSolution() {
+            document.getElementById("router").appendChild(document.getElementById("firewall"));
+            document.getElementById("switch").appendChild(document.getElementById("segmentation"));
+            document.getElementById("server").appendChild(document.getElementById("encryption"));
+            document.getElementById("pc").appendChild(document.getElementById("authentication"));
+
+            document.getElementById("feedback").innerHTML = "<p class='success'>Esta es la solución correcta.</p>";
+            document.getElementById("solutionBtn").classList.add("hidden");
+        }
+
+        function goHome() {
+            window.location.href = "../seguridad.html#simulacion-seguridad"; // Cambia "index.html" por la URL de la página de inicio
+        }
+    </script>
+</body>
+</html>

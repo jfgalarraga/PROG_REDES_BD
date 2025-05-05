@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elige el Cable Correcto</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button class="back-button" onclick="goBack()">Regresar</button>
+  <div class="container">
+    <h1>🌐 Elige el Cable Correcto</h1>
+    <p>Selecciona el cable adecuado según la distancia y observa cómo se conectan los dispositivos.</p>
+
+    <!-- Área de juego -->
+    <div class="game-area">
+      <div class="device" id="device1">
+        <img src="img/compu.png" alt="Computador">
+        <p>Computador</p>
+      </div>
+      <div class="distance" id="distanceBox">
+        <span id="distanceValue">0</span> metros
+      </div>
+      <div class="device" id="device2">
+        <img src="img/tv.png" alt="Televisión">
+        <p>Televisión</p>
+      </div>
+    </div>
+
+    <!-- Selección de cables -->
+    <div class="cable-selection">
+      <button class="cable-btn" onclick="selectCable('utp')">Cable UTP</button>
+      <button class="cable-btn" onclick="selectCable('coaxial')">Cable Coaxial</button>
+      <button class="cable-btn" onclick="selectCable('fiber')">Fibra Óptica</button>
+    </div>
+
+    <!-- Mensaje de racha -->
+    <div id="streakMessage"></div>
+
+    <!-- Resultado -->
+    <div class="result" id="result">
+      <p id="resultText"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

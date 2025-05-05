@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(120deg, #f3f4f6, #ffffff);
+    color: #333;
+}
+
+h1, h3, h4 {
+    color: #2c3e50;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Buttons */
+button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+button.btn-primary {
+    background-color: #3498db;
+    color: #fff;
+}
+
+button.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+button.btn-success {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+button.btn-success:hover {
+    background-color: #27ae60;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f7f7f7;
+    color: #2c3e50;
+}
+
+td {
+    color: #555;
+}
+
+/* Dropdowns */
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+select:focus {
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
+    outline: none;
+}
+
+/* Timer */
+#timer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Result Container */
+#result-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #ecf0f1;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#result-message {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.result-actions button {
+    margin: 0.5rem;
+}
+
+/* Animations */
+button:hover {
+    transform: scale(1.05);
+}
+
+.options {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.option-container {
+    margin-bottom: 1rem;
+}
+
+.option-container label {
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #34495e;
+}
+
+/* Header */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+h4 {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
+/* Start Container */
+.start-container {
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.start-container p {
+    margin-bottom: 1rem;
+    color: #7f8c8d;
+}

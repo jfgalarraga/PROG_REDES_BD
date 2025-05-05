@@ -1,0 +1,185 @@
+ /* Estilos para el cuerpo de la página */
+ .pagina {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos para el título */
+.titulo-principal {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Contenedor principal para el juego */
+.contenedor-juego {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 30px;
+  display: none; /* Ocultar inicialmente */
+}
+
+/* Estilos para los bloques de código */
+.bloques-codigo {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Estilos individuales de cada bloque de código */
+.bloque-codigo {
+  padding: 15px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+/* Estilo cuando se pasa el cursor sobre un bloque de código */
+.bloque-codigo:hover {
+  background-color: #388e3c;
+}
+
+/* Estilos para el área del algoritmo */
+.algoritmo {
+  width: 50%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Espacios vacíos para arrastrar y soltar los bloques */
+.espacio-vacio {
+  height: 60px;
+  border: 2px dashed #4caf50;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #888;
+}
+
+
+/* Estilo para el mensaje de completado */
+.completado {
+  background-color: #388e3c;
+  color: white;
+  text-align: center;
+  padding: 1px;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: none;
+  font-size: 18px;
+}
+
+/* Estilos para el selector de preguntas */
+.selector-pregunta {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Estilo para el selector de preguntas */
+.seleccionador {
+  padding: 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  width: 350px; /* Aumentar el ancho del selector */
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo cuando el cursor pasa sobre el selector */
+.seleccionador:hover {
+  background-color: #388e3c;
+}
+
+/* Estilo para las opciones dentro del selector */
+.opcion {
+  font-size: 20px;
+  white-space: nowrap; /* Evitar que el texto se corte */
+}
+
+/* Estilo para el botón de verificar */
+.boton-verificar {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+  display: none; /* Ocultar inicialmente */
+}
+
+/* Estilo cuando el cursor pasa sobre el botón de verificar */
+.boton-verificar:hover {
+  background-color: #388e3c;
+}
+/* BOTONES */
+
+.error-message {
+  color: white;
+  background-color: red;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.alert-message {
+  color: white;
+  background-color: rgb(255, 191, 30);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.boton-verificar {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.boton-intentar {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.botones {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}

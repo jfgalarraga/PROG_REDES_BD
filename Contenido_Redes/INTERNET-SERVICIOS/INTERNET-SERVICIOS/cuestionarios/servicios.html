@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios Relacionados - Cuestionario</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1c1c1c, #353535);
+      color: #f8f9fa;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: rgba(24, 26, 27, 0.95);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: #ffc107;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .question {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #2d2f31;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .question h2 {
+      color: #ffc107;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .options button {
+      background-color: #6c757d;
+      color: #f8f9fa;
+      border: 2px solid #ffc107;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .options button.selected {
+      background-color: #ffc107;
+      color: #1c1c1c;
+    }
+
+    .options button:hover {
+      background-color: #ffc107;
+      color: #1c1c1c;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #2d2f31;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      display: none;
+    }
+
+    #submit {
+      margin-top: 20px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Usos del Internet - Cuestionario</h1>
+    <p class="text-center">Selecciona la respuesta correcta según la descripción de cada uso del internet.</p>
+
+    <div id="quiz">
+      <div class="question" data-answer="Hosting y Dominios">
+        <h2>1. Que uso del internet te permite registrar y administrar sitios web y nombres de dominio.</h2>
+        <div class="options">
+          <button class="btn-option">Streaming</button>
+          <button class="btn-option">Hosting y Dominios</button>
+          <button class="btn-option">Videoconferencias</button>
+          <button class="btn-option">E-commerce</button>
+        </div>
+      </div>
+
+      <div class="question" data-answer="Streaming">
+        <h2>2. Permite disfrutar de películas y series desde cualquier dispositivo conectado a Internet.</h2>
+        <div class="options">
+          <button class="btn-option">E-commerce</button>
+          <button class="btn-option">Streaming</button>
+          <button class="btn-option">Hosting y Dominios</button>
+          <button class="btn-option">Seguridad en la Nube</button>
+        </div>
+      </div>
+
+      <div class="question" data-answer="Videoconferencias">
+        <h2>3. Uso del internet que conecta personas mediante video y audio, ideal para reuniones remotas.</h2>
+        <div class="options">
+          <button class="btn-option">Videoconferencias</button>
+          <button class="btn-option">Streaming</button>
+          <button class="btn-option">Aprendizaje en Línea</button>
+          <button class="btn-option">E-commerce</button>
+        </div>
+      </div>
+
+      <div class="question" data-answer="E-commerce">
+        <h2>4. Plataforma que permite comprar y vender productos de manera digital.</h2>
+        <div class="options">
+          <button class="btn-option">E-commerce</button>
+          <button class="btn-option">Seguridad en la Nube</button>
+          <button class="btn-option">Videoconferencias</button>
+          <button class="btn-option">Hosting y Dominios</button>
+        </div>
+      </div>
+
+      <div class="question" data-answer="Seguridad en la Nube">
+        <h2>5. Soluciones que garantizan el almacenamiento seguro y accesible de datos en línea.</h2>
+        <div class="options">
+          <button class="btn-option">Seguridad en la Nube</button>
+          <button class="btn-option">E-commerce</button>
+          <button class="btn-option">Streaming</button>
+          <button class="btn-option">Videoconferencias</button>
+        </div>
+      </div>
+    </div>
+
+    <button id="submit" class="btn btn-warning">Comprobar respuestas</button>
+
+    <div class="result">
+      <p id="score"></p>
+      <button id="restart" class="btn btn-primary">Reiniciar</button>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      let correctAnswers = 0;
+      let totalQuestions = $(".question").length;
+
+      $(".btn-option").click(function () {
+        let selectedAnswer = $(this).text();
+        $(this).closest(".options").find("button").removeClass("selected btn-success btn-danger");
+        $(this).addClass("selected");
+      });
+
+      $("#submit").click(function () {
+        correctAnswers = 0;
+        $(".question").each(function () {
+          let selectedAnswer = $(this).find(".selected").text();
+          let correctAnswer = $(this).data("answer");
+
+          if (selectedAnswer === correctAnswer) {
+            $(this).find(".selected").addClass("btn-success");
+            correctAnswers++;
+          } else {
+            $(this).find(".selected").addClass("btn-danger");
+          }
+        });
+
+        $(".btn-option").prop("disabled", true);
+
+        $(".result").fadeIn();
+        $("#score").text(`Respuestas correctas: ${correctAnswers}/${totalQuestions}`);
+      });
+
+      $("#restart").click(function () {
+        $(".btn-option").removeClass("selected btn-success btn-danger").prop("disabled", false);
+        $(".result").fadeOut();
+        $("#score").text("");
+      });
+    });
+  </script>
+</body>
+
+</html>

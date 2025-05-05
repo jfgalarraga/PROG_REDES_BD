@@ -1,0 +1,74 @@
+
+h2 {
+  font-size: 2rem;
+  color: #000000;
+  margin-top: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para título */
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.dropzone {
+  display: inline-block;
+  width: 150px;
+  height: 30px;
+  margin: 5px;
+  border: 2px dashed #333;
+  line-height: 30px;
+}
+.option {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: lightblue;
+  cursor: grab;
+}
+#resultado, #felicidades {
+  margin-top: 20px;
+  font-weight: bold;
+}
+#solucionario {
+  display: none;
+}
+#comprobar {
+  background-color: blue;
+  color: white;
+}
+#reiniciar {
+  background-color: red;
+  color: white;
+}
+#mostrarSolucionario {
+  background-color: purple;
+  color: white;
+  display: block;
+}
+#felicitaciones {
+  display: none;
+  margin-top: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: green;
+  padding: 10px;
+  border: 2px solid green;
+  border-radius: 5px;
+  background-color: #e0f8e0;
+}
+p {
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f0f8ff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+p:hover {
+  background-color: #add8e6;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}

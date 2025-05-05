@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasos Acumulativos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/diagramas.css">
+    <style>
+        .example-container {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .code-box {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 40px;
+            width: 100%;
+            max-width: 600px;
+            font-family: monospace;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .step {
+            margin-bottom: 5px;
+            display: none;
+        }
+
+        .code-number {
+            font-weight: bold;
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+
+
+        .resaltar-paso {
+            background-color: #1E242C;
+            color: #ffffff;
+            /* Rojo intenso */
+            font-size: 1.2rem;
+            /* Aumentar tamaño del texto */
+            font-weight: bold;
+            border-radius: 5px;
+            padding: 5px;
+            transition: all 0.3s ease;
+            /* Animación suave */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Sombra */
+        }
+
+        .resaltar-paso .code-number {
+            font-size: 1.5rem;
+            /* Aumentar tamaño del número */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Primera columna -->
+            <div class="col-md-6 col-lg-6" style="padding-top: 0px;">
+                <!-- Primera fila de la primera columna -->
+                <div class="row">
+                    <div class="example-container">
+
+                        <div class="code-box">
+                            <div class="step" id="paso1">
+                                <span class="code-number">1.</span> Inicio/Final
+                            </div>
+                            <div class="step" id="paso2">
+                                <span class="code-number">2.</span> Leer n
+                            </div>
+                            <div class="step" id="paso3">
+                                <span class="code-number">3.</span> Verificar si n es mayor que cero
+                            </div>
+                            <div class="step" id="paso4">
+                                <span class="code-number">4.</span> Imprimir n es positivo
+                            </div>
+                            <div class="step" id="paso5">
+                                <span class="code-number">5.</span> Si n no era positivo, verificar si n es menor que
+                                cero.
+                            </div>
+                            <div class="step" id="paso6">
+                                <span class="code-number">6.</span> Imprimir n es negativo.
+                            </div>
+                            <div class="step" id="paso7">
+                                <span class="code-number">7.</span> Si n no era negativo, imprimir n es cero.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Segunda fila de la primera columna (vacía) -->
+                <div class="row">
+                    <div class="example-container">
+                        <div class="text-center col-12">
+                            <button class="botonStart" id="btnSiguiente" style="width: 80%;">Comenzar <i
+                                    class="bi bi-caret-right-square ms-3"></i></button>
+                            <button class="botonStart" id="btnReiniciar" style="width: 80%; display: none;">Reiniciar <i
+                                    class="bi bi-arrow-clockwise ms-3"></i></button>
+
+
+                            <div class="speech-bubble">
+                                <p>
+                                <p class="text-muted" id="nube"><span>&#128161;</span> Consejo: presta atención a
+                                    cómo el algoritmo se transforma en un Diagrama de Flujo</p>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Bocadillo de diálogo -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- Segunda columna -->
+            <div class="col-md-6 col-lg-6">
+                <div class="example-container">
+                    <div class="code-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="100%" height="100%">
+                            <!-- ELIPSES INICIO Y FINAL-->
+                            <!-- PASO 1 -->
+                            <g id="paso_1" style="display:none;">
+                                <ellipse id="uno_figura1" cx="250" cy="50" rx="75" ry="25" class="elipse" />
+                                <text id="uno_t1" x="250" y="50" class="texto-mediano">Inicio</text>
+                                <line id="uno_l1" x1="250" y1="75" x2="250" y2="100" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+                                <ellipse id="uno_figura2" cx="250" cy="550" rx="75" ry="25" class="elipse" />
+                                <text id="uno_t2" x="250" y="550" class="texto-mediano">Final</text>
+                            </g>
+
+                            <!-- PASO 2 -->
+                            <g id="paso_2" style="display:none;">
+                                <polygon id="dos_figura1" points="175,100 375,100 325,150 125,150" class="poligono" />
+                                <text id="dos_t1" x="250" y="125" class="texto-mediano">Leer n</text>
+                                <line id="dos_l1" x1="250" y1="150" x2="250" y2="175" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+                            </g>
+
+                            <!-- PASO 3 -->
+                            <g id="paso_3" style="display:none;">
+                                <polygon id="tres_figura1" points="250,175 300,225 250,275 200,225" class="rombo" />
+                                <text id="tres_t1" x="250" y="225" class="texto-mediano">n > 0</text>
+                                <line id="tres_l1" x1="250" y1="150" x2="250" y2="175" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+                            </g>
+
+                            <!-- PASO 4 -->
+                            <g id="paso_4" style="display:none;">
+                                <line id="cuatro_l1" x1="300" y1="225" x2="425" y2="225" stroke="black"
+                                    stroke-width="2" />
+                                <text id="cuatro_t1" x="350" y="235" class="texto-pequeño">Falso</text>
+                                <line id="cuatro_l2" x1="425" y1="225" x2="425" y2="275" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+                                <polygon id="cuatro_figura1" points="350,275 500,275 450,325 300,325"
+                                    class="poligono" />
+                                <text id="cuatro_t2" x="400" y="300" class="texto-mediano">n es positivo</text>
+                                <line id="cuatro_l3" x1="425" y1="325" x2="425" y2="500" stroke="black"
+                                    stroke-width="2" />
+                                <line id="cuatro_l4" x1="425" y1="500" x2="250" y2="500" stroke="black"
+                                    stroke-width="2" />
+                                <line id="cuatro_l5" x1="250" y1="500" x2="250" y2="525" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+                            </g>
+
+                            <!-- PASO 5 -->
+                            <g id="paso_5" style="display:none;">
+                                <line id="cinco_l1" x1="200" y1="225" x2="100" y2="225" stroke="black"
+                                    stroke-width="2" />
+                                <text id="cinco_t1" x="150" y="235" class="texto-pequeño">Verdadero</text>
+                                <line id="cinco_l2" x1="100" y1="225" x2="100" y2="275" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+                                <polygon id="cinco_figura1" points="100,275 150,325 100,375 50,325" class="rombo" />
+                                <text id="cinco_t2" x="100" y="325" class="texto-mediano">n < 0</text>
+                            </g>
+
+                            <!-- PASO 6 -->
+                            <g id="paso_6" style="display:none;">
+                                <line id="seis_l1" x1="100" y1="375" x2="100" y2="425" stroke="black"
+                                    stroke-width="2" />
+                                <text id="seis_t1" x="50" y="385" class="texto-pequeño">Verdadero</text>
+                                <polygon id="seis_figura1" points="50,425 200,425 150,475 0,475" class="poligono" />
+                                <text id="seis_t2" x="100" y="450" class="texto-mediano">n es cero</text>
+                                <line id="seis_l2" x1="100" y1="475" x2="100" y2="500" stroke="black"
+                                    stroke-width="2" />
+                                <line id="seis_l3" x1="100" y1="500" x2="250" y2="500" stroke="black"
+                                    stroke-width="2" />
+                                <line id="seis_l4" x1="250" y1="500" x2="250" y2="525" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+                            </g>
+
+                            <!-- PASO 7 -->
+                            <g id="paso_7" style="display:none;">
+                                <line id="siete_l1" x1="150" y1="325" x2="250" y2="325" stroke="black"
+                                    stroke-width="2" />
+                                <text id="siete_t1" x="200" y="315" class="texto-pequeño">Falso</text>
+                                <line id="siete_l2" x1="250" y1="325" x2="250" y2="350" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+                                <polygon id="siete_figura1" points="200,350 350,350 300,400 150,400" class="poligono" />
+                                <text id="siete_t2" x="250" y="375" class="texto-mediano">n es negativo</text>
+                                <line id="siete_l3" x1="250" y1="400" x2="250" y2="525" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+                            </g>
+
+                            <!-- Flechas -->
+                            <defs>
+                                <marker id="flecha_normal" viewBox="0 0 20 20" refX="10" refY="10" orient="auto">
+                                    <path d="M0,0 L20,10 L0,20 z" fill="black" />
+                                </marker>
+                            </defs>
+
+                            <defs>
+                                <marker id="flecha_salida" markerWidth="10" markerHeight="10" refX="5" refY="5"
+                                    orient="auto">
+                                    <path d="M0,0 L10,5 L0,10 Z" fill="black" />
+                                </marker>
+                            </defs>
+
+                            <defs>
+                                <marker id="flecha_entrada" markerWidth="10" markerHeight="10" refX="5" refY="5"
+                                    orient="auto">
+                                    <path d="M10,0 L0,5 L10,10 Z" fill="black" />
+                                </marker>
+                            </defs>
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        let pasoActual = 0;
+        let currentStep = 1; // Paso inicial
+        const totalSteps = 7; // Total de pasos
+        var nubeElement = document.getElementById("nube");
+
+        const mensajesPasos = [
+            '<span>🔍</span> <strong>Paso 1:</strong> Inicio del algoritmo. Este es el punto de partida del flujo. Aquí se representan el inicio y el final del proceso con una elipse. Con otra elipse definimos el fin del flujo del programa.',
+            '<span>🔍</span> <strong>Paso 2:</strong> Leer el valor de <code>n</code>. Este paso toma el número que será evaluado en los siguientes pasos. El paralelogramo indica una operación de entrada o lectura.',
+            '<span>🔍</span> <strong>Paso 3:</strong> Verificar si <code>n > 0</code>. Este rombo representa una decisión. Si <code>n</code> es mayor que 0, seguimos por el camino que indica "Verdadero"; de lo contrario, tomamos el camino "Falso".',
+            '<span>🔍</span> <strong>Paso 4:</strong> Si la condición <code>n > 0</code> es verdadera, imprimimos "<code>n</code> es positivo". Esto indica que el número ingresado es mayor que cero.',
+            '<span>🔍</span> <strong>Paso 5:</strong> Si la condición <code>n > 0</code> es falsa, verificamos si <code>n < 0</code>. Aquí evaluamos si el número ingresado es menor que cero.',
+            '<span>🔍</span> <strong>Paso 6:</strong> Si la condición <code>n < 0</code> es verdadera, imprimimos "<code>n</code> es negativo". Esto indica que el número ingresado es menor que cero.',
+            '<span>🔍</span> <strong>Paso 7:</strong> Si las condiciones anteriores no se cumplen, entonces <code>n = 0</code>. En este caso, imprimimos "<code>n</code> es cero". Esto completa el flujo del algoritmo.  <br><br> 🎉 ¡Has revisado todos los pasos!. Presiona reiniciar para comenzar de nuevo, o pasa el mouse sobre el paso/figura y observa detenidamente el flujo de ejecución.'
+        ];
+
+        // Función para mostrar el mensaje del paso correspondiente
+        function mostrarMensajePaso(paso) {
+            if (paso >= 1 && paso <= 7) {
+                nubeElement.innerHTML = mensajesPasos[paso - 1];
+            }
+        }
+
+
+
+        // Asignar evento hover a los elementos SVG
+        for (let i = 1; i <= 7; i++) {
+            const pasoElement = document.getElementById(`paso_${i}`);
+            const pasoElementDoc = document.getElementById(`paso${i}`);
+            if (pasoElement) {
+                pasoElement.addEventListener('mouseenter', function () {
+                    mostrarMensajePaso(i); // Mostrar el mensaje correspondiente al paso
+
+                });
+                pasoElement.addEventListener('mouseleave', function () {
+                    mostrarMensajePaso(pasoActual); // Mostrar el mensaje correspondiente al paso
+                });
+            }
+            if (pasoElementDoc) {
+                pasoElementDoc.addEventListener('mouseenter', function () {
+                    mostrarMensajePaso(i); // Mostrar el mensaje correspondiente al paso
+                });
+                pasoElementDoc.addEventListener('mouseleave', function () {
+                    mostrarMensajePaso(pasoActual); // Mostrar el mensaje correspondiente al paso
+                });
+            }
+        }
+
+        document.getElementById('btnSiguiente').addEventListener('click', function () {
+            pasoActual++;
+            this.innerHTML = 'Siguiente paso <i class="bi bi-arrow-90deg-right ms-3"></i>';
+
+            // Mostrar el paso actual si existe
+            const stepElement = document.getElementById(`paso${currentStep}`);
+            const stepFiguras = document.getElementById(`paso_${currentStep}`);
+            if (stepElement) {
+                stepElement.style.display = 'block'; // Mostrar acumulativamente
+                stepFiguras.style.display = '';
+                nubeElement.innerHTML = mensajesPasos[currentStep - 1];
+                currentStep++;
+
+                // Si se muestran todos los pasos, deshabilitar el botón
+                if (currentStep > totalSteps) {
+                    this.style.display = 'none';
+                    document.getElementById('btnReiniciar').style.display = '';
+
+
+
+
+
+                }
+            }
+        });
+
+        document.getElementById('btnReiniciar').addEventListener('click', () => {
+
+            location.reload();
+        });
+
+
+        // Función que resalta el paso y su figura asociada sin temporizadores
+        function asociarPasoConGrupo(pasoId, grupoId) {
+            const paso = document.getElementById(pasoId);
+            const grupo = document.getElementById(grupoId);
+
+            if (!paso || !grupo) return;
+
+            // Obtener todos los elementos dentro del grupo
+            const elementos = grupo.getElementsByTagName('*');
+
+            // Función para agregar las clases de resaltar
+            function agregarClases() {
+                paso.classList.add('resaltar-paso');
+                for (const elemento of elementos) {
+                    const tagName = elemento.tagName.toLowerCase();
+                    const classList = elemento.classList;
+
+                    // Verificar si es una figura y tiene la clase adecuada
+                    if (
+                        (tagName === 'ellipse' && classList.contains('elipse')) ||
+                        (tagName === 'rect' && classList.contains('rectangulo')) ||
+                        (tagName === 'polygon' && classList.contains('rombo')) ||
+                        (tagName === 'polygon' && classList.contains('poligono'))
+                    ) {
+                        classList.add('resaltar');
+                        aplicarZoom(elemento, true);
+                    }
+
+                    // Verificar si es texto con la clase correcta
+                    if (classList.contains('texto-mediano')) {
+                        classList.add('texto-mediano-resaltado');
+                    }
+                    if (classList.contains('texto-pequeño')) {
+                        classList.add('texto-pequeño-resaltado');
+                    }
+                }
+            }
+
+            // Función para quitar las clases de resaltar
+            function quitarClases() {
+                paso.classList.remove('resaltar-paso');
+                for (const elemento of elementos) {
+                    const tagName = elemento.tagName.toLowerCase();
+                    const classList = elemento.classList;
+
+                    if (
+                        (tagName === 'ellipse' && classList.contains('elipse')) ||
+                        (tagName === 'rect' && classList.contains('rectangulo')) ||
+                        (tagName === 'polygon' && classList.contains('rombo')) ||
+                        (tagName === 'polygon' && classList.contains('poligono'))
+                    ) {
+                        classList.remove('resaltar');
+                        aplicarZoom(elemento, false);
+                    }
+
+                    if (classList.contains('texto-mediano')) {
+                        classList.remove('texto-mediano-resaltado');
+                    }
+                    if (classList.contains('texto-pequeño')) {
+                        classList.remove('texto-pequeño-resaltado');
+                    }
+                }
+            }
+
+            // Asociar eventos hover al grupo completo (en lugar de cada elemento)
+            grupo.addEventListener('mouseenter', agregarClases);
+            grupo.addEventListener('mouseleave', quitarClases);
+
+            // Asociar eventos hover al paso correspondiente
+            paso.addEventListener('mouseenter', agregarClases);
+            paso.addEventListener('mouseleave', quitarClases);
+        }
+
+        // Inicializar los pasos automáticamente
+        // Cambiar según el número de pasos en el SVG
+        for (let step = 1; step <= totalSteps; step++) {
+            const pasoId = `paso${step}`;
+            const grupoId = `paso_${step}`;
+            asociarPasoConGrupo(pasoId, grupoId);
+        }
+
+
+        // Almacenamiento global para las dimensiones originales de cada figura
+        const dimensionesOriginalesGlobal = {};
+
+        // Actualización de `obtenerDimensiones` para soportar nuevos atributos
+        function obtenerDimensiones(element) {
+            const id = element.id;
+
+            // Si ya existen dimensiones originales para este elemento, no recalcular
+            if (dimensionesOriginalesGlobal[id]) {
+                return dimensionesOriginalesGlobal[id];
+            }
+
+            const tagName = element.tagName.toLowerCase();
+            let dimensiones = null;
+
+            switch (tagName) {
+                case 'ellipse':
+                    dimensiones = {
+                        rx: parseFloat(element.getAttribute('rx')),
+                        ry: parseFloat(element.getAttribute('ry')),
+                    };
+                    break;
+                case 'rect':
+                    dimensiones = {
+                        x: parseFloat(element.getAttribute('x')),
+                        y: parseFloat(element.getAttribute('y')),
+                        width: parseFloat(element.getAttribute('width')),
+                        height: parseFloat(element.getAttribute('height')),
+                    };
+                    break;
+                case 'polygon':
+                    dimensiones = {
+                        points: element.getAttribute('points'),
+                    };
+                    break;
+                default:
+                    console.warn(`Tipo de elemento "${tagName}" no soportado.`);
+            }
+
+            if (dimensiones) {
+                // Guardar dimensiones originales de forma inmutable
+                dimensionesOriginalesGlobal[id] = { ...dimensiones };
+            }
+
+            return dimensiones;
+        }
+
+
+        function aplicarZoom(element, agrandar) {
+            const dimensionesOriginales = obtenerDimensiones(element);
+            if (!dimensionesOriginales) return; // Si no hay dimensiones, salir
+
+            const tagName = element.tagName.toLowerCase();
+            const zoomDelta = agrandar ? 10 : 0; // Solo aplica zoom si agrandar es true
+
+            switch (tagName) {
+                case 'ellipse': {
+                    const nuevoRx = agrandar ? dimensionesOriginales.rx + zoomDelta : dimensionesOriginales.rx;
+                    const nuevoRy = agrandar ? dimensionesOriginales.ry + zoomDelta : dimensionesOriginales.ry;
+                    element.setAttribute('rx', nuevoRx);
+                    element.setAttribute('ry', nuevoRy);
+                    break;
+                }
+                case 'rect': {
+                    const nuevoX = agrandar ? dimensionesOriginales.x - zoomDelta : dimensionesOriginales.x;
+                    const nuevoY = agrandar ? dimensionesOriginales.y - zoomDelta : dimensionesOriginales.y;
+                    const nuevoWidth = agrandar ? dimensionesOriginales.width + (2 * zoomDelta) : dimensionesOriginales.width;
+                    const nuevoHeight = agrandar ? dimensionesOriginales.height + (2 * zoomDelta) : dimensionesOriginales.height;
+                    element.setAttribute('x', nuevoX);
+                    element.setAttribute('y', nuevoY);
+                    element.setAttribute('width', nuevoWidth);
+                    element.setAttribute('height', nuevoHeight);
+                    break;
+                }
+                case 'polygon': {
+                    const puntosOriginales = dimensionesOriginales.points.split(' ');
+                    const nuevosPuntos = puntosOriginales.map((punto, index) => {
+                        const [x, y] = punto.split(',').map(Number);
+
+                        if (!agrandar) return `${x},${y}`; // Restaurar las coordenadas originales
+
+                        if (element.classList.contains('poligono')) {
+                            switch (index) {
+                                case 0: return `${x - zoomDelta},${y - zoomDelta}`;
+                                case 1: return `${x + zoomDelta},${y - zoomDelta}`;
+                                case 2: return `${x + zoomDelta},${y + zoomDelta}`;
+                                case 3: return `${x - zoomDelta},${y + zoomDelta}`;
+                                default: return `${x},${y}`;
+                            }
+                        } else if (element.classList.contains('rombo')) {
+                            switch (index) {
+                                case 0: return `${x},${y - zoomDelta}`;
+                                case 1: return `${x + zoomDelta},${y}`;
+                                case 2: return `${x},${y + zoomDelta}`;
+                                case 3: return `${x - zoomDelta},${y}`;
+                                default: return `${x},${y}`;
+                            }
+                        }
+                        return `${x},${y}`; // Por defecto, mantiene las coordenadas originales
+                    });
+
+                    element.setAttribute('points', nuevosPuntos.join(' '));
+                    break;
+                }
+                default:
+                    console.warn(`Tipo de elemento "${tagName}" no soportado para zoom.`);
+            }
+        }
+
+
+    </script>
+
+    <!-- Bootstrap JS (opcional, para interactividad) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

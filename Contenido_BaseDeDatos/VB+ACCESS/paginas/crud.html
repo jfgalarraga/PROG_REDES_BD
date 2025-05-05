@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>¿Que es un CRUD?</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+
+  <!-- Favicon -->
+  <link href="../img/favicon.ico" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="../lib/animate/animate.min.css" rel="stylesheet">
+  <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body class="index-page">
+
+
+  <header id="header" class="header dark-background d-flex flex-column">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="../img/icono.png" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="../index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">¿QUE ES UN CRUD?</h1>
+    </a>
+
+
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="../indexContenido.html" class="active"><i class="bi bi-house navicon"></i>Inicio</a></li>
+
+        <li class="dropdown">
+          <a href="#"><i class="bi bi-menu-button navicon"></i> Contenido teórico <i
+              class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="crud.html">¿Qué es un CRUD?</a></li>
+            <li><a href="ebFormulario.html">Elementos básicos <br> de un formulario</a></li>
+            <li><a href="vb.html">Visual Basic Access</a></li>
+
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#"><i class="bi bi-menu-button navicon"></i> Material de aprendizaje<i
+              class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="simulacion.html">Simulación</a></li>
+            <li><a href="juego.html">Juegos</a></li>
+            <li><a href="test.html">Test</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#"><i class="bi bi-menu-button navicon"></i> Ejemplos y ejercicios<i
+              class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="ejemplo.html">Ejemplos</a></li>
+            <li><a href="ejercicios.html">Ejercicios</a></li>
+          </ul>
+        </li>
+
+
+      </ul>
+    </nav>
+
+
+  </header>
+
+  <main class="main">
+
+
+
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+      <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Base de datos</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+
+
+        <!-- Menú Programación -->
+        <div class="nav-item dropdown">
+          <a href="#" class=" nav-item  nav-link dropdown-toggle small-text"
+            data-bs-toggle="dropdown">Programación</a>
+          <div class="dropdown-menu fade-down m-0">
+            <a href="../../../Contenido_Programacion/Contenido_Programacion/portfolio-details.html"
+              class="dropdown-item small-text">I. Algoritmos</a>
+            <a href="../../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
+              class="dropdown-item small-text">II. Diagramas</a>
+            <a href="../../../Contenido_Programacion/Contenido_Python/Origen.html"
+              class="dropdown-item small-text">III. Python</a>
+          </div>
+        </div>
+
+        <!-- Menú Redes -->
+        <div class="nav-item dropdown">
+          <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
+          <div class="dropdown-menu fade-down m-0">
+            <a href="../../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">I. Medios de
+              conexión</a>
+            <a href="../../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">II. Redes
+              Lan</a>
+              <a href="../../../Contenido_Redes/INTERNET-SERVICIOS/INTERNET-SERVICIOS/index.html"
+              class="dropdown-item small-text">III. Internet</a>
+
+          </div>
+        </div>
+
+        <!-- Menú Base de Datos -->
+        <div class="nav-item dropdown">
+          <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de
+            Datos</a>
+          <div class="dropdown-menu fade-down m-0">
+            <a href="../../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
+              class="dropdown-item small-text">I. Access</a>
+              <a href="../../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html"
+              class="dropdown-item small-text">II. Visual
+              Basic Access</a>
+            <a href="../../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+              class="dropdown-item small-text">III. MySQL (Workbench)</a>
+
+          </div>
+        </div>
+
+    </div>
+    <a href="../../../index.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" style="background-color: #06BBCC; border-radius: 0; margin: 0;">Principal<i
+        class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+    <section id="crud" class="container section-title"  data-aos="fade-up">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>¿Qué es un CRUD?</h2>
+        <p>
+          Un CRUD es una función fundamental en los sistemas de información, ya que permite realizar operaciones
+          esenciales
+          de mantenimiento y gestión de datos. Estas operaciones son la base para interactuar con cualquier base de
+          datos o
+          aplicación que maneje información.
+        </p>
+        <div style="text-align: center;">
+          <img style="width:50% ;height: 50%;margin-top: 25px;" src="../img/crud.png" alt="CRUD">
+        </div>
+
+      </div>
+      <!-- End Section Title -->
+
+
+
+      <div class="container section-title" data-aos="fade-up">
+        <h4>Significado de las siglas</h4>
+        <p>
+          CRUD es un acrónimo en inglés que representa las cuatro operaciones básicas: <strong>Create</strong> (Crear),
+          <strong>Read</strong> (Leer), <strong>Update</strong> (Actualizar) y <strong>Delete</strong> (Borrar). Que se
+          detallan a continuacion:
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+
+      <!--CRUD-->
+      <div class="tab-container container section-title" data-aos="fade-up">
+        <ul class="tabs">
+          <li class="tab-link bi bi-pen-fill" data-tab="tab-1"> CREATE</li>
+          <li class="tab-link bi bi-book-half" data-tab="tab-2"> READ</li>
+          <li class="tab-link bi bi-arrow-up-square-fill" data-tab="tab-3"> UPDATE</li>
+          <li class="tab-link bi bi-trash-fill" data-tab="tab-4"> DELETE</li>
+        </ul>
+
+        <!-- Contenido de las Pestañas -->
+        <div id="tab-1" class="tab-content">
+          <h2>Create (crear)</h2>
+          <p>Esta fase se utiliza para crear un nuevo registro en la base.</p>
+        </div>
+
+        <div id="tab-2" class="tab-content">
+          <h2>Read (leer)</h2>
+          <p>Esta fase se utiliza para leer los datos de la base y mostrarlos al usuario. </p>
+        </div>
+
+        <div id="tab-3" class="tab-content">
+          <h2>Update (actualizar)</h2>
+          <p>Esta fase se utiliza para actualizar los datos existentes en la base de datos.</p>
+        </div>
+
+        <div id="tab-4" class="tab-content">
+          <h2>Delete (borrar)</h2>
+          <p>Esta fase se utiliza para eliminar un registro existente.</p>
+        </div>
+      </div>
+
+      <div class="container section-title" data-aos="fade-up">
+        <h4>Ventajas y desventajas del CRUD </h4>
+      </div>
+      <!-- End Section Title -->
+
+      <!-- Accordion Container -->
+      <div class="accordion container section-title"  data-aos="fade-up">
+
+        <!-- Ventajas -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            Ventajas
+          </button>
+          <div class="accordion-content">
+            <ul>
+              <li>Facilita la creación y gestión de datos.</li>
+              <li>Proporciona una estructura coherente y fácil de entender para su manipulación.</li>
+              <li>Ayuda a minimizar los errores y garantiza la integridad de los datos.</li>
+              <li>Proporciona una base sólida para el desarrollo de aplicaciones.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Desventajas -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            Desventajas
+          </button>
+          <div class="accordion-content">
+            <ul>
+              <li>Puede ser demasiado simplista para aplicaciones complejas.</li>
+              <li>En ocasiones, es menos eficiente para aplicaciones de alta velocidad o de gran escala.</li>
+              <li>A veces, requiere una gran cantidad de código y configuración para implementarlo completamente.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h4>Ejemplos de aplicaciones del CRUD</h4>
+
+      </div><!-- End Section Title -->
+
+      <!-- Carrusel -->
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- Imagen 1 -->
+          <div class="carousel-item active">
+            <img src="../img/cms.jpg" class="d-block w-100" alt="Imagen 1">
+            <div class="carousel-caption-overlay">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Aplicaciones de gestión de contenido</h5>
+                <p>Permiten crear, leer, actualizar y eliminar contenido en sitios web, como WordPress, Drupal o Joomla.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Imagen 2 -->
+          <div class="carousel-item">
+            <img src="../img/comercio-electronico.jpg" class="d-block w-100" alt="Imagen 2">
+            <div class="carousel-caption-overlay">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Aplicaciones de comercio electrónico</h5>
+                <p>Permiten gestionar cuentas, productos y pedidos, como Amazon, eBay o Alibaba.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Imagen 3 -->
+          <div class="carousel-item">
+            <img src="../img/reservas.png" class="d-block w-100" alt="Imagen 3">
+            <div class="carousel-caption-overlay">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Sistemas de reservas</h5>
+                <p>Facilitan hacer, ver, actualizar y cancelar reservas en servicios como Booking.com, Expedia u
+                  OpenTable.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Imagen 4 -->
+          <div class="carousel-item">
+            <img src="../img/red.webp" class="d-block w-100" alt="Imagen 4">
+            <div class="carousel-caption-overlay">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Aplicaciones de redes sociales</h5>
+                <p>Permiten crear perfiles, publicar, leer, comentar contenido y eliminar información, como Facebook,
+                  Twitter o LinkedIn.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Imagen 5 -->
+          <div class="carousel-item">
+            <img src="../img/proyecto.png" class="d-block w-100" alt="Imagen 5">
+            <div class="carousel-caption-overlay">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Aplicaciones de gestión de proyectos</h5>
+                <p>Ayudan a crear proyectos, asignar tareas, actualizar estados y eliminarlas, como Trello, Asana o
+                  Jira.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controles del carrusel -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+    </section>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../js/script.js"></script>
+
+
+
+</body>
+
+</html>

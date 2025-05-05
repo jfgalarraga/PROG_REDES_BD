@@ -1,0 +1,42 @@
+/* Contenedor de categorías (conceptos) */
+.category {
+    border: 2px dashed #007bff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Elementos arrastrables (opciones) */
+  .draggable {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: grab;
+    text-align: center;
+    min-width: 120px;
+    transition: background-color 0.3s;
+  }
+  
+  .draggable:active {
+    cursor: grabbing;
+  }
+  
+  /* Categorías correctas/incorrectas */
+  .correct {
+    border-color: #28a745;
+    background-color: #d4edda;
+  }
+  
+  .incorrect {
+    border-color: #dc3545;
+    background-color: #f8d7da;
+  }
+  

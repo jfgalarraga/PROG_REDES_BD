@@ -1,0 +1,152 @@
+/* Estilo general */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  color: #333;
+  margin: 0;
+
+}
+
+h1 {
+  text-align: center;
+  color: #4a90e2;
+}
+
+#gameArea, #result {
+  margin: 20px auto;
+  max-width: 800px;
+  display: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+thead {
+  background: #4a90e2;
+  color: white;
+  text-align: left;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background: #f9f9f9;
+}
+
+.valid {
+  background-color: #d4edda;
+}
+
+.invalid {
+  background-color: #f8d7da;
+}
+
+/* Estilo de botones */
+button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.btn-warning {
+  background-color: #f39c12;
+  color: white;
+}
+
+.btn-warning:hover {
+  background-color: #e67e22;
+}
+
+#startBtn, #restartBtn, #submitBtn {
+  display: block;
+  margin: 10px auto;
+  background-color: #4a90e2;
+  color: white;
+  padding: 15px 25px;
+}
+
+#startBtn:hover, #restartBtn:hover, #submitBtn:hover {
+  background-color: #357abd;
+}
+
+#nextButtonContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.d-none {
+  display: none;
+}
+
+/* Input en celdas para corrección */
+td input {
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 14px;
+  width: 100%;
+}
+
+td input:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+/* Contenedor de resultados */
+#result {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#resultText {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#resultText span {
+  color: #4a90e2;
+}
+
+
+.invalid {
+  background-color: #f8d7da !important; /* Fondo rojo claro */
+  color: #721c24 !important; /* Texto rojo oscuro */
+  font-weight: bold;
+}
+
+.valid {
+  background-color: #d4edda !important; /* Fondo verde claro */
+  color: #155724 !important; /* Texto verde oscuro */
+  font-weight: bold;
+}
+
+.error-message {
+  font-size: 12px;
+  color: #721c24;
+  font-weight: bold;
+}

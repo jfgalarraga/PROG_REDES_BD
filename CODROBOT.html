@@ -1,0 +1,232 @@
+<!-- Main JS File -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+            /*Estilo Preguntas*/
+        #questionButton {
+          position: fixed;
+          bottom: 72px; /* Cambia según tu preferencia */
+          right: 10px;
+          z-index: 1050;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          background: url('../Asistente3.png')  ;
+          background-size: contain; /* Asegura que la imagen se ajuste al botón */
+          border: none; /* Opcional, para quitar el borde del botón */
+          cursor: pointer;
+          }
+
+      #questionMenu {
+          position: fixed;
+          border: none; 
+          bottom: 150px;
+          right: 8px;
+          z-index: 1040;
+          display:none ;
+          
+        }
+
+      .speech-bubble {
+        position: relative;
+        background: #f0f0f000;
+        border: none;
+        border-radius: 15px;
+        padding: 2px;
+        max-width: 300px;
+        
+        }
+
+      .speech-bubble::after {
+        content: '';
+        position: absolute;
+        bottom: -18px; /* Ubicación de la punta */
+        left: 70px; /* Ajusta según quieras centrar o mover la punta */
+        width: 0;
+        height: 0;
+        border-style: solid  ;
+        border-width: 15px 15px 0 15px;
+        border-color: #15c4ec00 transparent transparent transparent;
+        }
+
+      .BotonNav{
+        position: fixed;
+        bottom: 30px; /* Cambia según tu preferencia */
+        left: 320px;
+        z-index: 1050;
+        width: 600px;
+        height: 25px;
+        border-radius: 50%;
+        background-size: contain; /* Asegura que la imagen se ajuste al botón */
+        border: none; /* Opcional, para quitar el borde del botón */
+        cursor: pointer;
+        }
+
+/*Estilo Preguntas*/
+    </style>
+ </head>
+ <body>
+    
+     <!-- Botones con flechas -->
+   <div  class="BotonNav">
+ 
+      
+    <button  onclick="location.href='portfolio-details.html';"  class="btn btn-primary mr-2 "> <i class="fas fa-arrow-left"> </i> Anterior
+    </button>
+    <button onclick="location.href='ConceptosBasicos.html';"  class="btn btn-primary btn-rounded"> Siguiente <i class="fas fa-arrow-right"></i>
+    </button> 
+  </div>     
+     
+
+<!-- Asistente star -->
+
+<!--Modal  -->
+
+<div class="modal fade" id="responseModal" tabindex="-1" aria-labelledby="responseModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+      <div class="modal-content mb-0 ">
+          
+        <div class="container">
+          <div class="row">
+            <div class=" col-xs-11 col-lg-11 col-md-11" ></div>
+            
+            <div class=" col-xs-1 col-lg-1 col-md-1  mt-2 mr-6">
+              <button type="button" class="btn-close mr-5" data-bs-dismiss="modal" aria-label="Close"></button>  
+            </div>
+          </div>
+
+          <div class="row">
+            <div class=" col-lg-1 col-md-1 mt-3 pr-0">
+              <img src="Asistente3.png" alt="Icono" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+            </div>
+            <div class=" col-lg-11 col-md-11  pl-0">
+              <div class="modal-body mb-0" id="responseText"></div>
+            </div>
+          </div>
+        </div> 
+      </div>
+     
+  </div>
+</div>  
+<!--Moda END -->
+
+<button id="questionButton" class="btn btn-primary " data-aos="fade-up" ></button>
+
+<div  id="questionMenu" class="speech-bubble card">
+<ul class="list-group list-group-flush" id="questionList">
+  <!-- Preguntas generadas dinámicamente -->
+</ul>
+</div>
+
+<!-- Asistente end -->
+
+     <!-- Main JS Robot -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <script>
+
+    $(document).ready(function () {
+        // Array de preguntas, respuestas, imágenes y videos
+        const qaArray = [
+            {
+                question: "Pregunta 1",
+                response: "Esta es la respuesta a la Pregunta 1",
+                image: "",
+                video: "https://www.w3schools.com/html/mov_bbb.mp4"
+            },
+            {
+                question: "Pregunta 2",
+                response: "lor sit amet consectetur adipisicing elit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.",
+                image: "Asistente3.png",
+                video: "https://www.w3schools.com/html/mov_bbb.mp4"
+            },
+            {
+                question: "Pregunta 3",
+                response: "Esta es la respuesta a la Pregunta 3",
+                image: "https://via.placeholder.com/150",
+                video: ""
+            },
+            {
+                question: "Pregunta 4",
+                response: "Esta es la respuesta a la Pregunta 3",
+                image: "https://via.placeholder.com/150",
+                video: ""
+            }
+        ];
+    
+        // Generar las preguntas en el menú
+        qaArray.forEach((item, index) => {
+            $('#questionList').append(
+                `<li class="list-group-item question  mb-1 list-group-item-action"       
+                style="border: solid 0px #7c2e2e; border-radius: 15px; background-color: #181d38; color: white;"
+                data-bs-toggle="list"
+                role="tab"
+                data-index="${index}">${item.question}</li>`
+            );
+        });
+    
+    
+        // Mostrar/Ocultar el menú
+        $('#questionButton').on('click', function () {
+            $('#questionMenu').toggle();
+        });
+    
+        // Mostrar la respuesta en el modal
+        $(document).on('click', '.question', function () {
+            const index = $(this).data('index');
+            const selectedQA = qaArray[index];
+            let content = `
+            
+               <div class="container section-title" data-aos="fade-up">
+              <h2>${selectedQA.question}</h2>              
+              `; 
+           
+              content += `<p  >${selectedQA.response}</p>`; // Agregar la respuesta
+                
+            //agregamar imagen
+              if (selectedQA.image) {
+                content += `
+    
+                    <div class="container">
+                        <div class="row mt-3">
+                            <div class="col-lg-4 col-md-4" > </div>
+                            <div class="col-lg-4 col-md-4">
+                                <img src="${selectedQA.image}" alt="Imagen relacionada" class="img-fluid mb-3">
+                            </div>
+                    
+                
+                
+                `;
+            }
+            //agregamar Video
+            if (selectedQA.video) {
+                content += `
+                    
+                        <div class="row mt-1">
+                                 <video controls class="w-100">
+                                  <source src="${selectedQA.video}" type="video/mp4">
+                                </video>
+                            
+                        </div>
+                    
+                    </div>
+                   
+                `;
+            }
+            
+            $('#responseText').html(content);
+            $('#responseModal').modal('show'); // Mostrar el modal
+            $('#questionMenu').hide(); // Ocultar el menú después de seleccionar
+        });
+      });
+    </script>
+ </body>
+ </html>
+
+

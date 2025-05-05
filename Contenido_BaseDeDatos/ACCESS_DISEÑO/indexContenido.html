@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>BASE DE DATOS - ACCESS</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="css/lock.css" rel="stylesheet">
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Para un jueguito -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    .draggable {
+      width: 150px;
+      padding: 10px;
+      margin: 10px;
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      cursor: move;
+      border-radius: 5px;
+    }
+
+    .dropzone {
+      width: 500px;
+      height: 300px;
+      border: 2px dashed #007bff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px auto;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .dropzone div {
+      margin: 5px 0;
+    }
+
+    .correct {
+      background-color: #28a745 !important;
+    }
+
+    .incorrect {
+      background-color: #dc3545 !important;
+    }
+  </style>
+
+</head>
+
+<body class="index-page">
+
+
+  <header id="header" class="header dark-background d-flex flex-column">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="img/Logo_Access.png" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="indexContenido.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Bases de Datos</h1>
+    </a>
+
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Inicio</a></li>
+        <li><a href="#contenido"><i class="bi bi-person navicon"></i>Conceptos Básicos</a></li>
+        <li><a href="#ejempl"><i class="bi bi-file-earmark-text navicon"></i> Base de Datos de Ejemplo</a></li>
+        <li><a href="#recursos"><i class="bi bi-images navicon"></i> Recursos Interactivos</a></li>
+        <li class="dropdown"><a href="#quest"><i class="bi bi-menu-button navicon"></i> <span>Juegos y Retos</span> <i
+              class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="./retos/RETO_1.html">Reto 1</a></li>
+            <li><a href="./retos/RETO_2.html">Reto 2</a></li>
+            <li><a href="./retos/RETO_3.html">Reto 3</a></li>
+            <li><a href="./retos/RETO_4.html">Reto 4</a></li>
+          </ul>
+        </li>
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Examen Final</a></li>
+        <li><a href="#Certificado"><i class="bi bi-envelope navicon"></i> Certificado </a></li>
+      </ul>
+
+
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    
+<!-- Asistente star -->
+
+<!--Modal  -->
+
+<div class="modal fade" id="responseModal" tabindex="-1" aria-labelledby="responseModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+      <div class="modal-content mb-0 ">
+          
+        <div class="container">
+          <div class="row">
+            <div class=" col-xs-11 col-lg-11 col-md-11" ></div>
+            
+            <div class=" col-xs-1 col-lg-1 col-md-1  mt-2 mr-6">
+              <button type="button" class="btn-close mr-5" data-bs-dismiss="modal" aria-label="Close"></button>  
+            </div>
+          </div>
+
+          <div class="row">
+ 
+            <div class=" col-lg-11 col-md-11  pl-0">
+              <div class="modal-body mb-0" id="responseText"></div>
+            </div>
+          </div>
+        </div> 
+      </div>
+     
+  </div>
+</div>  
+<!--Moda END -->
+
+<button id="questionButton" class="btn btn-primary " data-aos="fade-up" ></button>
+
+<div  id="questionMenu" class="speech-bubble card">
+<ul class="list-group list-group-flush" id="questionList">
+  <!-- Preguntas generadas dinámicamente -->
+</ul>
+</div>
+
+<!-- Asistente end -->
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+  <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+    <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Base de Datos</h2>
+  </a>
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav ms-auto p-4 p-lg-0">
+      <!-- Enlace Inicio 
+      <a href="indexContenido.html" class="nav-item nav-link small-text">Inicio</a>-->  
+
+      <!-- Menú Programación -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item  nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Programación</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_Programacion/Contenido_Programacion/portfolio-details.html"
+            class="dropdown-item small-text">I. Algoritmos</a>
+          <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
+            class="dropdown-item small-text">II. Diagramas</a>
+          <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
+            class="dropdown-item small-text">III. Python</a>
+        </div>
+      </div>
+
+      <!-- Menú Redes -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">I. Medios de conexión</a>
+          <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">II. Redes Lan</a>
+          <a href="../../Contenido_Redes/INTERNET-SERVICIOS/INTERNET-SERVICIOS/index.html" class="dropdown-item small-text">III. Internet</a>
+
+        </div>
+      </div>
+
+      <!-- Menú Base de Datos -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de Datos</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
+            class="dropdown-item small-text">I. Access</a>
+          <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html" class="dropdown-item small-text">II. Visual
+            Basic Access</a>
+          <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+            class="dropdown-item small-text">III. MySQL (Workbench)</a>
+        </div>
+      </div>
+
+    </div>
+    <a href="../../index.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i class="fa fa-arrow-right ms-3"></i></a>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="img/Fondo_Access.jpg" alt="" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2 style="color: white;">Bienvenido</h2>
+        <p> A su curso Access: <span class="typed" data-typed-items="Diseño, Creación, Gestión"> </span><span
+            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span
+            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Conceptos Basicos -->
+    <header class="bg-primary text-white text-center py-4">
+      <h1>Microsoft Access</h1>
+    </header>
+
+    <main class="container my-5 px-4 py5">
+      <section id="contenido" class="about section">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Conceptos Básicos de Microsoft Access</h2>
+          <p>Microsoft Access es una herramienta poderosa para gestionar bases de datos de manera eficiente. A
+            continuación, exploraremos los temas fundamentales que necesitas conocer.</p>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="accordion" id="accessAccordion">
+
+            <!-- Tema 1: Tablas -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTablas">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTablas" aria-expanded="true" aria-controls="collapseTablas">
+                  1. Tablas
+                </button>
+              </h2>
+              <div id="collapseTablas" class="accordion-collapse collapse show" aria-labelledby="headingTablas"
+                data-bs-parent="#accessAccordion">
+                <div class="accordion-body text-center">
+                  <p>Las tablas son el componente principal de Access. Permiten almacenar datos de manera estructurada
+                    mediante filas y columnas.</p>
+                  <img src="img/Tabla_Access.jpg" class="img-fluid rounded shadow-sm mb-3" alt="Tablas en Access">
+                  <br>
+                  <button class="btn btn-primary" onclick="mostrarVideo('videoTablas')">Ver Video</button>
+                  <div id="videoTablas" class="collapse mt-3">
+                    <video controls width="100%">
+                      <source src="videos/TABLA.mp4" type="video/mp4">Tu navegador no soporta el elemento de video.
+                    </video>
+                  </div>
+                  <!-- Subtemas de Tablas -->
+                  <div class="mt-3">
+                    <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#subtema1_2"
+                      aria-expanded="false" aria-controls="subtema1_2">Subtema: Establecer una Clave Primaria</button>
+                    <div id="subtema1_2" class="collapse mt-2">
+                      <p>Una clave primaria garantiza la unicidad de los registros dentro de la tabla.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tema 2: Tipos de Campo -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingCampos">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseCampos" aria-expanded="false" aria-controls="collapseCampos">
+                  2. Tipos de Campo
+                </button>
+              </h2>
+              <div id="collapseCampos" class="accordion-collapse collapse" aria-labelledby="headingCampos"
+                data-bs-parent="#accessAccordion">
+                <div class="accordion-body text-center">
+                  <p>Los tipos de campo en Access determinan la naturaleza de los datos que se pueden almacenar en una
+                    tabla.</p>
+                  <img src="img/Tipo_Datos.png" class="img-fluid rounded shadow-sm mb-3" alt="Tablas en Access">
+                  <br>
+                  <button class="btn btn-primary" onclick="mostrarVideo('videoCampos')">Ver Video</button>
+                  <div id="videoCampos" class="collapse mt-3">
+                    <video controls width="100%">
+                      <source src="videos/Tipos.mp4" type="video/mp4">Tu navegador no soporta el elemento de video.
+                    </video>
+                  </div>
+                  <!-- Subtema de Campos -->
+                  <div class="mt-3">
+                    <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#subtema2_1"
+                      aria-expanded="false" aria-controls="subtema2_1">Subtema: Tipos Comunes de Campos</button>
+                    <div id="subtema2_1" class="collapse mt-2">
+                      <p>Algunos tipos comunes incluyen Texto, Número, Fecha/Hora, y Booleano.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tema 3: Relaciones -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingRelaciones">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseRelaciones" aria-expanded="false" aria-controls="collapseRelaciones">
+                  3. Relaciones
+                </button>
+              </h2>
+              <div id="collapseRelaciones" class="accordion-collapse collapse" aria-labelledby="headingRelaciones"
+                data-bs-parent="#accessAccordion">
+                <div class="accordion-body text-center">
+                  <p>Las relaciones permiten conectar diferentes tablas a través de campos comunes.</p>
+                  <img src="img/Conceptos_Relaciones.png" class="img-fluid rounded shadow-sm mb-3"
+                    alt="Relaciones en Access">
+                  <br>
+                  <button class="btn btn-primary" onclick="mostrarVideo('videoRelaciones')">Ver Video</button>
+                  <div id="videoRelaciones" class="collapse mt-3">
+                    <video controls width="100%">
+                      <source src="videos/Relaciones_Access.mp4" type="video/mp4">Tu navegador no soporta el elemento de
+                      video.
+                    </video>
+                  </div>
+                  <!-- Subtemas de Relaciones -->
+                  <div class="mt-3">
+                    <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#subtema3_1"
+                      aria-expanded="false" aria-controls="subtema3_1">Subtema: Relaciones Uno a Uno</button>
+                    <div id="subtema3_1" class="collapse mt-2">
+                      <p>En una relación uno a uno, cada registro de una tabla está relacionado con un solo registro de
+                        otra tabla.</p>
+                        <button class="btn btn-primary" onclick="mostrarVideo('unoauno')">Ver Video</button>
+                        <div id="unoauno" class="collapse mt-3">
+                          <video controls width="100%">
+                            <source src="videos/UNO.mp4" type="video/mp4">Tu navegador no soporta el elemento de
+                            video.
+                          </video>
+                        </div>
+                    </div>
+                    
+                  </div>
+                  <div class="mt-3">
+                    <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#subtema3_2"
+                      aria-expanded="false" aria-controls="subtema3_2">Subtema: Relaciones Uno a Muchos</button>
+                    <div id="subtema3_2" class="collapse mt-2">
+                      <p>En una relación uno a muchos, un registro en una tabla puede estar relacionado con múltiples
+                        registros en otra tabla.</p>
+                    </div>
+                  </div>
+                  <div class="mt-3">
+                    <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#subtema3_3"
+                      aria-expanded="false" aria-controls="subtema3_3">Subtema: Relaciones Muchos a Muchos</button>
+                    <div id="subtema3_3" class="collapse mt-2">
+                      <p>En una relación muchos a muchos, varios registros en una tabla pueden estar relacionados con
+                        varios registros en otra tabla.</p>
+                        <button class="btn btn-primary" onclick="mostrarVideo('varios')">Ver Video</button>
+                        <div id="varios" class="collapse mt-3">
+                          <video controls width="100%">
+                            <source src="videos/VARIOS.mp4.crdownload" type="video/mp4">Tu navegador no soporta el elemento de
+                            video.
+                          </video>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tema 4: Formularios -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFormularios">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFormularios" aria-expanded="false" aria-controls="collapseFormularios">
+                  4. Formularios
+                </button>
+              </h2>
+              <div id="collapseFormularios" class="accordion-collapse collapse" aria-labelledby="headingFormularios"
+                data-bs-parent="#accessAccordion">
+                <div class="accordion-body text-center">
+                  <p>Los formularios en Access permiten una entrada de datos más amigable y organizada para los
+                    usuarios.</p>
+                  <img src="img/Formulario_Access.jpg" class="img-fluid rounded shadow-sm mb-3"
+                    alt="Formularios en Access">
+                  <br>
+                  <button class="btn btn-primary" onclick="mostrarVideo('videoFormularios')">Ver Video</button>
+                  <div id="videoFormularios" class="collapse mt-3">
+                    <video controls width="100%">
+                      <source src="videos/Formulario_Access.mp4" type="video/mp4">Tu navegador no soporta el elemento de
+                      video.
+                    </video>
+                  </div>
+                  <!-- Subtemas de Formularios -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Tema 5: Consultas -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingConsultas">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseConsultas" aria-expanded="false" aria-controls="collapseConsultas">
+                  5. Consultas
+                </button>
+              </h2>
+              <div id="collapseConsultas" class="accordion-collapse collapse" aria-labelledby="headingConsultas"
+                data-bs-parent="#accessAccordion">
+                <div class="accordion-body text-center">
+                  <p>Las consultas en Access permiten extraer información específica de una o varias tablas.</p>
+                  <img src="img/Consulta_Access.png" class="img-fluid rounded shadow-sm mb-3" alt="Consultas en Access">
+                  <br>
+                  <button class="btn btn-primary" onclick="mostrarVideo('videoConsultas')">Ver Video</button>
+                  <div id="videoConsultas" class="collapse mt-3">
+                    <video controls width="100%">
+                      <source src
+                      
+                      ="videos/Consulta_Access.mp4" type="video/mp4">Tu navegador no soporta el elemento de
+                      video.
+                    </video>
+                  </div>
+                  <!-- Subtemas de Consultas en Access -->
+                  <div class="mt-3">
+                    <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#consulta1"
+                      aria-expanded="false" aria-controls="consulta1">Consulta de Selección</button>
+                    <div id="consulta1" class="collapse mt-2">
+                      <p>Permite extraer datos específicos de una o varias tablas aplicando criterios.</p>
+                      <button class="btn btn-primary" onclick="mostrarVideo('seleccion')">Ver Video</button>
+                      <div id="seleccion" class="collapse mt-3">
+                        <video controls width="100%">
+                          <source src="videos/SELECCION.mp4" type="video/mp4">
+                          Tu navegador no soporta el elemento de video.
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-3">
+                    <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#consulta2"
+                      aria-expanded="false" aria-controls="consulta2">Consulta de Acción</button>
+                    <div id="consulta2" class="collapse mt-2">
+                      <p>Modifica datos en la base de datos. Puede actualizar, eliminar, anexar o crear tablas.</p>
+                      <button class="btn btn-primary" onclick="mostrarVideo('accion')">Ver Video</button>
+                      <div id="accion" class="collapse mt-3">
+                        <video controls width="100%">
+                          <source src="videos/acción.mp4" type="video/mp4">
+                          Tu navegador no soporta el elemento de video.
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-3">
+                    <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#consulta3"
+                      aria-expanded="false" aria-controls="consulta3">Consulta de Parámetros</button>
+                    <div id="consulta3" class="collapse mt-2">
+                      <p>Solicita un valor al usuario al ejecutarse para filtrar los resultados.</p>
+                      <button class="btn btn-primary" onclick="mostrarVideo('parametro')">Ver Video</button>
+                      <div id="parametro" class="collapse mt-3">
+                        <video controls width="100%">
+                          <source src="videos/PARAMETROS.mp4" type="video/mp4">
+                          Tu navegador no soporta el elemento de video.
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tema 6: Claves Primarias y Foráneas -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingIndices">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseIndices" aria-expanded="false" aria-controls="collapseIndices">
+                  6. Claves Primarias y Foráneas
+                </button>
+              </h2>
+              <div id="collapseIndices" class="accordion-collapse collapse" aria-labelledby="headingIndices"
+                data-bs-parent="#accessAccordion">
+                <div class="accordion-body text-center">
+                  <p>Las claves primarias y foráneas permiten establecer relaciones entre tablas y garantizar la
+                    integridad de los datos.</p>
+                  <img src="./img/extra.png" class="img-fluid rounded shadow-sm mb-3" alt="Consultas en Access">
+                  <br>
+                  <button class="btn btn-primary" onclick="mostrarVideo('videoIndices')">Ver Video</button>
+                  <div id="videoIndices" class="collapse mt-3">
+                    <video controls width="100%">
+                      <source src="./videos/Foraneas_clave.mp4" type="video/mp4">Tu navegador no soporta el elemento de
+                      video.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Modal para videos -->
+        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="videoModalLabel">Video Tutorial</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                  id="closeModal"></button>
+              </div>
+              <div class="modal-body">
+                <video controls width="100%" id="videoModalSource">
+                  <source src="" type="video/mp4">Tu navegador no soporta el elemento de video.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ejemplo" class="example section">
+        <h1>Creación de Tablas en Access</h1>
+
+        <div class="container1">
+          <!-- Primer div: Creación de la tabla -->
+          <div class="form-section">
+            <h2>Ejercicio 1: Crear Tabla</h2>
+            <div class="form-item">
+              <label for="tablaNombre">Nombre de la tabla:</label>
+              <input type="text" id="tablaNombre" placeholder="Nombre de la tabla">
+            </div>
+
+            <div class="form-item">
+              <label for="campoNombre">Nombre del campo:</label>
+              <input type="text" id="campoNombre" placeholder="Nombre del campo">
+            </div>
+
+            <div class="form-item">
+              <label for="tipoCampo">Tipo de campo:</label>
+              <select id="tipoCampo">
+                <option value="Texto">Texto</option>
+                <option value="Número">Número</option>
+                <option value="Fecha">Fecha</option>
+                <option value="Sí/No">Sí/No</option>
+                <option value="AutoNumérico">AutoNumérico</option>
+              </select>
+            </div>
+
+            <button onclick="agregarCampo()">Agregar Campo</button>
+            <br><br>
+            <button onclick="crearNuevaTabla()">Crear Otra Tabla</button>
+          </div>
+
+          <!-- Segundo div: Resumen de la tabla creada -->
+          <div class="result-section">
+            <h2>Resumen de la Tabla Creada</h2>
+            <div id="tablaResumen"></div>
+          </div>
+
+          <!-- Tercer div: Formulario de ingreso de datos -->
+          <div class="form-data-section">
+            <h2>Formulario de Ingreso de Datos</h2>
+            <div id="formIngreso"></div>
+            <button onclick="guardarDatos()">Guardar</button>
+          </div>
+
+          <!-- Cuarto div: Mostrar datos ingresados -->
+          <div class="data-display-section">
+            <h2>Datos Ingresados</h2>
+            <table id="tablaDatos" class="result-table">
+              <thead>
+                <tr id="cabeceraTabla"></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section id="drag-game" class="game section">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Cuestionario de conceptos Básicos de Access</h2>
+          <p>¡Bienvenidos al quiz interactivo sobre la creación de bases de datos en Microsoft Access! En este ejercicio, pondremos a prueba tus conocimientos sobre la creación y gestión de bases de datos utilizando Access. A lo largo de las preguntas, se cubrirán conceptos como tablas, relaciones, claves primarias y foráneas, consultas y formularios, todos los cuales son esenciales al trabajar con bases de datos en Access.</p>
+          <p>Este quiz está dirigido a aquellos que están aprendiendo o desean reforzar su comprensión de cómo usar Microsoft Access para organizar y gestionar datos de manera efectiva. ¡Es el momento perfecto para aplicar lo que has aprendido y probar tus habilidades! Si alguna pregunta te resulta difícil, no te preocupes, las respuestas te ayudarán a comprender mejor el tema.</p>
+          <p>¡Comencemos y veamos qué tanto sabes sobre la creación de bases de datos en Access!</p>
+        </div>
+      
+        <div class="quiz-container">
+          <div class="quiz-row">
+            <div class="quiz-column">
+              <div class="quiz-card">
+                <h2 class="quiz-title">Cuestionario de Microsoft Access</h2>
+                <form id="quizForm">
+                  <div class="quiz-question">
+                    <label for="q1" class="quiz-label">1. ¿Qué es una tabla en Microsoft Access?</label>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q1" value="a" id="q1a">
+                      <label class="quiz-option-label" for="q1a">A) Un archivo de texto con datos</label>
+                    </div>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q1" value="b" id="q1b">
+                      <label class="quiz-option-label" for="q1b">B) Una colección de datos organizados en filas y columnas</label>
+                    </div>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q1" value="c" id="q1c">
+                      <label class="quiz-option-label" for="q1c">C) Un conjunto de archivos relacionados</label>
+                    </div>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q1" value="d" id="q1d">
+                      <label class="quiz-option-label" for="q1d">D) Ninguna de las anteriores</label>
+                    </div>
+                  </div>
+      
+                  <div class="quiz-question">
+                    <label for="q2" class="quiz-label">2. ¿Qué tipo de campo es utilizado para almacenar texto?</label>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q2" value="a" id="q2a">
+                      <label class="quiz-option-label" for="q2a">A) Campo Fecha</label>
+                    </div>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q2" value="b" id="q2b">
+                      <label class="quiz-option-label" for="q2b">B) Campo de Texto</label>
+                    </div>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q2" value="c" id="q2c">
+                      <label class="quiz-option-label" for="q2c">C) Campo Número</label>
+                    </div>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q2" value="d" id="q2d">
+                      <label class="quiz-option-label" for="q2d">D) Campo Sí/No</label>
+                    </div>
+                  </div>
+      
+                  <div class="quiz-question">
+                    <label for="q3" class="quiz-label">3. ¿Qué es una clave primaria?</label>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q3" value="a" id="q3a">
+                      <label class="quiz-option-label" for="q3a">A) Un campo único que identifica un registro</label>
+                    </div>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q3" value="b" id="q3b">
+                      <label class="quiz-option-label" for="q3b">B) Un campo que se utiliza para cálculos</label>
+                    </div>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q3" value="c" id="q3c">
+                      <label class="quiz-option-label" for="q3c">C) Un campo que relaciona dos tablas</label>
+                    </div>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q3" value="d" id="q3d">
+                      <label class="quiz-option-label" for="q3d">D) Un campo que permite búsquedas</label>
+                    </div>
+                  </div>
+      
+                  <div class="quiz-question">
+                    <label for="q4" class="quiz-label">4. ¿Cómo se llama el enlace entre dos tablas?</label>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q4" value="a" id="q4a">
+                      <label class="quiz-option-label" for="q4a">A) Relación</label>
+                    </div>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q4" value="b" id="q4b">
+                      <label class="quiz-option-label" for="q4b">B) Llave</label>
+                    </div>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q4" value="c" id="q4c">
+                      <label class="quiz-option-label" for="q4c">C) Unión</label>
+                    </div>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q4" value="d" id="q4d">
+                      <label class="quiz-option-label" for="q4d">D) Conexión</label>
+                    </div>
+                  </div>
+      
+                  <div class="quiz-question">
+                    <label for="q5" class="quiz-label">5. ¿Qué es una consulta?</label>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q5" value="a" id="q5a">
+                      <label class="quiz-option-label" for="q5a">A) Una operación para obtener datos de una o más tablas</label>
+                    </div>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q5" value="b" id="q5b">
+                      <label class="quiz-option-label" for="q5b">B) Un formulario para ingresar datos</label>
+                    </div>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q5" value="c" id="q5c">
+                      <label class="quiz-option-label" for="q5c">C) Una vista de la base de datos</label>
+                    </div>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q5" value="d" id="q5d">
+                      <label class="quiz-option-label" for="q5d">D) Un campo de texto</label>
+                    </div>
+                  </div>
+      
+                  <div class="quiz-question">
+                    <label for="q6" class="quiz-label">6. ¿Qué es un formulario en Access?</label>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q6" value="a" id="q6a">
+                      <label class="quiz-option-label" for="q6a">A) Una vista para visualizar los registros de la base de datos</label>
+                    </div>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q6" value="b" id="q6b">
+                      <label class="quiz-option-label" for="q6b">B) Una interfaz para ingresar y modificar datos</label>
+                    </div>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q6" value="c" id="q6c">
+                      <label class="quiz-option-label" for="q6c">C) Un campo de tipo fecha</label>
+                    </div>
+                    <div class="quiz-option">
+                      <input class="quiz-input" type="radio" name="q6" value="d" id="q6d">
+                      <label class="quiz-option-label" for="q6d">D) Un campo de tipo sí/no</label>
+                    </div>
+                  </div>
+      
+                  <div class="quiz-submit">
+                    <button type="button" class="quiz-btn" onclick="checkAnswers()">Enviar Respuestas</button>
+                  </div>
+                </form>
+            
+                <div id="result" class="quiz-result" style="display:none;"></div>
+            
+                <div class="quiz-submit" id="showSolutionBtn" style="display:none;">
+                  <button type="button" class="quiz-btn" onclick="showSolution()">Ver Soluciones</button>
+                </div>
+            
+                <div id="solution"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      </section>
+      <!-- Stats Section -->
+      <section id="ejempl" class="stats section">
+        <main class="container my-5">
+          <section id="ejemplo" class="example section">
+            <div class="container section-title" data-aos="fade-up">
+              <h2>Ejemplo de Creación de Base de Datos en Access Clientes</h2>
+              <p>¡Hola a todos! Bienvenidos a este tutorial donde aprenderemos a crear una base de datos desde cero en
+                Microsoft Access. A lo largo del video, exploraremos los pasos esenciales para diseñar tu propia base de
+                datos, creando tablas para almacenar información, formularios para facilitar la entrada de datos y
+                reportes para visualizar esos datos de manera organizada.</p>
+              <p>Este video está diseñado especialmente para principiantes, así que no te preocupes si nunca has
+                trabajado con Access antes; aquí te guiaré en cada paso del proceso. ¡Prepárense para sumergirse en el
+                mundo de las bases de datos y dar el primer paso hacia la gestión efectiva de la información! Así que,
+                ¡empecemos!</p>
+              <!-- Etiqueta de video -->
+              <video controls class="img-fluid" style="max-width: 100%; height: auto;" preload="metadata">
+                <source src="videos/Crear una base de datos.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos. Por favor, utiliza un navegador actualizado.
+              </video>
+            </div>
+          </section>
+      </section><!-- /Stats Section -->
+
+      <!-- Recursos Interativos Section -->
+      <section id="recursos" class="portfolio section light-background">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Recursos Interactivos</h2>
+          <p>Esta sección está diseñada para que explores Access de manera dinámica y sin saturación de contenido.
+            ¡Aprovecha estos recursos para convertirte en un experto en bases de datos! 🚀</p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+
+          <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+            <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+              <li data-filter="*" class="filter-active">Todo</li>
+              <li data-filter=".filter-video">Mini tutoriales</li>
+              <li data-filter=".filter-casos">Casos de Uso</li>
+              <li data-filter=".filter-descargables">Descargables</li>
+            </ul><!-- End Portfolio Filters -->
+
+            <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-video">
+                <div class="portfolio-content h-100">
+                  <img src="img/tik_crear_BD_Access.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Creación de BD</h4>
+                    <p>Crea tu primera Base de Datos en Access</p>
+                    <a href="videos/Creación_BD_Access.mp4" title="Video 1" data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-casos">
+                <div class="portfolio-content h-100">
+                  <img src="img/LOGO_ZURITA.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Laboratorios Zurita</h4>
+                    <p>Aprende como se aplica Access a un Laboratorio</p>
+                    <a href="img/LOGO_ZURITA.jpg" title="Laboratorio" data-gallery="portfolio-gallery-branding"
+                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a href="detalles-laboratorio.html" title="Mas Detalles" class="details-link"><i
+                        class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-video">
+                <div class="portfolio-content h-100">
+                  <img src="img/tik_crear_tabla_Acess.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Creación de Tablas</h4>
+                    <p>Crea tu primera tabla en Access</p>
+                    <a href="videos/Creación_Tabla_Access.mp4" title="Video 2" data-gallery="portfolio-gallery-product"
+                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-video">
+                <div class="portfolio-content h-100">
+                  <img src="img/tik_consulta_seleccion_Access.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Consulta de Selección</h4>
+                    <p>Crea tu consulta de selección en Acces</p>
+                    <a href="videos/Consulta_Selección_Access.mp4" title="Video 3"
+                      data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                        class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-descargables">
+                <div class="portfolio-content h-100">
+                  <img src="img/Descarga_Access.png" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Descarga Access</h4>
+                    <p>Te damos un lick de Acceso al instalador de Access</p>
+                    <a href="img/Descarga_Access.png" title="Descarga" data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a href="descargables.html" title="Mas detalles" class="details-link"><i
+                        class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-video">
+                <div class="portfolio-content h-100">
+                  <img src="img/tik_consulta_eliminar_Acess.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Consulta de Eliminar</h4>
+                    <p>Crea tu consulta de eliminar en Access</p>
+                    <a href="videos/Consulta_Eliminar_Access.mp4" title="Video 4" data-gallery="portfolio-gallery-book"
+                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-video">
+                <div class="portfolio-content h-100">
+                  <img src="img/tik_consulta_Anexar_Access.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Consulta de Anexar</h4>
+                    <p>Crea tu consulta de anexar en Access</p>
+                    <a href="videos/Consulta_Anexar_Access.mp4" title="Video 5" data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-video">
+                <div class="portfolio-content h-100">
+                  <img src="img/tik_consulta_Actualizacion_Access.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Consulta de Actualización</h4>
+                    <p>Crea tu consulta de actualización en Access</p>
+                    <a href="videos/Consulta_Actualizar_Acces.mp4" title="Video 6"
+                      data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                        class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-casos">
+                <div class="portfolio-content h-100">
+                  <img src="img/Banc_Logo.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Banco Pichincha</h4>
+                    <p>Aprende como se aplica Access a un Banco</p>
+                    <a href="img/Banc_Logo.jpg" title="Empresa" data-gallery="portfolio-gallery-book"
+                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a href="detalles-empresa.html" title="Mas Detalles" class="details-link"><i
+                        class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+
+            </div><!-- End Portfolio Container -->
+
+          </div>
+
+        </div>
+
+      </section><!-- /Portfolio Section -->
+
+      <!-- Recursos Interativos Section -->
+      <section id="quest" class="quest section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>DESAFÍOS Y RETOS</h2>
+          <p>¡Prepárate para poner a prueba tus conocimientos con Access! En esta sección, encontrarás juegos y retos
+            interactivos diseñados para desafiarte y ayudarte a mejorar tu dominio de las bases de datos. ¿Estás listo
+            para aceptar el reto?</p>
+        </div><!-- End Section Title -->
+
+        <!-- Retos Section -->
+        <div class="quiz-container ">
+          <div class="row">
+            <!-- Reto 1: Identificar el Tipo de Campo -->
+            <div class="col-12 col-sm-6 col-md-3 mb-4">
+              <div class="card reto-card" data-aos="fade-up">
+                <img src="./img/RETO2.png" class="card-img-top" alt="Juego 1">
+                <div class="card-body">
+                  <h5 class="card-title">Juego 1: Identificar el Tipo de Campo</h5>
+                  <p class="card-text">Asocia los tipos de datos correctos con situaciones específicas en Microsoft
+                    Access. ¡Demuestra tus conocimientos!</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Reto 2: Identificar la Relación que tienen las Tablas -->
+            <div class="col-12 col-sm-6 col-md-3 mb-4">
+              <div class="card reto-card" data-aos="fade-up">
+                <img src="./img/RETO1.png" class="card-img-top" alt="Juego 2">
+                <div class="card-body">
+                  <h5 class="card-title">Juego 2: Identificar la Relación que tienen las Tablas</h5>
+                  <p class="card-text">Analiza las tablas de una base de datos y encuentra cómo se relacionan entre sí
+                    para establecer conexiones adecuadas.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Reto 3: Corregir Errores en la Base de Datos -->
+            <div class="col-12 col-sm-6 col-md-3 mb-4">
+              <div class="card reto-card" data-aos="fade-up">
+                <img src="./img/RETO3.png" class="card-img-top" alt="Reto 1">
+                <div class="card-body">
+                  <h5 class="card-title">Reto 1: Corregir Errores en la Base de Datos</h5>
+                  <p class="card-text">Identifica y soluciona los errores comunes en una base de datos, como registros
+                    duplicados o datos faltantes.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Reto 4: Quiz de Access -->
+            <div class="col-12 col-sm-6 col-md-3 mb-4">
+              <div class="card reto-card" data-aos="fade-up">
+                <img src="./img/RETO4.png" class="card-img-top" alt="Reto 2">
+                <div class="card-body">
+                  <h5 class="card-title">Reto 2: Bienvenido al Quiz de Access</h5>
+                  <p class="card-text">Pon a prueba tu conocimiento con un cuestionario sobre Access. ¡Ve qué tan bien
+                    lo sabes!</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Row -->
+        </div><!-- End Retos Section -->
+      </section><!-- End Section -->
+
+      <!-- Services Section -->
+      <section id="services" class="services section">
+
+        <!-- Section Title -->
+        <div class="container section-title px-4 px-lg-5" data-aos="fade-up">
+          <h2>EXAMEN</h2>
+          <h1 class="mb-4">¡Bienvenido al Examen de Microsoft Access!</h1>
+          <p>
+            Este examen está diseñado para evaluar tus conocimientos sobre las principales funciones y características
+            de Microsoft Access,
+            una poderosa herramienta para la creación y gestión de bases de datos.
+          </p>
+          <p>
+            A lo largo de <strong>10 preguntas</strong>, pondremos a prueba tu comprensión de conceptos clave como
+            tablas, consultas, formularios,
+            relaciones y más. El tiempo límite es de <strong>6 minutos</strong>, así que asegúrate de administrar bien
+            tu tiempo y responder
+            cuidadosamente cada pregunta.
+          </p>
+          <p><strong>Recuerda:</strong></p>
+          <ul class="text-start">
+            <li>Lee cada pregunta con atención antes de seleccionar tu respuesta.</li>
+            <li>Al finalizar, obtendrás tu calificación y, si alcanzas una nota de <strong>7 o más</strong>, recibirás
+              un certificado que valida tu conocimiento.</li>
+          </ul>
+          <p class="fw-bold">¡Buena suerte!</p>
+          <p>Confía en tus habilidades y da lo mejor de ti. ¡Este es tu momento de demostrar todo lo que sabes!</p>
+          <div class="container text-center mt-5 px-4 px-lg-5" data-aos="fade-up">
+            <h1 class="mb-4">Examen de Microsoft Access</h1>
+            <p>¿Estás listo para rendir el examen?</p>
+            <a href="Examen_Final.html" class="btn btn-primary">Sí, estoy listo</a>
+          </div>
+        </div><!-- End Section Title -->
+
+
+        <!-- Testimonials Section -->
+        <section id="Certificado" class="testimonials section light-background">
+
+          <!-- Section Title -->
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Certificado!</h2>
+            <h3>Aqui se va a presentar tu certificado una vez hayas completado el Examen del Curso </h3>
+          </div><!-- End Section Title -->
+        </section><!-- /Testimonials Section -->
+
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+
+      <div class="container">
+        <div class="copyright text-center ">
+          <p>© <span>Copyright</span> <strong class="px-1 sitename">Grupo02</strong> <span>Todo los derechos
+              reservados</span></p>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
+            href="https://themewagon.com">ThemeWagon</a>
+        </div>
+      </div>
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="./js/conceptos.js"></script>
+
+    
+
+<script >
+
+  document.addEventListener('DOMContentLoaded', function () {
+      // Array de preguntas, respuestas, imágenes y videos
+      const qaArray = [
+          {
+              question: "¿Qué es Microsoft Access y para qué se utiliza?",
+              response: "Microsoft Access es un sistema de gestión de bases de datos (DBMS) desarrollado por Microsoft. Se utiliza para almacenar, organizar y gestionar grandes volúmenes de información, permitiendo crear bases de datos relacionales con tablas, consultas, formularios e informes.",
+              image: "",
+              video: ""
+          },
+          {
+              question: "¿Cuáles son los principales objetos que se pueden crear en Access?",
+              response: "Tablas: Para almacenar los datos de forma estructurada.Consultas: Para extraer y filtrar información específica de las tablas.Formularios: Para facilitar la introducción y visualización de datos.Informes: Para presentar los datos de manera organizada y visualmente atractiva.Macros y Módulos: Para automatizar tareas y agregar funciones avanzadas.",
+              image: "",
+              video: ""
+          },
+          {
+              question: "¿Cuál es la diferencia entre un campo y un registro en una tabla de Access?",
+              response: "Un campo es una columna en la tabla que almacena un tipo específico de dato, mientras que un registro es una fila que contiene los datos de cada campo.",
+              image: "",
+              video: ""
+          },
+          {
+              question: "¿Para qué sirve una consulta en Access?",
+              response: "Una consulta se utiliza para buscar, filtrar y analizar datos en una base de datos, mostrando solo la información que necesitas.",
+              image: "",
+              video: ""
+          }
+      ];
+  
+      // Referencias a elementos del DOM
+      const questionList = document.getElementById('questionList');
+      const questionButton = document.getElementById('questionButton');
+      const questionMenu = document.getElementById('questionMenu');
+      const responseText = document.getElementById('responseText');
+  
+      // Generar las preguntas en el menú
+      qaArray.forEach((item, index) => {
+          const listItem = document.createElement('li');
+          listItem.className = 'list-group-item question mb-1 list-group-item-action';
+          listItem.style.cssText = 'border: solid 0px #7c2e2e; border-radius: 15px; background-color: #181d38; color: white;';
+          listItem.setAttribute('data-bs-toggle', 'list');
+          listItem.setAttribute('role', 'tab');
+          listItem.setAttribute('data-index', index);
+          listItem.textContent = item.question;
+          questionList.appendChild(listItem);
+      });
+  
+      // Mostrar/Ocultar el menú
+      questionButton.addEventListener('click', function () {
+          questionMenu.style.display = questionMenu.style.display === 'none' || questionMenu.style.display === '' ? 'block' : 'none';
+      });
+  
+      // Delegación de eventos para manejar clics en las preguntas
+      questionList.addEventListener('click', function (event) {
+          if (event.target && event.target.classList.contains('question')) {
+              const index = event.target.getAttribute('data-index');
+              const selectedQA = qaArray[index];
+  
+              let content = `
+                  <div class="container section-title" data-aos="fade-up">
+                      <h2>${selectedQA.question}</h2>
+                      <p>${selectedQA.response}</p>
+                  </div>
+              `;
+  
+              // Agregar imagen si existe
+              if (selectedQA.image) {
+                  content += `
+                      <div class="container">
+                          <div class="row mt-3">
+                              <div class="col-lg-4 col-md-4"></div>
+                              <div class="col-lg-4 col-md-4">
+                                  <img src="${selectedQA.image}" alt="Imagen relacionada" class="img-fluid mb-3">
+                              </div>
+                          </div>
+                      </div>
+                  `;
+              }
+  
+              // Agregar video si existe
+              if (selectedQA.video) {
+                  content += `
+                      <div class="container">
+                          <div class="row mt-1">
+                              <video controls class="w-100">
+                                  <source src="${selectedQA.video}" type="video/mp4">
+                              </video>
+                          </div>
+                      </div>
+                  `;
+              }
+  
+              responseText.innerHTML = content;
+  
+              // Mostrar el modal y ocultar el menú
+              const responseModal = new bootstrap.Modal(document.getElementById('responseModal'));
+              responseModal.show();
+              questionMenu.style.display = 'none';
+          }
+      });
+  });
+    </script>
+</body>
+
+</html>

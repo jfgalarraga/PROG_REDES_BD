@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Emparejar Protocolos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: #64ffda;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #64ffda;
+    }
+
+    .instructions {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: #c0c0c0;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .protocols, .descriptions {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      width: 45%;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .protocol, .description {
+      background: rgba(255, 255, 255, 0.1);
+      color: #64ffda;
+      padding: 15px;
+      border-radius: 10px;
+      border: 2px solid #64ffda;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-shadow: 0 0 5px #64ffda;
+    }
+
+    .protocol:hover, .description:hover {
+      transform: scale(1.05);
+      background-color: #64ffda;
+      color: #000;
+      box-shadow: 0 0 20px #64ffda;
+    }
+
+    .matched {
+      color: #fff !important;
+      background-color: #00796b !important;
+      pointer-events: none;
+      box-shadow: 0 0 10px #00796b;
+    }
+
+    .btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      background: linear-gradient(45deg, #2193b0, #6dd5ed);
+      color: white;
+      border: none;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      background: linear-gradient(45deg, #6dd5ed, #2193b0);
+    }
+
+    #restart {
+      display: none;
+    }
+
+    #result-message {
+      color: #64ffda;
+      font-size: 1.5rem;
+      text-shadow: 0 0 5px #64ffda;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Juego de Emparejar Protocolos</h1>
+    <p class="instructions">Selecciona un protocolo en el lado izquierdo y luego su correspondiente descripción en el lado derecho.</p>
+
+    <div class="row">
+      <div class="protocols">
+        <div class="protocol" data-protocol="FTP">FTP</div>
+        <div class="protocol" data-protocol="POP3">POP3</div>
+        <div class="protocol" data-protocol="HTTP">HTTP</div>
+        <div class="protocol" data-protocol="HTTPS">HTTPS</div>
+        <div class="protocol" data-protocol="IMAP">IMAP</div>
+      </div>
+
+      <div class="descriptions">
+        <div class="description" data-protocol="FTP">Utilizado para la transferencia de archivos entre un cliente y servidoren una red.</div>
+        <div class="description" data-protocol="POP3">Permite la descarga de los mensajes desde un servidor de correo a un dispositivo local.</div>
+        <div class="description" data-protocol="HTTP">Base de la comunicación web, permite transmitir páginas web.</div>
+        <div class="description" data-protocol="HTTPS">Versión segura de HTTP con cifrado.</div>
+        <div class="description" data-protocol="IMAP">Permite acceder y gestionar mensajes almacenados en un servidor de correo.</div>
+      </div>
+    </div>
+
+    <div class="result text-center">
+      <p id="result-message"></p>
+      <button id="restart" class="btn">Reiniciar</button>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      let selectedProtocol = null;
+      let matchedCount = 0;
+      const totalMatches = $(".protocol").length;
+
+      function shuffleElements(container) {
+        const elements = container.children();
+        while (elements.length) {
+          container.append(elements.splice(Math.floor(Math.random() * elements.length), 1)[0]);
+        }
+      }
+
+      $(".protocol").click(function () {
+        if ($(this).hasClass("matched")) return;
+
+        $(".protocol").removeClass("selected");
+        $(this).addClass("selected");
+        selectedProtocol = $(this).data("protocol");
+      });
+
+      $(".description").click(function () {
+        if (!selectedProtocol || $(this).hasClass("matched")) return;
+
+        const descriptionProtocol = $(this).data("protocol");
+        if (selectedProtocol === descriptionProtocol) {
+          $(this).addClass("matched");
+          $(".protocol.selected").addClass("matched");
+          matchedCount++;
+
+          if (matchedCount === totalMatches) {
+            $("#result-message").text("¡Felicitaciones! Emparejaste todos los protocolos correctamente.");
+            $("#restart").show();
+          }
+        } else {
+          alert("Emparejamiento incorrecto. Intenta de nuevo.");
+        }
+
+        $(".protocol").removeClass("selected");
+        selectedProtocol = null;
+      });
+
+      $("#restart").click(function () {
+        $(".protocol, .description").removeClass("matched selected").css({ backgroundColor: "rgba(255, 255, 255, 0.1)" });
+        $("#result-message").text("");
+        $(this).hide();
+        matchedCount = 0;
+        selectedProtocol = null;
+
+        shuffleElements($(".protocols"));
+        shuffleElements($(".descriptions"));
+      });
+
+      // Shuffle on initial load
+      shuffleElements($(".protocols"));
+      shuffleElements($(".descriptions"));
+    });
+  </script>
+</body>
+
+</html>

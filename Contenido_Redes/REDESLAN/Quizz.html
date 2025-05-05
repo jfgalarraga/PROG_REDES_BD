@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz sobre Redes LAN</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- FontAwesome para el ícono de la casa -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f4f6f9;
+    }
+    .container {
+      max-width: 600px;
+      margin-top: 50px;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .question {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .answers li {
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .answers li:hover {
+      background-color: #e2e6ea;
+    }
+    .message {
+      font-size: 18px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .btn-primary {
+      width: 100%;
+    }
+    .btn-regresar {
+      margin-bottom: 20px;
+    }
+    .btn-regresar i {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Botón de Regresar -->
+<a href="indexContenido.html" class="btn btn-light btn-regresar">
+  <i class="fas fa-home"></i> Regresar
+</a>
+
+<div class="container">
+  <h1 class="text-center mb-4">Quiz sobre Redes LAN</h1>
+  
+  <!-- Quiz Content -->
+  <div id="quiz">
+    <div id="question-container">
+      <div class="question" id="question-text"></div>
+      <ul class="answers list-group" id="answers-list"></ul>
+    </div>
+    <button id="next-button" class="btn btn-primary" style="display:none;" onclick="nextQuestion()">Siguiente</button>
+  </div>
+  
+  <!-- Result -->
+  <div id="result" class="message"></div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const questions = [
+    {
+      question: "¿Qué es una Red LAN?",
+      answers: [
+        "Una red que conecta dispositivos en una misma área geográfica",
+        "Una red que conecta dispositivos de diferentes países",
+        "Una red para compartir archivos en Internet",
+        "Una red con múltiples tipos de conexiones inalámbricas"
+      ],
+      correct: 0
+    },
+    {
+      question: "¿Cuáles son las ventajas de elegir una Red LAN?",
+      answers: [
+        "Conexión rápida y de bajo costo, fácil administración y escalabilidad",
+        "Costos elevados de instalación y mantenimiento",
+        "Red de cobertura global con dispositivos móviles",
+        "Mayor seguridad pero sin facilidad de expansión"
+      ],
+      correct: 0
+    },
+    {
+      question: "¿Qué es un router?",
+      answers: [
+        "Conecta diferentes redes",
+        "Conecta una sola Red",
+        "Conecta multiples dispositivos ",
+        "Conecta un solo dispositivo"
+      ],
+      correct: 0
+    },
+    {
+      question: "¿Qué componente es parte de una Red LAN?",
+      answers: [
+        "Router",
+        "Mouse",
+        "CPU",
+      ],
+      correct: 0
+    }
+  ];
+
+  let currentQuestion = 0;
+  let correctAnswers = 0;
+
+  const questionText = document.getElementById("question-text");
+  const answersList = document.getElementById("answers-list");
+  const nextButton = document.getElementById("next-button");
+  const result = document.getElementById("result");
+
+  function loadQuestion() {
+    const question = questions[currentQuestion];
+    questionText.textContent = question.question;
+    answersList.innerHTML = '';
+    question.answers.forEach((answer, index) => {
+      const li = document.createElement('li');
+      li.classList.add('list-group-item');
+      li.textContent = answer;
+      li.onclick = () => checkAnswer(index);
+      answersList.appendChild(li);
+    });
+  }
+
+  function checkAnswer(selectedIndex) {
+    const question = questions[currentQuestion];
+    if (selectedIndex === question.correct) {
+      correctAnswers++;
+      alert("¡Respuesta correcta!");
+    } else {
+      alert("Respuesta incorrecta.");
+    }
+    nextButton.style.display = 'block';
+  }
+
+  function nextQuestion() {
+    currentQuestion++;
+    if (currentQuestion < questions.length) {
+      loadQuestion();
+      nextButton.style.display = 'none';
+    } else {
+      showResult();
+    }
+  }
+
+  function showResult() {
+    result.textContent = `¡Has completado el quiz! Respondiste correctamente ${correctAnswers} de ${questions.length} preguntas.`;
+    document.getElementById("quiz").style.display = 'none';
+  }
+
+  loadQuestion();
+</script>
+
+</body>
+</html>

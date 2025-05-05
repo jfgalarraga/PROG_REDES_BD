@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Subredes</title>
+  <style>
+/* Estilos personalizados */
+body {
+  background-color: #f4f4f4;
+}
+
+#intro-screen {
+  padding-top: 50px;
+}
+
+#game-screen {
+  padding-top: 50px;
+}
+
+canvas {
+  border: 2px solid #333;
+  background-color: #eaeaea;
+}
+
+.d-none {
+  display: none;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Fondo de video -->
+  <video id="background-video" autoplay muted loop>
+    <source src="../img/Fondo tecnológico en 4K.mp4" type="video/mp4">
+    Tu navegador no soporta el video.
+  </video>
+
+  <div class="container">
+    <!-- Pantalla de inicio con contexto del juego -->
+    <div id="intro-screen" class="text-center">
+      <h1>¡Bienvenido a El Laberinto de Cables!</h1>
+      <p>En este juego, tu misión es conectar computadoras a través de cables en un laberinto sin que se pierdan las conexiones. ¡Cuidado con los obstáculos!</p>
+      <button id="start-button" class="btn btn-primary">Iniciar Juego</button>
+    </div>
+
+    <!-- Pantalla del juego -->
+    <div id="game-screen" class="text-center d-none">
+      <h2>Conecta los cables de manera correcta</h2>
+      <canvas id="game-canvas" width="500" height="500"></canvas>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS, Popper y jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <script>
+  // Obtener elementos
+const startButton = document.getElementById('start-button');
+const introScreen = document.getElementById('intro-screen');
+const gameScreen = document.getElementById('game-screen');
+const canvas = document.getElementById('game-canvas');
+const ctx = canvas.getContext('2d');
+
+// Variables del juego
+let gameStarted = false;
+let playerX = 50, playerY = 50;
+let goalX = 450, goalY = 450;
+
+// Función para comenzar el juego
+startButton.addEventListener('click', () => {
+  introScreen.classList.add('d-none');
+  gameScreen.classList.remove('d-none');
+  startGame();
+});
+
+// Función para inicializar el juego
+function startGame() {
+  gameStarted = true;
+  playerX = 50;
+  playerY = 50;
+  drawGame();
+}
+
+// Función para dibujar el laberinto y al jugador
+function drawGame() {
+  if (gameStarted) {
+    // Limpiar el canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Dibujar el objetivo (meta)
+    ctx.fillStyle = 'green';
+    ctx.fillRect(goalX, goalY, 20, 20);
+
+    // Dibujar el jugador (computadora)
+    ctx.fillStyle = 'blue';
+    ctx.fillRect(playerX, playerY, 20, 20);
+  }
+}
+
+// Función para mover al jugador con las teclas
+document.addEventListener('keydown', (e) => {
+  if (gameStarted) {
+    const moveAmount = 20;
+
+    if (e.key === 'ArrowUp' && playerY > 0) playerY -= moveAmount;
+    if (e.key === 'ArrowDown' && playerY < canvas.height - 20) playerY += moveAmount;
+    if (e.key === 'ArrowLeft' && playerX > 0) playerX -= moveAmount;
+    if (e.key === 'ArrowRight' && playerX < canvas.width - 20) playerX += moveAmount;
+
+    drawGame();
+
+    // Comprobar si el jugador ha llegado a la meta
+    if (playerX === goalX && playerY === goalY) {
+      alert('¡Has ganado! Conectaste las computadoras correctamente.');
+      gameStarted = false;
+    }
+  }
+});
+  </script>
+
+</body>
+</html>

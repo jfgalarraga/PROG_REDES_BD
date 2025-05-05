@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>RDBMS-MYSQL(WORKBENCH)</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+
+        <div class="profile-img">
+            <img src="assets/img/logo-retos.png" alt="" class="img-fluid rounded-circle">
+        </div>
+
+        <a href="indexContenido.html" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename">Desafíos y Retos</h1>
+        </a>
+
+
+        
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <!-- PRINCIPAL -->
+                <li><a href="indexContenido.html"><i class="bi bi-house-door navicon"></i>PRINCIPAL</a></li>
+
+                <!-- Inicio -->
+                <li><a href="indexContenido.html"><i class="bi bi-house-door navicon"></i>Inicio</a></li>
+
+                <!-- Conceptos Básicos -->
+                <li class="dropdown">
+                    <a href="fundamental.html"><i class="bi bi-lightbulb navicon"></i>Conceptos Básicos</a>
+                </li>
+
+                <!-- Instalación -->
+                <li class="dropdown">
+                    <a href="instalacion.html"><i class="bi bi-plug navicon"></i>Instalación</a>
+                </li>
+
+                <!-- Videos de apoyo -->
+                <li class="dropdown">
+                    <a href="videos_apoyo.html"><i class="bi bi-film navicon"></i> <span>Videos de apoyo</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i>
+                    </a>
+                    <ul>
+                        <li><a href="videos_apoyo.html#introduccion-mysql"><i
+                                    class="bi bi-database navicon"></i>Introducción a MySQL</a></li>
+                        <li><a href="videos_apoyo.html#instalacion-workbench-server"><i
+                                    class="bi bi-laptop navicon"></i>Instalación de <br> Workbench y Server</a></li>
+                        <li><a href="videos_apoyo.html#creacion-bases-tablas"><i
+                                    class="bi bi-table navicon"></i>Creación de Bases de <br> Datos y Tablas</a></li>
+                        <li><a href="videos_apoyo.html#consultas-basicas"><i class="bi bi-search navicon"></i>Consultas
+                                Básicas</a></li>
+                        <li><a href="videos_apoyo.html#roles-permisos"><i class="bi bi-shield-lock navicon"></i>Roles y
+                                Permisos</a></li>
+                        <li><a href="videos_apoyo.html#ejercicio-practico"><i class="bi bi-pencil navicon"></i>Buenas
+                                Prácticas en <br> MySQL</a></li>
+                    </ul>
+                </li>
+
+
+                <!-- Desafíos y Retos -->
+                <li class="dropdown">
+                    <a href="desafios_retos.html"><i class="bi bi-flag navicon"></i> <span>Desafíos y Retos</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i>
+                    </a>
+                    <ul>
+                        <li><a href="desafios_retos.html#desafio-consultas-sql"><i
+                                    class="bi bi-file-earmark-code navicon"></i>Desafío
+                                de Consultas<br>SQL</a></li>
+                        <li><a href="desafios_retos.html#game-workbench"><i class="bi bi-diagram-2 navicon"></i>Desafío
+                                de MySQL
+                                <br>Workbench</a></li>
+                        <li><a href="desafios_retos.html#trivia_base_datos"><i
+                                    class="bi bi-question-circle navicon"></i>Trivia
+                                Interactiva</a></li>
+                    </ul>
+                </li>
+
+                <!-- Examen Final -->
+                <li class="dropdown">
+                    <a href="examen.html"><i class="bi bi-file-earmark-text navicon"></i>Examen Final</a>
+                </li>
+
+                <!-- Certificado -->
+                <li class="dropdown">
+                    <a href="certificado.html"><i class="bi bi-award navicon"></i>Certificado</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="main">
+ <!-- Navbar Start -->
+ <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Base de datos</h2>
+      </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <!-- Enlace Inicio 
+    <a href="indexContenido.html" class="nav-item nav-link small-text">Inicio</a>-->
+
+            <!-- Menú Programación -->
+            <div class="nav-item dropdown">
+                <a href="#" class=" nav-item  nav-link dropdown-toggle small-text"
+                    data-bs-toggle="dropdown">Programación</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="../../Contenido_Programacion/Contenido_Programacion/portfolio-details.html"
+                        class="dropdown-item small-text">I.Algoritmos</a>
+                    <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
+                        class="dropdown-item small-text">II.Diagramas</a>
+                    <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
+                        class="dropdown-item small-text">III.Python</a>
+                </div>
+            </div>
+
+            <!-- Menú Redes -->
+            <div class="nav-item dropdown">
+                <a href="#" class=" nav-item nav-link dropdown-toggle small-text"
+                    data-bs-toggle="dropdown">Redes</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="../../Contenido_Redes/INTERNET-SERVICIOS/index.html"
+                        class="dropdown-item small-text">I.Internet</a>
+                    <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html"
+                        class="dropdown-item small-text">II.Medios de conexión</a>
+                    <a href="../../Contenido_Redes/REDESLAN/indexContenido.html"
+                        class="dropdown-item small-text">III.Redes Lan</a>
+
+                </div>
+            </div>
+
+            <!-- Menú Base de Datos -->
+            <div class="nav-item dropdown">
+                <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base
+                    de Datos</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
+                        class="dropdown-item small-text">I.Access</a>
+
+                    <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html"
+                        class="dropdown-item small-text">II.Visual
+                        Basic Access</a>
+
+                        <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+                        class="dropdown-item small-text">III.MySQL (Workbench)</a>
+                </div>
+            </div>
+
+        </div>
+       
+
+    </div>
+    <a href="../../index.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i
+            class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+</nav>
+<!-- Navbar End -->
+        <!-- Sección Desafío de Consultas SQL -->
+        <section id="desafio-consultas-sql" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4 display-4">📝 ¡Crea Consultas como un Experto! 🔍</h2>
+                <p class="fst-italic text-center mb-5" style="font-size: 1.2rem;">Aprende a escribir consultas SQL con
+                    este divertido desafío.</p>
+
+                <div class="row">
+                    <!-- Ejercicio 1: Selección de Datos -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Ejercicio 1: Selección de Datos</h5>
+                                <p class="card-text">¿Qué comando SQL usas para seleccionar datos de una tabla?</p>
+                                <form id="quiz1">
+                                    <select class="form-select mb-3" id="question1">
+                                        <option value="">Seleccione una respuesta</option>
+                                        <option value="SELECT">SELECT</option>
+                                        <option value="INSERT">INSERT</option>
+                                        <option value="UPDATE">UPDATE</option>
+                                        <option value="DELETE">DELETE</option>
+                                    </select>
+                                    <button class="btn btn-primary" type="submit">Verificar Respuesta</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ejercicio 2: Filtrar Resultados -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Ejercicio 2: Filtrar Resultados</h5>
+                                <p class="card-text">¿Qué cláusula se usa para filtrar registros en SQL?</p>
+                                <form id="quiz2">
+                                    <select class="form-select mb-3" id="question2">
+                                        <option value="">Seleccione una respuesta</option>
+                                        <option value="WHERE">WHERE</option>
+                                        <option value="ORDER BY">ORDER BY</option>
+                                        <option value="HAVING">HAVING</option>
+                                        <option value="GROUP BY">GROUP BY</option>
+                                    </select>
+                                    <button class="btn btn-primary" type="submit">Verificar Respuesta</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ejercicio 3: Ordenar Resultados -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Ejercicio 3: Ordenar Resultados</h5>
+                                <p class="card-text">¿Qué comando se usa para ordenar los resultados en orden
+                                    ascendente?</p>
+                                <form id="quiz3">
+                                    <select class="form-select mb-3" id="question3">
+                                        <option value="">Seleccione una respuesta</option>
+                                        <option value="ASC">ASC</option>
+                                        <option value="DESC">DESC</option>
+                                        <option value="ORDER BY">ORDER BY</option>
+                                        <option value="GROUP BY">GROUP BY</option>
+                                    </select>
+                                    <button class="btn btn-primary" type="submit">Verificar Respuesta</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ejercicio 4: Combinación de Tablas -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Ejercicio 4: Combinación de Tablas</h5>
+                                <p class="card-text">¿Qué comando SQL se usa para combinar registros de dos tablas?</p>
+                                <form id="quiz4">
+                                    <select class="form-select mb-3" id="question4">
+                                        <option value="">Seleccione una respuesta</option>
+                                        <option value="JOIN">JOIN</option>
+                                        <option value="UNION">UNION</option>
+                                        <option value="INTERSECT">INTERSECT</option>
+                                        <option value="EXCEPT">EXCEPT</option>
+                                    </select>
+                                    <button class="btn btn-primary" type="submit">Verificar Respuesta</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Modal para mostrar los resultados -->
+        <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="resultModalLabel">Resultado</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                        <!-- El contenido del modal se llenará dinámicamente -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Script de verificación y modal -->
+        <script>
+            // Función para mostrar el resultado en el modal
+            function showResult(isCorrect, message) {
+                const modalBody = document.getElementById('modalBody');
+                modalBody.textContent = message;
+
+                // Cambiar color de fondo del modal dependiendo si es correcto o incorrecto
+                if (isCorrect) {
+                    modalBody.style.backgroundColor = '#d4edda'; // verde (correcto)
+                } else {
+                    modalBody.style.backgroundColor = '#f8d7da'; // rojo (incorrecto)
+                }
+
+                // Mostrar el modal
+                var myModal = new bootstrap.Modal(document.getElementById('resultModal'), {});
+                myModal.show();
+            }
+
+            // Funciones de verificación para los formularios
+            document.getElementById("quiz1").addEventListener("submit", function (event) {
+                event.preventDefault();
+                const selectedValue = document.getElementById("question1").value;
+                if (selectedValue === "") {
+                    showResult(false, "¡Por favor, selecciona una respuesta válida!");
+                } else if (selectedValue === "SELECT") {
+                    showResult(true, "¡Correcto! El comando SELECT se usa para seleccionar datos.");
+                } else {
+                    showResult(false, "¡Incorrecto! El comando correcto es SELECT.");
+                }
+            });
+
+            document.getElementById("quiz2").addEventListener("submit", function (event) {
+                event.preventDefault();
+                const selectedValue = document.getElementById("question2").value;
+                if (selectedValue === "") {
+                    showResult(false, "¡Por favor, selecciona una respuesta válida!");
+                } else if (selectedValue === "WHERE") {
+                    showResult(true, "¡Correcto! La cláusula WHERE se usa para filtrar registros.");
+                } else {
+                    showResult(false, "¡Incorrecto! La cláusula correcta es WHERE.");
+                }
+            });
+
+            document.getElementById("quiz3").addEventListener("submit", function (event) {
+                event.preventDefault();
+                const selectedValue = document.getElementById("question3").value;
+                if (selectedValue === "") {
+                    showResult(false, "¡Por favor, selecciona una respuesta válida!");
+                } else if (selectedValue === "ASC") {
+                    showResult(true, "¡Correcto! El comando ASC se usa para ordenar en orden ascendente.");
+                } else {
+                    showResult(false, "¡Incorrecto! El comando correcto es ASC.");
+                }
+            });
+
+            document.getElementById("quiz4").addEventListener("submit", function (event) {
+                event.preventDefault();
+                const selectedValue = document.getElementById("question4").value;
+                if (selectedValue === "") {
+                    showResult(false, "¡Por favor, selecciona una respuesta válida!");
+                } else if (selectedValue === "JOIN") {
+                    showResult(true, "¡Correcto! El comando JOIN se usa para combinar tablas.");
+                } else {
+                    showResult(false, "¡Incorrecto! El comando correcto es JOIN.");
+                }
+            });
+        </script>
+
+
+        <!-- Sección Juego Interactivo - Adivina las Partes del Workbench -->
+        <section id="game-workbench" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4 display-4">🖼 ¡Adivina las Partes del MySQL Workbench! 🎮</h2>
+                <p class="fst-italic text-center mb-5" style="font-size: 1.2rem;">Descubre las partes principales de la
+                    interfaz de MySQL Workbench</p>
+
+                <!-- Imagen interactiva -->
+                <div class="text-center mb-4">
+                    <img id="workbenchImage" src="assets/img/interfaz_workbench.png" alt="MySQL Workbench"
+                        class="img-fluid" style="max-width: 80%;">
+                </div>
+
+                <div class="row">
+                    <!-- Opciones de preguntas -->
+                    <div class="col-md-6 mb-4">
+                        <h5 class="text-success">¿Dónde se encuentra la barra de herramientas "Database"?</h5>
+                        <form id="answer1">
+                            <div class="mb-3">
+                                <select class="form-select form-select-lg" id="answerOption1">
+                                    <option value="">Seleccione una opción</option>
+                                    <option value="1">Parte superior central</option>
+                                    <option value="2">Parte inferior derecha</option>
+                                    <option value="3">Parte superior izquierda</option>
+                                    <option value="4">Parte inferior izquierda</option>
+                                </select>
+                            </div>
+                            <!-- Botón con borde y estilo destacado -->
+                            <button class="btn btn-outline-success w-100 btn-lg border-3 shadow-sm"
+                                type="submit">Verificar Respuesta</button>
+                        </form>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <h5 class="text-success">¿En qué sección se encuentra la herramienta "Administration"?</h5>
+                        <form id="answer2">
+                            <div class="mb-3">
+                                <select class="form-select form-select-lg" id="answerOption2">
+                                    <option value="">Seleccione una opción</option>
+                                    <option value="1">Barra de herramientas superior</option>
+                                    <option value="2">Panel lateral izquierdo</option>
+                                    <option value="3">Parte inferior central</option>
+                                    <option value="4">Parte inferior derecha</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-outline-success w-100 btn-lg border-3 shadow-sm"
+                                type="submit">Verificar Respuesta</button>
+                        </form>
+                    </div>
+
+                    <!-- Nueva pregunta 1: Instance -->
+                    <div class="col-md-6 mb-4">
+                        <h5 class="text-success">¿Dónde se encuentra el apartado "Instance" en MySQL Workbench?</h5>
+                        <form id="answer3">
+                            <div class="mb-3">
+                                <select class="form-select form-select-lg" id="answerOption3">
+                                    <option value="">Seleccione una opción</option>
+                                    <option value="1">Panel lateral izquierdo</option>
+                                    <option value="2">Parte superior central</option>
+                                    <option value="3">Parte inferior derecha</option>
+                                    <option value="4">Parte superior izquierda</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-outline-success w-100 btn-lg border-3 shadow-sm"
+                                type="submit">Verificar Respuesta</button>
+                        </form>
+                    </div>
+
+                    <!-- Nueva pregunta 2: Management -->
+                    <div class="col-md-6 mb-4">
+                        <h5 class="text-success">¿Dónde se encuentra el apartado "Management"?</h5>
+                        <form id="answer4">
+                            <div class="mb-3">
+                                <select class="form-select form-select-lg" id="answerOption4">
+                                    <option value="">Seleccione una opción</option>
+                                    <option value="1">Panel lateral izquierdo</option>
+                                    <option value="2">Parte central superior</option>
+                                    <option value="3">Parte inferior derecha</option>
+                                    <option value="4">Parte superior derecha</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-outline-success w-100 btn-lg border-3 shadow-sm"
+                                type="submit">Verificar Respuesta</button>
+                        </form>
+                    </div>
+
+                    <!-- Nueva pregunta 3: Barra de Herramientas -->
+                    <div class="col-md-6 mb-4">
+                        <h5 class="text-success">¿En qué parte de la interfaz se encuentra la barra de herramientas
+                            "Query"?</h5>
+                        <form id="answer5">
+                            <div class="mb-3">
+                                <select class="form-select form-select-lg" id="answerOption5">
+                                    <option value="">Seleccione una opción</option>
+                                    <option value="1">Parte superior izquierda</option>
+                                    <option value="2">Parte inferior derecha</option>
+                                    <option value="3">Parte central inferior</option>
+                                    <option value="4">Parte superior central</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-outline-success w-100 btn-lg border-3 shadow-sm"
+                                type="submit">Verificar Respuesta</button>
+                        </form>
+                    </div>
+
+                    <!-- Nueva pregunta 4: Barra de Navegación -->
+                    <div class="col-md-6 mb-4">
+                        <h5 class="text-success">¿Dónde se encuentra la sección de "Schemas"?</h5>
+                        <form id="answer6">
+                            <div class="mb-3">
+                                <select class="form-select form-select-lg" id="answerOption6">
+                                    <option value="">Seleccione una opción</option>
+                                    <option value="1">Parte inferior izquierda</option>
+                                    <option value="2">Parte central izquierda</option>
+                                    <option value="3">Parte inferior central</option>
+                                    <option value="4">Parte superior derecha</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-outline-success w-100 btn-lg border-3 shadow-sm"
+                                type="submit">Verificar Respuesta</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal para mostrar resultados -->
+        <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="resultModalLabel">Resultado</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                        <!-- El contenido del modal se llenará dinámicamente -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Script de verificación y modal -->
+        <script>
+            // Función para mostrar el resultado en el modal
+            function showResult(isCorrect, message) {
+                const modalBody = document.getElementById('modalBody');
+                modalBody.textContent = message;
+
+                // Cambiar color de fondo del modal dependiendo si es correcto o incorrecto
+                if (isCorrect) {
+                    modalBody.classList.add('bg-success', 'text-white');
+                    modalBody.classList.remove('bg-danger');
+                } else {
+                    modalBody.classList.add('bg-danger', 'text-white');
+                    modalBody.classList.remove('bg-success');
+                }
+
+                // Mostrar el modal
+                var myModal = new bootstrap.Modal(document.getElementById('resultModal'), {});
+                myModal.show();
+            }
+
+            // Funciones de verificación para los formularios
+            document.getElementById("answer1").addEventListener("submit", function (event) {
+                event.preventDefault();
+                const selectedValue = document.getElementById("answerOption1").value;
+                if (selectedValue === "") {
+                    showResult(false, "¡Por favor, selecciona una respuesta válida!");
+                } else if (selectedValue === "3") {
+                    showResult(true, "¡Correcto! 'SQL Editor' está en la parte superior izquierda.");
+                } else {
+                    showResult(false, "¡Incorrecto! 'SQL Editor' está en la parte superior izquierda.");
+                }
+            });
+
+            document.getElementById("answer2").addEventListener("submit", function (event) {
+                event.preventDefault();
+                const selectedValue = document.getElementById("answerOption2").value;
+                if (selectedValue === "") {
+                    showResult(false, "¡Por favor, selecciona una respuesta válida!");
+                } else if (selectedValue === "3") {
+                    showResult(true, "¡Correcto! 'Administration' está en el panel central.");
+                } else {
+                    showResult(false, "¡Incorrecto! 'Administration' está en el panel central.");
+                }
+            });
+
+            document.getElementById("answer3").addEventListener("submit", function (event) {
+                event.preventDefault();
+                const selectedValue = document.getElementById("answerOption3").value;
+                if (selectedValue === "") {
+                    showResult(false, "¡Por favor, selecciona una respuesta válida!");
+                } else if (selectedValue === "1") {
+                    showResult(true, "¡Correcto! 'Instance' está en el panel lateral izquierdo.");
+                } else {
+                    showResult(false, "¡Incorrecto! 'Instance' está en el panel lateral izquierdo.");
+                }
+            });
+
+            document.getElementById("answer4").addEventListener("submit", function (event) {
+                event.preventDefault();
+                const selectedValue = document.getElementById("answerOption4").value;
+                if (selectedValue === "") {
+                    showResult(false, "¡Por favor, selecciona una respuesta válida!");
+                } else if (selectedValue === "2") {
+                    showResult(true, "¡Correcto! 'Management' está en la parte central superior.");
+                } else {
+                    showResult(false, "¡Incorrecto! 'Management' está en la parte central superior.");
+                }
+            });
+
+            document.getElementById("answer5").addEventListener("submit", function (event) {
+                event.preventDefault();
+                const selectedValue = document.getElementById("answerOption5").value;
+                if (selectedValue === "") {
+                    showResult(false, "¡Por favor, selecciona una respuesta válida!");
+                } else if (selectedValue === "4") {
+                    showResult(true, "¡Correcto! 'Query' está en la parte superior central.");
+                } else {
+                    showResult(false, "¡Incorrecto! 'Query' está en la parte superior central.");
+                }
+            });
+
+            document.getElementById("answer6").addEventListener("submit", function (event) {
+                event.preventDefault();
+                const selectedValue = document.getElementById("answerOption6").value;
+                if (selectedValue === "") {
+                    showResult(false, "¡Por favor, selecciona una respuesta válida!");
+                } else if (selectedValue === "2") {
+                    showResult(true, "¡Correcto! 'Schemas' está en el panel lateral izquierdo.");
+                } else {
+                    showResult(false, "¡Incorrecto! 'Schemas' está en el panel lateral izquierdo.");
+                }
+            });
+        </script>
+
+        <section class="container mt-5" id="trivia_base_datos">
+            <div class="bg-light p-4 rounded shadow-sm">
+                <h2 class="text-center mb-4 text-primary">Cuestionario sobre Bases de Datos</h2>
+                <form id="quizForm">
+                    <!-- Pregunta 1 -->
+                    <div class="mb-3 p-3 bg-light rounded border">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-question-circle-fill text-primary me-2"></i>
+                            <label for="question1" class="form-label text-success">¿Qué es una base de datos?</label>
+                        </div>
+                        <div id="question1" class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" id="q1A" value="A">
+                            <label class="form-check-label" for="q1A">
+                                A) Un sistema para almacenar y organizar datos.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" id="q1B" value="B">
+                            <label class="form-check-label" for="q1B">
+                                B) Un software para crear gráficos.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" id="q1C" value="C">
+                            <label class="form-check-label" for="q1C">
+                                C) Un archivo de texto.
+                            </label>
+                        </div>
+                        <!-- Retroalimentación -->
+                        <div id="feedback1" class="mt-2 text-danger" style="display:none;">
+                            Respuesta correcta: A) Un sistema para almacenar y organizar datos.
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 2 -->
+                    <div class="mb-3 p-3 bg-light rounded border">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-question-circle-fill text-primary me-2"></i>
+                            <label for="question2" class="form-label text-warning">¿Qué tipo de dato se usa para
+                                almacenar números enteros?</label>
+                        </div>
+                        <div id="question2" class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" id="q2A" value="A">
+                            <label class="form-check-label" for="q2A">
+                                A) VARCHAR
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" id="q2B" value="B">
+                            <label class="form-check-label" for="q2B">
+                                B) INT
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" id="q2C" value="C">
+                            <label class="form-check-label" for="q2C">
+                                C) DATE
+                            </label>
+                        </div>
+                        <!-- Retroalimentación -->
+                        <div id="feedback2" class="mt-2 text-danger" style="display:none;">
+                            Respuesta correcta: B) INT
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 3 -->
+                    <div class="mb-3 p-3 bg-light rounded border">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-question-circle-fill text-primary me-2"></i>
+                            <label for="question3" class="form-label text-info">¿Qué es una clave primaria en una base
+                                de datos?</label>
+                        </div>
+                        <div id="question3" class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" id="q3A" value="A">
+                            <label class="form-check-label" for="q3A">
+                                A) Un valor opcional para identificar registros.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" id="q3B" value="B">
+                            <label class="form-check-label" for="q3B">
+                                B) Un valor único que identifica cada registro en una tabla.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" id="q3C" value="C">
+                            <label class="form-check-label" for="q3C">
+                                C) Una columna con valores duplicados.
+                            </label>
+                        </div>
+                        <!-- Retroalimentación -->
+                        <div id="feedback3" class="mt-2 text-danger" style="display:none;">
+                            Respuesta correcta: B) Un valor único que identifica cada registro en una tabla.
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 4 -->
+                    <div class="mb-3 p-3 bg-light rounded border">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-question-circle-fill text-primary me-2"></i>
+                            <label for="question4" class="form-label text-danger">¿Cuál es la función de una tabla en
+                                una base de datos?</label>
+                        </div>
+                        <div id="question4" class="form-check">
+                            <input class="form-check-input" type="radio" name="q4" id="q4A" value="A">
+                            <label class="form-check-label" for="q4A">
+                                A) Almacenar datos en filas y columnas.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q4" id="q4B" value="B">
+                            <label class="form-check-label" for="q4B">
+                                B) Administrar usuarios de la base de datos.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q4" id="q4C" value="C">
+                            <label class="form-check-label" for="q4C">
+                                C) Realizar operaciones matemáticas.
+                            </label>
+                        </div>
+                        <!-- Retroalimentación -->
+                        <div id="feedback4" class="mt-2 text-danger" style="display:none;">
+                            Respuesta correcta: A) Almacenar datos en filas y columnas.
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 5 -->
+                    <div class="mb-3 p-3 bg-light rounded border">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-question-circle-fill text-primary me-2"></i>
+                            <label for="question5" class="form-label text-muted">¿Qué es SQL?</label>
+                        </div>
+                        <div id="question5" class="form-check">
+                            <input class="form-check-input" type="radio" name="q5" id="q5A" value="A">
+                            <label class="form-check-label" for="q5A">
+                                A) Un formato de archivo para almacenar datos.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q5" id="q5B" value="B">
+                            <label class="form-check-label" for="q5B">
+                                B) Un sistema operativo para bases de datos.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q5" id="q5C" value="C">
+                            <label class="form-check-label" for="q5C">
+                                C) Un lenguaje de programación para gestionar bases de datos.
+                            </label>
+                        </div>
+                        <!-- Retroalimentación -->
+                        <div id="feedback5" class="mt-2 text-danger" style="display:none;">
+                            Respuesta correcta: C) Un lenguaje de programación para gestionar bases de datos.
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Verificar respuestas</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- Modal para mostrar la puntuación -->
+        <div class="modal fade" id="scoreModal" tabindex="-1" aria-labelledby="scoreModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="scoreModalLabel">Tu puntuación</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="modalFeedback"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById('quizForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                // Respuestas correctas
+                const correctAnswers = {
+                    q1: 'A',
+                    q2: 'B',
+                    q3: 'B',
+                    q4: 'A',
+                    q5: 'C'
+                };
+
+                let score = 0;
+                let modalFeedback = '';
+
+                // Comprobar respuestas y mostrar retroalimentación
+                for (let question in correctAnswers) {
+                    const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                    const feedbackElement = document.getElementById(`feedback${question.charAt(1)}`);
+
+                    if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                        score++;
+                        feedbackElement.style.color = 'green';
+                        feedbackElement.innerHTML = '¡Respuesta correcta!';
+                        modalFeedback += `<p style="color: green;">Pregunta ${question.charAt(1)}: ¡Correcto!</p>`;
+                    } else {
+                        feedbackElement.style.color = 'red';
+                        feedbackElement.innerHTML = `Respuesta correcta: ${correctAnswers[question]}`;
+                        modalFeedback += `<p style="color: red;">Pregunta ${question.charAt(1)}: Incorrecto. Respuesta correcta: ${correctAnswers[question]}</p>`;
+                    }
+                    feedbackElement.style.display = 'block';
+                }
+
+                // Mostrar el modal con la puntuación
+                const modal = new bootstrap.Modal(document.getElementById('scoreModal'));
+                document.getElementById('modalFeedback').innerHTML = `<p><strong>Tu puntuación es: ${score} de 5</strong></p>${modalFeedback}`;
+                modal.show();
+            });
+        </script>
+
+
+
+
+
+
+
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+
+        <div class="container">
+            <div class="copyright text-center ">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights
+                        Reserved</span></p>
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you've purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
+                    href="https://themewagon.com">ThemeWagon</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Juego Interactivo en Python</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    #game-area {
+      display: grid;
+      grid-template-columns: repeat(5, 50px);
+      grid-gap: 5px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .cell {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ccc;
+      background-color: #f0f0f0;
+      font-weight: bold;
+    }
+    .player {
+      background-color: blue;
+      color: white;
+    }
+    .object {
+      background-color: red;
+      color: white;
+    }
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .btn-direction {
+      width: 50px;
+      height: 50px;
+    }
+    #code-container {
+      margin-top: 30px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 15px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      overflow-x: auto;
+    }
+    .btn-back {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container text-center">
+    <h1>¡Juego Interactivo en Python!</h1>
+    <p>Controla al jugador para recoger el objeto (O) usando los botones de dirección.</p>
+    <div id="game-area"></div>
+    <div class="controls">
+      <button class="btn btn-primary btn-direction" onclick="movePlayer('w')">↑</button>
+      <div>
+        <button class="btn btn-primary btn-direction" onclick="movePlayer('a')">←</button>
+        <button class="btn btn-primary btn-direction" onclick="movePlayer('s')">↓</button>
+        <button class="btn btn-primary btn-direction" onclick="movePlayer('d')">→</button>
+      </div>
+    </div>
+    <div id="score" class="mt-3">Puntos: 0</div>
+    <button onclick="location.href='pruebas.html'" class="btn btn-secondary btn-back">Regresar</button>
+
+    <!-- Contenedor para el código Python -->
+    <h3 class="mt-5">Código Python del Juego</h3>
+    <div id="code-container"></div>
+  </div>
+
+  <script>
+    const gridSize = 5;
+    let playerPos = [2, 2];
+    let objectPos = [Math.floor(Math.random() * gridSize), Math.floor(Math.random() * gridSize)];
+    let points = 0;
+
+    const gameArea = document.getElementById("game-area");
+    const scoreDisplay = document.getElementById("score");
+
+    // Código Python del juego
+    const pythonCode = `
+import random
+
+# Dimensiones de la cuadrícula
+grid_size = 5
+
+# Posición inicial del jugador
+player_pos = [2, 2]
+
+# Generar posición aleatoria para el objeto
+object_pos = [random.randint(0, grid_size - 1), random.randint(0, grid_size - 1)]
+
+# Contador de puntos
+points = 0
+
+# Función para mostrar la cuadrícula
+def display_grid():
+    grid = ""
+    for row in range(grid_size):
+        for col in range(grid_size):
+            if [row, col] == player_pos:
+                grid += "P "
+            elif [row, col] == object_pos:
+                grid += "O "
+            else:
+                grid += ". "
+        grid += "\\n"
+    return grid
+
+# Función para procesar los movimientos
+def move_player(direction):
+    global player_pos, object_pos, points
+    if direction == "w" and player_pos[0] > 0:
+        player_pos[0] -= 1
+    elif direction == "s" and player_pos[0] < grid_size - 1:
+        player_pos[0] += 1
+    elif direction == "a" and player_pos[1] > 0:
+        player_pos[1] -= 1
+    elif direction == "d" and player_pos[1] < grid_size - 1:
+        player_pos[1] += 1
+
+    # Verificar si el jugador recoge el objeto
+    if player_pos == object_pos:
+        points += 1
+        print(f"¡Recogiste el objeto! Puntos: {points}")
+        object_pos = [random.randint(0, grid_size - 1), random.randint(0, grid_size - 1)]
+
+    print(display_grid())
+    print(f"Posición del jugador: {player_pos}")
+    print(f"Puntos: {points}")
+`;
+
+    // Mostrar el código Python en el contenedor
+    document.getElementById("code-container").textContent = pythonCode;
+
+    // Renderizar la cuadrícula
+    function renderGrid() {
+      gameArea.innerHTML = ""; // Limpiar la cuadrícula
+      for (let row = 0; row < gridSize; row++) {
+        for (let col = 0; col < gridSize; col++) {
+          const cell = document.createElement("div");
+          cell.classList.add("cell");
+
+          // Posición del jugador
+          if (row === playerPos[0] && col === playerPos[1]) {
+            cell.classList.add("player");
+            cell.textContent = "P";
+          }
+
+          // Posición del objeto
+          if (row === objectPos[0] && col === objectPos[1]) {
+            cell.classList.add("object");
+            cell.textContent = "O";
+          }
+
+          gameArea.appendChild(cell);
+        }
+      }
+    }
+
+    // Mover al jugador
+    function movePlayer(direction) {
+      if (direction === "w" && playerPos[0] > 0) {
+        playerPos[0] -= 1; // Mover arriba
+      } else if (direction === "s" && playerPos[0] < gridSize - 1) {
+        playerPos[0] += 1; // Mover abajo
+      } else if (direction === "a" && playerPos[1] > 0) {
+        playerPos[1] -= 1; // Mover izquierda
+      } else if (direction === "d" && playerPos[1] < gridSize - 1) {
+        playerPos[1] += 1; // Mover derecha
+      }
+
+      // Verificar si el jugador recoge el objeto
+      if (playerPos[0] === objectPos[0] && playerPos[1] === objectPos[1]) {
+        points += 1;
+        scoreDisplay.textContent = `Puntos: ${points}`;
+        objectPos = [Math.floor(Math.random() * gridSize), Math.floor(Math.random() * gridSize)];
+      }
+
+      renderGrid();
+    }
+
+    // Inicializar el juego
+    renderGrid();
+  </script>
+</body>
+</html>
+
+

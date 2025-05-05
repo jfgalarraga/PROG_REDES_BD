@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>RDBMS-MYSQL(WORKBENCH)</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+
+        <div class="profile-img">
+            <img src="assets/img/fundamental.png" alt="" class="img-fluid rounded-circle">
+        </div>
+
+        <a href="indexContenido.html" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename">Conceptos Básicos</h1>
+        </a>
+
+        
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+
+                <!-- Inicio -->
+                <li><a href="indexContenido.html"><i class="bi bi-house-door navicon"></i>Inicio</a></li>
+
+                <!-- Conceptos Básicos -->
+                <li class="dropdown">
+                    <a href="fundamental.html"><i class="bi bi-lightbulb navicon"></i>Conceptos Básicos</a>
+                </li>
+
+                <!-- Instalación -->
+                <li class="dropdown">
+                    <a href="instalacion.html"><i class="bi bi-plug navicon"></i>Instalación</a>
+                </li>
+
+
+                <!-- Videos de apoyo -->
+                <li class="dropdown">
+                    <a href="videos_apoyo.html"><i class="bi bi-film navicon"></i> <span>Videos de apoyo</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i>
+                    </a>
+                    <ul>
+                        <li><a href="videos_apoyo.html#introduccion-mysql"><i
+                                    class="bi bi-database navicon"></i>Introducción a MySQL</a></li>
+                        <li><a href="videos_apoyo.html#instalacion-workbench-server"><i
+                                    class="bi bi-laptop navicon"></i>Instalación de <br> Workbench y Server</a></li>
+                        <li><a href="videos_apoyo.html#creacion-bases-tablas"><i
+                                    class="bi bi-table navicon"></i>Creación de Bases de <br> Datos y Tablas</a></li>
+                        <li><a href="videos_apoyo.html#consultas-basicas"><i class="bi bi-search navicon"></i>Consultas
+                                Básicas</a></li>
+                        <li><a href="videos_apoyo.html#roles-permisos"><i class="bi bi-shield-lock navicon"></i>Roles y
+                                Permisos</a></li>
+                        <li><a href="videos_apoyo.html#ejercicio-practico"><i class="bi bi-pencil navicon"></i>Buenas
+                                Prácticas en <br> MySQL</a></li>
+                    </ul>
+                </li>
+
+                <!-- Desafíos y Retos -->
+                <li class="dropdown">
+                    <a href="desafios_retos.html"><i class="bi bi-flag navicon"></i> <span>Desafíos y Retos</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i>
+                    </a>
+                    <ul>
+                        <li><a href="desafios_retos.html#desafio-consultas-sql"><i
+                                    class="bi bi-file-earmark-code navicon"></i>Desafío
+                                de Consultas<br>SQL</a></li>
+                        <li><a href="desafios_retos.html#game-workbench"><i class="bi bi-diagram-2 navicon"></i>Desafío
+                                de MySQL
+                                <br>Workbench</a></li>
+                        <li><a href="desafios_retos.html#trivia_base_datos"><i
+                                    class="bi bi-question-circle navicon"></i>Trivia
+                                Interactiva</a></li>
+                    </ul>
+                </li>
+
+
+                <!-- Examen Final -->
+                <li class="dropdown">
+                    <a href="examen.html"><i class="bi bi-file-earmark-text navicon"></i>Examen Final</a>
+                </li>
+
+                <!-- Certificado -->
+                <li class="dropdown">
+                    <a href="certificado.html"><i class="bi bi-award navicon"></i>Certificado</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="main">
+
+ <!-- Navbar Start -->
+ <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Base de datos</h2>
+      </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <!-- Enlace Inicio 
+    <a href="indexContenido.html" class="nav-item nav-link small-text">Inicio</a>-->
+
+            <!-- Menú Programación -->
+            <div class="nav-item dropdown">
+                <a href="#" class=" nav-item  nav-link dropdown-toggle small-text"
+                    data-bs-toggle="dropdown">Programación</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="../../Contenido_Programacion/Contenido_Programacion/portfolio-details.html"
+                        class="dropdown-item small-text">I.Algoritmos</a>
+                    <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
+                        class="dropdown-item small-text">II.Diagramas</a>
+                    <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
+                        class="dropdown-item small-text">III.Python</a>
+                </div>
+            </div>
+
+            <!-- Menú Redes -->
+            <div class="nav-item dropdown">
+                <a href="#" class=" nav-item nav-link dropdown-toggle small-text"
+                    data-bs-toggle="dropdown">Redes</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="../../Contenido_Redes/INTERNET-SERVICIOS/index.html"
+                        class="dropdown-item small-text">I.Internet</a>
+                    <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html"
+                        class="dropdown-item small-text">II.Medios de conexión</a>
+                    <a href="../../Contenido_Redes/REDESLAN/indexContenido.html"
+                        class="dropdown-item small-text">III.Redes Lan</a>
+
+                </div>
+            </div>
+
+            <!-- Menú Base de Datos -->
+            <div class="nav-item dropdown">
+                <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base
+                    de Datos</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
+                        class="dropdown-item small-text">I.Access</a>
+
+                    <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html"
+                        class="dropdown-item small-text">II.Visual
+                        Basic Access</a>
+
+                        <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+                        class="dropdown-item small-text">III.MySQL (Workbench)</a>
+                </div>
+            </div>
+
+        </div>
+       
+
+    </div>
+    <a href="../../index.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i
+            class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+        <!-- About Section -->
+        <section id="conceptos" class="about section py-5">
+            <div class="container">
+                <h2 class="text-center mb-4 display-4" style="font-family: 'Poppins', sans-serif; color: #ff6347;">
+                    Conceptos Fundamentales de Bases de Datos</h2>
+                <p class="fst-italic text-center mb-5" style="font-size: 1.2rem; color: #4caf50;">
+                    Veamos los conceptos teóricos básicos de las bases de datos usando una analogía de almacenamiento y
+                    organización de información.
+                </p>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-chevron-right text-primary"></i>
+                                    <strong class="ms-2">Base de Datos:</strong>
+                                    <span class="ms-2 flex-grow-1">Conjunto organizado de datos accesibles
+                                        electrónicamente, facilitando su almacenamiento y gestión.</span>
+                                    <img src="assets/img/base1.jpg" alt="Base de Datos" class="img-fluid mt-2"
+                                        style="max-height: 150px; max-width: 200px; object-fit: contain;" />
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-chevron-right text-primary"></i>
+                                    <strong class="ms-2">Tabla:</strong>
+                                    <span class="ms-2 flex-grow-1">Estructura donde se almacena la información en una
+                                        base de datos, organizada en filas (registros) y columnas (campos).</span>
+                                    <img src="assets/img/base2.jpg" alt="Tabla" class="img-fluid mt-2"
+                                        style="max-height: 150px; max-width: 200px; object-fit: contain;" />
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-chevron-right text-primary"></i>
+                                    <strong class="ms-2">Registro:</strong>
+                                    <span class="ms-2 flex-grow-1">Fila dentro de una tabla, donde cada campo tiene un
+                                        valor asociado.</span>
+                                    <img src="assets/img/base3.png" alt="Registro" class="img-fluid mt-2"
+                                        style="max-height: 150px; max-width: 200px; object-fit: contain;" />
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-chevron-right text-primary"></i>
+                                    <strong class="ms-2">Campo:</strong>
+                                    <span class="ms-2 flex-grow-1">Categoría de datos en una tabla (por ejemplo, nombre,
+                                        edad, etc.).</span>
+                                    <img src="assets/img/base3.png" alt="Campo" class="img-fluid mt-2"
+                                        style="max-height: 150px; max-width: 200px; object-fit: contain;" />
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-chevron-right text-primary"></i>
+                                    <strong class="ms-2">Clave Primaria:</strong>
+                                    <span class="ms-2 flex-grow-1">Campo que identifica de manera única cada registro en
+                                        una tabla.</span>
+                                    <img src="assets/img/base5.png" alt="Clave Primaria" class="img-fluid mt-2"
+                                        style="max-height: 150px; max-width: 200px; object-fit: contain;" />
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-chevron-right text-primary"></i>
+                                    <strong class="ms-2">Clave Foránea:</strong>
+                                    <span class="ms-2 flex-grow-1">Campo que hace referencia a la clave primaria de otra
+                                        tabla, creando una relación entre ellas.</span>
+                                    <img src="assets/img/base6.png" alt="Clave Foránea" class="img-fluid mt-2"
+                                        style="max-height: 150px; max-width: 200px; object-fit: contain;" />
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-chevron-right text-primary"></i>
+                                    <strong class="ms-2">Integridad Referencial:</strong>
+                                    <span class="ms-2 flex-grow-1">Asegura que las relaciones entre tablas sean
+                                        coherentes.</span>
+                                    <img src="assets/img/base7.png" alt="Integridad Referencial" class="img-fluid mt-2"
+                                        style="max-height: 150px; max-width: 200px; object-fit: contain;" />
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-chevron-right text-primary"></i>
+                                    <strong class="ms-2">Relación:</strong>
+                                    <span class="ms-2 flex-grow-1">Conexión entre tablas, creada mediante claves
+                                        foráneas y primarias.</span>
+                                    <img src="assets/img/base8.png" alt="Relación" class="img-fluid mt-2"
+                                        style="max-height: 150px; max-width: 200px; object-fit: contain;" />
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-chevron-right text-primary"></i>
+                                    <strong class="ms-2">Modelo ER:</strong>
+                                    <span class="ms-2 flex-grow-1">Modelo gráfico que representa entidades y sus
+                                        relaciones en una base de datos.</span>
+                                    <img src="assets/img/base9.png" alt="Modelo ER" class="img-fluid mt-2"
+                                        style="max-height: 150px; max-width: 200px; object-fit: contain;" />
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-chevron-right text-primary"></i>
+                                    <strong class="ms-2">Entidad:</strong>
+                                    <span class="ms-2 flex-grow-1">Objeto o concepto con existencia propia en la base de
+                                        datos, como una persona o producto.</span>
+                                    <img src="assets/img/base10.svg" alt="Entidad" class="img-fluid mt-2"
+                                        style="max-height: 150px; max-width: 200px; object-fit: contain;" />
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-chevron-right text-primary"></i>
+                                    <strong class="ms-2">Atributo:</strong>
+                                    <span class="ms-2 flex-grow-1">Característica o propiedad de una entidad, como el
+                                        nombre o la edad de una persona.</span>
+                                    <img src="assets/img/base11.svg" alt="Atributo" class="img-fluid mt-2"
+                                        style="max-height: 150px; max-width: 200px; object-fit: contain;" />
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-chevron-right text-primary"></i>
+                                    <strong class="ms-2">Normalización:</strong>
+                                    <span class="ms-2 flex-grow-1">Proceso de organizar los datos para reducir
+                                        redundancias y mejorar la integridad.</span>
+                                    <img src="assets/img/base13.jpg" alt="Normalización" class="img-fluid mt-2"
+                                        style="max-height: 150px; max-width: 200px; object-fit: contain;" />
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <!-- Imagen o Video -->
+                        <div class="row text-center mt-5">
+                            <div class="col-12">
+                                <img src="assets/gifts/database.gif" alt="Biblioteca Animada"
+                                    class="img-fluid rounded shadow-sm" style="max-width: 70%;">
+                            </div>
+                        </div>
+
+                        <!-- Botón Interactivo -->
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-auto">
+                                <button class="btn btn-primary btn-lg" data-bs-toggle="modal"
+                                    data-bs-target="#videoModal">
+                                    ¡Descubre más con un video!
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Modal para Video -->
+                        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="videoModalLabel">¿Qué es una base de datos?</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Video en un elemento <video> -->
+                                        <video id="videoElement" width="100%" height="315" controls>
+                                            <source src="assets/videos/base_de_datos_basico.mp4" type="video/mp4">
+                                            Tu navegador no soporta el formato de video.
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Script para controlar el video -->
+                        <script>
+                            var videoModal = document.getElementById('videoModal');
+                            var videoElement = document.getElementById('videoElement');
+
+                            // Cuando el modal se abra, reproduce el video
+                            videoModal.addEventListener('shown.bs.modal', function () {
+                                videoElement.play();  // Reproduce el video
+                            });
+
+                            // Cuando el modal se cierre, pausa el video
+                            videoModal.addEventListener('hidden.bs.modal', function () {
+                                videoElement.pause();  // Pausa el video
+                                videoElement.currentTime = 0;  // Reinicia el video al inicio
+                            });
+                        </script>
+
+                    </div>
+        </section>
+        <!-- /About Section -->
+
+
+
+        <!-- MySQL Workbench Section -->
+        <section id="mysql-workbench" class="mysql-workbench section light-background">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="text-center">¿Qué es MySQL Workbench?</h2>
+                <p class="text-center">MySQL Workbench es una herramienta visual para diseñar, desarrollar y administrar
+                    bases de datos MySQL. Ofrece un conjunto de herramientas para crear consultas SQL, diseñar esquemas
+                    de bases de datos, gestionar usuarios y administrar servidores, todo dentro de un entorno gráfico
+                    intuitivo.</p>
+
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6 step-item">
+                        <img src="assets/img/intefaz_de_usuario.jpg" alt="Interfaz de MySQL Workbench"
+                            class="step-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal"
+                            data-bs-img="assets/img/intefaz_de_usuario.jpg" data-bs-title="Interfaz de Usuario"
+                            data-bs-description="La interfaz de usuario de MySQL Workbench es el entorno gráfico que facilita la gestión de bases de datos.">
+                        <p><strong>Interfaz de Usuario</strong></p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 step-item">
+                        <img src="assets/img/mysql_query_browser.gif" alt="MySQL Query Browser"
+                            class="step-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal"
+                            data-bs-img="assets/img/mysql_query_browser.gif" data-bs-title="MySQL Query Browser"
+                            data-bs-description="MySQL Query Browser es una herramienta para escribir y ejecutar consultas SQL en MySQL.">
+                        <p><strong>MySQL Query Browser</strong></p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 step-item">
+                        <img src="assets/img/gestion_de_esquemas.jpg" alt="Gestión de Esquemas en MySQL"
+                            class="step-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal"
+                            data-bs-img="assets/img/gestion_de_esquemas.jpg" data-bs-title="Gestión de Esquemas"
+                            data-bs-description="La gestión de esquemas permite organizar y administrar las bases de datos dentro de MySQL Workbench.">
+                        <p><strong>Gestión de Esquemas</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal (popup) -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img id="modalImg" src="" class="img-fluid mb-3" alt="Imagen ampliada">
+                        <p id="modalTitle" class="fw-bold"></p>
+                        <p id="modalDescription"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- JavaScript para configurar el Modal dinámicamente -->
+        <script>
+            var modal = document.getElementById('imageModal');
+            modal.addEventListener('show.bs.modal', function (event) {
+                var button = event.relatedTarget; // Elemento que activó el modal
+                var imgSrc = button.getAttribute('data-bs-img');
+                var title = button.getAttribute('data-bs-title');
+                var description = button.getAttribute('data-bs-description');
+
+                // Actualizar el contenido del modal
+                var modalImg = modal.querySelector('#modalImg');
+                var modalTitle = modal.querySelector('#modalTitle');
+                var modalDescription = modal.querySelector('#modalDescription');
+
+                modalImg.src = imgSrc;
+                modalTitle.textContent = title;
+                modalDescription.textContent = description;
+            });
+        </script>
+
+
+
+
+        <!-- About Section -->
+        <section id="conceptos" class="about section py-5 bg-light">
+            <section id="skills" class="skills section light-background">
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row justify-content-center skills-content skills-animation">
+                        <!-- Título llamativo -->
+                        <div class="col-12 col-md-8 text-center mb-4">
+                            <h2 class="display-4 text-primary">¡Sigue aprendiendo con más preguntas!</h2>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <!-- Questions Section -->
+                                <h3 class="text-center mb-4 text-primary">¡Pónte a prueba! Responde las preguntas sobre
+                                    bases de datos.</h3>
+                                <div id="quiz-container">
+                                    <!-- Question 1 -->
+                                    <div class="card mb-4 p-4 shadow-sm">
+                                        <p><strong>1. ¿Qué es una Base de Datos?</strong></p>
+                                        <div>
+                                            <label class="d-block"><input type="radio" name="q1" value="correct"
+                                                    class="form-check-input"> Conjunto organizado de datos accesibles
+                                                electrónicamente.</label>
+                                            <label class="d-block"><input type="radio" name="q1" value="incorrect"
+                                                    class="form-check-input"> Un archivo de texto que contiene
+                                                datos.</label>
+                                            <label class="d-block"><input type="radio" name="q1" value="incorrect"
+                                                    class="form-check-input"> Un tipo de documento de Word.</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 2 -->
+                                    <div class="card mb-4 p-4 shadow-sm">
+                                        <p><strong>2. ¿Qué es una Clave Primaria?</strong></p>
+                                        <div>
+                                            <label class="d-block"><input type="radio" name="q2" value="incorrect"
+                                                    class="form-check-input"> Una tabla que almacena información
+                                                única.</label>
+                                            <label class="d-block"><input type="radio" name="q2" value="correct"
+                                                    class="form-check-input"> Campo que identifica de manera única cada
+                                                registro en una tabla.</label>
+                                            <label class="d-block"><input type="radio" name="q2" value="incorrect"
+                                                    class="form-check-input"> Un valor repetido en un campo de la
+                                                tabla.</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 3 -->
+                                    <div class="card mb-4 p-4 shadow-sm">
+                                        <p><strong>3. ¿Qué es la Normalización?</strong></p>
+                                        <div>
+                                            <label class="d-block"><input type="radio" name="q3" value="incorrect"
+                                                    class="form-check-input"> El proceso de hacer copias de seguridad de
+                                                las bases de datos.</label>
+                                            <label class="d-block"><input type="radio" name="q3" value="incorrect"
+                                                    class="form-check-input"> El proceso de eliminar claves foráneas en
+                                                las tablas.</label>
+                                            <label class="d-block"><input type="radio" name="q3" value="correct"
+                                                    class="form-check-input"> Organizar los datos para reducir
+                                                redundancias y mejorar la integridad.</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 4 (New) -->
+                                    <div class="card mb-4 p-4 shadow-sm">
+                                        <p><strong>4. ¿Qué es una Clave Foránea?</strong></p>
+                                        <div>
+                                            <label class="d-block"><input type="radio" name="q4" value="incorrect"
+                                                    class="form-check-input"> Una clave que se utiliza para identificar
+                                                registros únicos en una tabla.</label>
+                                            <label class="d-block"><input type="radio" name="q4" value="correct"
+                                                    class="form-check-input"> Campo que se utiliza para vincular dos
+                                                tablas diferentes.</label>
+                                            <label class="d-block"><input type="radio" name="q4" value="incorrect"
+                                                    class="form-check-input"> Un índice que optimiza las búsquedas de
+                                                una tabla.</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 5 (New) -->
+                                    <div class="card mb-4 p-4 shadow-sm">
+                                        <p><strong>5. ¿Qué es un Índice en una Base de Datos?</strong></p>
+                                        <div>
+                                            <label class="d-block"><input type="radio" name="q5" value="incorrect"
+                                                    class="form-check-input"> Un archivo de respaldo de la base de
+                                                datos.</label>
+                                            <label class="d-block"><input type="radio" name="q5" value="incorrect"
+                                                    class="form-check-input"> Una columna que almacena datos
+                                                duplicados.</label>
+                                            <label class="d-block"><input type="radio" name="q5" value="correct"
+                                                    class="form-check-input"> Estructura que mejora la velocidad de las
+                                                consultas en una base de datos.</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <div class="text-center">
+                                        <button onclick="checkAnswers()" class="btn btn-lg btn-primary shadow">Comprobar
+                                            Respuestas</button>
+                                    </div>
+
+                                    <!-- Result -->
+                                    <div id="result" class="mt-4 text-center" style="display:none;">
+                                        <h4 id="score" class="display-6 text-success"></h4>
+                                    </div>
+
+                                    <!-- Retry Button -->
+                                    <div id="retry-container" class="text-center mt-4" style="display:none;">
+                                        <button onclick="retryQuiz()" class="btn btn-lg btn-warning shadow">Reintentar
+                                            Cuestionario</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                function checkAnswers() {
+                    var score = 0;
+                    var totalQuestions = 5;
+
+                    // Question 1
+                    var q1 = document.querySelector('input[name="q1"]:checked');
+                    if (q1 && q1.value == "correct") score++;
+
+                    // Question 2
+                    var q2 = document.querySelector('input[name="q2"]:checked');
+                    if (q2 && q2.value == "correct") score++;
+
+                    // Question 3
+                    var q3 = document.querySelector('input[name="q3"]:checked');
+                    if (q3 && q3.value == "correct") score++;
+
+                    // Question 4
+                    var q4 = document.querySelector('input[name="q4"]:checked');
+                    if (q4 && q4.value == "correct") score++;
+
+                    // Question 5
+                    var q5 = document.querySelector('input[name="q5"]:checked');
+                    if (q5 && q5.value == "correct") score++;
+
+                    // Show result
+                    var result = document.getElementById("result");
+                    var scoreText = document.getElementById("score");
+                    var retryContainer = document.getElementById("retry-container");
+                    result.style.display = "block";
+                    retryContainer.style.display = (score < totalQuestions) ? "block" : "none";
+                    scoreText.innerHTML = "¡Tu puntuación es " + score + " de " + totalQuestions + "!";
+                }
+
+                function retryQuiz() {
+                    // Uncheck all radio buttons
+                    var radios = document.querySelectorAll('input[type="radio"]:checked');
+                    radios.forEach(function (radio) {
+                        radio.checked = false;
+                    });
+
+                    // Hide result and retry button
+                    document.getElementById("result").style.display = "none";
+                    document.getElementById("retry-container").style.display = "none";
+                }
+            </script>
+        </section>
+
+
+
+
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+
+        <div class="container">
+            <div class="copyright text-center ">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights
+                        Reserved</span></p>
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you've purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
+                    href="https://themewagon.com">ThemeWagon</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

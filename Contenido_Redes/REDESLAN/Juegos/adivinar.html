@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Adivina la Topología!</title>
+    <!-- Enlace a Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url('../img/fondo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            padding: 20px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: #00aaff;
+            margin-bottom: 10px;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 170, 255, 0.8), 0 0 20px rgba(0, 170, 255, 0.5);
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(0, 170, 255, 0.8), 0 0 20px rgba(0, 170, 255, 0.5);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(0, 170, 255, 1), 0 0 30px rgba(0, 170, 255, 0.9);
+            }
+        }
+
+        .instructions {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #ff5722;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #e64a19;
+            transform: scale(1.05);
+        }
+
+        .home-button i {
+            margin-right: 10px;
+        }
+
+        .game-container {
+            display: grid;
+            grid-template-columns: repeat(4, 160px);
+            gap: 25px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .card {
+        width: 160px;
+        height: 220px;
+        background-color: #007bff;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        cursor: pointer;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+        font-size: 20px;
+        text-align: center;
+        padding: 10px;
+        text-transform: uppercase;
+    }
+
+    .card:hover {
+        transform: scale(1.15);
+        background-color: #0056b3; /* Mismo color de fondo que antes */
+        box-shadow: 0 0 20px #00aaff, 0 0 40px #00aaff; /* Brillo con el color del título */
+    }
+
+        .question-container {
+            display: none;
+            background-color: rgba(41, 41, 58, 0.9);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 90%;
+            max-width: 700px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .topology-image {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .answer-option {
+            margin: 18px 0;
+            font-size: 18px;
+        }
+
+        .question-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 25px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .question-container button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .home-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: #1e2a38; /* Fondo más oscuro */
+        color: #00aaff; /* Texto celeste que combina con el título */
+        padding: 15px 30px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .home-button:hover {
+        background-color: #263645; /* Un poco más claro al pasar el mouse */
+        transform: scale(1.05);
+    }
+        .result {
+            font-size: 22px;
+            margin-top: 25px;
+            font-weight: bold;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>¡Adivina la Topología!</h1>
+    
+    <div class="instructions">
+        Selecciona una topología y adivina cuál es. ¡Diviértete aprendiendo las diferentes formas de conectar redes!
+    </div>
+
+    <!-- Botón HOME con ícono de casa -->
+    <a href="../Juegos.html#test-conocimientos">
+        <button class="home-button">
+          <i class="fas fa-home"></i> HOME
+        </button>
+    </a>
+      
+    <div class="game-container">
+        <div class="card" onclick="showTopology(0)">Topología 1</div>
+        <div class="card" onclick="showTopology(1)">Topología 2</div>
+        <div class="card" onclick="showTopology(2)">Topología 3</div>
+        <div class="card" onclick="showTopology(3)">Topología 4</div>
+    </div>
+
+    <div class="question-container" id="question-container">
+        <h3 id="question-title">¿Cuál es esta topología?</h3>
+        <img id="topology-image" class="topology-image" src="" alt="Imagen de topología">
+        <div id="question-options">
+            <!-- Las opciones se agregarán aquí dinámicamente -->
+        </div>
+        <button class="back-button" onclick="goBack()">Volver al juego</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        const topologies = [
+            {
+                image: "../img/estre.webp", // Cambiar por una URL real
+                options: [
+                    { label: "Estrella", correct: true },
+                    { label: "Anillo", correct: false },
+                    { label: "Bus", correct: false },
+                    { label: "Malla", correct: false }
+                ]
+            },
+            {
+                image: "../img/bus.png", // Cambiar por una URL real
+                options: [
+                    { label: "Estrella", correct: false },
+                    { label: "Anillo", correct: false },
+                    { label: "Bus", correct: true },
+                    { label: "Malla", correct: false }
+                ]
+            },
+            {
+                image: "../img/anillo.gif", // Cambiar por una URL real
+                options: [
+                    { label: "Estrella", correct: false },
+                    { label: "Anillo", correct: true },
+                    { label: "Bus", correct: false },
+                    { label: "Malla", correct: false }
+                ]
+            },
+            {
+                image: "../img/malla.png", // Cambiar por una URL real
+                options: [
+                    { label: "Estrella", correct: false },
+                    { label: "Anillo", correct: false },
+                    { label: "Bus", correct: false },
+                    { label: "Malla", correct: true }
+                ]
+            }
+        ];
+
+        function showTopology(index) {
+            document.querySelector('.game-container').style.display = 'none';
+            const questionContainer = document.getElementById('question-container');
+            questionContainer.style.display = 'block';
+            document.getElementById('topology-image').src = topologies[index].image;
+            const questionOptions = document.getElementById('question-options');
+            questionOptions.innerHTML = '';
+            topologies[index].options.forEach(option => {
+                const optionElement = document.createElement('div');
+                optionElement.className = 'answer-option';
+                optionElement.textContent = option.label;
+                optionElement.onclick = () => checkAnswer(option.correct);
+                questionOptions.appendChild(optionElement);
+            });
+            document.getElementById('result').textContent = '';
+        }
+
+        function checkAnswer(correct) {
+            const resultElement = document.getElementById('result');
+            if (correct) {
+                resultElement.textContent = '¡Correcto! 😊';
+                resultElement.style.color = '#00ff00';
+            } else {
+                resultElement.textContent = '¡Incorrecto! 😢 Inténtalo de nuevo.';
+                resultElement.style.color = '#ff0000';
+            }
+        }
+
+        function goBack() {
+            document.querySelector('.game-container').style.display = 'grid';
+            document.getElementById('question-container').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

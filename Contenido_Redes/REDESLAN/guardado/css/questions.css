@@ -1,0 +1,145 @@
+/* Fondo de la página */
+  
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  /* Estilo para el título */
+  h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  
+  /* Botón inicial */
+  #startQuizBtn {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #startQuizBtn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilo para las preguntas */
+  .question-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .question-container h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .question-container label {
+    display: block;
+    background-color: #f1f1f1;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .question-container label:hover {
+    background-color: #dcdcdc;
+  }
+  
+  /* Retroalimentación */
+  .feedback-correct {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .feedback-incorrect {
+    color: #f44336;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  /* Botón de "Siguiente" */
+  .btn-success {
+    background-color: #28a745;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+  }
+  
+  /* Estilo de la sección */
+  .section {
+    padding: 60px 0;
+  }
+  
+  /* Estilo para el contenedor del formulario del cuestionario */
+  #quizFormContainer {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+
+/* Asegúrate de que las imágenes estén a la derecha y el texto a la izquierda, pero ahora con clases específicas */
+.flex-container-step-1, .flex-container-step-2, .flex-container-step-3, .flex-container-step-4, .flex-container-step-5, .flex-container-step-6 {
+    display: flex;
+    flex-direction: row-reverse; /* Esto mueve la imagen a la derecha y el texto a la izquierda */
+    align-items: center;
+  }
+  
+  .image-container-step-1, .image-container-step-2, .image-container-step-3, .image-container-step-4, .image-container-step-5, .image-container-step-6 {
+    width: 40%;
+    padding-left: 20px;
+  }
+  
+  .text-container-step-1, .text-container-step-2, .text-container-step-3, .text-container-step-4, .text-container-step-5, .text-container-step-6 {
+    width: 60%;
+  }
+  
+  .image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+  
+  .step-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1e40af;
+  }
+  
+  .step-description {
+    color: #4b5563;
+  }
+  
+  .step-list {
+    color: #4b5563;
+    margin-left: 20px;
+  }
+  
+  .step-list a {
+    color: #2563eb;
+    text-decoration: underline;
+  }
+  

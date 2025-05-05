@@ -1,0 +1,131 @@
+  
+ 
+  --------------------VB+Acces-----------------------------------
+  
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+      <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Base de datos</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+
+
+        <!-- Menú Programación -->
+        <div class="nav-item dropdown">
+          <a href="#" class=" nav-item  nav-link dropdown-toggle small-text"
+            data-bs-toggle="dropdown">Programación</a>
+          <div class="dropdown-menu fade-down m-0">
+            <a href="../../../Contenido_Programacion/Principal.html"
+              class="dropdown-item small-text">I. Algoritmos</a>
+            <a href="../../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
+              class="dropdown-item small-text">II. Diagramas</a>
+            <a href="../../../Contenido_Programacion/Contenido_Python/Origen.html"
+              class="dropdown-item small-text">III. Python</a>
+          </div>
+        </div>
+
+        <!-- Menú Redes -->
+        <div class="nav-item dropdown">
+          <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
+          <div class="dropdown-menu fade-down m-0">
+            <a href="../../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">I. Medios de
+              conexión</a>
+            <a href="../../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">II. Redes
+              Lan</a>
+              <a href="../../../Contenido_Redes/INTERNET-SERVICIOS/INTERNET-SERVICIOS/index.html"
+              class="dropdown-item small-text">III. Internet</a>
+
+          </div>
+        </div>
+
+        <!-- Menú Base de Datos -->
+        <div class="nav-item dropdown">
+          <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de
+            Datos</a>
+          <div class="dropdown-menu fade-down m-0">
+            <a href="../../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
+              class="dropdown-item small-text">I. Access</a>
+              <a href="../../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html"
+              class="dropdown-item small-text">II. Visual
+              Basic Access</a>
+            <a href="../../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+              class="dropdown-item small-text">III. MySQL (Workbench)</a>
+
+          </div>
+        </div>
+
+    </div>
+    <a href="../../../index.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" style="background-color: #06BBCC; border-radius: 0; margin: 0;">Principal<i
+        class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+ 
+  --------------------------------------------------lan-------------------------
+  
+  <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+      <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-globe me-3"></i>Redes</h2>
+      </a>
+      <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+
+
+          <!-- Menú Programación -->
+          <div class="nav-item dropdown">
+            <a href="#" class=" nav-item  nav-link dropdown-toggle small-text"
+              data-bs-toggle="dropdown">Programación</a>
+            <div class="dropdown-menu fade-down m-0">
+              <a href="../../Contenido_Programacion/Principal.html"
+                class="dropdown-item small-text">I. Algoritmos</a>
+              <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
+                class="dropdown-item small-text">II. Diagramas</a>
+              <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
+                class="dropdown-item small-text">III. Python</a>
+            </div>
+          </div>
+
+          <!-- Menú Redes -->
+          <div class="nav-item dropdown">
+            <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
+            <div class="dropdown-menu fade-down m-0">
+              <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">I. Medios de
+                conexión</a>
+              <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">II. Redes
+                Lan</a>
+                <a href="../../Contenido_Redes/INTERNET-SERVICIOS/INTERNET-SERVICIOS/index.html"
+                class="dropdown-item small-text">III. Internet</a>
+
+            </div>
+          </div>
+
+          <!-- Menú Base de Datos -->
+          <div class="nav-item dropdown">
+            <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de
+              Datos</a>
+            <div class="dropdown-menu fade-down m-0">
+              <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
+                class="dropdown-item small-text">I. Access</a>
+                <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html"
+                class="dropdown-item small-text">II. Visual
+                Basic Access</a>
+              <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+                class="dropdown-item small-text">III. MySQL (Workbench)</a>
+
+            </div>
+          </div>
+
+      </div>
+      <a href="../../index.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i
+          class="fa fa-arrow-right ms-3"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar End -->

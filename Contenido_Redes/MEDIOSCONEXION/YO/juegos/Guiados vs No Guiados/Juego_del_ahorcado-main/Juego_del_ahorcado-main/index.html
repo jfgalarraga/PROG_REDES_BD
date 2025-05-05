@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/estilos.css" />
+  <title>Juego del ahorcado</title>
+</head>
+
+<body style="background-color: rgb(65, 112, 243);">
+  <!-- Video de fondo -->
+
+  <header style="padding-top: 3%;">
+    <div class="contenedor">
+      <div class="header"></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="contenedor main">
+      <div id="menu" class="menu">
+        <form class="btns_menu">
+          <input id="start" class="btn btn-primary" type="button" value="Empezar Juego" />
+        </form>
+      </div>
+      <div id="juego" class="no-display">
+        <h2 id="pregunta" class="pregunta">Pregunta aparecerá aquí</h2>
+        <div id="estado" class="state-nodisplay"></div>
+        <canvas class="ahorcado" width="355" height="354"></canvas>
+        <div class="correctas"></div>
+        <div class="teclado">
+          <div class="fila1"></div>
+          <div class="fila2"></div>
+          <div class="fila3"></div>
+        </div>
+        <form class="btns_juego">
+          <input id="new" class="btn btn-primary" type="button" value="Nuevo Juego" />
+          <input id="des" class="btn btn-secondary" type="button" value="Desistir" />
+        </form>
+      </div>
+    </div>
+  </main>
+  <a href="../../../../juegos.html" class="back-button">Regresar</a>
+  <script src="./js/ahorcado.js"></script>
+</body>
+
+</html>

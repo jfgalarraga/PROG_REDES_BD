@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>RDBMS-MYSQL(WORKBENCH)</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+
+        <div class="profile-img">
+            <img src="assets/img/logo_final.avif" alt="" class="img-fluid rounded-circle">
+        </div>
+
+        <a href="indexContenido.html" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename">Examen Final</h1>
+        </a>
+
+
+
+        
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <!-- PRINCIPAL -->
+                <li><a href="indexContenido.html"><i class="bi bi-house-door navicon"></i>PRINCIPAL</a></li>
+
+                <!-- Inicio -->
+                <li><a href="indexContenido.html"><i class="bi bi-house-door navicon"></i>Inicio</a></li>
+
+                <!-- Conceptos Básicos -->
+                <li class="dropdown">
+                    <a href="fundamental.html"><i class="bi bi-lightbulb navicon"></i>Conceptos Básicos</a>
+                </li>
+
+                <!-- Instalación -->
+                <li class="dropdown">
+                    <a href="instalacion.html"><i class="bi bi-plug navicon"></i>Instalación</a>
+                </li>
+
+                <!-- Videos de apoyo -->
+                <li class="dropdown">
+                    <a href="videos_apoyo.html"><i class="bi bi-film navicon"></i> <span>Videos de apoyo</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i>
+                    </a>
+                    <ul>
+                        <li><a href="videos_apoyo.html#introduccion-mysql"><i
+                                    class="bi bi-database navicon"></i>Introducción a MySQL</a></li>
+                        <li><a href="videos_apoyo.html#instalacion-workbench-server"><i
+                                    class="bi bi-laptop navicon"></i>Instalación de <br> Workbench y Server</a></li>
+                        <li><a href="videos_apoyo.html#creacion-bases-tablas"><i
+                                    class="bi bi-table navicon"></i>Creación de Bases de <br> Datos y Tablas</a></li>
+                        <li><a href="videos_apoyo.html#consultas-basicas"><i class="bi bi-search navicon"></i>Consultas
+                                Básicas</a></li>
+                        <li><a href="videos_apoyo.html#roles-permisos"><i class="bi bi-shield-lock navicon"></i>Roles y
+                                Permisos</a></li>
+                        <li><a href="videos_apoyo.html#ejercicio-practico"><i class="bi bi-pencil navicon"></i>Buenas
+                                Prácticas en <br> MySQL</a></li>
+                    </ul>
+                </li>
+
+
+                <!-- Desafíos y Retos -->
+                <li class="dropdown">
+                    <a href="desafios_retos.html"><i class="bi bi-flag navicon"></i> <span>Desafíos y Retos</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i>
+                    </a>
+                    <ul>
+                        <li><a href="desafios_retos.html#desafio-consultas-sql"><i
+                                    class="bi bi-file-earmark-code navicon"></i>Desafío
+                                de Consultas<br>SQL</a></li>
+                        <li><a href="desafios_retos.html#game-workbench"><i class="bi bi-diagram-2 navicon"></i>Desafío
+                                de MySQL
+                                <br>Workbench</a></li>
+                        <li><a href="desafios_retos.html#trivia_base_datos"><i
+                                    class="bi bi-question-circle navicon"></i>Trivia
+                                Interactiva</a></li>
+                    </ul>
+                </li>
+
+                <!-- Examen Final -->
+                <li class="dropdown">
+                    <a href="examen.html"><i class="bi bi-file-earmark-text navicon"></i>Examen Final</a>
+                </li>
+
+                <!-- Certificado -->
+                <li class="dropdown">
+                    <a href="certificado.html"><i class="bi bi-award navicon"></i>Certificado</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="main">
+
+        <!-- Navbar Start -->
+          <!-- Navbar Start -->
+          <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+                <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Base de datos</h2>
+              </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <!-- Enlace Inicio 
+            <a href="indexContenido.html" class="nav-item nav-link small-text">Inicio</a>-->
+
+                    <!-- Menú Programación -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class=" nav-item  nav-link dropdown-toggle small-text"
+                            data-bs-toggle="dropdown">Programación</a>
+                        <div class="dropdown-menu fade-down m-0">
+                            <a href="../../Contenido_Programacion/Contenido_Programacion/portfolio-details.html"
+                                class="dropdown-item small-text">I.Algoritmos</a>
+                            <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
+                                class="dropdown-item small-text">II.Diagramas</a>
+                            <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
+                                class="dropdown-item small-text">III.Python</a>
+                        </div>
+                    </div>
+
+                    <!-- Menú Redes -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class=" nav-item nav-link dropdown-toggle small-text"
+                            data-bs-toggle="dropdown">Redes</a>
+                        <div class="dropdown-menu fade-down m-0">
+                            <a href="../../Contenido_Redes/INTERNET-SERVICIOS/index.html"
+                                class="dropdown-item small-text">I.Internet</a>
+                            <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html"
+                                class="dropdown-item small-text">II.Medios de conexión</a>
+                            <a href="../../Contenido_Redes/REDESLAN/indexContenido.html"
+                                class="dropdown-item small-text">III.Redes Lan</a>
+
+                        </div>
+                    </div>
+
+                    <!-- Menú Base de Datos -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base
+                            de Datos</a>
+                        <div class="dropdown-menu fade-down m-0">
+                            <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
+                                class="dropdown-item small-text">I.Access</a>
+
+                            <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html"
+                                class="dropdown-item small-text">II.Visual
+                                Basic Access</a>
+
+                                <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+                                class="dropdown-item small-text">III.MySQL (Workbench)</a>
+                        </div>
+                    </div>
+
+                </div>
+               
+
+            </div>
+            <a href="../../index.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Sección Test Final de Bases de Datos y MySQL Workbench -->
+        <section id="test-final-db" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4 display-4">📝 Test Final: Bases de Datos y MySQL Workbench</h2>
+                <p class="fst-italic text-center mb-5" style="font-size: 1.2rem;">Pon a prueba tu conocimiento sobre
+                    bases de datos y MySQL Workbench con estas preguntas. Al final, recibirás tu calificación.</p>
+
+                <form id="testForm">
+                    <div class="mb-4">
+                        <!-- Pregunta 1: Creación de Base de Datos -->
+                        <h5 class="text-primary">Pregunta 1</h5>
+                        <p>¿Cuál es el comando para crear una base de datos en MySQL?</p>
+                        <select class="form-select mb-3" id="question1">
+                            <option value="">Seleccione una respuesta</option>
+                            <option value="CREATE DATABASE">CREATE DATABASE</option>
+                            <option value="ADD DATABASE">ADD DATABASE</option>
+                            <option value="MAKE DATABASE">MAKE DATABASE</option>
+                            <option value="NEW DATABASE">NEW DATABASE</option>
+                        </select>
+                        <div id="feedback1" class="feedback text-danger" style="display:none;">
+                            <p>Respuesta incorrecta. El comando correcto es <strong>CREATE DATABASE</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <!-- Pregunta 2: Tipo de Datos -->
+                        <h5 class="text-primary">Pregunta 2</h5>
+                        <p>¿Qué tipo de dato se utiliza para almacenar cadenas de texto de longitud variable en MySQL?
+                        </p>
+                        <select class="form-select mb-3" id="question2">
+                            <option value="">Seleccione una respuesta</option>
+                            <option value="VARCHAR">VARCHAR</option>
+                            <option value="TEXT">TEXT</option>
+                            <option value="CHAR">CHAR</option>
+                            <option value="STRING">STRING</option>
+                        </select>
+                        <div id="feedback2" class="feedback text-danger" style="display:none;">
+                            <p>Respuesta incorrecta. El tipo de dato correcto es <strong>VARCHAR</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <!-- Pregunta 3: Crear Tabla -->
+                        <h5 class="text-primary">Pregunta 3</h5>
+                        <p>¿Cuál es el comando para crear una tabla en MySQL?</p>
+                        <select class="form-select mb-3" id="question3">
+                            <option value="">Seleccione una respuesta</option>
+                            <option value="CREATE TABLE">CREATE TABLE</option>
+                            <option value="MAKE TABLE">MAKE TABLE</option>
+                            <option value="NEW TABLE">NEW TABLE</option>
+                            <option value="ADD TABLE">ADD TABLE</option>
+                        </select>
+                        <div id="feedback3" class="feedback text-danger" style="display:none;">
+                            <p>Respuesta incorrecta. El comando correcto es <strong>CREATE TABLE</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <!-- Pregunta 4: Insertar Datos -->
+                        <h5 class="text-primary">Pregunta 4</h5>
+                        <p>¿Qué comando SQL se usa para insertar datos en una tabla?</p>
+                        <select class="form-select mb-3" id="question4">
+                            <option value="">Seleccione una respuesta</option>
+                            <option value="INSERT INTO">INSERT INTO</option>
+                            <option value="ADD TO">ADD TO</option>
+                            <option value="INSERT VALUES">INSERT VALUES</option>
+                            <option value="INSERT DATA">INSERT DATA</option>
+                        </select>
+                        <div id="feedback4" class="feedback text-danger" style="display:none;">
+                            <p>Respuesta incorrecta. El comando correcto es <strong>INSERT INTO</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <!-- Pregunta 5: Consultas Básicas -->
+                        <h5 class="text-primary">Pregunta 5</h5>
+                        <p>¿Cuál es el comando SQL para seleccionar todos los registros de una tabla?</p>
+                        <select class="form-select mb-3" id="question5">
+                            <option value="">Seleccione una respuesta</option>
+                            <option value="SELECT * FROM">SELECT * FROM</option>
+                            <option value="SELECT ALL FROM">SELECT ALL FROM</option>
+                            <option value="SELECT ALL">SELECT ALL</option>
+                            <option value="SELECT FROM">SELECT FROM</option>
+                        </select>
+                        <div id="feedback5" class="feedback text-danger" style="display:none;">
+                            <p>Respuesta incorrecta. El comando correcto es <strong>SELECT * FROM</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <!-- Pregunta 6: Eliminar Datos -->
+                        <h5 class="text-primary">Pregunta 6</h5>
+                        <p>¿Qué comando se utiliza para eliminar un registro de una tabla en MySQL?</p>
+                        <select class="form-select mb-3" id="question6">
+                            <option value="">Seleccione una respuesta</option>
+                            <option value="DELETE">DELETE</option>
+                            <option value="REMOVE">REMOVE</option>
+                            <option value="DROP">DROP</option>
+                            <option value="CLEAR">CLEAR</option>
+                        </select>
+                        <div id="feedback6" class="feedback text-danger" style="display:none;">
+                            <p>Respuesta incorrecta. El comando correcto es <strong>DELETE</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <!-- Pregunta 7: Modificar Datos -->
+                        <h5 class="text-primary">Pregunta 7</h5>
+                        <p>¿Qué comando se utiliza para modificar un valor en una tabla en MySQL?</p>
+                        <select class="form-select mb-3" id="question7">
+                            <option value="">Seleccione una respuesta</option>
+                            <option value="UPDATE">UPDATE</option>
+                            <option value="MODIFY">MODIFY</option>
+                            <option value="ALTER">ALTER</option>
+                            <option value="CHANGE">CHANGE</option>
+                        </select>
+                        <div id="feedback7" class="feedback text-danger" style="display:none;">
+                            <p>Respuesta incorrecta. El comando correcto es <strong>UPDATE</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <!-- Pregunta 8: Crear Índices -->
+                        <h5 class="text-primary">Pregunta 8</h5>
+                        <p>¿Cuál es el comando para crear un índice en MySQL?</p>
+                        <select class="form-select mb-3" id="question8">
+                            <option value="">Seleccione una respuesta</option>
+                            <option value="CREATE INDEX">CREATE INDEX</option>
+                            <option value="ADD INDEX">ADD INDEX</option>
+                            <option value="MAKE INDEX">MAKE INDEX</option>
+                            <option value="NEW INDEX">NEW INDEX</option>
+                        </select>
+                        <div id="feedback8" class="feedback text-danger" style="display:none;">
+                            <p>Respuesta incorrecta. El comando correcto es <strong>CREATE INDEX</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <!-- Pregunta 9: Tipos de Join -->
+                        <h5 class="text-primary">Pregunta 9</h5>
+                        <p>¿Qué tipo de JOIN devuelve todas las filas de la tabla de la izquierda y las filas
+                            coincidentes de la tabla de la derecha?</p>
+                        <select class="form-select mb-3" id="question9">
+                            <option value="">Seleccione una respuesta</option>
+                            <option value="LEFT JOIN">LEFT JOIN</option>
+                            <option value="RIGHT JOIN">RIGHT JOIN</option>
+                            <option value="INNER JOIN">INNER JOIN</option>
+                            <option value="FULL JOIN">FULL JOIN</option>
+                        </select>
+                        <div id="feedback9" class="feedback text-danger" style="display:none;">
+                            <p>Respuesta incorrecta. El tipo de JOIN correcto es <strong>LEFT JOIN</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <!-- Pregunta 10: Claves Primarias -->
+                        <h5 class="text-primary">Pregunta 10</h5>
+                        <p>¿Cuál es el comando para establecer una clave primaria en una tabla en MySQL?</p>
+                        <select class="form-select mb-3" id="question10">
+                            <option value="">Seleccione una respuesta</option>
+                            <option value="PRIMARY KEY">PRIMARY KEY</option>
+                            <option value="PRIMARY">PRIMARY</option>
+                            <option value="KEY PRIMARY">KEY PRIMARY</option>
+                            <option value="PK">PK</option>
+                        </select>
+                        <div id="feedback10" class="feedback text-danger" style="display:none;">
+                            <p>Respuesta incorrecta. El comando correcto es <strong>PRIMARY KEY</strong>.</p>
+                        </div>
+                    </div>
+
+                    <!-- Botón para calificar -->
+                    <div class="text-center">
+                        <button type="button" id="submitTest" class="btn btn-success mt-4">Calificar Test</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Modal para mostrar los resultados -->
+        <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="resultModalLabel">Resultado del Test</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                        <!-- Resultado del test aparecerá aquí -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Script de Calificación -->
+        <script>
+            const correctAnswers = {
+                question1: "CREATE DATABASE",
+                question2: "VARCHAR",
+                question3: "CREATE TABLE",
+                question4: "INSERT INTO",
+                question5: "SELECT * FROM",
+                question6: "DELETE",
+                question7: "UPDATE",
+                question8: "CREATE INDEX",
+                question9: "LEFT JOIN",
+                question10: "PRIMARY KEY"
+            };
+
+            document.getElementById('submitTest').addEventListener('click', function () {
+                let score = 0;
+
+                // Verifica las respuestas seleccionadas
+                for (let i = 1; i <= 10; i++) {
+                    const question = `question${i}`;
+                    const selectedAnswer = document.getElementById(question).value;
+                    const feedbackDiv = document.getElementById(`feedback${i}`);
+
+                    if (selectedAnswer === correctAnswers[question]) {
+                        score++;
+                        feedbackDiv.style.display = 'none'; // Oculta la retroalimentación cuando la respuesta es correcta
+                    } else {
+                        feedbackDiv.style.display = 'block'; // Muestra la retroalimentación si la respuesta es incorrecta
+                    }
+                }
+
+                // Mostrar el resultado en un modal
+                const resultMessage = score >= 7 ? "¡Felicidades, aprobaste el test!" : "Lo siento, no aprobaste el test. Sigue practicando.";
+                const modalBody = document.getElementById('modalBody');
+                modalBody.innerHTML = `Tu puntaje es ${score} de 10. ${resultMessage}`;
+
+                const resultModal = new bootstrap.Modal(document.getElementById('resultModal'));
+                resultModal.show();
+            });
+        </script>
+
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+
+        <div class="container">
+            <div class="copyright text-center ">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights
+                        Reserved</span></p>
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you've purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
+                    href="https://themewagon.com">ThemeWagon</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

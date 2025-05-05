@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Conexión</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">Conecta los Dispositivos 🌐</h1>
+    <p class="subtitle">Selecciona el cable adecuado después de responder correctamente.</p>
+
+    <div id="question-section">
+      <div class="card">
+        <h2 id="question">Pregunta aparecerá aquí</h2>
+        <div id="answers" class="answers">
+          <!-- Opciones de respuesta dinámicas -->
+        </div>
+      </div>
+    </div>
+
+    <div id="game-section" class="hidden">
+      <div class="game-area">
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+      </div>
+      <div class="controls">
+        <button class="btn" onclick="selectCable('UTP')">Cable UTP</button>
+        <button class="btn" onclick="selectCable('Coaxial')">Cable Coaxial</button>
+        <button class="btn" onclick="selectCable('Fibra Óptica')">Fibra Óptica</button>
+      </div>
+      <div class="result">
+        <h2>Resultado</h2>
+        <p id="resultText"></p>
+      </div>
+    </div>
+  </div>
+  <a href="../../../../YO/juegos.html" class="back-button">Regresar</a>
+  <script src="script.js"></script>
+</body>
+
+</html>

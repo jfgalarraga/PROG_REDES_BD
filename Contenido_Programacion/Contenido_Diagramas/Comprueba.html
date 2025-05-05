@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Proyecto Aplicaciones Web</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+ 
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link href="css/diagramas.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+
+    
+  <style>
+    .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+   </style>
+</head>
+
+<body class="starter-page-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.png" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="#" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Programación</h1>
+    </a>
+
+
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        
+        <li><a href="../../index.html"><i class="bi bi-house navicon"></i>Home Page</a></li>
+
+              
+      
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Algoritmos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>              
+             <li><a href="../Contenido_Programacion/portfolio-details.html"><i class="bi bi-file-earmark-text navicon"></i>I. ¿Qué es un Algoritmo?</a></li>
+             <li><a href="../Contenido_Programacion/ConceptosBasicos.html"><i class="bi bi-check2"></i>II. Conceptos Basicos</a></li> 
+             <li><a href="../Contenido_Programacion/ConceptosBasicos1.html"><i class="bi bi-check2"></i>III. Ejercicios</a></li>
+             <li><a href="../Contenido_Programacion/ConceptosBasicos2.html"><i class="bi bi-check2"></i>IV. Arreglos</a></li>
+             <li><a href="../Contenido_Programacion/EjercicioA.html"><i class="bi bi-gear navicon"></i>V. Juego</a></li>  
+             <li><a href="../Contenido_Programacion/Evaluacion.html"><i class="bi bi-star navicon"></i>VI. Cuestionario</a></li>  
+                          
+              
+                  
+          </ul>
+        </li>
+
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Diagramas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>              
+             <li><a href="Introduccion.html"><i class="bi bi-person navicon"></i>I. Introducción</a></li>
+             <li><a href="Componentes.html"><i class="bi bi-person navicon"></i>II. Resumen</a></li> 
+             <li><a href="Diagramas.html"><i class="bi bi-person navicon"></i>III. Construyendo</a></li>  
+             <li><a href="Comprueba.html"><i class="bi bi-person navicon"></i>IV. Conocimientos</a></li>     
+          </ul>
+        </li>
+
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Python</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>              
+             <li><a href="../Contenido_Python/Origen.html"><i class="bi bi-person navicon"></i>I. Origen</a></li>
+             <li><a href="../Contenido_Python/Tutoriales.html"><i class="bi bi-person navicon"></i>II. Tutoriales</a></li>
+             <li><a href="../Contenido_Python/Ejemplos.html"><i class="bi bi-person navicon"></i>III. Ejemplos</a></li> 
+             <li><a href="../Contenido_Python/Pruebas.html"><i class="bi bi-person navicon"></i>IV. Pruebas</a></li>  
+             <li><a href="../Contenido_Python/Servicios.html"><i class="bi bi-person navicon"></i>V. Servicios</a></li> 
+             <li><a href="../Contenido_Python/Algoritmos.html"><i class="bi bi-person navicon"></i>VI. Algoritmos</a></li>         
+                                  
+          </ul>
+        </li>
+
+       
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+
+<!-- Asistente star -->
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style=" font-family: 'Poppins', sans-serif;">
+   
+  <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5" >
+      <h2  class="m-0" style="color:#06BBCC; font-family: 'Poppins', sans-serif;" ><i class="fa fa-book me-3" style="color:#06BBCC;"></i >Programación</h2>
+  </a>
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="Principal.html" class="nav-item nav-link">
+            </a>
+
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto p-4 p-lg-0">
+  
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">PROGRAMACIÓN</a>
+              <div class="dropdown-menu fade-down m-0">
+                
+                <a href="../Contenido_Programacion/portfolio-details.html"class="dropdown-item">I. Algoritmos</a>
+                <a href="../Contenido_Diagramas/Introduccion.html"class="dropdown-item">II. Diagramas</a>
+                <a href="../Contenido_Python/Origen.html" class="dropdown-item">III. Python</a>
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">REDES</a>
+              <div class="dropdown-menu fade-down m-0">
+                <a href="../../Contenido_Redes/INTERNET-SERVICIOS/INTERNET-SERVICIOS/index.html" class="dropdown-item">I. Internet</a>
+                <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item">II. Medios de conexión</a>
+                <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item">III. Redes LAN</a>
+              </div>
+            </div>
+  
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">BASE DE DATOS</a>
+              <div class="dropdown-menu fade-down m-0">
+                <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html" class="dropdown-item">I. Access</a>
+
+                <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html" class="dropdown-item">II. Visual Basic
+                  Access</a>
+
+                  <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+                  class="dropdown-item">III. Mysql(Workbench)</a>
+            </div>
+          
+          </div>
+  
+          </div>
+  
+       
+          
+      </div>
+      <a href="../../index.html" class="btn btn-primary py-4 px-lg-6 d-none d-lg-block" style="background-color:#06BBCC; border: #06BBCC; 
+        border-radius: 0%; margin: 0;">Principal<i class="fa fa-arrow-right ms-3"></i></a>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+     <!-- Starter Section Section -->
+    <!-- Resume Section -->
+   <!-- Services Section -->
+   <section id="services" class="services section">
+
+    <!-- Section Title -->
+     <br><br>
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Constuye tu primer diagrama</h2>
+      <p>Ahora que comprendes mejor los diagramas de flujo, analiza los siguientes:</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+      <div class="row gy-4" id="rowConstruye">
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon flex-shrink-0"><i class="bi bi-printer-fill"></i></div>
+          <div>
+            <h4 class="title"><a id="imprimir1an" class="stretched-link">Imprimir los números del 1 a n</a></h4>
+            <p class="description">Construye el Diagrama de Flujo del algoritmo para mostrar los números de 1 hasta el
+              número que desees.</p>
+          </div>
+        </div>
+        <!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon flex-shrink-0"><i class="bi bi-question-diamond-fill"></i></div>
+          <div>
+            <h4 class="title"><a id="signo" class="stretched-link">Signo de un número </a></h4>
+            <p class="description">Construye el Diagrama de Flujo del algoritmo que determina si un número es
+              positivo, negativo o cero.</p>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon flex-shrink-0"><i class="bi-plus-square-fill"></i></div>
+          <div>
+            <h4 class="title"><a id="suma1an" class="stretched-link">Suma de 1 a n</a></h4>
+            <p class="description">Construye el Diagrama de flujo del algoritmo que determina el resultado de sumar
+              los números desde el cero hasta el que desees.</p>
+          </div>
+        </div><!-- End Service Item -->
+
+      </div>
+
+      <div id="contenedorImprimir" style="display: none;">
+        <!-- El src estará vacío inicialmente -->
+        <iframe id="unoIframe" width="100%" height="700px" frameborder="0" style="padding-top: 50px;"></iframe>
+        <div class="text-center">
+          <button class="botonStart" id="unoSalir">Regresar</button>
+        </div>
+      </div>
+
+      <div id="contenedorSigno" style="display: none;">
+        <!-- El src estará vacío inicialmente -->
+        <iframe id="dosIframe" width="100%" height="800px" frameborder="0" style="padding-top: 50px;"></iframe>
+        <div class="text-center">
+          <button class="botonStart" id="dosSalir">Regresar</button>
+        </div>
+      </div>
+
+      <div id="contenedorSuma" style="display: none;">
+        <!-- El src estará vacío inicialmente -->
+        <iframe id="tresIframe" width="100%" height="900px" frameborder="0" style="padding-top: 50px;"></iframe>
+        <div class="text-center">
+          <button class="botonStart" id="tresSalir">Regresar</button>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+    </div>
+
+    <script>
+
+      document.getElementById('imprimir1an').addEventListener('click', function () {
+        document.getElementById('rowConstruye').style.display = 'none';
+
+        document.getElementById('contenedorImprimir').style.display = 'block';
+
+        document.getElementById('unoIframe').src = 'imprimir.html';
+      });
+
+      document.getElementById('unoSalir').addEventListener('click', function () {
+        document.getElementById('rowConstruye').style.display = '';
+        document.getElementById('contenedorImprimir').style.display = 'none';
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      })
+
+      // Función para manejar el evento del botón "Signo de un número"
+      document.getElementById('signo').addEventListener('click', function () {
+        document.getElementById('rowConstruye').style.display = 'none';
+        document.getElementById('contenedorSigno').style.display = 'block';
+        document.getElementById('dosIframe').src = 'signo.html'; // Cambia el src según tu archivo de destino
+      });
+
+      // Función para manejar el evento del botón "Regresar" en el contenedor de signo
+      document.getElementById('dosSalir').addEventListener('click', function () {
+        document.getElementById('rowConstruye').style.display = '';
+        document.getElementById('contenedorSigno').style.display = 'none';
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Función para manejar el evento del botón "Suma de 1 a n"
+      document.getElementById('suma1an').addEventListener('click', function () {
+        document.getElementById('rowConstruye').style.display = 'none';
+        document.getElementById('contenedorSuma').style.display = 'block';
+        document.getElementById('tresIframe').src = 'suma.html'; // Cambia el src según tu archivo de destino
+      });
+
+      // Función para manejar el evento del botón "Regresar" en el contenedor de suma
+      document.getElementById('tresSalir').addEventListener('click', function () {
+        document.getElementById('rowConstruye').style.display = '';
+        document.getElementById('contenedorSuma').style.display = 'none';
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+
+  </section><!-- /Services Section -->
+
+  <section style="margin-bottom: -200px;">
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Diagramas avanzados</h2>
+      <p>En esta sección, exploraremos dos algoritmos clásicos: Factorial y Fibonacci. Estos algoritmos son
+        fundamentales para entender la recursión y las operaciones matemáticas en programación. A través de diagramas
+        de flujo, podrás visualizar cada paso del algoritmo y ver cómo se desarrollan los cálculos en tiempo real.</p>
+
+
+
+      <div class="row py-5" id="rowJuego">
+
+        <!-- Fila 1: 4 columnas con las 4 secciones de texto -->
+
+        <div class="col-lg-6 col-md-6 wow zoomIn" data-wow-delay="0.5s">
+          <div class="text-center mb-4">
+            <h4 style="color: #2BC5D4;">Factorial</h4>
+            <p>El factorial de un número es el producto de todos los enteros positivos menores o iguales a ese número.
+              Es un concepto clave en matemáticas y programación, especialmente en áreas como combinatoria y teoría de
+              probabilidades.</p>
+
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 wow zoomIn" data-wow-delay="0.5s">
+          <div class="text-center mb-4">
+            <h4 style="color: #2BC5D4;">Fibonacci</h4>
+            <p>La secuencia de Fibonacci es una serie de números en la que cada número es la suma de los dos
+              anteriores. Empieza con 0 y 1, y cada número siguiente es la suma de los dos anteriores. Es un algoritmo
+              popular que se utiliza en programación recursiva y en problemas relacionados con crecimiento y patrones.
+            </p>
+          </div><br><br>
+        </div>
+
+
+        <div class="col-12 wow zoomIn" data-wow-delay="0.5s">
+          <div class="text-center mb-4">
+
+            <p><strong>Si deseas reforzar alguno de los algoritmos antes de iniciar la simulación, vuelve al módulo 1:
+                Algoritmos</strong></p>
+          </div><br><br>
+        </div>
+
+        <div class="col-12 wow zoomIn" data-wow-delay="0.5s">
+          <div class="text-center mb-4">
+            <h4 style="color: #2BC5D4;">Simulador de Ejecución</h4>
+            <p>Este simulador te permitirá ver cómo se ejecutan los algoritmos de Factorial y Fibonacci paso a paso.
+              Los diagramas de flujo se pintarán en tiempo real y estarán alineados con la consola simulada, donde
+              podrás ver una prueba de escritorio. Además, podrás ajustar la velocidad de la simulación para un mejor
+              aprendizaje.</p>
+          </div>
+        </div>
+
+        <div class="row py-5" id="rowSimuladores">
+          <div class="col-lg-6 col-md-6 wow zoomIn" data-wow-delay="0.5s" style="padding-top: 10px;">
+            <a class="position-relative d-block overflow-hidden zoom-container">
+              <div class="course-item bg-light">
+                <div class="position-relative overflow-hidden">
+                  <img class="img-fluid" src="img/factorial.png" alt="">
+                  <div class="w-50 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                    <a id="juegaFactorial" class="flex-shrink-0 btn btn-sm btn-primary px-3 "
+                      style="border-radius: 0 30px 30px 0;">Prueba el simulador</a>
+                  </div>
+                </div>
+                <div class="text-center p-4 pb-0">
+                  <h3 class="mb-0">Factorial</h3>
+                  <div class="mb-3" style="padding-top: 20px;">
+                    <h5 class="mb-4">Dificultad:</h5>
+                    <small class="fa fa-star text-primary"></small>
+                    <small class="fa fa-star text-primary"></small>
+                    <small class="fa fa-star text-primary"></small>
+                    <small class="fa fa-star "></small>
+                    <small class="fa fa-star"></small>
+                  </div>
+                </div><br>
+
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-6 col-md-6 wow zoomIn" data-wow-delay="0.5s" style="padding-top: 10px;">
+            <a class="position-relative d-block overflow-hidden zoom-container">
+              <div class="course-item bg-light">
+                <div class="position-relative overflow-hidden">
+                  <img class="img-fluid" src="img/fibonacci.png" alt="">
+                  <div class="w-50 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                    <a id="juegaFibonacci" class="flex-shrink-0 btn btn-sm btn-primary px-3 juega"
+                      style="border-radius: 0 30px 30px 0;">Prueba el simulador</a>
+                  </div>
+                </div>
+                <div class="text-center p-4 pb-0">
+                  <h3 class="mb-0">Fibonacci</h3>
+                  <div class="mb-3" style="padding-top: 20px;">
+                    <h5 class="mb-4">Dificultad:</h5>
+                    <small class="fa fa-star text-primary"></small>
+                    <small class="fa fa-star text-primary"></small>
+                    <small class="fa fa-star text-primary"></small>
+                    <small class="fa fa-star text-primary"></small>
+                    <small class="fa fa-star"></small>
+                  </div>
+                </div><br>
+
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div id="contenedorFactorial" style="display: none;">
+          <!-- El src estará vacío inicialmente -->
+          <iframe id="gameIframe2" width="100%" height="700px" frameborder="0" style="padding-top: 50px;"></iframe>
+          <div class="text-center">
+            <button class="botonStart" id="salir2">Regresar</button>
+          </div>
+        </div>
+
+        <div id="contenedorFibonacci" style="display: none;">
+          <!-- El src estará vacío inicialmente -->
+          <iframe id="gameIframe3" width="100%" height="850px" frameborder="0" style="padding-top: 50px;"></iframe>
+          <div class="text-center">
+            <button class="botonStart" id="salir3">Regresar</button>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+      <script>
+        document.getElementById('juegaFactorial').addEventListener('click', function () {
+          // Ocultar el contenedor rowJuego
+          document.getElementById('rowSimuladores').style.display = 'none';
+
+          // Mostrar el iframe con el juego
+          document.getElementById('contenedorFactorial').style.display = 'block';
+
+          // Asignar la URL del juego al iframe para cargarlo dinámicamente
+          document.getElementById('gameIframe2').src = 'factorial.html';
+        });
+
+        document.getElementById('salir2').addEventListener('click', function () {
+          document.getElementById('rowSimuladores').style.display = '';
+          document.getElementById('contenedorFactorial').style.display = 'none';
+        })
+
+        document.getElementById('juegaFibonacci').addEventListener('click', function () {
+          // Ocultar el contenedor rowJuego
+          document.getElementById('rowSimuladores').style.display = 'none';
+
+          // Mostrar el iframe con el juego
+          document.getElementById('contenedorFibonacci').style.display = 'block';
+
+          // Asignar la URL del juego al iframe para cargarlo dinámicamente
+          document.getElementById('gameIframe3').src = 'fibonacci.html';
+        });
+
+        document.getElementById('salir3').addEventListener('click', function () {
+          document.getElementById('rowSimuladores').style.display = '';
+          document.getElementById('contenedorFibonacci').style.display = 'none';
+        })
+      </script>
+
+    </div>
+
+    </div>
+
+  </section>
+
+  <section id="contact" class="contact section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Ejercicios Propuestos</h2>
+      <p>Este es el momento de poner a prueba tus conocimientos sobre <strong>diagramas de flujo</strong>.
+        Aquí te retamos a convertir los algoritmos en representaciones visuales usando las figuras adecuadas:
+        <code>elipses</code> para inicio y fin, <code>rectángulos</code> para acciones,
+        <code>rombos</code> para decisiones y <code>paralelogramos</code> para entrada/salida de datos y el resto de
+        figuras que has aprendido.
+      </p><br><br>
+
+      <p>
+        Antes de comenzar, asegúrate de repasar los conceptos y ejemplos que ya aprendiste.
+        Este es un excelente momento para fortalecer tus habilidades y enfrentar nuevos desafíos.
+        ¡Atrévete a resolver estos ejercicios y convierte tus ideas en diagramas de flujo bien estructurados! 🚀
+      </p><br><br>
+
+      <div class="row">
+
+        <!-- Ejercicio 1 -->
+        <div class="col-md-6 mb-4">
+          <h4 style="color: #2BC5D4;">Pares Perfectos</h4>
+          <p>
+            Convierte el siguiente algoritmo en un diagrama de flujo. Este algoritmo imprimirá los números
+            perfectos pares hasta un valor máximo especificado por <code>MAX</code>.
+          </p><br>
+          <h5>Pasos del algoritmo:</h5>
+          <ol>
+            <li>Escribir <code>"LOS NÚMEROS PERFECTOS PARES HASTA EL "</code>, <code>MAX</code>, <code>" son:"</code>.</li>
+            <li>Para <code>num = 1</code>; <code>num <= MAX</code>; <code>num++</code>, hacer:</li>
+            <li>Si <code>num % 2 == 0</code>, entonces:</li>
+            <ul>
+              <li>Inicializar <code>suma = 1</code>.</li>
+              <li>Para <code>cont = 2</code>; <code>cont < num</code>; <code>cont++</code>, hacer:</li>
+              <li>Si <code>num % cont == 0</code>, entonces:</li>
+              <ul>
+                <li>Incrementar <code>suma = suma + cont</code>.</li>
+              </ul>
+            </ul>
+            <li>Si <code>suma == num</code>, entonces:</li>
+            <ul>
+              <li>Escribir <code>"EL NÚMERO "</code>, <code>num</code>, <code>" ES PERFECTO PAR"</code>.</li>
+            </ul>
+          </ol>
+        </div>
+        
+
+        <!-- Ejercicio 2 -->
+        <!-- Ejercicio 3 -->
+        <div class="col-md-6 mb-4">
+          <h4 style="color: #2BC5D4;">¿Número par o impar?</h4>
+          <p>
+            Convierte el siguiente algoritmo en un diagrama de flujo. Este algoritmo determina si un número es par o
+            impar.
+          </p><br>
+          <h5>Pasos del algoritmo:</h5>
+          <ol>
+            <li>Leer número (<code>n</code>).</li>
+            <li>Si <code>n % 2 == 0</code> entonces:
+              <ul>
+                <li>Imprimir "El número es par".</li>
+              </ul>
+            </li>
+            <li>Si no:
+              <ul>
+                <li>Imprimir "El número es impar".</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h4 style="color: #2BC5D4;">Números Perfectos Impares</h4>
+          <p>
+            Convierte el siguiente algoritmo en un diagrama de flujo. Este algoritmo imprimirá los números
+            perfectos impares hasta un valor máximo especificado por <code>MAX</code>.
+          </p><br>
+          <h5>Pasos del algoritmo:</h5>
+          <ol>
+            <li>Escribir <code>"LOS NÚMEROS PERFECTOS IMPARES HASTA EL "</code>, <code>MAX</code>, <code>" son:"</code>.</li>
+            <li>Para <code>num = 1</code>; <code>num <= MAX</code>; <code>num++</code>, hacer:</li>
+            <li>Si <code>num % 2 != 0</code>, entonces:</li>
+            <ul>
+              <li>Inicializar <code>suma = 1</code>.</li>
+              <li>Para <code>cont = 2</code>; <code>cont < num</code>; <code>cont++</code>, hacer:</li>
+              <li>Si <code>num % cont == 0</code>, entonces:</li>
+              <ul>
+                <li>Incrementar <code>suma = suma + cont</code>.</li>
+              </ul>
+            </ul>
+            <li>Si <code>suma == num</code>, entonces:</li>
+            <ul>
+              <li>Escribir <code>"EL NÚMERO "</code>, <code>num</code>, <code>" ES PERFECTO IMPAR"</code>.</li>
+            </ul>
+          </ol>
+        </div>
+        
+        
+
+
+        <!-- Ejercicio 4 -->
+        <div class="col-md-6 mb-4">
+          <h4 style="color: #2BC5D4;">Contar Dígitos de un Número</h4>
+          <p>
+            Convierte el siguiente algoritmo en un diagrama de flujo. Este algoritmo cuenta cuántos dígitos tiene un número entero positivo.
+          </p><br>
+          <h5>Pasos del algoritmo:</h5>
+          <ol>
+            <li>Leer número entero <code>n</code>.</li>
+            <li>Inicializar <code>contadorDígitos = 0</code>.</li>
+            <li>Mientras <code>n > 0</code>, hacer:</li>
+            <ul>
+              <li>Incrementar <code>contadorDígitos</code> en 1.</li>
+              <li>Dividir <code>n</code> entre 10 (hacer <code>n = n / 10</code>).</li>
+            </ul>
+            <li>Imprimir <code>contadorDígitos</code>.</li>
+          </ol>
+        </div>
+        
+      </div><!-- End Section Title -->
+
+    </div>
+
+
+  </section><!-- /Contact Section -->
+
+  <!-- Tools for Flowcharts Section -->
+  <section id="testimonials" class="testimonials section light-background" sty>
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Herramientas para Diagramas de Flujo</h2>
+      <p>Ahora que has comprendido qué es un Diagrama de Flujo y cómo realizar uno, descubre estas increíbles
+        herramientas para crear y personalizar diagramas de flujo de manera profesional. Puedes utilizar una de estas
+        herramientas para realizar los ejercicios propuestos en la sección anterior.</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="swiper init-swiper">
+        <script type="application/json" class="swiper-config">
+      {
+        "loop": true,
+        "speed": 600,
+        "autoplay": {
+          "delay": 5000
+        },
+        "slidesPerView": "auto",
+        "pagination": {
+          "el": ".swiper-pagination",
+          "type": "bullets",
+          "clickable": true
+        },
+        "breakpoints": {
+          "320": {
+            "slidesPerView": 1,
+            "spaceBetween": 40
+          },
+          "1200": {
+            "slidesPerView": 3,
+            "spaceBetween": 1
+          }
+        }
+      }
+    </script>
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bi bi-tools"></i>
+                <span>LucidChart es una herramienta versátil y fácil de usar para crear diagramas colaborativos en
+                  tiempo real.</span>
+                <i class="bi bi-tools"></i>
+              </p>
+              <img src="img/lucid.png" class="testimonial-img testimonial-img-hover alt=" LucidChart" id="lucid">
+              <h3>LucidChart</h3>
+              <h4>Herramienta colaborativa</h4>
+            </div>
+          </div><!-- End tool item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bi bi-briefcase"></i>
+                <span>Ofrece funciones avanzadas para crear diagramas detallados y profesionales. Forma parte de la
+                  suite ofimática de Microsoft Office.</span>
+                <i class="bi bi-briefcase"></i>
+
+              </p>
+              <img src="img/visio.png" class="testimonial-img testimonial-img-hover" alt="Microsoft Visio" id="visio">
+
+              <h3>Microsoft Visio</h3>
+              <h4>Solución empresarial</h4>
+            </div>
+          </div><!-- End tool item -->
+
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bi bi-pencil"></i>
+                <span>Draw.io es una plataforma gratuita y accesible para diseñar diagramas de flujo en línea o sin
+                  conexión.</span>
+                <i class="bi bi-pencil"></i>
+              </p>
+              <img src="img/drawio.png" class="testimonial-img testimonial-img-hover" alt="Draw.io" id="drawio">
+              <h3>Draw.io</h3>
+              <h4>Opción gratuita</h4>
+            </div>
+          </div><!-- End tool item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bi bi-lightbulb"></i>
+                <span>Creately es ideal para equipos que necesitan diagramas simples o complejos con herramientas
+                  colaborativas.</span>
+                <i class="bi bi-lightbulb"></i>
+              </p>
+              <img src="img/creately.png" class="testimonial-img testimonial-img-hover" alt="Creately" id="creately">
+              <h3>Creately</h3>
+              <h4>Flexibilidad y colaboración</h4>
+            </div>
+          </div><!-- End tool item -->
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+
+
+    <script>
+      // Obtener elementos
+      var modal = document.getElementById("imageModal");
+      var modalImg = document.getElementById("modalImage");
+      var span = document.getElementsByClassName("close")[0];
+
+      // Función para abrir el modal y cambiar la imagen según el ID de la imagen clickeada
+      function openModal(imageId) {
+        modal.style.display = "block"; // Mostrar el modal
+
+        // Cambiar la fuente de la imagen en el modal según el ID de la imagen clickeada
+        switch (imageId) {
+          case 'visio':
+            modalImg.src = "img/visioint.jpg";
+            break;
+          case 'lucid':
+            modalImg.src = "img/lucidint.png";
+            break;
+          case 'drawio':
+            modalImg.src = "img/drawioint.png";
+            break;
+          case 'creately':
+            modalImg.src = "img/createlyint.webp";
+            break;
+          default:
+            modalImg.src = ""; // Deja la imagen vacía si no coincide
+            break;
+        }
+      }
+
+      // Asignar el evento de clic a las imágenes
+      document.getElementById("visio").onclick = function () {
+        openModal('visio');
+      };
+      document.getElementById("lucid").onclick = function () {
+        openModal('lucid');
+      };
+      document.getElementById("drawio").onclick = function () {
+        openModal('drawio');
+      };
+      document.getElementById("creately").onclick = function () {
+        openModal('creately');
+      };
+
+      // Cuando se hace clic en la X, cerrar el modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
+
+      // Si se hace clic fuera del contenido del modal, también se cierra
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+
+    </script>
+
+  </section><!-- /Tools for Flowcharts Section -->
+
+
+
+
+  <!-- Contact Section -->
+
+</main>
+
+<footer id="footer" class="footer position-relative light-background">
+
+  <div class="container">
+    <div class="copyright text-center ">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span>
+      </p>
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you've purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
+        href="https://themewagon.com">ThemeWagon</a>
+    </div>
+  </div>
+
+</footer>
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+    class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/typed.js/typed.umd.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+<script src="script.js"></script>
+
+
+
+<script >
+
+  document.addEventListener('DOMContentLoaded', function () {
+      // Array de preguntas, respuestas, imágenes y videos
+      const qaArray = [
+          {
+              question: "¿Qué es un algoritmo?",
+              response: "Un conjunto de instrucciones que resuelven un problema o realizan una tarea.",
+              image: "",
+              video: ""
+          },
+          {
+              question: "¿Dime una operación aritmética básica en algoritmos?",
+              response: "Sumar dos números.",
+              image: "",
+              video: ""
+          },
+          {
+              question: "¿Qué se necesita para usar una condicional en un algoritmo?",
+              response: "Una condición que puede ser verdadera o falsa.",
+              image: "",
+              video: ""
+          },
+          {
+              question: "¿Cuál es el propósito de un ciclo 'while'?",
+              response: "Repetir un bloque de código mientras una condición sea verdadera.",
+              image: "",
+              video: ""
+          }
+      ];
+  
+      // Referencias a elementos del DOM
+      const questionList = document.getElementById('questionList');
+      const questionButton = document.getElementById('questionButton');
+      const questionMenu = document.getElementById('questionMenu');
+      const responseText = document.getElementById('responseText');
+  
+      // Generar las preguntas en el menú
+      qaArray.forEach((item, index) => {
+          const listItem = document.createElement('li');
+          listItem.className = 'list-group-item question mb-1 list-group-item-action';
+          listItem.style.cssText = 'border: solid 0px #7c2e2e; border-radius: 15px; background-color: #181d38; color: white;';
+          listItem.setAttribute('data-bs-toggle', 'list');
+          listItem.setAttribute('role', 'tab');
+          listItem.setAttribute('data-index', index);
+          listItem.textContent = item.question;
+          questionList.appendChild(listItem);
+      });
+  
+      // Mostrar/Ocultar el menú
+      questionButton.addEventListener('click', function () {
+          questionMenu.style.display = questionMenu.style.display === 'none' || questionMenu.style.display === '' ? 'block' : 'none';
+      });
+  
+      // Delegación de eventos para manejar clics en las preguntas
+      questionList.addEventListener('click', function (event) {
+          if (event.target && event.target.classList.contains('question')) {
+              const index = event.target.getAttribute('data-index');
+              const selectedQA = qaArray[index];
+  
+              let content = `
+                  <div class="container section-title" data-aos="fade-up">
+                      <h2>${selectedQA.question}</h2>
+                      <p>${selectedQA.response}</p>
+                  </div>
+              `;
+  
+              // Agregar imagen si existe
+              if (selectedQA.image) {
+                  content += `
+                      <div class="container">
+                          <div class="row mt-3">
+                              <div class="col-lg-4 col-md-4"></div>
+                              <div class="col-lg-4 col-md-4">
+                                  <img src="${selectedQA.image}" alt="Imagen relacionada" class="img-fluid mb-3">
+                              </div>
+                          </div>
+                      </div>
+                  `;
+              }
+  
+              // Agregar video si existe
+              if (selectedQA.video) {
+                  content += `
+                      <div class="container">
+                          <div class="row mt-1">
+                              <video controls class="w-100">
+                                  <source src="${selectedQA.video}" type="video/mp4">
+                              </video>
+                          </div>
+                      </div>
+                  `;
+              }
+  
+              responseText.innerHTML = content;
+  
+              // Mostrar el modal y ocultar el menú
+              const responseModal = new bootstrap.Modal(document.getElementById('responseModal'));
+              responseModal.show();
+              questionMenu.style.display = 'none';
+          }
+      });
+  });
+    </script>
+</body>
+
+</html>

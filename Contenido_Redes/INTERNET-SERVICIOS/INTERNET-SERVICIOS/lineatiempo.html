@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Línea de Tiempo Horizontal</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #0d1117;
+      color: #ffffff;
+    }
+
+    h1.neon-text {
+      font-size: 2.5rem;
+      color: #00ffcc;
+      text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc;
+    }
+
+    .timeline-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 2rem 0;
+      position: relative;
+    }
+
+    .timeline-item {
+      flex: 0 0 250px;
+      margin-right: 2rem;
+      background-color: #161b22;
+      border-radius: 8px;
+      border: 2px solid #00ffcc;
+      box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+      padding: 1rem;
+      color: #ffffff;
+      min-height: 150px;
+      transform: translateY(50px);
+      opacity: 0;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+      position: relative;
+    }
+
+    .timeline-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00ffcc, 0 0 25px #00ffcc;
+    }
+
+    .timeline-item.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .timeline-item h3 {
+      font-size: 1.3rem;
+      color: #00ffcc;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-item p {
+      font-size: 0.9rem;
+    }
+
+    .timeline-item:last-child {
+      margin-right: 0;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .timeline-item:last-child {
+      margin-right: 0;
+      min-width: 250px; /* Garantiza que sea visible */
+    }
+
+    /* Puntos centrales en cada cuadro */
+    .timeline-item::after {
+      content: "";
+      width: 15px;
+      height: 15px;
+      background-color: #00ffcc;
+      border: 2px solid #161b22;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      transform: translateX(-50%);
+      box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+    }
+
+    .timeline-container::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background-color: #00ffcc;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <h1 class="neon-text">Línea de Tiempo </h1>
+      <p class="lead">Un recorrido desde sus inicios hasta su impacto futurista</p>
+    </div>
+  </header>
+
+  <main class="container-fluid">
+    <div class="timeline-container">
+      <!-- Año 1969 -->
+      <div class="timeline-item">
+        <h3>1969</h3>
+        <h4>Nacimiento de ARPANET</h4>
+        <p>ARPANET, el precursor del internet, conecta por primera vez computadoras en diferentes universidades.</p>
+      </div>
+
+      <!-- Año 1983 -->
+      <div class="timeline-item">
+        <h3>1983</h3>
+        <h4>TCP/IP se estandariza</h4>
+        <p>El Protocolo TCP/IP se convierte en el estándar para redes, marcando un hito clave en el desarrollo del internet moderno.</p>
+      </div>
+
+      <!-- Año 1991 -->
+      <div class="timeline-item">
+        <h3>1991</h3>
+        <h4>Nace la World Wide Web</h4>
+        <p>Tim Berners-Lee introduce la World Wide Web (WWW), cambiando para siempre cómo accedemos a la información.</p>
+      </div>
+
+      <!-- Año 2004 -->
+      <div class="timeline-item">
+        <h3>2004</h3>
+        <h4>Redes Sociales</h4>
+        <p>La aparición de plataformas como Facebook y Twitter marca el auge de las redes sociales en la era digital.</p>
+      </div>
+
+      <!-- Año 2025 -->
+      <div class="timeline-item">
+        <h3>2025</h3>
+        <h4>Futuro del Internet</h4>
+        <p>El internet continúa evolucionando con tecnologías como inteligencia artificial, metaverso y redes 6G.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Detectar cuando los cuadros están en la vista y aplicarles animación
+      function revealOnScroll() {
+        $(".timeline-item").each(function () {
+          const itemPosition = $(this).offset().left;
+          const windowWidth = $(window).scrollLeft() + $(window).width();
+
+          if (itemPosition < windowWidth) {
+            $(this).addClass("show");
+          }
+        });
+      }
+
+      // Llamar a la función al cargar y al desplazarse
+      $(window).on("scroll resize", revealOnScroll);
+      revealOnScroll();
+    });
+  </script>
+</body>
+</html>

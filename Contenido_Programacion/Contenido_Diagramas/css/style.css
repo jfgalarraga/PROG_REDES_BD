@@ -1,0 +1,344 @@
+          /*Estilo Preguntas*/
+          #questionButton {
+            position: fixed;
+            bottom: 72px; /* Cambia según tu preferencia */
+            right: 10px;
+            z-index: 1050;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: url('../assetsBot/robot.png');
+            background-size: contain; /* Asegura que la imagen se ajuste al botón */
+            border: none; /* Opcional, para quitar el borde del botón */
+            cursor: pointer;
+            }
+  
+        #questionMenu {
+            position: fixed;
+            border: none; 
+            bottom: 150px;
+            right: 8px;
+            z-index: 1040;
+            display:none ;
+            
+          }
+  
+        .speech-bubble {
+          position: relative;
+          background: #f0f0f000;
+          border: none;
+          border-radius: 15px;
+          padding: 2px;
+          max-width: 300px;
+          
+          }
+  
+        .speech-bubble::after {
+          content: '';
+          position: absolute;
+          bottom: -18px; /* Ubicación de la punta */
+          left: 70px; /* Ajusta según quieras centrar o mover la punta */
+          width: 0;
+          height: 0;
+          border-style: solid  ;
+          border-width: 15px 15px 0 15px;
+          border-color: #15c4ec00 transparent transparent transparent;
+          }
+  
+        .BotonNav{
+          position: fixed;
+          bottom: 30px; /* Cambia según tu preferencia */
+          left: 320px;
+          z-index: 1050;
+          width: 600px;
+          height: 25px;
+          border-radius: 50%;
+          background-size: contain; /* Asegura que la imagen se ajuste al botón */
+          border: none; /* Opcional, para quitar el borde del botón */
+          cursor: pointer;
+          }
+  
+  /*Estilo Preguntas*/
+
+  
+.topnav1 {
+    top: 0;
+    margin: 0;
+    background-color: whitesmoke;
+   
+  }
+  
+  .topnav1 a {
+    float: left;
+    display: block;
+    color: #06BBCC;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .active1 {
+    background-color: #F0FBFC;
+    
+  }
+  
+  .topnav1 .icon1 {
+    display: none;
+  }
+  
+  .dropdown1 {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown1 .dropbtn1 {
+    font-size: 17px;    
+    border: none;
+    outline: none;
+    color: #06BBCC;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content1 a {
+    float: none;
+    color: #06BBCC;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .topnav1 a:hover, .dropdown1:hover .dropbtn1 {
+    background-color: #f9f9f9;
+    color: #06BBCC;
+  }
+  
+  .dropdown-content1 a:hover {
+    background-color: #06BBCC;
+    color: #F0FBFC;
+  }
+  
+  .dropdown1:hover .dropdown-content1 {
+    display: block;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav1 a:not(:first-child), .dropdown1 .dropbtn1 {
+      display: none;
+    }
+    .topnav1 a.icon1 {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav1.responsive1 {position: relative;}
+    .topnav1.responsive1 .icon1 {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav1.responsive1 a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav1.responsive1 .dropdown1 {float: none;}
+    .topnav1.responsive1 .dropdown-content1 {position: relative;}
+    .topnav1.responsive1 .dropdown1 .dropbtn1 {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+
+/********** Template CSS **********/
+:root {
+    --primary: #06BBCC;
+    --light: #F0FBFC;
+    --dark: #181d38;
+}
+
+.fw-medium {
+    font-weight: 600 !important;
+}
+
+.fw-semi-bold {
+    font-weight: 700 !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 0px;
+}
+
+
+/*** Navbar ***/
+.navbar .dropdown1-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-light .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+.navbar-light .navbar-brand,
+.navbar-light a.btn {
+    height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.navbar-light.sticky-top {
+    top: 0px;
+    transition: .5s;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown1-menu {
+        display: block;
+        margin-top: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .dropdown-menu.fade-down {
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        transform: rotateX(0deg);
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 200px;
+    }
+}
+
+@media (min-width: 992px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 300px;
+    }
+}

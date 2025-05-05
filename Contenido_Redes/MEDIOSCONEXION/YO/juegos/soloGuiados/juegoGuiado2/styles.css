@@ -1,0 +1,142 @@
+/* Estilos básicos */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .subtitle {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #d9e3f0;
+  }
+  
+  /* Sección de preguntas */
+  .card {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .answers {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .answers .btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .answers .btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+  }
+  
+  /* Juego */
+  .game-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  canvas {
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .controls .btn {
+    padding: 12px 25px;
+    font-size: 1em;
+    background-color: #008cba;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .controls .btn:hover {
+    background-color: #0077a2;
+    transform: scale(1.1);
+  }
+  
+  /* Resultado */
+  .result {
+    margin-top: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+    padding: 15px;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .result h2 {
+    margin: 0 0 10px 0;
+  }
+  
+  .result p {
+    font-size: 1em;
+    margin: 0;
+  }
+  /* Obstáculos */
+.obstacle {
+    background-color: red;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+  }
+  .back-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #06BBCC;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .back-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+    background-color: #028a9b;
+  }

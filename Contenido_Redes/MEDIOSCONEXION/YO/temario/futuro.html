@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Definicion - iPortfolio Bootstrap Template</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon" />
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="../assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="../assets/css/main.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+/* Estilo General */
+/* General */
+.future-section {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.future-section:hover {
+  transform: translateY(-5px);
+}
+
+.gradient-title {
+  background: linear-gradient(to right, #007bff, #00c853);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.future-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.future-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.future-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.interactive-box {
+  padding: 20px;
+  background: linear-gradient(135deg, #fff9c4, #ffe0b2);
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.example-placeholder {
+  height: 300px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #757575;
+}
+
+/* Botones */
+.btn-discover {
+  transition: all 0.3s ease;
+}
+
+.btn-discover:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Animación para mostrar el iframe */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Ajuste del contenedor del iframe */
+#interactive-placeholder iframe {
+  animation: fadeIn 0.5s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.botones-centrales {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto; /* Centra el contenedor verticalmente */
+  max-width: 100%; /* Limita el ancho al 80% del contenedor */
+  padding: 0 40px; /* Espaciado interno adicional */
+}
+
+.boton-izquierdo a,
+.boton-derecho a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-size: 18px;
+  margin-top: -40%;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  color: #fff;
+  background-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.boton-izquierdo a:hover,
+.boton-derecho a:hover {
+  background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+  transform: translateY(-3px); /* Efecto de elevación */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.boton-izquierdo a i,
+.boton-derecho a i {
+  font-size: 20px; /* Tamaño del ícono */
+}
+
+.boton-izquierdo a i.me-2 {
+  margin-right: 8px; /* Espaciado entre el ícono y el texto */
+}
+
+.boton-derecho a i.ms-2 {
+  margin-left: 8px; /* Espaciado entre el texto y el ícono */
+}
+
+
+  </style>
+  
+  </head>
+
+  <body class="service-details-page">
+    <header id="header" class="header dark-background d-flex flex-column">
+    
+      <i class="header-toggle d-xl-none bi bi-list"></i>
+  
+      <div class="profile-img">
+        <img src="../../VANNE/img/perfil.jpg" alt="" class="img-fluid rounded-circle">
+      </div>
+  
+      <a href="../../VANNE/index.html" class="logo d-flex align-items-center justify-content-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Redes</h1>
+      </a>
+  
+      <div class="social-links text-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+  
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../../VANNE/index.html"><i class="bi bi-house navicon"></i>Inicio</a></li>
+<li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>I. Capa Física</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+  <ul>
+    <li><a href="../../VANNE/index.html#introduccion"><i class="bi bi-book navicon"></i>Introducción</a></li>
+    <li><a href="../../VANNE/index.html#about"><i class="bi bi-file-earmark-text navicon"></i>¿Qué es la Capa Física?</a></li>
+    <li><a href="../../VANNE/index.html#funciones"><i class="bi bi-gear navicon"></i>Funciones Principales</a></li>
+    <li><a href="../../VANNE/index.html#caracteristicas"><i class="bi bi-star navicon"></i>Características</a></li>
+    <li><a href="../../VANNE/index.html#componentes"><i class="bi bi-diagram-3 navicon"></i>Componentes</a></li> 
+    <li><a href="../../VANNE/index.html#cuestionario"><i class="bi bi-list-task navicon"></i>Cuestionario</a></li>
+  </ul>
+</li>
+<li class="dropdown"><a href="../VANNE/mediosGuiados.html"><i class="bi bi-menu-button navicon"></i> <span>II. Medios Guiados</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+  <ul>
+    <li><a href="../VANNE/parTrenzado.html"><i class="bi bi-lightning navicon"></i>Par Trenzado</a></li>
+    <li><a href="../VANNE/coaxial.html"><i class="bi bi-router navicon"></i>Cable Coaxial</a></li>
+    <li><a href="../VANNE/fibra.html"><i class="bi bi-globe navicon"></i>Fibra Óptica</a></li>
+    <li><a href="../VANNE/tabla.html"><i class="bi bi-hdd-stack navicon"></i>Características</a></li>
+  </ul>
+  </li>
+<li class="dropdown"><a href="../portfolio-details.html" class="active"><i class="bi bi-menu-button navicon"></i> <span>III. Medios No Guiados</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+  <ul>
+    <li><a href="../service-details.html"><i class="bi bi-info-circle navicon"></i>Introducción</a></li>
+    <li class="dropdown"><a href="#" class="active"><i class="bi bi-menu-button navicon"></i> <span>Temario</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="../temario/definicion.html" ><i class="bi bi-book-half navicon"></i>Definición</a></li>
+        <li><a href="../temario/tipos.html"><i class="bi bi-diagram-2 navicon"></i>Tipos</a></li>
+        <li><a href="../temario/futuro.html" class="active"><i class="bi bi-cloud-arrow-up navicon"></i>Futuro</a></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+<li class="dropdown"><a href="#ejercicios"><i class="bi bi-pencil navicon"></i> <span>IV. Ejercicios</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+  <ul>
+    <li><a href="../../VANNE/ejercicio1.html"><i class="bi bi-clipboard-check navicon"></i>Ejercicio 1</a></li>
+    <li><a href="../../VANNE/ejercicio2.html"><i class="bi bi-clipboard-check navicon"></i>Ejercicio 2</a></li>
+  </ul>
+</li>
+<li><a href="../../YO/juegos.html"><i class="bi bi-controller navicon"></i>V. Juegos</a></li>
+<li><a href="../../YO/videos.html"><i class="bi bi-play-circle navicon"></i>VI. Videos</a></li>
+
+          
+        </ul>
+      </nav> 
+    </header>
+
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title dark-background">
+        <div
+          class="container d-lg-flex justify-content-between align-items-center"
+        >
+          <h1 class="mb-2 mb-lg-0">Futuro</h1>
+          <nav class="breadcrumbs">
+            <ol>
+              <li><a style="color: white;">Medios no Guiados</a></li>
+              <li><a href="#">Futuro</a></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <!-- End Page Title -->
+      <div class="container-fluid">
+        <div class="row align-items-center mb-5">
+          <!-- Primera Sección: Introducción -->
+          <div class="col-lg-8" data-aos="fade-right">
+            <section class="future-section">
+              <h2 class="mb-4 gradient-title">I. El Futuro de los Medios No Guiados</h2>
+              <p class="mb-4">
+                Los avances en medios no guiados están cambiando el mundo. Con tecnologías como el 6G, satélites avanzados y el Internet de las Cosas (IoT), el futuro promete conexiones más rápidas, seguras y accesibles para todos.
+              </p>
+            </section>
+          </div>
+    
+          <!-- Ejemplo Interactivo -->
+          <div class="col-lg-4" data-aos="fade-left" style="margin-top: 1%;">
+            <div class="interactive-box">
+              <h3 class="text-center mb-3 gradient-title">II. Medios Guiados VS No Guiados</h3>
+              <div id="interactive-placeholder" style="position: relative; text-align: center;">
+                <!-- Imagen inicial -->
+                <img
+                  id="preview-image"
+                  src="../assets/img/Captura de pantalla 2025-01-26 230758.png"
+                  alt="Ejemplo Interactivo"
+                  style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);"
+                />
+                <!-- Botón de Play -->
+                <button
+                  id="play-button"
+                  style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+                         background-color: rgba(0, 128, 255, 0.8); color: white; border: none;
+                         border-radius: 50%; padding: 15px 20px; font-size: 24px; cursor: pointer;
+                         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+                  ▶
+                </button>
+              </div>
+            </div>            
+          </div>
+          
+          
+    
+        <!-- Segunda Sección: Innovaciones Futuras -->
+        <div class="row" style="margin-top: 0.4%;">
+          <div class="col-12">
+            <section class="future-section">
+              <h3 class="mb-4 text-center gradient-title">III. Innovaciones Futuras</h3>
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="future-card" data-aos="zoom-in">
+                    <img src="../assets/img/840_560.jpg" alt="Redes 6G" class="future-img">
+                    <div class="p-3 text-center">
+                      <h5 class="text-primary">Redes 6G</h5>
+                      <p>Velocidades sorprendentes y baja latencia para la comunicación del futuro.</p>
+                     
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="future-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="../assets/img/imageljblkblkbl.jpg" alt="Satélites Inteligentes" class="future-img">
+                    <div class="p-3 text-center">
+                      <h5 class="text-success">Satélites Inteligentes</h5>
+                      <p>Conexión en lugares remotos con redes de satélites de baja órbita.</p>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="future-card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="../assets/img/internet de las cosas.jpg" alt="Internet de las Cosas" class="future-img">
+                    <div class="p-3 text-center">
+                      <h5 class="text-warning">Internet de las Cosas</h5>
+                      <p>Comunicación entre dispositivos para ciudades y hogares inteligentes.</p>
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="botones-centrales">
+        <div class="boton-izquierdo">
+          <a 
+            href="./tipos.html" 
+            class="btn btn-primary btn-lg shadow-lg d-flex align-items-center justify-content-center"
+          >
+            <i class="bi bi-arrow-left-circle me-2"></i> Tipos
+          </a>
+        </div>
+        <div class="boton-derecho">
+          <a 
+            href="../finalizar.html" 
+            class="btn btn-primary btn-lg shadow-lg d-flex align-items-center justify-content-center"
+          >
+            Finalizar <i class="bi bi-arrow-right-circle ms-2"></i>
+          </a>
+        </div>
+      </div>
+      
+  </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">Grupo 10</strong>
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by
+          <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by
+          <a href="https://themewagon.com">ThemeWagon</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- Main JS File -->
+    <script src="../assets/js/main.js"></script>
+    <script>
+// Inicializar AOS (animaciones)
+// Inicializar AOS (animaciones)
+AOS.init({
+  duration: 1000,
+  easing: 'ease-in-out',
+  once: true,
+});
+document.getElementById("play-button").addEventListener("click", function () {
+    const placeholder = document.getElementById("interactive-placeholder");
+    
+
+    // Reemplazar el contenido con un iframe
+    placeholder.innerHTML = `
+      <iframe
+        src="../juegos/ejemploVIsual/guiados/index.html"
+        style="width: 100%; height: 300px; border: none; border-radius: 10px;"
+        title="Ejemplo Interactivo"
+        loading="lazy"
+      ></iframe>
+    `;
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const playButton = document.getElementById("play-button");
+  const previewImage = document.getElementById("preview-image");
+  const iframeContainer = document.getElementById("iframe-container");
+  const interactiveIframe = document.getElementById("interactive-iframe");
+  const fullscreenButton = document.getElementById("fullscreen-button");
+
+  // Acción para abrir el juego
+  playButton.addEventListener("click", function () {
+    // Ocultar imagen previa y botón de play
+    previewImage.style.display = "none";
+    playButton.style.display = "none";
+
+    // Mostrar el contenedor del iframe y cargar el juego
+    iframeContainer.style.display = "block";
+    interactiveIframe.src = "../juegos/mi_juego/index.html";
+  });
+
+  // Acción para entrar en pantalla completa
+  fullscreenButton.addEventListener("click", function () {
+    if (interactiveIframe.requestFullscreen) {
+      interactiveIframe.requestFullscreen();
+    } else if (interactiveIframe.webkitRequestFullscreen) {
+      interactiveIframe.webkitRequestFullscreen(); // Safari
+    } else if (interactiveIframe.msRequestFullscreen) {
+      interactiveIframe.msRequestFullscreen(); // IE11
+    }
+  });
+
+  // Detectar salida de pantalla completa
+  document.addEventListener("fullscreenchange", function () {
+    if (!document.fullscreenElement) {
+      // Salir de pantalla completa
+      iframeContainer.style.display = "none";
+      previewImage.style.display = "block";
+      playButton.style.display = "block";
+    }
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const playButton = document.getElementById("play-button");
+  const placeholder = document.getElementById("interactive-placeholder");
+
+  playButton.addEventListener("click", function () {
+    // Reemplazar el contenido del placeholder con un iframe
+    placeholder.innerHTML = `
+      <iframe
+        src="../juegos/ejemploVIsual/guiados/index.html"
+        title="Ejemplo Interactivo"
+        loading="lazy"
+      ></iframe>
+      <button
+        id="fullscreen-button"
+        style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0, 128, 255, 0.8);
+               color: white; border: none; border-radius: 5px; padding: 10px 15px; font-size: 14px;
+               cursor: pointer;">
+        Pantalla Completa
+      </button>
+    `;
+
+    // Agregar funcionalidad al botón de pantalla completa
+    const iframe = placeholder.querySelector("iframe");
+    const fullscreenButton = placeholder.querySelector("#fullscreen-button");
+
+    fullscreenButton.addEventListener("click", function () {
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+      } else if (iframe.webkitRequestFullscreen) {
+        iframe.webkitRequestFullscreen();
+      } else if (iframe.msRequestFullscreen) {
+        iframe.msRequestFullscreen();
+      }
+    });
+  });
+});
+
+    </script>
+        
+  </body>
+</html>

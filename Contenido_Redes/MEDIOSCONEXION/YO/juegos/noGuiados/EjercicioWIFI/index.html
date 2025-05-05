@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulación: Frecuencia y Rango de WiFi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <video class="video-background" autoplay muted loop>
+    <source src="./video/Fondo de Pantalla Animado Rayquaza de Pokémon 🐉 en Movimiento [4K] [HD].mp4" type="video/mp4">
+    Tu navegador no soporta videos de fondo.
+  </video>
+  <div class="container">
+    <h1 style="color: black;">Simulación: Frecuencia y Rango de WiFi</h1>
+    <p style="color: black;">Explora cómo las frecuencias afectan el alcance de la señal y cómo las interferencias reducen su efectividad.</p>
+
+    <div class="controls">
+      <button class="btn" onclick="startSimulation('2.4GHz')">Frecuencia 2.4 GHz</button>
+      <button class="btn" onclick="startSimulation('5GHz')">Frecuencia 5 GHz</button>
+      <button class="btn" id="toggleInterferences" onclick="toggleInterferences()">Activar Interferencias</button>
+    </div>
+
+    <div class="simulation-area">
+      <canvas id="simulationCanvas" width="800" height="400"></canvas>
+    </div>
+
+    <div id="resultMessage" class="result hidden">
+      <p id="resultText"></p>
+      <button class="btn btn-restart" onclick="restartSimulation()">Reiniciar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

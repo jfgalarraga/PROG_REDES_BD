@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selecciona una Topología</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Agregar estilos para la sección */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+    }
+
+    .section {
+      padding: 50px 0;
+    }
+
+    .section-title h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .info-box {
+      background-color: #e9f7fa;
+      color: #333;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-box h3 {
+      color: #007bff;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section id="topologia" class="caracteristicas section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Cómo Elegir Según el Tamaño y las Necesidades</h2>
+  </div>
+
+  <div class="row">
+    <!-- ComboBox (Select) -->
+    <div class="col-md-6">
+      <div class="form-group" style="max-width: 450px; margin: 0 auto;">
+        <br><br>
+        <label for="topologiaSelect" style="font-size: 1.2rem; font-weight: 500; color: #504b4b;">Selecciona una Topología</label>
+        <select class="form-control" id="topologiaSelect" style="border: 2px solid #ddd; font-size: 1rem; max-width: 500px; margin: 0 auto; display: block;">
+          <option value="1">Bus</option>
+          <option value="2">Anillo</option>
+          <option value="3">Malla</option>
+          <option value="4">Estrella</option>
+          <option value="5">Árbol</option>
+          <option value="6">Híbrida</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-6" id="infoFoto" class="centrar-contenido">
+      <!-- Aquí se insertarán las imágenes dinámicamente según la selección -->
+    </div>
+  </div>
+
+  <br><br>
+  <!-- Nueva fila para mostrar Uso Ideal y Tamaño de Red Recomendado -->
+  <div class="row" id="infoRow">
+    <!-- Uso Ideal -->
+    <div class="col-md-6" id="infoUsoIdeal" class="centrar-contenido" style="max-width: 550px; margin: 0 auto;">
+      <div class="info-box">
+        <h3 style="text-align: center; color:#007bff;">Uso Ideal</h3>
+        <p style="text-align: center;">Redes pequeñas, económicas, con pocos dispositivos.</p>
+      </div>
+    </div>
+
+    <!-- Tamaño de Red Recomendado -->
+    <div class="col-md-6" id="infoTamañoRed" class="centrar-contenido" style="max-width: 500px; margin: 0 auto;">
+      <div class="info-box">
+        <h3 style="text-align: center;">Tamaño de Red Recomendado</h3>
+        <p style="text-align: center;">Pequeña (1-10 dispositivos)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JS para cambiar la información según la selección del combobox -->
+<script>
+  // Función para actualizar la información según la selección del combobox
+  function updateInfo() {
+    const selectedValue = document.getElementById('topologiaSelect').value;
+    const infoUsoIdeal = document.getElementById('infoUsoIdeal');
+    const infoTamañoRed = document.getElementById('infoTamañoRed');
+    const infoFoto = document.getElementById('infoFoto');
+    const infoRow = document.getElementById('infoRow');
+
+    // Cambiar el contenido según la opción seleccionada
+    if (selectedValue == '1') {
+      infoFoto.innerHTML = `
+        <img src="img/bus.webp" alt="Descripción de la imagen" style="width: 100%; max-width: 400px; display: block; margin: 0 auto;">
+      `;
+      infoUsoIdeal.innerHTML = `
+        <div class="info-box" style="background-color: #92e7f4; color: #000; border: 1px solid #f5c6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Uso Ideal</h3>
+          <p style="text-align: center;">Redes pequeñas, económicas, con pocos dispositivos.</p>
+        </div>
+      `;
+      infoTamañoRed.innerHTML = `
+        <div class="info-box" style="background-color: #92e7f4; color: #000; border: 1px solid #c3e6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Tamaño de Red Recomendado</h3>
+          <p style="text-align: center;">Pequeña (1-10 dispositivos)</p>
+        </div>
+      `;
+    } else if (selectedValue == '2') {
+      infoFoto.innerHTML = `
+        <img src="img/anillo.png" alt="Descripción de la imagen" style="width: 100%; max-width: 400px; display: block; margin: 0 auto;">
+      `;
+      infoUsoIdeal.innerHTML = `
+        <div class="info-box" style="background-color: #f8d291; color: #000; border: 1px solid #f5c6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Uso Ideal</h3>
+          <p style="text-align: center;">Redes pequeñas a medianas</p>
+        </div>
+      `;
+      infoTamañoRed.innerHTML = `
+        <div class="info-box" style="background-color: #f8d291; color: #000; border: 1px solid #c3e6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Tamaño de Red Recomendado</h3>
+          <p style="text-align: center;">Pequeña a Mediana (10-100 dispositivos)</p>
+        </div>
+      `;
+    } else if (selectedValue == '3') {
+      infoFoto.innerHTML = `
+        <img src="img/malla.webp" alt="Descripción de la imagen" style="width: 100%; max-width: 400px; display: block; margin: 0 auto;">
+      `;
+      infoUsoIdeal.innerHTML = `
+        <div class="info-box" style="background-color: #d7f891; color: #000; border: 1px solid #f5c6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Uso Ideal</h3>
+          <p style="text-align: center;">Redes críticas, alta disponibilidad</p>
+        </div>
+      `;
+      infoTamañoRed.innerHTML = `
+        <div class="info-box" style="background-color: #d7f891; color: #000; border: 1px solid #c3e6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Tamaño de Red Recomendado</h3>
+          <p style="text-align: center;">Grande (100+ dispositivos)</p>
+        </div>
+      `;
+    } else if (selectedValue == '4') {
+      infoFoto.innerHTML = `
+        <img src="img/estrella.webp" alt="Descripción de la imagen" style="width: 100%; max-width: 400px; display: block; margin: 0 auto;">
+      `;
+      infoUsoIdeal.innerHTML = `
+        <div class="info-box" style="background-color: #cebafc; color: #000; border: 1px solid #f5c6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Uso Ideal</h3>
+          <p style="text-align: center;">Oficinas, edificios comerciales, redes medianas</p>
+        </div>
+      `;
+      infoTamañoRed.innerHTML = `
+        <div class="info-box" style="background-color: #cebafc; color: #000; border: 1px solid #c3e6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Tamaño de Red Recomendado</h3>
+          <p style="text-align: center;">Pequeña a Mediana (10-100 dispositivos)</p>
+        </div>
+      `;
+    } else if (selectedValue == '5') {
+      infoFoto.innerHTML = `
+        <img src="img/arbol.webp" alt="Descripción de la imagen" style="width: 100%; max-width: 400px; display: block; margin: 0 auto;">
+      `;
+      infoUsoIdeal.innerHTML = `
+        <div class="info-box" style="background-color: #fcbafc; color: #000; border: 1px solid #f5c6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Uso Ideal</h3>
+          <p style="text-align: center;">Redes grandes, empresas con múltiples subredes</p>
+        </div>
+      `;
+      infoTamañoRed.innerHTML = `
+        <div class="info-box" style="background-color: #fcbafc; color: #000; border: 1px solid #c3e6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Tamaño de Red Recomendado</h3>
+          <p style="text-align: center;">Mediana a Grande (50+ dispositivos)</p>
+        </div>
+      `;
+    } else if (selectedValue == '6') {
+      infoFoto.innerHTML = `
+        <img src="img/hibrida.webp" alt="Descripción de la imagen" style="width: 100%; max-width: 400px; display: block; margin: 0 auto;">
+      `;
+      infoUsoIdeal.innerHTML = `
+        <div class="info-box" style="background-color: #bafcea; color: #000; border: 1px solid #f5c6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Uso Ideal</h3>
+          <p style="text-align: center;">Redes grandes, complejas, adaptadas a diferentes necesidades</p>
+        </div>
+      `;
+      infoTamañoRed.innerHTML = `
+        <div class="info-box" style="background-color: #bafcea; color: #000; border: 1px solid #c3e6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Tamaño de Red Recomendado</h3>
+          <p style="text-align: center;">Mediana a Grande (50+ dispositivos)</p>
+        </div>
+      `;
+    }
+  }
+
+  // Llamar la función al cambiar la selección del combobox
+  document.getElementById('topologiaSelect').addEventListener('change', updateInfo);
+
+  // Llamar la función al cargar la página para establecer el contenido inicial
+  document.addEventListener("DOMContentLoaded", updateInfo);
+</script>
+
+<!-- Bootstrap JS y dependencias (jQuery y Popper.js) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

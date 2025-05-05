@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo: Cómo funciona el internet</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="bg-primary text-white text-center py-4">
+    <div class="container">
+      <h1>¿Cómo funciona el internet?</h1>
+      <p class="lead">Descubre cómo los clientes y servidores interactúan en la red</p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <!-- Botones para mostrar/ocultar la simulación -->
+    <div class="text-center mb-4">
+      <button id="showSimulation" class="btn btn-primary btn-lg">Mostrar</button>
+      <button id="hideSimulation" class="btn btn-secondary btn-lg d-none">Ocultar</button>
+    </div>
+
+    <!-- Contenido de la simulación (oculto por defecto) -->
+    <div id="simulationContent" class="d-none">
+      <div class="row align-items-center text-center g-4">
+        <!-- Cliente -->
+        <div class="col-12 col-md-5">
+          <div class="card shadow border-primary h-100">
+            <div class="card-body">
+              <h2 class="card-title text-primary">Cliente</h2>
+              <p class="card-text">Yo quiero acceder a un sitio web.</p>
+              <select id="websiteSelect" class="form-select mb-3">
+                <option value="google">Google</option>
+                <option value="chrome">Edge</option>
+                <option value="mozilla">Mozilla</option>
+              </select>
+              <button id="requestButton" class="btn btn-success btn-lg w-100">Enviar solicitud</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flecha -->
+        <div class="col-12 col-md-2 d-flex justify-content-center align-items-center">
+          <div class="display-4 text-secondary">➡️</div>
+        </div>
+
+        <!-- Servidor -->
+        <div class="col-12 col-md-5">
+          <div class="card shadow border-primary h-100">
+            <div class="card-body" id="server">
+              <h2 class="card-title text-primary">Servidor</h2>
+              <p class="card-text">Esperando solicitudes...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <p class="fs-5 text-muted">
+          Este ejemplo muestra cómo un cliente (tú) envía una solicitud al servidor, 
+          y este responde con la información que solicitaste.
+        </p>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- Bootstrap JS (incluye Popper.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Mostrar el contenido de la simulación
+    document.getElementById('showSimulation').addEventListener('click', function () {
+      const simulationContent = document.getElementById('simulationContent');
+      const hideButton = document.getElementById('hideSimulation');
+      simulationContent.classList.remove('d-none'); // Quita la clase que oculta el contenido
+      this.classList.add('d-none'); // Oculta el botón "Mostrar"
+      hideButton.classList.remove('d-none'); // Muestra el botón "Ocultar"
+    });
+
+    // Ocultar el contenido de la simulación
+    document.getElementById('hideSimulation').addEventListener('click', function () {
+      const simulationContent = document.getElementById('simulationContent');
+      const showButton = document.getElementById('showSimulation');
+      simulationContent.classList.add('d-none'); // Agrega la clase que oculta el contenido
+      this.classList.add('d-none'); // Oculta el botón "Ocultar"
+      showButton.classList.remove('d-none'); // Muestra el botón "Mostrar"
+    });
+
+    // Funcionalidad de la solicitud del cliente al servidor
+    document.getElementById('requestButton').addEventListener('click', function () {
+      const server = document.getElementById('server');
+      const website = document.getElementById('websiteSelect').value;
+      
+      server.innerHTML = `
+        <h2 class="card-title text-primary">Servidor</h2>
+        <p class="card-text">Procesando solicitud...</p>
+      `;
+
+      setTimeout(() => {
+        let responseHTML = '<h2 class="card-title text-primary">Servidor</h2>';
+
+        switch (website) {
+          case 'google':
+            responseHTML += '<p class="card-text">¡Aquí está Google!</p><img src="./img/Google.png" alt="Google" class="img-fluid">';
+            break;
+          case 'chrome':
+            responseHTML += '<p class="card-text">¡Aquí está Edge!</p><img src="./img/Microsoft.jpg" alt="Edge" class="img-fluid">';
+            break;
+          case 'mozilla':
+            responseHTML += '<p class="card-text">¡Aquí está Mozilla!</p><img src="./img/Mozilla.jpg" alt="Mozilla" class="img-fluid">';
+            break;
+          default:
+            responseHTML += '<p class="card-text">Sitio no reconocido.</p>';
+        }
+
+        server.innerHTML = responseHTML;
+        alert('El servidor ha respondido con la información.');
+      }, 2000);
+    });
+  </script>
+</body>
+</html>

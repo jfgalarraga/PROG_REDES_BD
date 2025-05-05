@@ -1,0 +1,168 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.context-container {
+  background-color: #fffcf9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.exam-container, .result-container {
+  display: none;
+}
+
+.btn {
+  background-color: #0099ff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background-color: #0066cc;
+}
+
+.start-btn {
+  background-color: #28a745;
+}
+
+.start-btn:hover {
+  background-color: #218838;
+}
+
+.questions-container {
+  margin-top: 20px;
+}
+
+.question {
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.question:hover {
+  transform: scale(1.02);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.options label {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.timer {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff6347;
+  margin-bottom: 20px;
+  animation: timerAnim 1s ease-in-out;
+}
+
+.result-message {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.buttons-container {
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.previous-btn, .next-btn {
+  width: 45%;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.previous-btn {
+  background-color: #f8b400;
+}
+
+.previous-btn:hover {
+  background-color: #e69500;
+}
+
+.next-btn {
+  background-color: #0099ff;
+}
+
+.next-btn:hover {
+  background-color: #0066cc;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes timerAnim {
+  0% { color: #ff6347; }
+  50% { color: #ff4500; }
+  100% { color: #ff6347; }
+}
+#seeCorrectAnswersBtn {
+  background-color: #0099ff; /* Fondo verde */
+  color: white; /* Texto blanco */
+  padding: 10px 20px; /* Relleno del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+  font-size: 16px; /* Tamaño de la fuente */
+  margin-top: 20px; /* Margen superior */
+  display: block; /* Asegura que se muestre como bloque */
+  width: 200px; /* Ancho del botón */
+  text-align: center; /* Alinear texto al centro */
+}
+
+#seeCorrectAnswersBtn:hover {
+  background-color: #b3b4cf; /* Color verde oscuro al pasar el ratón */
+}
+
+#seeCorrectAnswersBtn:active {
+  background-color: #000000; /* Color verde aún más oscuro al hacer clic */
+}
+
+#seeCorrectAnswersBtn:disabled {
+  background-color: #ccc; /* Fondo gris cuando el botón está deshabilitado */
+  cursor: not-allowed; /* Cursor de no permitido cuando está deshabilitado */
+}

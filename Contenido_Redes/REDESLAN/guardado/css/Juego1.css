@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+#introScreen {
+    margin-top: 50px;
+}
+
+#gameScreen {
+    margin-top: 50px;
+}
+
+button {
+    margin-top: 20px;
+}
+
+.game-box {
+    height: 150px;
+    border: 3px solid #4caf50;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.device {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    cursor: move;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.device img {
+    width: 60px;
+    height: 60px;
+}
+
+#diagram {
+    margin-top: 50px;
+}
+
+#status {
+    font-size: 18px;
+    font-weight: bold;
+    color: green;
+}
+
+.device:hover {
+    transform: scale(1.1);
+}
+
+.device.connected {
+    background-color: #aaffaa;
+    border-color: #4caf50;
+}
+
+#verifyButton {
+    margin-top: 20px;
+}

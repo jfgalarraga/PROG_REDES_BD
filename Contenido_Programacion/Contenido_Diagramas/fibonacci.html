@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/diagramas.css">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+           
+            <div class="col-12 col-md-5">
+                <div class="row">
+
+                    <div class="col-12" id="seccionVelocidad" style="display: block;">
+
+                        <div class="d-flex flex-column gap-3" style="padding-top: 5%;">
+                            <div>
+                                <p><strong>Selecciona la velocidad:</strong></p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <button id="speed0_5" class="botones-velocidad flex-fill">x0.5</button>
+                                    <button id="speed1" class="botones-velocidad flex-fill">x1</button>
+                                    <button id="speed2" class="botones-velocidad flex-fill">x2</button>
+                                    <button id="speed5" class="botones-velocidad flex-fill">x5</button>
+                                    <button id="speed10" class="botones-velocidad flex-fill">x10</button>
+                                </div>
+                            </div>
+
+                            <div class="d-flex gap-2 justify-content-between align-items-center flex-wrap">
+                                <input id="customSpeed" type="number" step="0.1" placeholder="Velocidad personalizada"
+                                    class="form-control flex-grow-1" style="max-width: 70%;">
+                                <button id="setCustomSpeed" class="botones-velocidad"
+                                    style="max-width: 25%;">Usar</button>
+                            </div>
+
+                            <p class="text-muted"><span>&#128161;</span> Consejo: comienza con una velocidad baja y
+                                cuando comprendas el algoritmo, prueba una velocidad mayor</p>
+
+
+                        </div>
+
+                    </div>
+                    <div class="col-12" id="seccionConsola" style="display: none;">
+                        <p><strong> ¡Interactua con la consola!</strong></p>
+                        <div id="console">
+                            <input type="text" id="inputField" disabled class="form-control">
+                        </div>
+                        <button id="fi_startButton" class="botonStart flex-fill"
+                            style="display: block; width: 100%;">Empezar</button>
+                        <button id="restartButton" class="botonStart flex-fill"
+                            style="display: none; width: 100%;">Reiniciar</button>
+
+                    </div>
+
+
+                    <div class="col-12" id="seccionPruebaEscritorio" style="display: none; padding-top: 5%;">
+                        <p><strong> Prueba de escritorio</strong></p>
+                        <p class="text-muted"><span>&#128161;</span> Observa cómo cambia el valor de las variables</p>
+                        <div class="table-container" style="max-height: 500px; overflow-y:auto;">
+                            <table class="table table-bordered table-striped" id="pruebaEscritorioTabla">
+                                <thead class="sticky-top">
+                                    <tr>
+                                        <th>Paso</th>
+                                        <th>n</th>
+                                        <th>i</th>
+                                        <th>fibPrevio1</th>
+                                        <th>fibPrevio2</th>
+                                        <th>fibActual</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Filas dinámicas -->
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+                
+                <div class="col-12 col-md-7" id="seccionDiagrama">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1400" width="100%" height="100%">
+                        <!-- Elipse para "Inicio" -->
+                        <ellipse cx="500" cy="50" rx="75" ry="25" class="elipse" id="fi_elipseInicio" />
+                        <text x="500" y="50" class="texto-mediano" id="texto_fi_elipseInicio">
+                            Inicio
+                        </text>
+                        <line x1="500" y1="75" x2="500" y2="100" stroke="black" stroke-width="2"
+                            marker-end="url(#flecha_normal)" />
+
+                        <!-- Paralelogramo para "Ingresa la posicion" -->
+                        <polygon points="350,100 700,100 650,150 300,150" class="poligono" id="fi_pol1" />
+                        <text x="500" y="125" class="texto-mediano" id="texto_fi_pol1">
+                            <tspan font-style="italic">Ingresa la posición:</tspan>
+
+                        </text>
+                        <line x1="500" y1="150" x2="500" y2="175" stroke="black" stroke-width="2"
+                            marker-end="url(#flecha_normal)" />
+                        <line x1="675" y1="110" x2="750" y2="75" stroke="black" stroke-width="2"
+                            marker-end="url(#flecha_salida)" />
+
+                        <!-- Paralelogramo "numero" -->
+                        <polygon points="400,175 650,175 600,225 350,225" class="poligono" id="fi_pol2" />
+                        <text x="500" y="200" class="texto-mediano" id="texto_fi_pol2">
+                            Leer n
+                        </text>
+                        <line x1="625" y1="185" x2="700" y2="150" stroke="black" stroke-width="2"
+                            marker-start="url(#flecha_entrada)" />
+                        <line x1="500" y1="225" x2="500" y2="250" stroke="black" stroke-width="2"
+                            marker-end="url(#flecha_normal)" />
+
+
+
+                        <!--Rombo numero > 0-->
+                        <polygon points="500,250 600,300 500,350 400,300" class="rombo" id="fi_rombo1" />
+                        <text x="500" y="300" class="texto-mediano" id="texto_fi_rombo1">
+                            n < 0 </text>
+                                <line x1="400" y1="300" x2="300" y2="300" stroke="black" stroke-width="2" />
+                                <text x="350" y="290" class="texto-pequeño" id="fi_falso1">
+                                    Falso
+                                </text>
+                                <line x1="300" y1="300" x2="300" y2="350" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+
+
+                                <line x1="600" y1="300" x2="775" y2="300" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+                                <text x="700" y="290" class="texto-pequeño" id="fi_verdadero1">
+                                    Verdadero
+                                </text>
+
+                                <!--fibonacci no existe-->
+                                <polygon points="800,275 925,275 875,325 750,325" class="poligono" id="fi_pol3" />
+                                <text x="835" y="290" class="texto-mediano" id="texto_fi_pol3">
+                                    <tspan font-style="italic">Fibonacci</tspan>
+                                </text>
+                                <text x="835" y="310" class="texto-mediano" id="texto_fi_pol3">
+                                    <tspan font-style="italic">no existe</tspan>
+                                </text>
+                                <line x1="900" y1="285" x2="975" y2="250" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_salida)" />
+                                <line x1="900" y1="300" x2="975" y2="300" stroke="black" stroke-width="2" />
+                                <line x1="975" y1="300" x2="975" y2="1335" stroke="black" stroke-width="2" />
+                                <line x1="975" y1="1335" x2="575" y2="1335" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+
+                                <!--Rombo n = 0-->
+                                <polygon points="300,350 375,400 300,450 225,400" class="rombo" id="fi_rombo2" />
+                                <text x="300" y="400" class="texto-mediano" id="texto_fi_rombo2">
+                                    n = 0 </text>
+                                <line x1="225" y1="400" x2="100" y2="400" stroke="black" stroke-width="2" />
+                                <text x="150" y="390" class="texto-pequeño" id="fi_falso2">
+                                    Falso
+                                </text>
+                                <line x1="100" y1="400" x2="100" y2="450" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+
+                                <line x1="375" y1="400" x2="700" y2="400" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+                                <text x="500" y="390" class="texto-pequeño" id="fi_verdadero2">
+                                    Verdadero
+                                </text>
+
+                                <!--fibonacci es cero-->
+                                <polygon points="700,375 900,375 850,425 660,425" class="poligono" id="fi_pol4" />
+                                <text x="780" y="390" class="texto-mediano" id="texto_fi_pol4">
+                                    <tspan font-style="italic">Fibonacci en la</tspan>
+
+                                </text>
+                                <text x="765" y="410" class="texto-mediano" id="texto_fi_pol4_1">
+                                    <tspan font-style="italic">posicion </tspan> n <tspan font-style="italic">es '0'
+                                    </tspan>
+
+                                </text>
+                                <line x1="875" y1="400" x2="950" y2="400" stroke="black" stroke-width="2" />
+                                <line x1="950" y1="400" x2="950" y2="1315" stroke="black" stroke-width="2" />
+                                <line x1="950" y1="1315" x2="575" y2="1315" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+
+
+                                <!--fibPrevio1 = 0-->
+                                <rect x="50" y="450" width="150" height="50" class="rectangulo" id="fi_rect1" />
+                                <text x="125" y="475" class="texto-mediano" id="texto_fi_rect1">
+                                    fibPrevio1 ← 0
+                                </text>
+                                <line x1="100" y1="500" x2="100" y2="525" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+
+                                <!--fibPrevio2 = 1-->
+                                <rect x="50" y="525" width="150" height="50" class="rectangulo" id="fi_rect2" />
+                                <text x="125" y="550" class="texto-mediano" id="texto_fi_rect2">
+                                    fibPrevio2 ← 1
+                                </text>
+                                <line x1="100" y1="575" x2="100" y2="600" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+
+                                <!--i = 0-->
+                                <rect x="50" y="600" width="150" height="50" class="rectangulo" id="fi_rect3" />
+                                <text x="125" y="625" class="texto-mediano" id="texto_fi_rect3">
+                                    i ← 2
+                                </text>
+                                <line x1="200" y1="625" x2="500" y2="625" stroke="black" stroke-width="2" />
+                                <line x1="500" y1="625" x2="500" y2="650" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+
+                                <!--Rombo i <= n-->
+                                <polygon points="500,650 575,700 500,750 425,700" class="rombo" id="fi_rombo3" />
+                                <text x="500" y="700" class="texto-mediano" id="texto_fi_rombo3">
+                                    i ≤ n </text>
+                                <line x1="575" y1="700" x2="725" y2="700" stroke="black" stroke-width="2" />
+                                <text x="625" y="690" class="texto-pequeño" id="fi_falso3">
+                                    Falso
+                                </text>
+                                <line x1="725" y1="700" x2="725" y2="1125" stroke="black" stroke-width="2" />
+                                <line x1="725" y1="1125" x2="500" y2="1125" stroke="black" stroke-width="2" />
+                                <line x1="500" y1="1125" x2="500" y2="1150" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+
+                                <line x1="500" y1="750" x2="500" y2="800" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+                                <text x="550" y="775" class="texto-pequeño" id="fi_verdadero3">
+                                    Verdadero
+                                </text>
+
+
+                                <!--fibActual = fibPrevio1 + fibPrevio2-->
+                                <rect x="325" y="800" width="350" height="50" class="rectangulo" id="fi_rect4" />
+                                <text x="500" y="825" class="texto-mediano" id="texto_fi_rect4">
+                                    fibActual ← fibPrevio1 + fibPrevio2
+                                </text>
+                                <line x1="500" y1="850" x2="500" y2="875" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+
+                                <!--fibPrevio1 = fibPrevio2-->
+                                <rect x="375" y="875" width="250" height="50" class="rectangulo" id="fi_rect5" />
+                                <text x="500" y="900" class="texto-mediano" id="texto_fi_rect5">
+                                    fibPrevio1 ← fibPrevio2
+                                </text>
+                                <line x1="500" y1="925" x2="500" y2="950" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+
+                                <!--fibPrevio2 = fibActual-->
+                                <rect x="375" y="950" width="250" height="50" class="rectangulo" id="fi_rect6" />
+                                <text x="500" y="975" class="texto-mediano" id="texto_fi_rect6">
+                                    fibPrevio2 ← fibActual
+                                </text>
+                                <line x1="500" y1="1000" x2="500" y2="1025" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+
+                                <!--i = i + 1-->
+                                <rect x="425" y="1025" width="150" height="50" class="rectangulo" id="fi_rect7" />
+                                <text x="500" y="1050" class="texto-mediano" id="texto_fi_rect7">
+                                    i ← i + 1
+                                </text>
+                                <line x1="500" y1="1075" x2="500" y2="1100" stroke="black" stroke-width="2" />
+                                <line x1="500" y1="1100" x2="275" y2="1100" stroke="black" stroke-width="2" />
+                                <line x1="275" y1="1100" x2="275" y2="635" stroke="black" stroke-width="2" />
+                                <line x1="275" y1="635" x2="500" y2="635" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+
+                                <!--Rombo n = 1-->
+                                <polygon points="500,1150 575,1200 500,1250 425,1200" class="rombo" id="fi_rombo4" />
+                                <text x="500" y="1200" class="texto-mediano" id="texto_fi_rombo4">
+                                    n = 1 </text>
+                                <line x1="425" y1="1200" x2="325" y2="1200" stroke="black" stroke-width="2" />
+                                <text x="375" y="1190" class="texto-pequeño" id="fi_falso4">
+                                    Falso
+                                </text>
+                                <line x1="575" y1="1200" x2="675" y2="1200" stroke="black" stroke-width="2" />
+                                <text x="625" y="1190" class="texto-pequeño" id="fi_verdadero4">
+                                    Verdadero
+                                </text>
+
+                                <!--fibonacci verdadero-->
+                                <polygon points="700,1175 925,1175 875,1225 650,1225" class="poligono" id="fi_pol5" />
+                                <text x="800" y="1190" class="texto-mediano" id="texto_fi_pol5">
+                                    <tspan font-style="italic">Fibonacci en la posicion</tspan>
+                                </text>
+                                <text x="775" y="1210" class="texto-mediano" id="texto_fi_pol5_1">
+                                    n
+                                    <tspan font-style="italic">es</tspan>
+                                    fibPrevio2
+                                </text>
+                                <line x1="775" y1="1225" x2="775" y2="1275" stroke="black" stroke-width="2" />
+                                <line x1="775" y1="1275" x2="500" y2="1275" stroke="black" stroke-width="2" />
+                                <line x1="500" y1="1275" x2="500" y2="1300" stroke="black" stroke-width="2"
+                                    marker-end="url(#flecha_normal)" />
+
+                                <!--fibonacci falso-->
+                                <polygon points="125,1175 350,1175 300,1225 75,1225" class="poligono" id="fi_pol6" />
+                                <text x="225" y="1190" class="texto-mediano" id="texto_fi_pol6">
+                                    <tspan font-style="italic">Fibonacci en la posicion</tspan>
+                                </text>
+                                <text x="200" y="1210" class="texto-mediano" id="texto_fi_pol6_1">
+                                    n
+                                    <tspan font-style="italic">es</tspan>
+                                    fibActual
+                                </text>
+                                <line x1="225" y1="1225" x2="225" y2="1275" stroke="black" stroke-width="2" />
+                                <line x1="225" y1="1275" x2="500" y2="1275" stroke="black" stroke-width="2" />
+
+                                <!-- Elipse para final -->
+                                <ellipse cx="500" cy="1325" rx="75" ry="25" class="elipse" id="fi_elipseFinal" />
+                                <text x="500" y="1325" class="texto-mediano" id="texto_fi_elipseFinal">
+                                    Final
+                                </text>
+
+
+                                <!--Flechas-->
+                                <defs>
+                                    <marker id="flecha_normal" viewBox="0 0 20 20" refX="10" refY="10" orient="auto">
+                                        <path d="M0,0 L20,10 L0,20 z" fill="black" />
+                                    </marker>
+                                </defs>
+
+                                <defs>
+                                    <marker id="flecha_salida" markerWidth="10" markerHeight="10" refX="5" refY="5"
+                                        orient="auto">
+                                        <path d="M0,0 L10,5 L0,10 Z" fill="black" />
+                                    </marker>
+                                </defs>
+
+                                <defs>
+                                    <marker id="flecha_entrada" markerWidth="10" markerHeight="10" refX="5" refY="5"
+                                        orient="auto">
+                                        <path d="M10,0 L0,5 L10,10 Z" fill="black" />
+                                    </marker>
+                                </defs>
+                    </svg>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <script>
+            const consoleDiv = document.getElementById('console');
+            const inputField = document.getElementById('inputField');
+            const fi_startButton = document.getElementById('fi_startButton');
+            const restartButton = document.getElementById('restartButton');
+            const tableBody = document.getElementById('pruebaEscritorioTabla').querySelector('tbody');
+            const tableContainer = document.querySelector('.table-container');
+            const customSpeedInput = document.getElementById("customSpeed");
+            const setCustomSpeedButton = document.getElementById("setCustomSpeed");
+            const seccionConsola = document.getElementById('seccionConsola');
+        const seccionVelocidad = document.getElementById('seccionVelocidad');
+        const seccionPruebaEscritorio = document.getElementById('seccionPruebaEscritorio')
+       
+
+            let n = null;
+            let velocidad = 1;
+            let isStarted = false;
+            let currentStep = 0;
+
+            // Asignar eventos a cada botón de velocidad
+        document.getElementById('speed0_5').addEventListener("click", () => {
+            velocidad = 0.5;
+            seccionVelocidad.style.display = "none";
+            seccionConsola.style.display = "block";
+            seccionPruebaEscritorio.style.display = "block";
+        });
+
+        document.getElementById('speed1').addEventListener("click", () => {
+            velocidad = 1;
+            seccionVelocidad.style.display = "none";
+            seccionConsola.style.display = "block";
+            seccionPruebaEscritorio.style.display = "block";
+        });
+
+        document.getElementById('speed2').addEventListener("click", () => {
+            velocidad = 2;
+            seccionVelocidad.style.display = "none";
+            seccionConsola.style.display = "block";
+            seccionPruebaEscritorio.style.display = "block";
+        });
+
+        document.getElementById('speed5').addEventListener("click", () => {
+            velocidad = 5;
+            seccionVelocidad.style.display = "none";
+            seccionConsola.style.display = "block";
+            seccionPruebaEscritorio.style.display = "block";
+        });
+
+        document.getElementById('speed10').addEventListener("click", () => {
+            velocidad = 10;
+            seccionVelocidad.style.display = "none";
+            seccionConsola.style.display = "block";
+            seccionPruebaEscritorio.style.display = "block";
+        });
+
+        
+        // Asignar evento al botón para usar velocidad personalizada
+        setCustomSpeedButton.addEventListener("click", () => {
+            const customSpeed = parseFloat(customSpeedInput.value);
+            if (!isNaN(customSpeed) && customSpeed > 0) {
+                velocidad = customSpeed;
+                seccionVelocidad.style.display = "none";
+            seccionConsola.style.display = "block";
+            seccionPruebaEscritorio.style.display = "block";
+
+            } else {
+                alert("Por favor, introduce un valor válido para la velocidad.");
+            }
+        });
+
+            // Función para escribir en la consola
+            function writeToConsole(message) {
+                const line = document.createElement('div');
+                line.textContent = message;
+                consoleDiv.insertBefore(line, inputField);
+                consoleDiv.scrollTop = consoleDiv.scrollHeight;
+            }
+
+            // Función para agregar una fila en la prueba de escritorio
+            function addRowToTable(step, n, i, fibPrevio1, fibPrevio2, fibActual) {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+        <td>${step}</td>
+         <td>${n}</td>
+        <td>${i}</td>
+        <td>${fibPrevio1}</td>
+        <td>${fibPrevio2}</td>
+        <td>${fibActual}</td>
+    `;
+                tableBody.appendChild(row);
+
+                // Ajustar el scroll al final del contenedor
+                tableContainer.scrollTop = tableContainer.scrollHeight;
+            }
+
+            //start
+            fi_startButton.addEventListener('click', () => {
+                if (!isStarted) {
+                    // Mostrar el mensaje inicial
+                    writeToConsole(">> Iniciando programa...");
+
+                    resaltarConTiempos('fi_elipseInicio', [
+                        { tiempo: 0, agregar: true, clase: 'resaltar' },
+                        { tiempo: 3000 / velocidad, agregar: false, clase: 'resaltar' }
+                    ]);
+
+                    resaltarConTiempos('texto_fi_elipseInicio', [
+                        { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                        { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano.resaltado' }
+                    ]);
+
+                    if (n === null || isNaN(n)) {
+                        resaltarConTiempos('fi_pol1', [
+                            { tiempo: 0, agregar: false, clase: 'resaltar' },
+                            { tiempo: 3000 / velocidad, agregar: true, clase: 'resaltar' }
+                        ]);
+                        resaltarConTiempos('texto_fi_pol1', [
+                            { tiempo: 0, agregar: false, clase: 'texto-mediano-resaltado' },
+                            { tiempo: 3000 / velocidad, agregar: true, clase: 'texto-mediano-resaltado' }
+                        ]);
+                    }
+
+                    isStarted = true;
+                    fi_startButton.disabled = true;
+
+
+
+                    setTimeout(() => {
+                        writeToConsole(">> Ingrese la posición buscada:");
+                        inputField.disabled = false;
+                        inputField.focus();
+                        fi_startButton.style.display = "none";
+                        restartButton.style.display = "block";
+                    }, 3000 / velocidad);
+                }
+            });
+
+            // Evento para capturar la entrada del usuario
+            inputField.addEventListener('keydown', function (event) {
+
+                if (event.key === 'Enter') {
+                    const input = inputField.value.trim();
+                    inputField.value = '';
+
+                    if (input === '') {
+                        writeToConsole(">> Por favor, ingrese un número.");
+                        return;
+                    }
+
+                    n = parseInt(input, 10);
+
+
+                    if (isNaN(n)) {
+                        writeToConsole(">> Entrada no válida. Por favor, ingrese un número entero.");
+                    } else {
+                        fibonacciConMientras(n);
+
+                    }
+                }
+            });
+
+
+            // Evento para reiniciar el simulador
+            restartButton.addEventListener('click', () => {
+                // Limpiar consola
+                location.reload();
+            });
+
+
+            function resaltarConTiempos(elementId, tiempos) {
+                const element = document.getElementById(elementId);
+                if (!element) {
+                    console.error(`Elemento con ID "${elementId}" no encontrado.`);
+                    return;
+                }
+
+                // Guardar las clases originales
+                const clasesOriginales = element.getAttribute("class") || "";
+
+                // Guardar dimensiones originales una vez
+                obtenerDimensiones(element);
+
+                let enProceso = false; // Bloqueo para evitar solapamientos
+
+                tiempos.forEach((evento) => {
+                    setTimeout(() => {
+                        if (enProceso) return; // Ignorar si ya hay una transformación en proceso
+                        enProceso = true;
+
+                        if (evento.agregar) {
+                            if (element.tagName === "text") {
+                                // Para elementos <text>, agregar la clase sin sobrescribir las originales
+                                element.setAttribute("class", `${clasesOriginales} ${evento.clase}`.trim());
+                            } else {
+                                element.classList.add(evento.clase);
+                            }
+                            aplicarZoom(element, true); // Zoom in
+                        } else {
+                            if (element.tagName === "text") {
+                                // Restaurar las clases originales
+                                element.setAttribute("class", clasesOriginales);
+                            } else {
+                                element.classList.remove(evento.clase);
+                            }
+                            aplicarZoom(element, false); // Restaurar tamaño original
+                        }
+
+                        enProceso = false; // Liberar bloqueo
+                    }, evento.tiempo);
+                });
+            }
+
+
+
+            // Almacenamiento global para las dimensiones originales de cada figura
+            const dimensionesOriginalesGlobal = {};
+
+            // Actualización de `obtenerDimensiones` para soportar nuevos atributos
+            function obtenerDimensiones(element) {
+                const id = element.id;
+
+                // Si ya existen dimensiones originales para este elemento, no recalcular
+                if (dimensionesOriginalesGlobal[id]) {
+                    return dimensionesOriginalesGlobal[id];
+                }
+
+                const tagName = element.tagName.toLowerCase();
+                let dimensiones = null;
+
+                switch (tagName) {
+                    case 'ellipse':
+                        dimensiones = {
+                            rx: parseFloat(element.getAttribute('rx')),
+                            ry: parseFloat(element.getAttribute('ry')),
+                        };
+                        break;
+                    case 'rect':
+                        dimensiones = {
+                            x: parseFloat(element.getAttribute('x')),
+                            y: parseFloat(element.getAttribute('y')),
+                            width: parseFloat(element.getAttribute('width')),
+                            height: parseFloat(element.getAttribute('height')),
+                        };
+                        break;
+                    case 'polygon':
+                        dimensiones = {
+                            points: element.getAttribute('points'),
+                        };
+                        break;
+                    default:
+                        console.warn(`Tipo de elemento "${tagName}" no soportado.`);
+                }
+
+                if (dimensiones) {
+                    // Guardar dimensiones originales de forma inmutable
+                    dimensionesOriginalesGlobal[id] = { ...dimensiones };
+                }
+
+                return dimensiones;
+            }
+
+
+            // Modificar `aplicarZoom` para usar dimensiones originales globales
+            function aplicarZoom(element, agrandar) {
+                const dimensionesOriginales = obtenerDimensiones(element);
+                if (!dimensionesOriginales) return; // Si no hay dimensiones, salir
+
+                const tagName = element.tagName.toLowerCase();
+                const zoomDelta = agrandar ? 10 : 0; // Solo aplica zoom si agrandar es true
+
+                switch (tagName) {
+                    case 'ellipse': {
+                        const nuevoRx = agrandar ? dimensionesOriginales.rx + zoomDelta : dimensionesOriginales.rx;
+                        const nuevoRy = agrandar ? dimensionesOriginales.ry + zoomDelta : dimensionesOriginales.ry;
+                        element.setAttribute('rx', nuevoRx);
+                        element.setAttribute('ry', nuevoRy);
+                        break;
+                    }
+                    case 'rect': {
+                        const nuevoX = agrandar ? dimensionesOriginales.x - zoomDelta : dimensionesOriginales.x;
+                        const nuevoY = agrandar ? dimensionesOriginales.y - zoomDelta : dimensionesOriginales.y;
+                        const nuevoWidth = agrandar ? dimensionesOriginales.width + (2 * zoomDelta) : dimensionesOriginales.width;
+                        const nuevoHeight = agrandar ? dimensionesOriginales.height + (2 * zoomDelta) : dimensionesOriginales.height;
+                        element.setAttribute('x', nuevoX);
+                        element.setAttribute('y', nuevoY);
+                        element.setAttribute('width', nuevoWidth);
+                        element.setAttribute('height', nuevoHeight);
+                        break;
+                    }
+                    case 'polygon': {
+                        const puntosOriginales = dimensionesOriginales.points.split(' ');
+                        const nuevosPuntos = puntosOriginales.map((punto, index) => {
+                            const [x, y] = punto.split(',').map(Number);
+
+                            if (!agrandar) return `${x},${y}`; // Restaurar las coordenadas originales
+
+                            if (element.classList.contains('poligono')) {
+                                switch (index) {
+                                    case 0: return `${x - zoomDelta},${y - zoomDelta}`;
+                                    case 1: return `${x + zoomDelta},${y - zoomDelta}`;
+                                    case 2: return `${x + zoomDelta},${y + zoomDelta}`;
+                                    case 3: return `${x - zoomDelta},${y + zoomDelta}`;
+                                    default: return `${x},${y}`;
+                                }
+                            } else if (element.classList.contains('rombo')) {
+                                switch (index) {
+                                    case 0: return `${x},${y - zoomDelta}`;
+                                    case 1: return `${x + zoomDelta},${y}`;
+                                    case 2: return `${x},${y + zoomDelta}`;
+                                    case 3: return `${x - zoomDelta},${y}`;
+                                    default: return `${x},${y}`;
+                                }
+                            }
+                            return `${x},${y}`; // Por defecto, mantiene las coordenadas originales
+                        });
+
+                        element.setAttribute('points', nuevosPuntos.join(' '));
+                        break;
+                    }
+                    default:
+                        console.warn(`Tipo de elemento "${tagName}" no soportado para zoom.`);
+                }
+            }
+
+
+
+
+
+            async function fibonacciConMientras(n) {
+
+                inputField.disabled = true;
+
+                resaltarConTiempos('fi_pol1', [
+                    { tiempo: 0, agregar: false, clase: 'resaltar' },    // Añadir la clase al iniciar
+
+                ]);
+                document.getElementById('texto_fi_pol1').classList.remove('texto-mediano-resaltado');
+
+                setTimeout(() => {
+                    writeToConsole(`El número ingresado es = ${n}`);
+                }, 3000 / velocidad);
+
+                resaltarConTiempos('fi_pol2', [
+                    { tiempo: 0, agregar: true, clase: 'resaltar' },
+                    { tiempo: 3000 / velocidad, agregar: false, clase: 'resaltar' },
+
+                ]);
+
+                resaltarConTiempos('texto_fi_pol2', [
+                    { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                    { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+
+                ]);
+
+                setTimeout(() => {
+
+                    resaltarConTiempos('fi_rombo1', [
+                        { tiempo: 0, agregar: true, clase: 'resaltar' },
+                        { tiempo: 3000 / velocidad, agregar: false, clase: 'resaltar' },
+                    ]);
+                    resaltarConTiempos('texto_fi_rombo1', [
+                        { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                        { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                    ]);
+
+                }, 3000 / velocidad);
+
+                if (n < 0) {
+
+                    setTimeout(() => {
+                        resaltarConTiempos('fi_verdadero1', [
+                            { tiempo: 0, agregar: true, clase: 'texto-pequeño-resaltado' },
+                            { tiempo: 2000 / velocidad, agregar: false, clase: 'texto-pequeño-resaltado' },
+                        ]);
+                    }, 6000 / velocidad);
+
+                    setTimeout(() => {
+                        resaltarConTiempos('fi_pol3', [
+                            { tiempo: 0, agregar: true, clase: 'resaltar' },
+                            { tiempo: 3000 / velocidad, agregar: false, clase: 'resaltar' },
+                        ]);
+                        resaltarConTiempos('texto_fi_pol3', [
+                            { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                            { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                        ]);
+                    }, 8000 / velocidad);
+
+                    setTimeout(() => {
+                        writeToConsole(">> Fibonacci no existe");
+                    }, 8000 / velocidad);
+
+                    setTimeout(() => {
+                        resaltarConTiempos('fi_elipseFinal', [
+                            { tiempo: 0, agregar: true, clase: 'resaltar' },
+                            { tiempo: 3000 / velocidad, agregar: false, clase: 'resaltar' },
+                        ]);
+                        resaltarConTiempos('texto_fi_elipseFinal', [
+                            { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                            { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                        ]);
+                    }, 11000 / velocidad);
+
+                    setTimeout(() => {
+                        writeToConsole(">> Fin del programa")
+                    }, 11000 / velocidad);
+
+                    inputField.disabled = true;
+
+
+
+                } else {
+
+
+
+                    setTimeout(() => {
+                        resaltarConTiempos('fi_falso1', [
+                            { tiempo: 0, agregar: true, clase: 'texto-pequeño-resaltado' },
+                            { tiempo: 2000 / velocidad, agregar: false, clase: 'texto-pequeño-resaltado' },
+                        ]);
+                        writeToConsole('>> Calculando... ¡Revisa la prueba de escritorio!');
+                        addRowToTable(++currentStep, n, null, null, null, null)
+                    }, 6000 / velocidad);
+
+
+                    setTimeout(() => {
+
+                        resaltarConTiempos('fi_rombo2', [
+                            { tiempo: 0, agregar: true, clase: 'resaltar' },
+                            { tiempo: 3000 / velocidad, agregar: false, clase: 'resaltar' },
+                        ]);
+                        resaltarConTiempos('texto_fi_rombo2', [
+                            { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                            { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                        ]);
+
+                        addRowToTable(++currentStep, n, null, null, null, null);
+
+                    }, 8000 / velocidad);
+
+
+
+
+                    if (n === 0) {
+
+                        setTimeout(() => {
+
+                            resaltarConTiempos('fi_verdadero2', [
+                                { tiempo: 0, agregar: true, clase: 'texto-pequeño-resaltado' },
+                                { tiempo: 2000 / velocidad, agregar: false, clase: 'texto-pequeño-resaltado' },
+                            ]);
+
+                        }, 11000 / velocidad)
+
+                        setTimeout(() => {
+                            resaltarConTiempos('fi_pol4', [
+                                { tiempo: 0, agregar: true, clase: 'resaltar' },
+                                { tiempo: 3000 / velocidad, agregar: false, clase: 'resaltar' },
+                            ]);
+                            resaltarConTiempos('texto_fi_pol4', [
+                                { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                                { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                            ]);
+                            resaltarConTiempos('texto_fi_pol4_1', [
+                                { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                                { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                            ]);
+                            writeToConsole(`>> Fibonacci en la posición ${n} es: 0`);
+                        }, 13000 / velocidad);
+
+
+                        setTimeout(() => {
+                            resaltarConTiempos('fi_elipseFinal', [
+                                { tiempo: 0, agregar: true, clase: 'resaltar' },
+                                { tiempo: 3000 / velocidad, agregar: false, clase: 'resaltar' },
+                            ]);
+                            resaltarConTiempos('texto_fi_elipseFinal', [
+                                { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                                { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                            ]);
+                            writeToConsole(">> Fin del programa")
+                        }, 16000 / velocidad);
+
+                        inputField.disabled = true;
+
+
+
+                    } else {
+                        fibPrevio1 = 0;
+                        fibPrevio2 = 1;
+                        i = 2;
+
+                        setTimeout(() => {
+                            resaltarConTiempos('fi_falso2', [
+                                { tiempo: 0, agregar: true, clase: 'texto-pequeño-resaltado' },
+                                { tiempo: 2000 / velocidad, agregar: false, clase: 'texto-pequeño-resaltado' },
+                            ]);
+
+                        }, 11000 / velocidad)
+
+                        setTimeout(() => {
+                            resaltarConTiempos('fi_rect1', [
+                                { tiempo: 0, agregar: true, clase: 'resaltar' },
+                                { tiempo: 3000 / velocidad, agregar: false, clase: 'resaltar' },
+                            ]);
+                            resaltarConTiempos('texto_fi_rect1', [
+                                { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                                { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                            ]);
+
+                            addRowToTable(++currentStep, n, null, fibPrevio1, null, null);
+                        }, 13000 / velocidad);
+
+                        setTimeout(() => {
+                            resaltarConTiempos('fi_rect2', [
+                                { tiempo: 0, agregar: true, clase: 'resaltar' },
+                                { tiempo: 3000 / velocidad, agregar: false, clase: 'resaltar' },
+                            ]);
+                            resaltarConTiempos('texto_fi_rect2', [
+                                { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                                { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                            ]);
+
+                            addRowToTable(++currentStep, n, null, fibPrevio1, fibPrevio2, null);
+                        }, 16000 / velocidad);
+
+                        setTimeout(() => {
+                            resaltarConTiempos('fi_rect3', [
+                                { tiempo: 0, agregar: true, clase: 'resaltar' },
+                                { tiempo: 3000 / velocidad, agregar: false, clase: 'resaltar' },
+                            ]);
+                            resaltarConTiempos('texto_fi_rect3', [
+                                { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                                { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                            ]);
+
+                            addRowToTable(++currentStep, 2, i, fibPrevio1, fibPrevio2, null);
+                        }, 19000 / velocidad);
+
+
+                        function procesarIteracion() {
+                            resaltarConTiempos('fi_rombo3', [
+                                { tiempo: 0, agregar: true, clase: 'resaltar' },
+                                { tiempo: 3000 / velocidad, agregar: false, clase: 'resaltar' },
+                            ]);
+
+                            resaltarConTiempos('fi_rombo3', [
+                                { tiempo: 0, agregar: true, clase: 'resaltar' },
+                                { tiempo: 3000 / velocidad, agregar: false, clase: 'resaltar' },
+
+                            ]);
+
+                            if (i > n) return;
+
+                            resaltarConTiempos('texto_fi_rombo3', [
+                                { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                                { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                            ]);
+                            resaltarConTiempos('fi_verdadero3', [
+                                { tiempo: 0, agregar: false, clase: 'texto-pequeño-resaltado' },
+                                { tiempo: 3000 / velocidad, agregar: true, clase: 'texto-pequeño-resaltado' },
+                                { tiempo: 5000 / velocidad, agregar: false, clase: 'texto-pequeño-resaltado' },
+                            ]);
+
+                            resaltarConTiempos('fi_rect4', [
+                                { tiempo: 0, agregar: false, clase: 'resaltar' },
+                                { tiempo: 5000 / velocidad, agregar: true, clase: 'resaltar' },
+                                { tiempo: 8000 / velocidad, agregar: false, clase: 'resaltar' },
+                            ]);
+                            resaltarConTiempos('texto_fi_rect4', [
+                                { tiempo: 0, agregar: false, clase: 'texto-mediano-resaltado' },
+                                { tiempo: 5000 / velocidad, agregar: true, clase: 'texto-mediano-resaltado' },
+                                { tiempo: 8000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                            ]);
+
+                            resaltarConTiempos('fi_rect5', [
+                                { tiempo: 0, agregar: false, clase: 'resaltar' },
+                                { tiempo: 8000 / velocidad, agregar: true, clase: 'resaltar' },
+                                { tiempo: 11000 / velocidad, agregar: false, clase: 'resaltar' },
+                            ]);
+                            resaltarConTiempos('texto_fi_rect5', [
+                                { tiempo: 0, agregar: false, clase: 'texto-mediano-resaltado' },
+                                { tiempo: 8000 / velocidad, agregar: true, clase: 'texto-mediano-resaltado' },
+                                { tiempo: 11000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                            ]);
+
+                            resaltarConTiempos('fi_rect6', [
+                                { tiempo: 0, agregar: false, clase: 'resaltar' },
+                                { tiempo: 11000 / velocidad, agregar: true, clase: 'resaltar' },
+                                { tiempo: 14000 / velocidad, agregar: false, clase: 'resaltar' },
+                            ]);
+                            resaltarConTiempos('texto_fi_rect6', [
+                                { tiempo: 0, agregar: false, clase: 'texto-mediano-resaltado' },
+                                { tiempo: 11000 / velocidad, agregar: true, clase: 'texto-mediano-resaltado' },
+                                { tiempo: 14000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                            ]);
+
+                            resaltarConTiempos('fi_rect7', [
+                                { tiempo: 0, agregar: false, clase: 'resaltar' },
+                                { tiempo: 14000 / velocidad, agregar: true, clase: 'resaltar' },
+                                { tiempo: 17000 / velocidad, agregar: false, clase: 'resaltar' },
+                            ]);
+                            resaltarConTiempos('texto_fi_rect7', [
+                                { tiempo: 0, agregar: false, clase: 'texto-mediano-resaltado' },
+                                { tiempo: 14000 / velocidad, agregar: true, clase: 'texto-mediano-resaltado' },
+                                { tiempo: 17000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                            ]);
+
+                            setTimeout(() => {
+                                fibActual = fibPrevio1 + fibPrevio2;
+                                addRowToTable(++currentStep, n, i, fibPrevio1, fibPrevio2, fibActual);
+                            }, 5000 / velocidad);
+
+                            setTimeout(() => {
+                                fibPrevio1 = fibPrevio2;
+                                addRowToTable(++currentStep, n, i, fibPrevio1, fibPrevio2, fibActual);
+                            }, 8000 / velocidad);
+
+                            setTimeout(() => {
+                                fibPrevio2 = fibActual;
+                                addRowToTable(++currentStep, n, i, fibPrevio1, fibPrevio2, fibActual);
+                            }, 11000 / velocidad);
+
+                            setTimeout(() => {
+                                i++;
+                                addRowToTable(++currentStep, n, i, fibPrevio1, fibPrevio2, fibActual);
+                            }, 14000 / velocidad);
+
+                            setTimeout(procesarIteracion, 17000 / velocidad);
+
+
+                        }
+
+                        setTimeout(() => {
+                            procesarIteracion();
+                        }, 22000 / velocidad);
+
+                        let tiempo = 22000 / velocidad + (17000 / velocidad * (n - 1));
+
+                        setTimeout(() => {
+                            resaltarConTiempos('texto_fi_rombo3', [
+                                { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                                { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                            ]);
+                        }, tiempo);
+
+                        setTimeout(() => {
+                            resaltarConTiempos('fi_falso3', [
+                                { tiempo: 0, agregar: true, clase: 'texto-pequeño-resaltado' },
+                                { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-pequeño-resaltado' },
+                            ]);
+                        }, tiempo + 3000 / velocidad);
+
+                        setTimeout(() => {
+                            resaltarConTiempos('fi_rombo4', [
+                                { tiempo: 0, agregar: true, clase: 'resaltar' },
+                                { tiempo: 3000 / velocidad, agregar: false, clase: 'resaltar' },
+                            ]);
+
+                            resaltarConTiempos('texto_fi_rombo4', [
+                                { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                                { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                            ]);
+
+                        }, tiempo + 6000 / velocidad);
+
+                        if (n === 1) {
+
+                            setTimeout(() => {
+                                resaltarConTiempos('fi_verdadero4', [
+                                    { tiempo: 0, agregar: true, clase: 'texto-pequeño-resaltado' },
+                                    { tiempo: 2000 / velocidad, agregar: false, clase: 'texto-pequeño-resaltado' },
+                                ]);
+                            }, tiempo + 9000 / velocidad);
+
+                            setTimeout(() => {
+                                resaltarConTiempos('fi_pol5', [
+                                    { tiempo: 0, agregar: true, clase: 'resaltar' },
+                                    { tiempo: 3000 / velocidad, agregar: false, clase: 'resaltar' },
+                                ]);
+
+                                resaltarConTiempos('texto_fi_pol5', [
+                                    { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                                    { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                                ]);
+                                resaltarConTiempos('texto_fi_pol5_1', [
+                                    { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                                    { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                                ]);
+                                writeToConsole(`>> Fibonacci en la posición ${n} es: ${fibPrevio2}`);
+
+                            }, tiempo + 11000 / velocidad);
+
+                            setTimeout(() => {
+                                resaltarConTiempos('fi_elipseFinal', [
+                                    { tiempo: 0, agregar: true, clase: 'resaltar' },
+                                    { tiempo: 3000 / velocidad, agregar: false, clase: 'resaltar' },
+                                ]);
+
+                                resaltarConTiempos('texto_fi_elipseFinal', [
+                                    { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                                    { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                                ]);
+                                writeToConsole(">> Fin del programa");
+
+                            }, tiempo + 14000 / velocidad);
+
+                        } else {
+                            setTimeout(() => {
+                                resaltarConTiempos('fi_falso4', [
+                                    { tiempo: 0, agregar: true, clase: 'texto-pequeño-resaltado' },
+                                    { tiempo: 2000 / velocidad, agregar: false, clase: 'texto-pequeño-resaltado' },
+                                ]);
+                            }, tiempo + 9000 / velocidad);
+
+                            setTimeout(() => {
+                                resaltarConTiempos('fi_pol6', [
+                                    { tiempo: 0, agregar: true, clase: 'resaltar' },
+                                    { tiempo: 3000 / velocidad, agregar: false, clase: 'resaltar' },
+                                ]);
+
+                                resaltarConTiempos('texto_fi_pol6', [
+                                    { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                                    { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                                ]);
+                                resaltarConTiempos('texto_fi_pol6_1', [
+                                    { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                                    { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                                ]);
+                                writeToConsole(`>> Fibonacci en la posición ${n} es: ${fibActual}`);
+
+                            }, tiempo + 11000 / velocidad);
+
+                            setTimeout(() => {
+                                resaltarConTiempos('fi_elipseFinal', [
+                                    { tiempo: 0, agregar: true, clase: 'resaltar' },
+                                    { tiempo: 3000 / velocidad, agregar: false, clase: 'resaltar' },
+                                ]);
+
+                                resaltarConTiempos('texto_fi_elipseFinal', [
+                                    { tiempo: 0, agregar: true, clase: 'texto-mediano-resaltado' },
+                                    { tiempo: 3000 / velocidad, agregar: false, clase: 'texto-mediano-resaltado' },
+                                ]);
+                                writeToConsole(">> Fin del programa");
+
+                            }, tiempo + 14000 / velocidad);
+                        }
+                    }
+                }
+            }
+
+
+        </script>
+
+
+
+</body>
+
+</html>

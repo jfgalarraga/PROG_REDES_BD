@@ -1,0 +1,411 @@
+/* Asegura un diseño limpio y moderno */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fa;
+}
+
+
+.accordion-button {
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.accordion-button:hover {
+  background-color: #0056b3;
+}
+
+.accordion-body {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-item {
+  margin-bottom: 20px;
+}
+
+.accordion-button:after {
+  content: '+';
+}
+
+.accordion-button.collapsed:after {
+  content: '-';
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.modal-header {
+  background-color: #007bff;
+  color: white;
+}
+
+.modal-body video {
+  border-radius: 8px;
+}
+
+.modal-content {
+  border-radius: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+ 
+
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.form-check-label {
+  font-size: 1.1rem;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: #3498db;
+  border: none;
+  font-size: 1.1rem;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#result {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  background-color: #eaf2f8;
+  display: none;
+}
+
+.correct {
+  background-color: #2ecc71;
+  color: #ffffff;
+}
+
+.incorrect {
+  background-color: #e74c3c;
+  color: #ffffff;
+}
+
+#result p {
+  margin: 0;
+}
+
+/*cosas estrax*/
+.container1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-section,
+.result-section,
+.form-data-section,
+.data-display-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-item {
+  margin-bottom: 15px;
+}
+
+.form-item label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-item input, .form-item select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  border-color: red;
+}
+
+.result-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.result-table th, .result-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.result-table th {
+  background-color: #f2f2f2;
+}
+
+.result-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.result-table tbody tr:hover {
+  background-color: #e2e2e2;
+}
+
+/* Ajustes de disposición */
+.form-section {
+  grid-column: span 2;
+}
+
+.result-section {
+  grid-column: span 2;
+}
+
+.form-data-section {
+  grid-column: span 2;
+}
+
+.data-display-section {
+  grid-column: span 2;
+}
+
+.container > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* quiz*/
+
+.quiz-container {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-title {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+}
+
+.quiz-question {
+  margin-bottom: 20px;
+}
+
+.quiz-label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.quiz-option {
+  margin-bottom: 10px;
+}
+
+.quiz-option input {
+  margin-right: 10px;
+}
+
+.quiz-submit {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.quiz-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-btn:hover {
+  background-color: #0056b3;
+}
+
+.quiz-result {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  color: #000000;
+}
+
+#showSolutionBtn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#showSolutionBtn button {
+  background-color: #28a745;
+}
+
+#showSolutionBtn button:hover {
+  background-color: #218838;
+}
+
+#solution {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: none;
+}
+
+#solution h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+#solution ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#solution li {
+  margin-bottom: 10px;
+}
+
+/*ques*/
+/* Contenedor de la sección */
+.quest {
+  padding: 50px 0;
+}
+
+/* Título de la sección */
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  color: #000000;
+}
+
+.section-title p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Estilo para las tarjetas */
+.reto-card {
+  margin-bottom: 30px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 200px; /* Ajustar la altura de las imágenes */
+}
+
+.card-body {
+  padding: 15px;
+  flex-grow: 1; /* Esto asegura que el contenido de la tarjeta se expanda correctamente */
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Efecto de hover en las tarjetas */
+.reto-card:hover {
+  transform: translateY(-5px);
+}
+
+.reto-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Ajuste para las columnas en pantallas grandes y medianas */
+@media (min-width: 768px) {
+  .col-md-3 {
+      flex: 0 0 23%;
+      max-width: 23%;
+  }
+}
+
+/* Para pantallas pequeñas y móviles */
+@media (max-width: 767px) {
+  .col-12 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+}
+

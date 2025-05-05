@@ -1,0 +1,382 @@
+
+
+#console {
+    background-color: #040B14;
+    color: #2BC5D4 ;
+    font-family: monospace;
+    padding-top: 10px;
+    border-radius: 5px;
+    height: 150px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#inputField {
+    background-color: transparent;
+    color: #2BC5D4 ;
+    font-family: monospace;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-top: auto;
+}
+
+.botones-velocidad {
+    background-color: #1E242C; /* Color base */
+    color: white; /* Texto blanco para contraste */
+    border: none; /* Sin bordes */
+   
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave en el cambio de color */
+}
+
+.botonStart {
+    background-color: #1E242C; /* Color base */
+    color: white; /* Texto blanco para contraste */
+    border: none; /* Sin bordes */
+    margin-top: 10px;
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave en el cambio de color */
+}
+
+.botonStart2 {
+    background-color: #1E242C; /* Color base */
+    color: white; /* Texto blanco para contraste */
+    border: none; /* Sin bordes */
+    margin-top: 20px;
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave en el cambio de color */
+    width: 100%;
+
+}
+
+.botones-velocidad:hover, .botonStart:hover, .botonStart2:hover {
+    background-color: #2BC5D4; /* Color al pasar el mouse */
+}
+
+
+.table-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.poligono, .rombo, .rectangulo, .elipse {
+    fill: #2BC5D4 ;
+    stroke-width: 2px; 
+    transition: fill 0.3s ease;
+}
+
+
+.resaltar {
+    fill: #040B14;
+
+}
+
+.texto-mediano {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    fill: #ffffff;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+.texto-pequeño {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    fill: #292F37;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+.texto-mediano-resaltado {
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    fill: #ffffff;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+.texto-pequeño-resaltado {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    fill: #040B14;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+.question-container {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo suave */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilo para los párrafos de preguntas */
+  .question-container p {
+    font-weight: bold; /* Negrita */
+    font-size: 16px; /* Tamaño adecuado */
+    color: #333; /* Texto oscuro */
+    line-height: 1.5;
+    margin-bottom: 15px; /* Espacio debajo de la pregunta */
+    border-left: 4px solid #007bff; /* Línea a la izquierda */
+    padding-left: 10px; /* Espaciado después de la línea */
+  }
+  
+  /* Estilo para las opciones de respuesta */
+  .form-check {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-check-input {
+    margin-right: 10px;
+    accent-color: #007bff; /* Color para los radios */
+  }
+  
+  .form-check-label {
+    font-size: 14px;
+    color: #555; /* Texto gris para las opciones */
+  }
+  
+  /* Estilo para los elementos de la lista de opciones */
+.form-check input[type="radio"]:checked + .form-check-label {
+    font-weight: bold; /* Resaltar la opción seleccionada */
+    color: #007bff; /* Cambiar el color de la opción seleccionada */
+  }
+  
+  .form-check input[type="radio"]:not(:checked) + .form-check-label {
+    cursor: pointer; /* Cambiar el cursor cuando no está seleccionado */
+  }
+
+
+
+.ul-dflujo {
+    list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+}
+
+.li-dflujo {
+    background-color: #2BC5D4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.li-dflujo:hover {
+    background-color: #040B14;
+}
+
+.iframe-dflujo {
+    width: 100%;
+    height: 1200px;
+    border: none;
+   
+}
+
+
+.table-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.table thead {
+    background-color: #1E242C !important; /* Azul oscuro para la cabecera */
+    color: white !important; /* Texto blanco en la cabecera */
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #F4FAFD; /* Blanco y celeste muy claro para filas pares */
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #FFFFFF; /* Blanco para las filas impares */
+}
+
+.table tbody tr:hover {
+    background-color: #2BC5D4; /* Celeste claro en hover */
+    color: white; /* Texto blanco al hacer hover */
+}
+
+.table td {
+    color: #040B14; /* Texto en color azul oscuro para las celdas */
+}
+
+.tool-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tool-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .tool-img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    background-color: #f9f9f9;
+    object-fit: cover;
+  }
+  
+  .tool-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .tool-item p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Hover effect para las imágenes */
+.testimonial-img-hover {
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-img-hover:hover {
+    transform: scale(1.1); /* Aumenta el tamaño un 10% al pasar el ratón */
+  }
+  
+
+  /* Estilo general del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000; /* Asegura que el modal esté encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    overflow: auto; /* Permite desplazarse si el contenido es muy grande */
+    padding: 50px 0; /* Espaciado de arriba y abajo */
+  }
+  
+  /* Contenedor del contenido del modal */
+  .modal-content {
+    position: relative;
+    margin: auto;
+    background-color: #040B14;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 80%; /* Ajustar al 80% del ancho de la pantalla */
+    max-height: 80%; /* Limitar la altura al 70% de la pantalla */
+    overflow: hidden; /* Evitar que el contenido se desborde */
+  }
+  
+  /* Imagen dentro del modal */
+  .modal-img {
+    width: 100%; /* La imagen ocupa el 100% del ancho del modal */
+    height: 100%; /* Mantiene la relación de aspecto */
+    max-height: 400px; /* Limita la altura de la imagen */
+    object-fit: contain; /* Ajusta la imagen sin distorsionarla */
+  }
+  
+  /* Botón de cierre */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Botón de cierre cuando se pasa el ratón */
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+  #juegaAhora {
+    background-color: #1E242C; /* Color base */
+    color: white; /* Texto blanco para contraste */
+    border: none; /* Sin bordes */
+    margin-top: 10px;
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 0 30px 30px 0; /* Bordes redondeados con el estilo indicado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave en el cambio de color */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+#juegaAhora:hover {
+    background-color: #2BC5D4; /* Color al pasar el mouse */
+}
+
+
+#juegaFactorial {
+  background-color: #1E242C; /* Color base */
+  color: white; /* Texto blanco para contraste */
+  border: none; /* Sin bordes */
+  margin-top: 10px;
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 0 30px 30px 0; /* Bordes redondeados con el estilo indicado */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave en el cambio de color */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+#juegaFactorial:hover {
+  background-color: #2BC5D4; /* Color al pasar el mouse */
+}
+
+#juegaFibonacci {
+  background-color: #1E242C; /* Color base */
+  color: white; /* Texto blanco para contraste */
+  border: none; /* Sin bordes */
+  margin-top: 10px;
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 0 30px 30px 0; /* Bordes redondeados con el estilo indicado */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave en el cambio de color */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+#juegaFibonacci:hover {
+  background-color: #2BC5D4; /* Color al pasar el mouse */
+}
+

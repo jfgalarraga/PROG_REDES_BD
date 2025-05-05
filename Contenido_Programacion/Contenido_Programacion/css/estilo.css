@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../img/fondo.jpg'); /* Ajusta la ruta según la ubicación de la imagen */
+    background-size: cover; /* Para que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Hace que la imagen se quede fija al hacer scroll */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+#pantalla-inicial, #pantalla-juego, #pantalla-final {
+    display: none;
+}
+
+#pantalla-inicial {
+    display: block;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 18px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px; /* Bordes redondeados en los botones */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Centra el contenido verticalmente */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: transparent; /* Fondo transparente para que se vea la imagen de fondo */
+}
+
+.opciones {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.opcion {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    padding: 15px 20px;
+    margin: 5px;
+    width: 200px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s;
+    border-radius: 10px; /* Bordes redondeados en las opciones */
+}
+
+.opcion:hover {
+    background-color: #e0e0e0;
+}
+
+.opcionAcertada {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.opcionNoAcertada {
+    background-color: #f44336;
+    color: white;
+}
+
+.numeroCirculo {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Círculo */
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+/* Estilo para el contenedor de la pregunta */
+.pantalla-juego #pregunta {
+    background-color: white; /* Fondo blanco */
+    border-radius: 30px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio debajo de la pregunta */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    font-size: 1.5em; /* Tamaño de la fuente */
+}
+.salir-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.salir-btn:hover {
+    background-color: #d43c3c;
+}
+#contenido-solucionario {
+    text-align: justify; /* Justifica el texto */
+    padding: 10px; /* Añade un poco de espacio alrededor del texto */
+    line-height: 1.6; /* Mejora la legibilidad con un interlineado adecuado */
+}

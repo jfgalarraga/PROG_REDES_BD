@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulación Visual de Protocolos de Red</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/backcone.css">
+</head>
+<body>
+  <header class="bg-dark text-cyan text-center py-4">
+    <div class="container">
+      <h1 class="neon-title">Simulación Visual de Protocolos de Red</h1>
+      <p class="lead">Explora cómo funcionan los protocolos de red: IP, TCP, UDP, HTTP, HTTPS, TLS/SSL</p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <!-- Botones para mostrar/ocultar secciones -->
+    <div class="text-center mb-4">
+      <button id="show-definitions" class="btn btn-cyan">Mostrar Protocolos</button>
+      <button id="hide-definitions" class="btn btn-secondary d-none">Ocultar Protocolos</button>
+    </div>
+
+    <!-- Definiciones de los Protocolos -->
+    <div id="definitions-section" class="row g-4 d-none">
+      <div class="col-12 col-md-4">
+        <div class="card futuristic-card">
+          <div class="card-header text-white text-center">
+            <h2>Protocolo IP</h2>
+          </div>
+          <div class="card-body">
+            <p>IP direcciona los datos para que lleguen al dispositivo correcto.</p>
+            <button data-protocol="ip" class="simulate-btn btn btn-cyan w-100">Simular IP</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card futuristic-card">
+          <div class="card-header text-white text-center">
+            <h2>Protocolo TCP</h2>
+          </div>
+          <div class="card-body">
+            <p>TCP garantiza la entrega confiable de datos, asegurando que lleguen completos y en orden.</p>
+            <button data-protocol="tcp" class="simulate-btn btn btn-green w-100">Simular TCP</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card futuristic-card">
+          <div class="card-header text-white text-center">
+            <h2>Protocolo UDP</h2>
+          </div>
+          <div class="card-body">
+            <p>UDP envía datos rápidamente, sin confirmar si llegaron al destino.</p>
+            <button data-protocol="udp" class="simulate-btn btn btn-orange w-100">Simular UDP</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="card futuristic-card">
+          <div class="card-header text-white text-center">
+            <h2>Protocolo HTTP/HTTPS</h2>
+          </div>
+          <div class="card-body">
+            <p>HTTP transfiere datos en la web, mientras que HTTPS asegura los datos con cifrado.</p>
+            <button data-protocol="http" class="simulate-btn btn btn-purple w-100">Simular HTTP</button>
+            <button data-protocol="https" class="simulate-btn btn btn-dark w-100 mt-2">Simular HTTPS</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="card futuristic-card">
+          <div class="card-header text-white text-center">
+            <h2>Protocolo TLS/SSL</h2>
+          </div>
+          <div class="card-body">
+            <p>TLS/SSL cifra los datos para proporcionar seguridad en las comunicaciones.</p>
+            <button data-protocol="tls" class="simulate-btn btn btn-blue w-100">Simular TLS/SSL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Simulación Visual -->
+    <div id="simulation-section" class="position-relative mx-auto mt-5 d-none">
+      <h2 class="text-center">Simulación de Protocolo</h2>
+      <div id="network" class="position-relative mx-auto">
+        <!-- PC Origen -->
+        <div id="pc-origin" class="pc">
+          <i class="bi bi-laptop-fill text-cyan" style="font-size: 4rem;"></i>
+          <p>PC Origen</p>
+        </div>
+
+        <!-- Paquete -->
+        <div id="packet" class="packet hidden">📦</div>
+
+        <!-- PC Destino -->
+        <div id="pc-destination" class="pc">
+          <i class="bi bi-router-fill text-green" style="font-size: 4rem;"></i>
+          <p>PC Destino</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./js/backbone.js"></script>
+</body>
+</html>

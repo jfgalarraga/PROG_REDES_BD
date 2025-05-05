@@ -1,0 +1,111 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+}
+
+.neon-title {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+}
+
+.futuristic-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.futuristic-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.5);
+}
+
+#network {
+  width: 80%;
+  height: 200px;
+  position: relative;
+  margin: 20px auto;
+  border: 2px dashed #00ffff;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pc {
+  text-align: center;
+}
+
+.packet {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #00ffff;
+  color: #000;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.packet.visible {
+  display: block;
+}
+
+.btn-cyan {
+  background: #00ffff;
+  color: #000;
+  border: none;
+}
+
+.btn-cyan:hover {
+  background: #00cccc;
+}
+
+.btn-green {
+  background: #32cd32;
+  color: #fff;
+  border: none;
+}
+
+.btn-green:hover {
+  background: #28a428;
+}
+
+.btn-orange {
+  background: #ff8c00;
+  color: #fff;
+  border: none;
+}
+
+.btn-orange:hover {
+  background: #e57c00;
+}
+
+.btn-purple {
+  background: #800080;
+  color: #fff;
+  border: none;
+}
+
+.btn-purple:hover {
+  background: #6e006e;
+}
+
+.btn-blue {
+  background: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.btn-blue:hover {
+  background: #0056b3;
+}

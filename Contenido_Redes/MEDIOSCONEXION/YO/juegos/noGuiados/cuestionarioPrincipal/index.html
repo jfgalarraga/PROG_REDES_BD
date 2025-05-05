@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego: ¿Qué Sabes de los Medios No Guiados?</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Video de fondo -->
+  <video autoplay muted loop id="bg-video">
+    <source src="./video/4K - Samurai Autumn.mp4" type="video/mp4">
+    Tu navegador no soporta video.
+  </video>
+
+  <!-- Contenido principal -->
+  <div class="container">
+    <h1>¿Qué Sabes de los Medios No Guiados?</h1>
+    <p>Responde correctamente y observa cómo funcionan los medios no guiados.</p>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <div id="quiz-section">
+      <h2 id="question">Pregunta aparecerá aquí</h2>
+      <div id="options" class="options"></div>
+      <div id="feedback" class="feedback hidden"></div>
+      <button id="next-question" class="btn hidden" style="margin-top: 1%;">Continuar</button>
+    </div>
+
+    <div class="animation-area">
+      <canvas id="animationCanvas" width="800" height="400"></canvas>
+    </div>
+
+    <div id="result-modal" class="hidden">
+      <h2>¡Juego Terminado!</h2>
+      <p id="score">Tu puntuación fue: 0/10</p>
+      <button id="restart-game" class="btn">Jugar de Nuevo</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario de Protocolos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #232526, #414345);
+      color: #fff;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: rgba(34, 49, 63, 0.95);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: #66FCF1;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      text-align: center;
+    }
+
+    .question {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #1F2833;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .question h2 {
+      color: #66FCF1;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .options {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .options button {
+      background-color: #0B0C10;
+      color: #66FCF1;
+      border: 2px solid #66FCF1;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .options button.selected {
+      background-color: #45A29E;
+      color: #0B0C10;
+    }
+
+    .options button:hover {
+      background-color: #66FCF1;
+      color: #0B0C10;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #1F2833;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      display: none;
+    }
+
+    #submit {
+      margin-top: 20px;
+      display: block;
+      width: 100%;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container text-center mt-5">
+      <h1 class="mb-4 text-primary">Cuestionario de Protocolos de Red</h1>
+      <p class="mb-4">Selecciona la respuesta correcta para cada pregunta y comprueba tu conocimiento.</p>
+
+      <div id="quiz">
+          <div class="question" data-answer="Protocolo de transferencia de archivos">
+              <h2>1. ¿Qué significa FTP y cuál es su función principal?</h2>
+              <div class="options">
+                  <button class="btn-option">Protocolo de transferencia de archivos</button>
+                  <button class="btn-option">Protocolo de seguridad en redes</button>
+                  <button class="btn-option">Protocolo de acceso a correos</button>
+                  <button class="btn-option">Protocolo de transferencia de hipervínculos</button>
+              </div>
+          </div>
+
+          <div class="question" data-answer="HTTPS utiliza cifrado para mayor seguridad">
+              <h2>2. ¿En qué se diferencia HTTP de HTTPS?</h2>
+              <div class="options">
+                  <button class="btn-option">HTTPS utiliza cifrado para mayor seguridad</button>
+                  <button class="btn-option">HTTP es más rápido</button>
+                  <button class="btn-option">HTTPS no es un protocolo real</button>
+                  <button class="btn-option">HTTP y HTTPS son idénticos</button>
+              </div>
+          </div>
+
+          <div class="question" data-answer="Permite la sincronización en múltiples dispositivos">
+              <h2>3. ¿Cuál es la ventaja principal de utilizar IMAP en lugar de POP3 para gestionar correos electrónicos?</h2>
+              <div class="options">
+                  <button class="btn-option">Permite la sincronización en múltiples dispositivos</button>
+                  <button class="btn-option">Elimina automáticamente los correos después de leerlos</button>
+                  <button class="btn-option">Solo permite acceso desde una única computadora</button>
+                  <button class="btn-option">No permite sincronización con servidores</button>
+              </div>
+          </div>
+
+          <div class="question" data-answer="Puertos 20 y 21 para datos y control">
+              <h2>4. ¿Qué puertos se utilizan comúnmente para FTP y por qué se usan dos puertos diferentes?</h2>
+              <div class="options">
+                  <button class="btn-option">Puertos 20 y 21 para datos y control</button>
+                  <button class="btn-option">Puertos 80 y 443 para conexiones seguras</button>
+                  <button class="btn-option">Solo un puerto es necesario</button>
+                  <button class="btn-option">Usa puertos aleatorios en cada conexión</button>
+              </div>
+          </div>
+      </div>
+
+      <button id="submit" class="btn btn-success mt-3">Comprobar respuestas</button>
+      <div class="result mt-4" style="display: none;">
+          <p id="score"></p>
+          <button id="showAnswers" class="btn btn-info mt-2" style="display: none;">Mostrar respuestas correctas</button>
+          <div id="correctAnswersList" class="mt-3" style="display: none; text-align: left;"></div>
+          <button id="restart" class="btn btn-primary">Reiniciar</button>
+      </div>
+  </div>
+
+  <script>
+      $(document).ready(function () {
+          let correctAnswers = 0;
+          let totalQuestions = $(".question").length;
+
+          $(".btn-option").click(function () {
+              $(this).closest(".options").find("button").removeClass("selected btn-success btn-danger");
+              $(this).addClass("selected");
+          });
+
+          $("#submit").click(function () {
+              correctAnswers = 0;
+              $(".question").each(function () {
+                  let selectedAnswer = $(this).find(".selected").text();
+                  let correctAnswer = $(this).data("answer");
+
+                  if (selectedAnswer === correctAnswer) {
+                      correctAnswers++;
+                  }
+              });
+
+              $(".btn-option").prop("disabled", true);
+              $(".result").fadeIn();
+              $("#score").text(`Respuestas correctas: ${correctAnswers}/${totalQuestions}`);
+              $("#showAnswers").fadeIn();
+          });
+
+          $("#showAnswers").click(function () {
+              let answersHtml = "<h4>Respuestas correctas:</h4><ul>";
+              $(".question").each(function () {
+                  let questionText = $(this).find("h2").text();
+                  let correctAnswer = $(this).data("answer");
+                  answersHtml += `<li><strong>${questionText}</strong><br>Respuesta: ${correctAnswer}</li>`;
+              });
+              answersHtml += "</ul>";
+              $("#correctAnswersList").html(answersHtml).fadeIn();
+          });
+
+          $("#restart").click(function () {
+              $(".btn-option").removeClass("selected btn-success btn-danger").prop("disabled", false);
+              $(".result").fadeOut();
+              $("#showAnswers").fadeOut();
+              $("#correctAnswersList").fadeOut().html("");
+              $("#score").text("");
+          });
+      });
+  </script>
+</body>
+</html>

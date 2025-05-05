@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Señales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <video class="video-background" autoplay loop muted>
+        <source src="./img/Anime Rain Loop wallpapers.mp4" type="video/mp4" />
+        Tu navegador no soporta la reproducción de video.
+      </video>
+    <div class="container">
+        <h1>Simulador de Señales: Medios Guiados vs No Guiados</h1>
+        <p>Explora cómo las señales viajan a través de diferentes medios de transmisión.</p>
+
+        <div class="simulation-container">
+            <div class="origin">
+                <span>📡 Origen</span>
+            </div>
+            <canvas id="simulationCanvas" width="800" height="300"></canvas>
+            <div class="destination">
+                <span>🎯 Destino</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn" onclick="startSimulation('utp')">Cable UTP</button>
+            <button class="btn" onclick="startSimulation('fiber')">Fibra Óptica</button>
+            <button class="btn" onclick="startSimulation('wifi')">WiFi</button>
+            <button class="btn" onclick="startSimulation('bluetooth')">Bluetooth</button>
+            <button class="btn" onclick="startSimulation('satellite')">Satélite</button>
+        </div>
+
+        <div class="result">
+            <h2>Resultado</h2>
+            <p id="resultText"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

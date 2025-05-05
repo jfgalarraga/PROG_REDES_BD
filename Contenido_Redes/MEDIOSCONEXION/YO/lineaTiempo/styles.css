@@ -1,0 +1,176 @@
+/* Contenedor general */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('img/fondo.jpg'); /* Cambia esto por la ruta de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Video de fondo */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Línea de tiempo */
+.timeline-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+h2.timeline-title {
+    font-size: 2.5rem;
+    color: #06BBCC;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Línea central */
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #06BBCC;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Elementos de la línea de tiempo */
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item.left .timeline-content {
+    left: calc(50% - 48%);
+    animation: slideInLeft 0.6s ease-in-out;
+}
+
+.timeline-item.right .timeline-content {
+    left: 52%;
+    animation: slideInRight 0.6s ease-in-out;
+}
+
+/* Contenido de cada elemento */
+.timeline-content {
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 45%;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+
+/* Animaciones de los elementos */
+.timeline-content:hover {
+    transform: scale(1.03);
+    transition: all 0.3s ease-in-out;
+}
+
+.timeline-content img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.timeline-content img:hover {
+    transform: scale(1.1);
+}
+
+/* Puntos en la línea */
+.timeline-item .timeline-point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    background-color: #06BBCC;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    z-index: 3;
+    animation: pulse 1.5s infinite;
+}
+
+/* Animación del punto */
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Animaciones de entrada */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Compactar contenido */
+.timeline-content p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Ajustar separación global */
+.timeline-item {
+    margin-bottom: 15px;
+}

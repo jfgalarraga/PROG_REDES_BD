@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario sobre Redes LAN - Topologías</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+
+    h2 {
+      color: #007bff;
+      text-align: center;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .answer-option {
+      display: flex;
+      align-items: center;
+    }
+
+    .submit-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .submit-button:hover {
+      background-color: #0056b3;
+    }
+
+    .home-button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .home-button i {
+      margin-right: 8px;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .solution-container {
+      margin-top: 20px;
+      display: none;
+      font-size: 16px;
+    }
+
+    .solution-button {
+      background-color: #ff8c00;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Cuestionario sobre Topologías de Redes LAN</h2>
+
+    <form id="lan-form">
+      <!-- Pregunta 1 -->
+      <div class="question">
+        <label for="question1">¿Qué es una topología en una red LAN?</label>
+        <div class="answer-option">
+          <input type="radio" id="q1a" name="question1" value="Es la forma en que los dispositivos están conectados en una red" required>
+          <label for="q1a">Es la forma en que los dispositivos están conectados en una red</label>
+        </div>
+        <div class="answer-option">
+          <input type="radio" id="q1b" name="question1" value="Es un tipo de cable utilizado en redes LAN">
+          <label for="q1b">Es un tipo de cable utilizado en redes LAN</label>
+        </div>
+        <div class="answer-option">
+          <input type="radio" id="q1c" name="question1" value="Es el software utilizado para administrar la red">
+          <label for="q1c">Es el software utilizado para administrar la red</label>
+        </div>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="question">
+        <label for="question2">¿Qué tipo de dispositivo es común en una red LAN?</label>
+        <div class="answer-option">
+          <input type="radio" id="q2a" name="question2" value="Router" required>
+          <label for="q2a">Router</label>
+        </div>
+        <div class="answer-option">
+          <input type="radio" id="q2b" name="question2" value="Hub" required>
+          <label for="q2b">Hub</label>
+        </div>
+        <div class="answer-option">
+          <input type="radio" id="q2c" name="question2" value="Antena WiFi" required>
+          <label for="q2c">Antena WiFi</label>
+        </div>
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="question">
+        <label for="question3">¿Qué significa LAN?</label>
+        <div class="answer-option">
+          <input type="radio" id="q3a" name="question3" value="Local Area Network" required>
+          <label for="q3a">Local Area Network</label>
+        </div>
+        <div class="answer-option">
+          <input type="radio" id="q3b" name="question3" value="Large Area Network">
+          <label for="q3b">Large Area Network</label>
+        </div>
+        <div class="answer-option">
+          <input type="radio" id="q3c" name="question3" value="Local Arrangement Network">
+          <label for="q3c">Local Arrangement Network</label>
+        </div>
+      </div>
+
+      <!-- Pregunta 4 -->
+      <div class="question">
+        <label for="question4">¿Qué topología conecta los dispositivos a través de un solo cable?</label>
+        <div class="answer-option">
+          <input type="radio" id="q4a" name="question4" value="Bus" required>
+          <label for="q4a">Bus</label>
+        </div>
+        <div class="answer-option">
+          <input type="radio" id="q4b" name="question4" value="Estrella">
+          <label for="q4b">Estrella</label>
+        </div>
+        <div class="answer-option">
+          <input type="radio" id="q4c" name="question4" value="Anillo">
+          <label for="q4c">Anillo</label>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-button">Enviar respuestas</button>
+      
+      <div class="result" id="result"></div>
+    </form>
+
+    <div id="solution" class="solution-container">
+      <h3>Respuestas correctas:</h3>
+      <ul>
+        <li><strong>Pregunta 1:</strong> Es la forma en que los dispositivos están conectados en una red</li>
+        <li><strong>Pregunta 2:</strong> Hub</li>
+        <li><strong>Pregunta 3:</strong> Local Area Network</li>
+        <li><strong>Pregunta 4:</strong> Bus</li>
+      </ul>
+      <button class="solution-button" onclick="window.location.reload();">Cerrar solución</button>
+    </div>
+
+    <button id="solution-button" class="solution-button" style="display:none" onclick="showSolution()">Ver solución</button>
+
+    <!-- Botón Home -->
+    <a href="../Juegos.html">
+      <button class="home-button">
+        <i class="fas fa-home"></i> Inicio
+      </button>
+    </a>
+    
+  </div>
+
+  <script>
+    document.getElementById('lan-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      let score = 0;
+      const answers = {
+        question1: 'Es la forma en que los dispositivos están conectados en una red',
+        question2: 'Hub',
+        question3: 'Local Area Network',
+        question4: 'Bus'
+      };
+
+      // Revisar respuestas
+      if (document.querySelector('input[name="question1"]:checked')?.value === answers.question1) {
+        score++;
+      }
+      if (document.querySelector('input[name="question2"]:checked')?.value === answers.question2) {
+        score++;
+      }
+      if (document.querySelector('input[name="question3"]:checked')?.value === answers.question3) {
+        score++;
+      }
+      if (document.querySelector('input[name="question4"]:checked')?.value === answers.question4) {
+        score++;
+      }
+
+      // Mostrar calificación
+      const resultText = `Tu calificación es ${score} de 4.`;
+      document.getElementById('result').textContent = resultText;
+      document.getElementById('solution-button').style.display = 'block';
+    });
+
+    function showSolution() {
+      document.getElementById('solution').style.display = 'block';
+      document.getElementById('solution-button').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>

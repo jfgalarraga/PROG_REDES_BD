@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Tipos de Topologías</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+
+</head>
+
+<body class="index-page">
+
+
+  <header id="header" class="header dark-background d-flex flex-column">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="img/icono.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="#" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">REDES LAN</h1>
+    </a>
+
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="home.html" class="navitem"><i class="bi bi-house-fill navicon"></i> Home</a></li>
+        <li><a href="indexContenido.html" class="navitem"><i class="bi bi-router navicon"></i> ¿Qué es una Red LAN?</a></li>
+        <li><a href="Topologia.html" class="navitem"><i class="bi bi-diagram-3 navicon"></i> Topologías de red LAN</a></li>
+        <li><a href="Protocolos_Redes LAN.html" class="navitem"><i class="bi bi-plug navicon"></i> Protocolos de Comunicación</a></li>
+        <li><a href="seguridad.html" class="navitem"><i class="bi bi-shield-lock navicon"></i> Seguridad</a></li>        
+        <li><a href="Juegos.html" class="navitem"><i class="bi bi-controller navicon"></i>Juegos</a></li>
+        <li><a href="Ejercicio.html" class="navitem"><i class="bi bi-pencil-square navicon"></i>Ejercicio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+   
+  
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+      <h2 class="m-0 text-primary"><i class="fa fa-globe me-3"></i>Redes</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+
+
+        <!-- Menú Programación -->
+        <div class="nav-item dropdown">
+          <a href="#" class=" nav-item  nav-link dropdown-toggle small-text"
+            data-bs-toggle="dropdown">Programación</a>
+          <div class="dropdown-menu fade-down m-0">
+            <a href="../../Contenido_Programacion/Contenido_Programacion/portfolio-details.html"
+              class="dropdown-item small-text">I. Algoritmos</a>
+            <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
+              class="dropdown-item small-text">II. Diagramas</a>
+            <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
+              class="dropdown-item small-text">III. Python</a>
+          </div>
+        </div>
+
+        <!-- Menú Redes -->
+        <div class="nav-item dropdown">
+          <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
+          <div class="dropdown-menu fade-down m-0">
+            <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">I. Medios de
+              conexión</a>
+            <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">II. Redes
+              Lan</a>
+              <a href="../../Contenido_Redes/INTERNET-SERVICIOS/INTERNET-SERVICIOS/index.html"
+              class="dropdown-item small-text">III. Internet</a>
+
+          </div>
+        </div>
+
+        <!-- Menú Base de Datos -->
+        <div class="nav-item dropdown">
+          <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de
+            Datos</a>
+          <div class="dropdown-menu fade-down m-0">
+            <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
+              class="dropdown-item small-text">I. Access</a>
+              <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html"
+              class="dropdown-item small-text">II. Visual
+              Basic Access</a>
+            <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+              class="dropdown-item small-text">III. MySQL (Workbench)</a>
+
+          </div>
+        </div>
+      </div>
+
+  </div>
+  <a href="../../index.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" style="background-color: #06BBCC;
+  border-radius: 0;">Principal<i
+      class="fa fa-arrow-right ms-3"></i></a>
+  </div>
+</nav>
+<!-- Navbar End -->
+<!-- Protocolos de Redes LAN Section -->
+<section id="protocolos-lan" class="protocolos-lan section bg-light pt-5 pb-5">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2 class="text-center mb-4">Ethernet: Estándares y funcionamiento</h2>
+  </div>
+   <div class="row pt-4">
+    <div class="col-12">
+      <section class="future-section">
+        
+        <div class="row g-4">
+          <!-- Future Card 1: Redes 6G -->
+          <div class="col-md-4">
+            <div class="future-card" data-aos="zoom-in">
+              <img src="img/Ethernet1.png" alt="Redes 6G" class="future-img">
+              <div class="p-3 text-center">
+                <h5 class="text-primary">Ethernet (IEEE 802.3)</h5>
+                <p>El protocolo más utilizado en redes LAN cableadas, que ofrece alta velocidad y 
+                  confiabilidad mediante cables de cobre o fibra óptica.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Future Card 2: Satélites Inteligentes -->
+          <div class="col-md-4">
+            <div class="future-card" data-aos="zoom-in" data-aos-delay="100">
+              <img src="img/wifi.jpg" alt="Satélites Inteligentes" class="future-img">
+              <div class="p-3 text-center">
+                <h5 class="text-success">Wi-Fi (IEEE 802.11)</h5>
+                <br>
+                    <p>Protocolo estándar para redes LAN inalámbricas que permite la transmisión de datos sin cables, usando ondas de radio.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Future Card 3: Internet de las Cosas -->
+          <div class="col-md-4">
+            <div class="future-card" data-aos="zoom-in" data-aos-delay="200">
+              <img src="img/dns.webp" alt="Internet de las Cosas" class="future-img">
+              <div class="p-3 text-center">
+                <h5 class="text-warning">DNS (Domain Name System)</h5>
+                <p>Protocolo utilizado para la resolución de nombres de dominio a direcciones IP, facilitando la conectividad en redes LAN e Internet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<section id="protocolos-lan" class="protocolos-lan section bg-light pt-5 pb-5" style="background: linear-gradient(to right, rgb(255, 255, 255), white);">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2 class="text-center mb-4">Protocolo TCP/IP</h2>
+    <p style="font-size: 20px; text-align: justify;">TCP/IP es un conjunto de protocolos que facilitan la comunicación entre dispositivos en una red. 
+      TCP se ocupa de garantizar que los datos lleguen correctamente,
+      mientras que IP se encarga de dirigir esos datos hacia el destino adecuado a través de una dirección única. <br>
+     </p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="img/TCP-IP.webp" alt="Imagen relacionada" class="img-fluid" style="max-height: 350px;">
+      </div>
+
+      <!-- Columna 1: Capas del modelo TCP/IP -->
+      <div class="col-md-6">
+        <ul class="nav nav-pills flex-column" id="tcp-ip-tabs" role="tablist">
+          <li class="nav-item mb-3" role="presentation">
+            <a class="nav-link" id="capas-tab-1" data-bs-toggle="modal" href="#modalCapa1" role="tab" aria-controls="capa1" aria-selected="true" style="background-color: #f83d8d;">
+              <h5>Capa 1: Capa de Acceso a la Red</h5>
+            </a>
+          </li>
+          <li class="nav-item mb-3" role="presentation">
+            <a class="nav-link" id="capas-tab-2" data-bs-toggle="modal" href="#modalCapa2" role="tab" aria-controls="capa2" aria-selected="false" style="background-color: #5ac872;">
+              <h5>Capa 2: Capa de Internet</h5>
+            </a>
+          </li>
+          <li class="nav-item mb-3" role="presentation">
+            <a class="nav-link" id="capas-tab-3" data-bs-toggle="modal" href="#modalCapa3" role="tab" aria-controls="capa3" aria-selected="false" style="background-color: #45a3ff;">
+              <h5>Capa 3: Capa de Transporte</h5>
+            </a>
+          </li>
+          <li class="nav-item mb-3" role="presentation">
+            <a class="nav-link" id="capas-tab-4" data-bs-toggle="modal" href="#modalCapa4" role="tab" aria-controls="capa4" aria-selected="false" style="background-color: #ffbf45;">
+              <h5>Capa 4: Capa de Aplicación</h5>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Capa 1: Capa de Acceso a la Red -->
+<div class="modal fade" id="modalCapa1" tabindex="-1" aria-labelledby="modalCapa1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalCapa1Label">🕸️ Capa de Acceso a la Red</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p style="text-align: justify;">La capa de acceso a la red se encarga de la transmisión física de los datos a través del medio de comunicación, ya sea un cable (como en Ethernet) o señales inalámbricas (como en Wi-Fi).</p>
+
+             <!-- Tarjetas Interactivas de Protocolos -->
+        <h4 class="mt-4 text-start">Protocolos:</h4>
+        <div class="row">
+          <!-- Tarjeta ARP -->
+          <div class="col-md-4 mb-3" >
+            <div class="card">
+              <div class="card-body" style="background-color: #d6eaf8; ">
+                <h5 class="card-title">ARP</h5>
+                <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <p class="card-text">Protocolo utilizado para mapear direcciones de red (IP) a 
+                    direcciones físicas (MAC) dentro de una red local.</p>
+                </div>
+              </div>
+              
+              
+            </div>
+          </div>
+
+          <!-- Tarjeta Wi-Fi -->
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body" style="background-color: #d6eaf8 ;">
+                <h5 class="card-title">Wi-Fi</h5>
+                <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <p class="card-text">Utilizado en redes LAN inalámbricas. Define cómo los dispositivos se comunican sin cables, proporcionando una forma de acceder a la red mediante señales de radio.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Puedes agregar más tarjetas aquí -->
+          <!-- Tarjeta Ethernet -->
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body" style="background-color: #d6eaf8 ;">
+                <h5 class="card-title">Ethernet</h5>
+                <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <p class="card-text">Define el formato de los paquetes de datos y las reglas de acceso al medio para evitar colisiones.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Modal Capa 2: Capa de Internet -->
+  <div class="modal fade" id="modalCapa2" tabindex="-1" aria-labelledby="modalCapa2Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" >
+          <h5 class="modal-title" id="modalCapa2Label" >📶 Capa de Internet</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p style="text-align: justify;">La capa de Internet se encarga de dirigir los paquetes de datos de un dispositivo a otro a través de la red, utilizando el protocolo IP (Internet Protocol). Esta capa es responsable del direccionamiento y el enrutamiento de los paquetes de datos, garantizando que lleguen al destino correcto.
+
+
+          </p>
+
+              <!-- Tarjetas Interactivas de Protocolos -->
+        <h4 class="mt-4 text-start">Direcciones IP:</h4>
+        <div class="row">
+          <!-- Tarjeta ARP -->
+          <div class="col-md-6 mb-3">
+            <div class="card">
+              <div class="card-body" style="background-color: #d6eaf8 ;">
+                <h5 class="card-title">IPv4</h5>
+                <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <img src="img/direccionip.png" alt="" class="img-fluid" style="width: 100%; height: auto; object-fit: cover;">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta Wi-Fi -->
+          <div class="col-md-6 mb-3">
+            <div class="card">
+              <div class="card-body" style="background-color: #d6eaf8 ;">
+                <h5 class="card-title">IPv6</h5>
+                <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <img src="img/ipv6.png" alt="">                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!-- Puedes agregar más tarjetas aquí -->
+          <!-- Tarjeta Ethernet -->
+
+          <h4 class="mt-4 text-start">Tipos de IP:</h4>
+          <div class="row">
+          <div class="col-md-6 mb-3">
+            <div class="card">
+              <div class="card-body" style="background-color: #d6eaf8 ;">
+                <h5 class="card-title">IP Privada</h5>
+                <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <p class="card-text">Es una dirección IP que se utiliza dentro de una red privada, como una red local (LAN), y no es accesible directamente desde Internet. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+
+        <div class="col-md-6 mb-3">
+          <div class="card">
+            <div class="card-body" style="background-color: #d6eaf8 ;">
+              <h5 class="card-title">IP Pública</h5>
+              <p class="card-text"></p>
+              <div class="card-face card-back">
+                <p class="card-text">Es una dirección única asignada a un dispositivo o red que está directamente accesible a través de Internet. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+ 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Capa 3: Capa de Transporte -->
+  <div class="modal fade" id="modalCapa3" tabindex="-1" aria-labelledby="modalCapa3Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-center">
+          <h5 class="modal-title" id="modalCapa3Label">💻 Capa de Transporte</h5>
+         
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p style="text-align: justify;">La capa de transporte asegura que los datos se entreguen de manera fiable entre los dispositivos de una red, 
+            garantizando que la comunicación de extremo a extremo sea adecuada.</p>
+     <!-- Tarjetas Interactivas de Protocolos -->
+     <h4 class="mt-4 text-start">Protocolos:</h4>
+     <div class="row">
+       <!-- Tarjeta ARP -->
+       <div class="col-md-6 6mb-3">
+         <div class="card">
+           <div class="card-body" style="background-color: #d6eaf8 ;">
+             <h5 class="card-title">TCP</h5>
+             <p class="card-text"></p>
+             <div class="card-face card-back">
+              <p class="card-text">Es un protocolo orientado a la conexión y confiable. Establece una conexión entre el emisor y el receptor antes de la transmisión de datos.</p>
+            </div>
+           </div>
+         </div>
+       </div>
+
+       <!-- Tarjeta Wi-Fi -->
+       <div class="col-md-6 mb-3">
+         <div class="card">
+           <div class="card-body" style="background-color: #d6eaf8 ;">
+             <h5 class="card-title">UDP</h5>
+             <p class="card-text"></p>
+             <div class="card-face card-back">
+              <p class="card-text">UDP envía los datos como datagramas, sin preocuparse por la ordenación ni confirmación. Esto permite una transmisión más rápida, pero también más susceptible a pérdidas o errores en la entrega.</p>
+            </div>
+           </div>
+         </div>
+       </div>
+
+  
+     </div>
+    
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Capa 4: Capa de Aplicación -->
+<div class="modal fade" id="modalCapa4" tabindex="-1" aria-labelledby="modalCapa4Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalCapa4Label">🖧 Capa de Aplicación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p style="text-align: justify;">En esta capa residen los protocolos que interactúan directamente con las aplicaciones del usuario y proporcionan los servicios necesarios para la comunicación de datos entre los dispositivos.</p>
+
+        <!-- Ventajas y Desventajas -->
+        <h4 class="mt-4 text-start">Protocolos:</h4>
+        <div class="row">
+          <!-- Tarjeta HTTP -->
+          <div class="col-md-6 mb-3">
+            <div class="card">
+              <div class="card-body" style="background-color: #d6eaf8;">
+                <h5 class="card-title">HTTP</h5>
+                <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <p class="card-text">Es el protocolo utilizado para la transferencia de páginas web. Cuando accedes a una página en tu navegador, este protocolo se utiliza para enviar solicitudes y recibir respuestas entre tu navegador y el servidor web.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta FTP -->
+          <div class="col-md-6 mb-3">
+            <div class="card">
+              <div class="card-body" style="background-color: #d6eaf8;">
+                <h5 class="card-title">FTP</h5>
+                <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <p class="card-text">Protocolo utilizado para la transferencia de archivos entre un cliente y un servidor a través de una red. FTP permite a los usuarios subir o descargar archivos desde servidores remotos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Tarjeta DNS -->
+          <div class="col-md-6 mb-3">
+            <div class="card">
+              <div class="card-body" style="background-color: #d6eaf8;">
+                <h5 class="card-title">DNS</h5>
+                <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <p class="card-text">Este protocolo traduce los nombres de dominio legibles por humanos (como www.ejemplo.com) en direcciones IP, que son utilizadas para enrutar paquetes de datos en la red.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta SMTP -->
+          <div class="col-md-6 mb-3">
+            <div class="card">
+              <div class="card-body" style="background-color: #d6eaf8;">
+                <h5 class="card-title">SMTP</h5>
+                <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <p class="card-text">Protocolo utilizado para el envío de correos electrónicos entre servidores. Cuando envías un correo desde un cliente de correo, SMTP es el encargado de enviar ese mensaje al servidor de destino.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</section>
+<style>
+  .card {
+    perspective: 1000px; /* Para darle profundidad al efecto */
+  }
+  
+  .card-body {
+    transform-style: preserve-3d; /* Necesario para el efecto de rotación */
+    transition: transform 0.5s; /* Duración de la rotación */
+    position: relative;
+  }
+  
+  .card:hover .card-body {
+    transform: rotateY(180deg); /* Gira la tarjeta en el eje Y cuando pasa el mouse */
+  }
+  
+  .card-body .front,
+  .card-body .back {
+    backface-visibility: hidden; /* Para ocultar la parte de atrás cuando está girada */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .card-body .back {
+    transform: rotateY(180deg); /* Coloca la parte de atrás detrás de la parte delantera */
+    background-color: #f0f0f0; /* Puedes agregar un fondo diferente para la parte de atrás */
+    padding: 10px;
+    text-align: center;
+  }
+  
+</style>
+
+<!-- JavaScript to Toggle Details -->
+<script>
+  function toggleDetails(protocol) {
+    var details = document.getElementById(protocol + '-details');
+    details.style.display = details.style.display === 'none' ? 'block' : 'none';
+  }
+</script>
+
+
+<header class="bg-primary text-white text-center py-4">
+  <div class="container">
+    <h1>¡Vamos a comprobar tus conocimientos!</h1>
+    <!-- Contenedor para los botones -->
+    <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+      <!-- Botón para mostrar el juego -->
+      <button onclick="showGame()" class="btn btn-light mt-4">Mostrar Juego</button>
+      
+      <!-- Botón para ocultar el juego -->
+      <button onclick="hideGame()" class="btn btn-danger mt-4" style="display: none;">Ocultar Juego</button>
+    </div>
+  </div>
+</header>
+
+<!-- Sección del Juego que se mostrará al hacer clic -->
+ 
+<section id="gameSection" style="display: none; padding-top: 20px;">
+  <!-- Primer iframe (Juego Laberinto) -->
+  <div class="iframe-container" style="width: 200%; padding: 0 10px;">
+    <br><br><br>
+    <iframe id="gameIframe" src="Juegos/laberinto.html" style="width: 100%; height: 300px; border: none; border-radius: 8px;"></iframe>
+  </div>
+</section>
+
+<script>
+  // Función para mostrar el juego al hacer clic en el botón
+  function showGame() {
+    document.getElementById('gameSection').style.display = 'block';
+    document.getElementById('gameSection').scrollIntoView({ behavior: 'smooth' }); // Desplaza hacia el iframe
+    document.querySelector('.btn-light').style.display = 'none'; // Ocultar botón Mostrar Juego
+    document.querySelector('.btn-danger').style.display = 'inline-block'; // Mostrar botón Ocultar Juego
+  }
+
+  // Función para ocultar el juego al hacer clic en el botón
+  function hideGame() {
+    document.getElementById('gameSection').style.display = 'none';
+    document.querySelector('.btn-light').style.display = 'inline-block'; // Mostrar botón Mostrar Juego
+    document.querySelector('.btn-danger').style.display = 'none'; // Ocultar botón Ocultar Juego
+  }
+  document.addEventListener("DOMContentLoaded", function() {
+    // Obtén la URL actual
+    const currentUrl = window.location.pathname;
+  
+    // Obtén todos los enlaces en el menú
+    const links = document.querySelectorAll('.navitem');
+  
+    // Itera a través de los enlaces y compara su href con la URL actual
+    links.forEach(link => {
+      if (link.href.includes(currentUrl)) {
+        link.classList.add('active');  // Añadir la clase 'active' al enlace correspondiente
+      } else {
+        link.classList.remove('active');  // Remover la clase 'active' de los demás enlaces
+      }
+    });
+  });
+  
+</script>
+
+<!-- Agregar estilos adicionales -->
+<style>
+  /* Botón estilizado */
+  .btn {
+    padding: 12px 24px;
+    background-color: #ffffff;
+    color: #007bff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #007bff;
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+
+  /* Botón de Ocultar */
+  .btn-danger {
+    background-color: #f44336;
+    color: white;
+  }
+
+  .btn-danger:hover {
+    background-color: #d32f2f;
+  }
+
+  /* Ajustes para los iframes */
+  .iframe-container {
+    max-width: 1200px; /* Limitar el tamaño máximo del iframe */
+    margin: 0 auto; /* Centrar el iframe */
+  }
+
+  /* Asegurar que los botones están bien alineados */
+  .btn-light {
+    background-color: #f8f9fa;
+    color: #007bff;
+  }
+
+  .btn-light:hover {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+</style>
+
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

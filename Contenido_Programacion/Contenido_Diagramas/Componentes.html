@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Proyecto Aplicaciones Web</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/diagramas.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+   <!-- Icon Font Stylesheet -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+     
+   <style>
+    .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+   </style>
+   
+</head>
+
+<body class="starter-page-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.png" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="#" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Programación</h1>
+    </a>
+
+ 
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        
+        <li><a href="../../index.html"><i class="bi bi-house navicon"></i>Home Page</a></li>
+
+              
+      
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Algoritmos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>              
+             <li><a href="../Contenido_Programacion/portfolio-details.html"><i class="bi bi-file-earmark-text navicon"></i>I. ¿Qué es un Algoritmo?</a></li>
+             <li><a href="../Contenido_Programacion/ConceptosBasicos.html"><i class="bi bi-check2"></i>II. Conceptos Basicos</a></li> 
+             <li><a href="../Contenido_Programacion/ConceptosBasicos1.html"><i class="bi bi-check2"></i>III. Ejercicios</a></li>
+             <li><a href="../Contenido_Programacion/ConceptosBasicos2.html"><i class="bi bi-check2"></i>IV. Arreglos</a></li>
+             <li><a href="../Contenido_Programacion/EjercicioA.html"><i class="bi bi-gear navicon"></i>V. Juego</a></li>  
+             <li><a href="../Contenido_Programacion/Evaluacion.html"><i class="bi bi-star navicon"></i>VI. Cuestionario</a></li>  
+                          
+              
+                  
+          </ul>
+        </li>
+
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Diagramas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>              
+             <li><a href="Introduccion.html"><i class="bi bi-person navicon"></i>I. Introducción</a></li>
+             <li><a href="Componentes.html"><i class="bi bi-person navicon"></i>II. Resumen</a></li> 
+             <li><a href="Diagramas.html"><i class="bi bi-person navicon"></i>III. Construyendo</a></li>  
+             <li><a href="Comprueba.html"><i class="bi bi-person navicon"></i>IV. Conocimientos</a></li>     
+          </ul>
+        </li>
+
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Python</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>              
+             <li><a href="../Contenido_Python/Origen.html"><i class="bi bi-person navicon"></i>I. Origen</a></li>
+             <li><a href="../Contenido_Python/Tutoriales.html"><i class="bi bi-person navicon"></i>II. Tutoriales</a></li>
+             <li><a href="../Contenido_Python/Ejemplos.html"><i class="bi bi-person navicon"></i>III. Ejemplos</a></li> 
+             <li><a href="../Contenido_Python/Pruebas.html"><i class="bi bi-person navicon"></i>IV. Pruebas</a></li>  
+             <li><a href="../Contenido_Python/Servicios.html"><i class="bi bi-person navicon"></i>V. Servicios</a></li> 
+             <li><a href="../Contenido_Python/Algoritmos.html"><i class="bi bi-person navicon"></i>VI. Algoritmos</a></li>         
+                                  
+          </ul>
+        </li>
+
+       
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style=" font-family: 'Poppins', sans-serif;">
+   
+  <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5" >
+      <h2  class="m-0" style="color:#06BBCC; font-family: 'Poppins', sans-serif;" ><i class="fa fa-book me-3" style="color:#06BBCC;"></i >Programación</h2>
+  </a>
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="Principal.html" class="nav-item nav-link">
+            </a>
+
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto p-4 p-lg-0">
+  
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">PROGRAMACIÓN</a>
+              <div class="dropdown-menu fade-down m-0">
+                
+                <a href="../Contenido_Programacion/portfolio-details.html"class="dropdown-item">I. Algoritmos</a>
+                <a href="../Contenido_Diagramas/Introduccion.html"class="dropdown-item">II. Diagramas</a>
+                <a href="../Contenido_Python/Origen.html" class="dropdown-item">III. Python</a>
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">REDES</a>
+              <div class="dropdown-menu fade-down m-0">
+                <a href="../../Contenido_Redes/INTERNET-SERVICIOS/INTERNET-SERVICIOS/index.html" class="dropdown-item">I. Internet</a>
+                <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item">II. Medios de conexión</a>
+                <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item">III. Redes LAN</a>
+              </div>
+            </div>
+  
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">BASE DE DATOS</a>
+              <div class="dropdown-menu fade-down m-0">
+                <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html" class="dropdown-item">I. Access</a>
+
+                <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html" class="dropdown-item">II. Visual Basic
+                  Access</a>
+
+                  <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+                  class="dropdown-item">III. Mysql(Workbench)</a>
+            </div>
+          
+          </div>
+  
+          </div>
+  
+       
+          
+      </div>
+      <a href="../../index.html" class="btn btn-primary py-4 px-lg-6 d-none d-lg-block" style="background-color:#06BBCC; border: #06BBCC; 
+        border-radius: 0%; margin: 0;">Principal<i class="fa fa-arrow-right ms-3"></i></a>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+     <!-- Starter Section Section -->
+    <!-- Resume Section -->
+
+    <section>
+      <div class="container"> <!--seccion resumen-->
+
+        <div class="container section-title" data-aos="fade-up">
+          <br><br>
+          <h2>Resumen</h2>
+          <p>Las figuras que más se utilizan para construir diagramas de flujo son las siguientes:</p>
+        </div>
+
+
+        <div id="figurasCarrusel" class="carousel slide my-4" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/ovalo.svg" class="d-block w-100" alt="Inicio/Fin">
+              <br><br><br><br><br>
+              <div class="carousel-caption">
+                <h5 style="color: black;">Inicio/Fin</h5>
+                <p style="color: black;">Representa el inicio o fin de un proceso.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/rectangulo.svg" class="d-block w-100" alt="Proceso">
+              <br><br><br><br>
+              <div class="carousel-caption">
+                <h5 style="color: black;">Proceso</h5>
+                <p style="color: black;">Indica una acción o tarea específica dentro del flujo.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/rombo.svg" class="d-block w-100" alt="Decisión">
+              <br><br><br><br><br>
+              <div class="carousel-caption">
+                <h5 style="color: black;">Decisión</h5>
+                <p style="color: black;">Representa una bifurcación en el flujo según una condición.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/poligono.svg" class="d-block w-100" alt="Entrada/Salida">
+              <br><br><br><br><br>
+              <div class="carousel-caption">
+                <h5 style="color: black;">Entrada / Salida</h5>
+                <p style="color: black;">Representa una entrada o salida de datos.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/hexagono.svg" class="d-block w-100" alt="Entrada/Salida">
+              <br><br><br>
+              <div class="carousel-caption">
+                <h5 style="color: black;">Bucle</h5>
+                <p style="color: black;">Representa un bucle en el diagrama.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#figurasCarrusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#figurasCarrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!--seccion juego-->
+    <section>
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Juego</h2>
+        <p>Valida tus conocimientos sobre las figuras básicas para realizar diagramas de flujo.</p>
+
+        <div id="gameContainer" style="display: none;">
+          <!-- El src estará vacío inicialmente -->
+          <iframe id="gameIframe" width="100%" height="600px" frameborder="0" style="padding-top: 50px;"></iframe>
+          <div class="text-center">
+            <button class="botonStart" id="salir">Regresar</button>
+          </div>
+        </div>
+        <div class="row py-5" id="rowJuego">
+
+
+          <div class="col-lg-6 col-md-6 wow zoomIn" data-wow-delay="0.5s" style="padding-top: 70px;">
+            <a class="position-relative d-block overflow-hidden zoom-container" href="">
+              <div class="course-item bg-light">
+                <div class="position-relative overflow-hidden">
+                  <img class="img-fluid" src="img/diagrama.png" alt="">
+                  <div class="w-50 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                    <a id="juegaAhora" class="flex-shrink-0 btn btn-sm btn-primary px-3"
+                      style="border-radius: 0 30px 30px 0;">¡Juega ahora!</a>
+                  </div>
+                </div>
+                <div class="text-center p-4 pb-0">
+                  <h3 class="mb-0">Arrastra la figura</h3>
+                  <div class="mb-3" style="padding-top: 20px;">
+                    <h5 class="mb-4">Dificultad:</h5>
+                    <small class="fa fa-star text-primary"></small>
+                    <small class="fa fa-star text-primary"></small>
+                    <small class="fa fa-star text-primary"></small>
+                    <small class="fa fa-star"></small>
+                    <small class="fa fa-star"></small>
+                  </div>
+                </div>
+                <div class="d-flex border-top">
+                  <small class="flex-fill text-center border-end py-2"><i class="fa fa-hammer text-primary me-2"></i>6
+                    Niveles</small>
+                  <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1
+                    minuto</small>
+                </div>
+              </div>
+            </a>
+          </div>
+
+
+          <div class="col-lg-6 col-md-6 wow zoomIn" data-wow-delay="0.5s">
+
+            <!-- Título y descripción -->
+            <div class="text-center mb-4">
+              <h1>¡Hora de jugar!</h1>
+              <p>Arrastra la figura es un juego interactivo diseñado para mejorar tus habilidades de lógica y atención.
+                Completa varios niveles arrastrando la figura correcta al área de validación dentro de un tiempo límite.
+              </p>
+            </div>
+
+            <!-- Instrucciones -->
+            <div class="text-center mb-4">
+              <h2>¿Cómo jugar?</h2>
+              <ol>
+                <li>Cada nivel te indicará cuál figura debes arrastrar.</li><br>
+                <li>Arrastra la figura correspondiente al área marcada como "Arrastra aquí".</li><br>
+                <li>Si eliges correctamente, avanzarás al siguiente nivel. Si te equivocas o se acaba el tiempo,
+                  volverás al nivel 1.</li>
+              </ol>
+            </div>
+
+            <!-- Características -->
+            <div class="text-center mb-4">
+              <h2>Características:</h2>
+              <ul style="list-style-type: none;">
+                <li>Las figuras cambian de orden en cada nivel para hacerlo más desafiante.</li><br>
+                <li>Un temporizador que añade presión y emoción a cada nivel.</li><br>
+                <li>Animaciones para destacar los últimos segundos del tiempo disponible.</li><br>
+                <li>Niveles dinámicos con dificultad progresiva y retroalimentación inmediata.</li><br>
+              </ul>
+            </div>
+
+          </div>
+
+
+
+          <script>
+            document.getElementById('juegaAhora').addEventListener('click', function () {
+              // Ocultar el contenedor rowJuego
+              document.getElementById('rowJuego').style.display = 'none';
+
+              // Mostrar el iframe con el juego
+              document.getElementById('gameContainer').style.display = 'block';
+
+              // Asignar la URL del juego al iframe para cargarlo dinámicamente
+              document.getElementById('gameIframe').src = 'juego.html';
+            });
+
+            document.getElementById('salir').addEventListener('click', function () {
+              document.getElementById('rowJuego').style.display = '';
+              document.getElementById('gameContainer').style.display = 'none';
+            })
+          </script>
+
+
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="js/script.js"></script>
+
+
+  
+
+<script >
+
+  document.addEventListener('DOMContentLoaded', function () {
+      // Array de preguntas, respuestas, imágenes y videos
+      const qaArray = [
+          {
+              question: "¿Qué es un algoritmo?",
+              response: "Un conjunto de instrucciones que resuelven un problema o realizan una tarea.",
+              image: "",
+              video: ""
+          },
+          {
+              question: "¿Dime una operación aritmética básica en algoritmos?",
+              response: "Sumar dos números.",
+              image: "",
+              video: ""
+          },
+          {
+              question: "¿Qué se necesita para usar una condicional en un algoritmo?",
+              response: "Una condición que puede ser verdadera o falsa.",
+              image: "",
+              video: ""
+          },
+          {
+              question: "¿Cuál es el propósito de un ciclo 'while'?",
+              response: "Repetir un bloque de código mientras una condición sea verdadera.",
+              image: "",
+              video: ""
+          }
+      ];
+  
+      // Referencias a elementos del DOM
+      const questionList = document.getElementById('questionList');
+      const questionButton = document.getElementById('questionButton');
+      const questionMenu = document.getElementById('questionMenu');
+      const responseText = document.getElementById('responseText');
+  
+      // Generar las preguntas en el menú
+      qaArray.forEach((item, index) => {
+          const listItem = document.createElement('li');
+          listItem.className = 'list-group-item question mb-1 list-group-item-action';
+          listItem.style.cssText = 'border: solid 0px #7c2e2e; border-radius: 15px; background-color: #181d38; color: white;';
+          listItem.setAttribute('data-bs-toggle', 'list');
+          listItem.setAttribute('role', 'tab');
+          listItem.setAttribute('data-index', index);
+          listItem.textContent = item.question;
+          questionList.appendChild(listItem);
+      });
+  
+      // Mostrar/Ocultar el menú
+      questionButton.addEventListener('click', function () {
+          questionMenu.style.display = questionMenu.style.display === 'none' || questionMenu.style.display === '' ? 'block' : 'none';
+      });
+  
+      // Delegación de eventos para manejar clics en las preguntas
+      questionList.addEventListener('click', function (event) {
+          if (event.target && event.target.classList.contains('question')) {
+              const index = event.target.getAttribute('data-index');
+              const selectedQA = qaArray[index];
+  
+              let content = `
+                  <div class="container section-title" data-aos="fade-up">
+                      <h2>${selectedQA.question}</h2>
+                      <p>${selectedQA.response}</p>
+                  </div>
+              `;
+  
+              // Agregar imagen si existe
+              if (selectedQA.image) {
+                  content += `
+                      <div class="container">
+                          <div class="row mt-3">
+                              <div class="col-lg-4 col-md-4"></div>
+                              <div class="col-lg-4 col-md-4">
+                                  <img src="${selectedQA.image}" alt="Imagen relacionada" class="img-fluid mb-3">
+                              </div>
+                          </div>
+                      </div>
+                  `;
+              }
+  
+              // Agregar video si existe
+              if (selectedQA.video) {
+                  content += `
+                      <div class="container">
+                          <div class="row mt-1">
+                              <video controls class="w-100">
+                                  <source src="${selectedQA.video}" type="video/mp4">
+                              </video>
+                          </div>
+                      </div>
+                  `;
+              }
+  
+              responseText.innerHTML = content;
+  
+              // Mostrar el modal y ocultar el menú
+              const responseModal = new bootstrap.Modal(document.getElementById('responseModal'));
+              responseModal.show();
+              questionMenu.style.display = 'none';
+          }
+      });
+  });
+    </script>
+  
+
+
+</body>
+
+</html>

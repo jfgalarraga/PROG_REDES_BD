@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego: Escoge la Tecnología Correcta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #3b3f72, #1e243d);
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      margin: 20px 0;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 5px;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .feedback {
+      margin: 20px 0;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 1.1rem;
+    }
+
+    .simulation-area {
+      margin-top: 20px;
+    }
+
+    canvas {
+      border: 2px solid white;
+      border-radius: 10px;
+      background-color: #1e1e1e;
+      width: 100%;
+      max-width: 800px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Juego: Escoge la Tecnología Correcta</h1>
+    <p>Lee el escenario y selecciona la tecnología de medio no guiado más adecuada.</p>
+
+    <div id="scenario">
+      <h2 id="question">Pregunta aquí</h2>
+    </div>
+
+    <div class="buttons">
+      <button class="btn" onclick="checkAnswer('WiFi')">WiFi</button>
+      <button class="btn" onclick="checkAnswer('Bluetooth')">Bluetooth</button>
+      <button class="btn" onclick="checkAnswer('Satélite')">Satélite</button>
+    </div>
+
+    <div id="feedback" class="feedback"></div>
+
+    <div class="simulation-area">
+      <canvas id="animationCanvas" width="800" height="400"></canvas>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,2357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Internet - Grupo 5</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    #map-container {
+      position: relative;
+      width: 100%;
+      margin: auto;
+      overflow: hidden;
+      border: 1px solid #848080;
+      height: 500px;
+      cursor: grab;
+    }
+
+    #map {
+      width: 100%;
+      transform-origin: center;
+      transition: transform 0.2s;
+      position: absolute;
+    }
+
+    #controls {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .control-button {
+      background-color: rgb(186, 182, 182);
+      border: 1px solid #000000;
+      border-radius: 3px;
+      padding: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .control-button:hover {
+      background-color: #ffbebe;
+    }
+
+    @media (max-width: 576px) {
+      #map-container {
+        height: 300px;
+      }
+
+      .control-button {
+        font-size: 12px;
+        padding: 3px;
+      }
+    }
+
+
+
+    .progress {
+      background-color: #e9ecef;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress:hover .progress-bar {
+      transform: scaleX(1.1);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .progress-bar {
+      font-size: 1rem;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-label {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #495057;
+    }
+
+    .btn-llamativo {
+      background: linear-gradient(45deg, #ff6f61, #ff8e53);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .btn-llamativo:hover {
+      background: linear-gradient(45deg, #ff8e53, #ff6f61);
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+      transform: scale(1.1);
+    }
+
+    .btn-llamativo:active {
+      transform: scale(1);
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .iframe-container {
+      margin: 20px auto;
+      max-width: 90%;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      display: none;
+      /* Ocultar el iframe inicialmente */
+    }
+
+    .game-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .word-search-container {
+      display: grid;
+      grid-template-columns: repeat(10, 40px);
+      gap: 5px;
+      justify-content: center;
+    }
+
+    .cell {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #0071E3;
+      background-color: #ffffff;
+      font-weight: bold;
+      color: #0071E3;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .cell.selected {
+      background-color: #0071E3;
+      color: #ffffff;
+    }
+
+    .cell.found {
+      background-color: #28a745;
+      color: #ffffff;
+    }
+
+    .word-list {
+      text-align: left;
+    }
+
+    .word-list h4 {
+      color: #0071E3;
+      margin-bottom: 10px;
+    }
+
+    .word {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .word.brave {
+      color: #f97b22;
+    }
+
+    .word.chrome {
+      color: #4285F4;
+    }
+
+    .word.edge {
+      color: #0A95EE;
+    }
+
+    .word.safari {
+      color: #5AC8FA;
+    }
+
+    .word.firefox {
+      color: #FF7139;
+    }
+
+    .word.opera {
+      color: #FF1B2D;
+    }
+
+    .word.found {
+      text-decoration: line-through;
+      color: #28a745 !important;
+    }
+
+    .containerr {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-custom-primary {
+      background: linear-gradient(45deg, #ff6f61, #ff8e53);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 30px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .btn-custom-primary:hover {
+      background: linear-gradient(45deg, #ff8e53, #ff6f61);
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+      transform: scale(1.1);
+    }
+
+    .btn-custom-secondary {
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 30px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .btn-custom-secondary:hover {
+      background: linear-gradient(45deg, #2575fc, #6a11cb);
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+      transform: scale(1.1);
+    }
+
+    .sin-scroll {
+      width: 100%;
+      height: 500px;
+      border: none;
+      overflow: hidden;
+    }
+  </style>
+
+
+</head>
+
+<body class="index-page">
+
+
+  <header id="header" class="header dark-background d-flex flex-column">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="./img/interr.jpeg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <h1 class="sitename">El Internet</h1>
+    </a>
+
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active" aria-label="Ir a Inicio"><i class="bi bi-house navicon"></i> Inicio</a></li>
+        <li><a href="#about" aria-label="Ir a ¿Qué es el Internet?"><i class="bi bi-person navicon"></i> ¿Qué es el
+            Internet?</a></li>
+        <li><a href="#caracteristicas" aria-label="Ir a Características"><i class="bi bi-gear navicon"></i>
+            Características</a></li>
+        <li><a href="#impacto" aria-label="Ir a Impacto"><i class="bi bi-lightning navicon"></i> Impacto</a></li>
+        <li><a href="#connections" aria-label="Ir a Tipos de Conexión"><i class="bi bi-wifi navicon"></i> Tipos de
+            Conexión</a></li>
+        <li><a href="#servicios" aria-label="Ir a Servicios Relacionados"><i class="bi bi-gear navicon"></i>
+            Servicios</a></li>
+        <li><a href="#resume" aria-label="Ir a Usos Relacionados"><i class="bi bi-file-earmark-text navicon"></i>
+            Usos Relacionados</a></li>
+        <li><a href="#portfolio2" aria-label="Ir a Navegadores Web"><i class="bi bi-images navicon"></i> Navegadores
+            Web</a></li>
+        <li><a href="#testimonials" aria-label="Ir a Protocolos de Red"><i class="bi bi-hdd-stack navicon"></i>
+            Protocolos de Red</a></li>
+        <li><a href="#contact" aria-label="Ir a Backbone"><i class="bi bi-card-checklist navicon"></i> Backbone </a>
+        </li>
+        <li><a href="#prov" aria-label="Ir a Navegadores Web"><i class="bi bi-reception-4 navicon"></i> ISP</a></li>
+        <li><a href="#cuestionario" aria-label="Ir a cuestionarios"><i class="bi bi-ui-checks navicon"></i>
+            Cuestionarios</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+  <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+    <h2 class="m-0 text-primary"><i class="fa fa-globe me-3"></i>Redes</h2>
+  </a>
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav ms-auto p-4 p-lg-0">
+      <!-- Menú Programación -->
+      <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Programación</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../../Contenido_Programacion/Contenido_Programacion/portfolio-details.html" class="dropdown-item small-text">I. Algoritmos</a>
+          <a href="../../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html" class="dropdown-item small-text">II. Diagramas de flujo</a>
+          <a href="../../../Contenido_Programacion/Contenido_Python/Origen.html" class="dropdown-item small-text">III. Python</a>
+        </div>
+      </div>
+
+      <!-- Menú Redes -->
+      <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text"> I. Medios de conexión</a>
+          <a href="../../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">II. Redes Lan</a>
+          <a href="../../../Contenido_Redes/INTERNET-SERVICIOS/INTERNET-SERVICIOS/index.html" class="dropdown-item small-text">III. Internet</a>
+
+        </div>
+      </div>
+
+      <!-- Menú Base de Datos -->
+      <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de Datos</a> 
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html" class="dropdown-item small-text">I. Access</a>
+          <a href="../../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html" class="dropdown-item small-text">II. Visual Basic Access</a>
+          <a href="../../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html" class="dropdown-item small-text">III. MySQL (Workbench)</a>
+        </div>
+      </div>
+
+      <!-- Sección Pages -->
+       <!-- 
+      <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="#about" class="dropdown-item">Internet</a>
+          <a href="#connections" class="dropdown-item">Tipos de Conexión</a>
+          <a href="#servicios" class="dropdown-item">Servicios</a>
+          <a href="#resume" class="dropdown-item">Usos Relacionados</a>
+          <a href="#portfolio2" class="dropdown-item">Navegadores Web</a>
+          <a href="#testimonials" class="dropdown-item">Protocolos de Red</a>
+          <a href="#contact" class="dropdown-item">Backbone</a>
+          <a href="#prov" class="dropdown-item">Proveedores de Internet</a>
+        </div>
+      </div>-->
+
+      <!-- Cuestionarios -->
+        <!-- 
+      <a href="#cuestionarios" class="nav-item nav-link small-text">CUESTIONARIOS</a>-->
+    </div>
+
+    <!-- Botón Principal -->
+    <a href="../../../index.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i class="fa fa-arrow-right ms-3"></i></a>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="img/internet.jpg" alt="Internet" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2 style="color: white;">El Internet</h2>
+        <p>La <span class="typed"
+            data-typed-items="fuente de conocimientos, puerta hacia el futuro, red que nos conecta, chispa de la innovación, ventana al mundo">gran
+            autopista de la comunicación moderna, gratuita e independiente.</span><span
+            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Hero Section -->
+    <section id="about" class="about section">
+
+      <div class="container section-title" data-aos="fade-up" style="text-align: justify;">
+        <h2>Introducción</h2>
+        <p style="font-size: 20px;">El Internet es más que una red global; es el tejido que conecta nuestro mundo
+          digital. Desde sus humildes comienzos como un proyecto de investigación en redes, hasta convertirse en una
+          herramienta imprescindible para la comunicación, la educación, los negocios y el entretenimiento, el Internet
+          ha revolucionado la manera en que vivimos y trabajamos.
+
+          En este sitio, exploraremos los aspectos más fascinantes del Internet: su historia, su infraestructura, los
+          protocolos que lo hacen posible, y los servicios que han transformado nuestras vidas. Acompáñanos en un
+          recorrido por el pasado, el presente y el futuro de esta increíble red que sigue evolucionando para conectar
+          cada rincón del planeta.</p>
+      </div><!-- End Section Title -->
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <center>
+          <h2>¿Qué es el Internet?</h2>
+          <p style="font-size: 20px;">El Internet es una red global que conecta millones de dispositivos en todo el
+            mundo. Permite la comunicación,
+            el acceso a información y la innovación tecnológica.</p>
+        </center>
+
+      </div><!-- End Section Title -->
+
+      <div class="container section-title" data-aos="">
+        <h2>Origen:</h2>
+        <div class="container mt-5">
+          <h1 class="text-center mb-4">El Origen del Internet</h1>
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                aria-label="Slide 6"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+                aria-label="Slide 7"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./El-Origen-del-Internet/1_El-Origen-del-Internet.png" class="d-block w-100"
+                  alt="El Origen del Internet">
+              </div>
+              <div class="carousel-item">
+                <img src="./El-Origen-del-Internet/2_Evolucion-de-las-Redes-de-Comunicacion.png" class="d-block w-100"
+                  alt="Evolución de las Redes de Comunicación">
+              </div>
+              <div class="carousel-item">
+                <img src="./El-Origen-del-Internet/3_Desarrollo-de-TCPIP-y-la-World-Wide-Web.png" class="d-block w-100"
+                  alt="Desarrollo de TCP/IP y la World Wide Web">
+              </div>
+              <div class="carousel-item">
+                <img src="./El-Origen-del-Internet/4_La-Explosion-del-Uso-del-Internet.png" class="d-block w-100"
+                  alt="La Explosión del Uso del Internet">
+              </div>
+              <div class="carousel-item">
+                <img src="./El-Origen-del-Internet/5_Navegadores-Web-y-la-Interactividad.png" class="d-block w-100"
+                  alt="Navegadores Web y la Interactividad">
+              </div>
+              <div class="carousel-item">
+                <img src="./El-Origen-del-Internet/6_Expansion-Global-y-Diversificacion-de-Usos.png"
+                  class="d-block w-100" alt="Expansión Global y Diversificación de Usos">
+              </div>
+              <div class="carousel-item">
+                <img src="./El-Origen-del-Internet/7_Impacto-en-la-Sociedad-y-Futuro-de-la-Tecnologia.png"
+                  class="d-block w-100" alt="Impacto en la Sociedad y Futuro de la Tecnología">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div><!-- End Presentation -->
+
+
+      <section id="caracteristicas" class="caracteristicas section">
+        <!-- Características Clave -->
+        <div class="row mg-5">
+          <div class="col-12">
+            <div class="container section-title" data-aos="fade-up">
+              <h2>Características Clave</h2> <!-- Se agrega la clase para el estilo -->
+            </div>
+          </div>
+          <div class="col-md-6">
+            <ul>
+              <li data-aos="fade-right" data-aos-delay="200"><strong>Interconexión:</strong> Permite que dispositivos de
+                todo el mundo se comuniquen entre sí.</li>
+              <li data-aos="fade-right" data-aos-delay="300"><strong>Accesibilidad:</strong> Disponible en una amplia
+                variedad de dispositivos y plataformas.</li>
+              <li data-aos="fade-right" data-aos-delay="400"><strong>Velocidad:</strong> Con avances como la fibra
+                óptica, las conexiones son más rápidas que nunca.</li>
+              <li data-aos="fade-right" data-aos-delay="500"><strong>Escalabilidad:</strong> Diseñado para crecer y
+                adaptarse a las necesidades de los usuarios.</li>
+            </ul>
+          </div>
+          <div class="col-md-5 me-3">
+            <div id="carouselCharacteristics" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/internet4.jpg" class="d-block w-100" alt="Interconexión"
+                    style="height: 200px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/internet2.jpeg" class="d-block w-100" alt="Accesibilidad"
+                    style="height: 200px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/internet3.jpeg" class="d-block w-100" alt="Velocidad"
+                    style="height: 200px; object-fit: cover;">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselCharacteristics"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselCharacteristics"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <iframe src="./lineatiempo.html" width="102%" height="500px"
+          style="border: none;transform: scale(0.9);"></iframe>
+        <br><br>
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Ejemplo:</h2> <!-- Se agrega la clase para el estilo -->
+        </div>
+
+
+
+        <header class="bg-primary text-white text-center py-4">
+          <div class="container">
+            <h1>¿Cómo funciona el internet?</h1>
+            <p class="lead">Descubre cómo los clientes y servidores interactúan en la red</p>
+          </div>
+        </header>
+
+        <main class="container my-5">
+          <!-- Botones para mostrar/ocultar la simulación -->
+          <div class="text-center mb-4">
+            <button id="showSimulation" class="btn btn-primary btn-lg">Mostrar</button>
+            <button id="hideSimulation" class="btn btn-secondary btn-lg d-none">Ocultar</button>
+          </div>
+
+          <!-- Contenido de la simulación (oculto por defecto) -->
+          <div id="simulationContent" class="d-none">
+            <div class="row align-items-center text-center g-4">
+              <!-- Cliente -->
+              <div class="col-12 col-md-5">
+                <div class="card shadow border-primary h-100">
+                  <div class="card-body">
+                    <h2 class="card-title text-primary">Cliente</h2>
+                    <p class="card-text">Yo quiero acceder a un sitio web.</p>
+                    <select id="websiteSelect" class="form-select mb-3">
+                      <option value="google">Google</option>
+                      <option value="chrome">Wikipedia</option>
+                      <option value="mozilla">Amazon</option>
+                    </select>
+                    <button id="requestButton" class="btn btn-success btn-lg w-100">Enviar solicitud</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Flecha -->
+              <div class="col-12 col-md-2 d-flex justify-content-center align-items-center">
+                <div class="display-4 text-secondary">➡️</div>
+              </div>
+
+              <!-- Servidor -->
+              <div class="col-12 col-md-5">
+                <div class="card shadow border-primary h-100">
+                  <div class="card-body" id="server">
+                    <h2 class="card-title text-primary">Servidor</h2>
+                    <p class="card-text">Esperando solicitudes...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-5">
+              <p class="fs-5 text-muted">
+                Este ejemplo muestra cómo un cliente (tú) envía una solicitud al servidor,
+                y este responde con la información que solicitaste.
+              </p>
+            </div>
+          </div>
+        </main>
+        <!-- Button to toggle the game -->
+        <div class="container mt-4">
+          <center>
+            <button id="toggleGameButton" class="btn btn-primary" onclick="toggleGame()" style="
+                background: linear-gradient(45deg, #86a5b5, #2468dd);
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                border: none;
+                border-radius: 10px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s, box-shadow 0.3s;
+              " onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 6px 20px rgba(0, 0, 0, 0.5)';"
+              onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(0, 0, 0, 0.3)';">
+              Juego Rápido
+            </button>
+          </center>
+        </div>
+
+        <!-- Hidden game for Juego Rápido (origen.html) -->
+        <div id="gameContainer" style="display: none;" class="container mt-4">
+          <iframe src="juegos/origen.html" style="width: 100%; height: 500px; border: none;"></iframe>
+        </div>
+
+
+
+
+        <!-- Bootstrap JS (incluye Popper.js) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+          // Mostrar el contenido de la simulación
+          document.getElementById('showSimulation').addEventListener('click', function () {
+            const simulationContent = document.getElementById('simulationContent');
+            const hideButton = document.getElementById('hideSimulation');
+            simulationContent.classList.remove('d-none'); // Quita la clase que oculta el contenido
+            this.classList.add('d-none'); // Oculta el botón "Mostrar"
+            hideButton.classList.remove('d-none'); // Muestra el botón "Ocultar"
+          });
+
+          // Ocultar el contenido de la simulación
+          document.getElementById('hideSimulation').addEventListener('click', function () {
+            const simulationContent = document.getElementById('simulationContent');
+            const showButton = document.getElementById('showSimulation');
+            simulationContent.classList.add('d-none'); // Agrega la clase que oculta el contenido
+            this.classList.add('d-none'); // Oculta el botón "Ocultar"
+            showButton.classList.remove('d-none'); // Muestra el botón "Mostrar"
+          });
+
+          // Funcionalidad de la solicitud del cliente al servidor
+          document.getElementById('requestButton').addEventListener('click', function () {
+            const server = document.getElementById('server');
+            const website = document.getElementById('websiteSelect').value;
+
+            server.innerHTML = `
+                <h2 class="card-title text-primary">Servidor</h2>
+                <p class="card-text">Procesando solicitud...</p>
+              `;
+
+            setTimeout(() => {
+              let responseHTML = '<h2 class="card-title text-primary">Servidor</h2>';
+
+              switch (website) {
+                case 'google':
+                  responseHTML += '<p class="card-text">¡Aquí está Google!</p><img src="./img/Google.png" alt="Google" class="img-fluid">';
+                  break;
+                case 'chrome':
+                  responseHTML += '<p class="card-text">¡Aquí está Wikipedia!</p><img src="./img/wikipedia.jpg" alt="Wikipedia" class="img-fluid">';
+                  break;
+                case 'mozilla':
+                  responseHTML += '<p class="card-text">¡Aquí está Amazon!</p><img src="./img/amazon.jpg" alt="Amazon" class="img-fluid">';
+                  break;
+                default:
+                  responseHTML += '<p class="card-text">Sitio no reconocido.</p>';
+              }
+
+              server.innerHTML = responseHTML;
+              alert('El servidor ha respondido con la información.');
+            }, 2000);
+          });
+        </script>
+      </section><!-- /About Section -->
+
+      <!-- Script to control the visibility of the game and toggle button text -->
+      <script>
+        function toggleGame() {
+          const gameContainer = document.getElementById('gameContainer');
+          const toggleGameButton = document.getElementById('toggleGameButton');
+
+          // Toggle the game visibility
+          if (gameContainer.style.display === 'none') {
+            gameContainer.style.display = 'block';
+            toggleGameButton.textContent = 'Ocultar';
+          } else {
+            gameContainer.style.display = 'none';
+            toggleGameButton.textContent = 'Juego Rápido';
+          }
+        }
+      </script>
+
+    </section>
+
+    <!-- Impacto del Internet -->
+    <section id="impacto" class="impacto section py-5"
+      style="background: linear-gradient(to right, #f5f5f5, #e8e8e8); color: #2c3e50;">
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="text-center" style="color: #34495e;">Impacto del Internet</h2>
+        <p class="text-center" style="color: #7f8c8d;">Desde su creación, el Internet ha transformado la manera en que
+          vivimos, trabajamos y nos comunicamos. Su impacto abarca:</p>
+      </div><!-- End Section Title -->
+
+      <div class="row text-center">
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="icon-hover">
+            <i class="bi bi-briefcase-fill display-4" style="color: #5dade2;"></i>
+          </div>
+          <h5 class="mt-3" style="color: #34495e;">Economía Global</h5>
+          <p style="color: #7f8c8d;">Facilitando el comercio electrónico y los negocios.</p>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="icon-hover">
+            <i class="bi bi-book-fill display-4" style="color: #48c9b0;"></i>
+          </div>
+          <h5 class="mt-3" style="color: #34495e;">Educación</h5>
+          <p style="color: #7f8c8d;">Proporcionando acceso a recursos y aprendizaje en línea.</p>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+          <div class="icon-hover">
+            <i class="bi bi-people-fill display-4" style="color: #f4d03f;"></i>
+          </div>
+          <h5 class="mt-3" style="color: #34495e;">Conexión Social</h5>
+          <p style="color: #7f8c8d;">Permitiendo la interacción en tiempo real sin barreras geográficas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dino Game Section -->
+    <section id="dino-game-section" class="py-5"
+      style="background: linear-gradient(to right, #ebebeb, #d6d6d6); color: #2c3e50;">
+      <div class="container text-center">
+        <h3 style="color: #34495e;">¿Sin Internet?</h3>
+        <h4 style="color: #7f8c8d;">Diviértete un poco mientras aprendes</h4>
+        <div id="dino-game" style="display: none;" class="mt-4">
+          <canvas id="gameCanvas" width="600" height="150"
+            style="background: #ffffff; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);"></canvas>
+          <button id="restartButton" class="btn btn-outline-secondary mt-3" style="display: none;">Reiniciar
+            Juego</button>
+        </div>
+        <button id="startButton" class="btn btn-outline-secondary mt-3">Iniciar Juego</button>
+      </div>
+    </section>
+
+
+
+
+    <!-- Skills Section -->
+    <section id="connections" class="skills section"
+      style="background: linear-gradient(to bottom, #f9f9f9, #e0e0e0); color: #333;">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up" style="text-align: center; color: #444;">
+        <h2 style="color: #0e0e0e;">Tipos de Conexiones a Internet</h2>
+        <p>Explora las tecnologías que nos mantienen conectados: desde conexiones tradicionales hasta las más avanzadas.
+        </p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <div class="card h-100 border-0 shadow" style="background: #fff;">
+              <img src="img/dsl.jpg" class="card-img-top rounded clickable-image" alt="DSL"
+                style="width: 100%; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #ff9800;">Conexión DSL</h5>
+                <p class="card-text">Basada en líneas telefónicas, ideal para usuarios residenciales en zonas urbanas.
+                </p>
+                <ul>
+                  <li>Velocidad promedio: 1-20 Mbps</li>
+                  <li>Ventajas: Económica y accesible.</li>
+                  <li>Desventajas: Menor velocidad en comparación con otras tecnologías.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card h-100 border-0 shadow" style="background: #fff;">
+              <img src="img/fibra.jpeg" class="card-img-top rounded clickable-image" alt="Fibra Óptica"
+                style="width: 100%; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #4caf50;">Fibra Óptica</h5>
+                <p class="card-text">La tecnología más avanzada para conexiones rápidas y estables, ideal para el hogar
+                  y la empresa.</p>
+                <ul>
+                  <li>Velocidad promedio: Hasta 1 Gbps</li>
+                  <li>Ventajas: Rápida y fiable.</li>
+                  <li>Desventajas: Disponibilidad limitada en zonas rurales.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card h-100 border-0 shadow" style="background: #fff;">
+              <img src="img/satelital.jpeg" class="card-img-top rounded clickable-image" alt="Satélite"
+                style="width: 100%; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #03a9f4;">Satélite</h5>
+                <p class="card-text">La solución para zonas rurales o remotas, aunque con mayor latencia.</p>
+                <ul>
+                  <li>Velocidad promedio: 10-100 Mbps</li>
+                  <li>Ventajas: Accesible desde cualquier lugar.</li>
+                  <li>Desventajas: Latencia alta y costos elevados.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card h-100 border-0 shadow" style="background: #fff;">
+              <img src="img/movil.jpg" class="card-img-top rounded clickable-image" alt="Móvil"
+                style="width: 100%; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #e91e63;">Conexión Móvil</h5>
+                <p class="card-text">Proporcionada a través de redes celulares, ideal para usuarios en movimiento.</p>
+                <ul>
+                  <li>Velocidad promedio: 5-100 Mbps</li>
+                  <li>Ventajas: Acceso desde cualquier lugar con cobertura móvil.</li>
+                  <li>Desventajas: Dependencia de la señal y costos de datos.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nuevo tipo: Conexión por Cable -->
+          <div class="col-lg-4">
+            <div class="card h-100 border-0 shadow" style="background: #fff;">
+              <img src="img/cable.jpeg" class="card-img-top rounded clickable-image" alt="Cable"
+                style="width: 100%; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #673ab7;">Conexión por Cable</h5>
+                <p class="card-text">Conexiones estables y rápidas, ideales para el uso doméstico o empresarial.</p>
+                <ul>
+                  <li>Velocidad promedio: 100-1000 Mbps</li>
+                  <li>Ventajas: Estabilidad y alta velocidad.</li>
+                  <li>Desventajas: Requiere instalación física de cables.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nuevo tipo: Conexión Inalámbrica -->
+          <div class="col-lg-4">
+            <div class="card h-100 border-0 shadow" style="background: #fff;">
+              <img src="img/inalambrica.jpeg" class="card-img-top rounded clickable-image" alt="Conexión Inalámbrica"
+                style="width: 100%; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #ff9800;">Conexión Inalámbrica</h5>
+                <p class="card-text">Conexiones flexibles que no requieren cables, ideales para movilidad.</p>
+                <ul>
+                  <li>Velocidad promedio: 20-300 Mbps</li>
+                  <li>Ventajas: Sin necesidad de cables y fácil instalación.</li>
+                  <li>Desventajas: Puede ser inestable en áreas con interferencias.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-5">
+        <h1 class="text-center mb-4">Da click y juega</h1>
+        <!-- Botón para mostrar/ocultar -->
+        <div class="text-center">
+          <button class="btn btn-llamativo" id="toggleIframeButton"
+            style="background: linear-gradient(45deg, #ff5722, #ff9800); color: white; font-weight: bold; padding: 10px 20px; border: none; border-radius: 5px;">JUGAR</button>
+        </div>
+
+
+        <!-- Contenedor del iframe -->
+        <div class="iframe-container mt-4" id="iframeContainer">
+          <iframe src="./juegos/tiposservicios.html" width="100%" height="800px" style="border: none;"></iframe>
+        </div>
+      </div>
+
+      <script>
+        // Obtener referencias a los elementos
+        const toggleButton = document.getElementById("toggleIframeButton");
+        const iframeContainer = document.getElementById("iframeContainer");
+
+        // Función para mostrar/ocultar el iframe
+        toggleButton.addEventListener("click", () => {
+          if (iframeContainer.style.display === "none" || iframeContainer.style.display === "") {
+            iframeContainer.style.display = "block"; // Mostrar el iframe
+            toggleButton.textContent = "Ocultar ";
+          } else {
+            iframeContainer.style.display = "none"; // Ocultar el iframe
+            toggleButton.textContent = "JUGAR";
+          }
+        });
+
+        // Asegurarse de que el iframe esté oculto al cargar
+        window.onload = () => {
+          iframeContainer.style.display = "none";
+        };
+      </script>
+    </section><!-- /Skills Section -->
+
+
+    <div class="container mt-5"> <!-- Agregado contenedor para márgenes -->
+      <h2>Más utilizados por el público:</h2>
+      <div class="row skills-content skills-animation">
+        <div class="col-md-10 mx-auto"> <!-- Centrando y limitando el ancho -->
+
+          <!-- DSL -->
+          <div class="mb-4">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="skill-label">DSL</span> <span class="skill-label">25%</span>
+            </div>
+            <div class="progress" style="height: 25px;">
+              <div class="progress-bar progress-bar-animated progress-bar-striped bg-primary" role="progressbar"
+                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+            </div>
+          </div>
+
+          <!-- Fibra Óptica -->
+          <div class="mb-4">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="skill-label">Fibra Óptica</span> <span class="skill-label">50%</span>
+            </div>
+            <div class="progress" style="height: 25px;">
+              <div class="progress-bar progress-bar-animated progress-bar-striped bg-success" role="progressbar"
+                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
+            </div>
+          </div>
+
+          <!-- Satélite -->
+          <div class="mb-4">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="skill-label">Satélite</span> <span class="skill-label">10%</span>
+            </div>
+            <div class="progress" style="height: 25px;">
+              <div class="progress-bar progress-bar-animated progress-bar-striped bg-danger" role="progressbar"
+                aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
+            </div>
+          </div>
+
+          <!-- Móvil -->
+          <div class="mb-4">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="skill-label">Móvil</span> <span class="skill-label">15%</span>
+            </div>
+            <div class="progress" style="height: 25px;">
+              <div class="progress-bar progress-bar-animated progress-bar-striped bg-warning" role="progressbar"
+                aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%;"></div>
+            </div>
+          </div>
+
+          <!-- Conexión por Cable -->
+          <div class="mb-4">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="skill-label">Conexión por Cable</span> <span class="skill-label">30%</span>
+            </div>
+            <div class="progress" style="height: 25px;">
+              <div class="progress-bar progress-bar-animated progress-bar-striped bg-info" role="progressbar"
+                aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
+            </div>
+          </div>
+
+          <!-- Conexión Inalámbrica -->
+          <div class="mb-4">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="skill-label">Conexión Inalámbrica</span> <span class="skill-label">20%</span>
+            </div>
+            <div class="progress" style="height: 25px;">
+              <div class="progress-bar progress-bar-animated progress-bar-striped bg-secondary" role="progressbar"
+                aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección: Servicios de Internet - Totalmente Interactiva -->
+    <section id="servicios" class="services section py-5"
+      style="background: linear-gradient(to bottom, #ffffff, #e3f2fd); color: #333;">
+      <div class="container text-center" data-aos="zoom-in">
+        <h2 class="text-dark fw-bold">🌐 Servicios de Internet 🚀</h2>
+        <p>Descubre cómo los diferentes servicios de Internet hacen posible la comunicación y el intercambio de
+          información.</p>
+      </div>
+
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <!-- Servicio Template -->
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="flip-left">
+            <div class="card service-card shadow-lg text-center h-100">
+              <img src="img/www.jpeg" class="card-img-top img-hover" alt="World Wide Web"
+                style="height: 200px; object-fit: cover; transition: transform 0.3s ease-in-out;">
+              <div class="card-body d-flex flex-column">
+                <h4 class="card-title text-primary">🌍 World Wide Web (WWW)</h4>
+                <p class="card-text flex-grow-1">La World Wide Web es un sistema de distribución de información basado
+                  en hipertexto, accesible a través de Internet mediante navegadores web.</p>
+                <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalWWW">Ver
+                  Más</button>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Modal WWW -->
+          <!-- Modal WWW -->
+          <div class="modal fade" id="modalWWW" tabindex="-1" aria-labelledby="modalWWWLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">🌍 World Wide Web (WWW)</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                  <video width="100%" height="315" controls>
+                    <source src="videos/www.mp4" type="video/mp4">
+                  </video>
+
+                  <!-- Importancia de la WWW -->
+                  <h4 class="mt-3 text-start">🌐 Importancia de la WWW</h4>
+                  <p style="text-align: justify;">
+                    La World Wide Web ha transformado la forma en que las personas acceden a la información, interactúan
+                    y realizan actividades cotidianas. Ha impulsado la globalización, facilitado el aprendizaje y
+                    revolucionado sectores como la comunicación, el comercio y la educación. Su constante evolución
+                    permite innovaciones tecnológicas que siguen cambiando la manera en que vivimos y trabajamos.
+                  </p>
+                  <!-- Ventajas y Desventajas -->
+                  <h4 class="mt-4 text-start">📌 Ventajas de la WWW</h4>
+                  <ul class="text-start">
+                    <li>Acceso global a la información en tiempo real.</li>
+                    <li>Facilita la comunicación y el intercambio de datos.</li>
+                    <li>Posibilita el comercio electrónico y la educación en línea.</li>
+                    <li>Permite la interactividad entre usuarios y aplicaciones.</li>
+                  </ul>
+
+                  <h4 class="mt-3 text-start">⚠️ Desventajas de la WWW</h4>
+                  <ul class="text-start">
+                    <li>Exposición a riesgos de seguridad y privacidad.</li>
+                    <li>Alta cantidad de información falsa o poco fiable.</li>
+                    <li>Dependencia tecnológica y distracción en el trabajo/estudio.</li>
+                    <li>Posibilidad de ciberataques y fraudes en línea.</li>
+                  </ul>
+
+                  <!-- Ejemplo Interactivo -->
+                  <h5 class="mt-4 text-center">Ejemplo Interactivo</h5>
+                  <p>Simula la carga de un sitio web seleccionando una opción:</p>
+
+                  <select id="webSelect" class="form-select mb-2">
+                    <option value="" selected disabled>Selecciona un sitio</option>
+                    <option value="facebook">www.facebook.com</option>
+                    <option value="twitter">www.twitter.com</option>
+                    <option value="gmail">www.gmail.com</option>
+                  </select>
+
+                  <button class="btn btn-primary" onclick="simulateWebLoad()">Cargar</button>
+
+                  <div class="mt-3" id="webOutput"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Servicio: FTP -->
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="flip-up">
+            <div class="card service-card shadow-lg text-center h-100">
+              <img src="img/ftp.jpeg" class="card-img-top img-hover" alt="FTP"
+                style="height: 200px; object-fit: cover; transition: transform 0.3s ease-in-out;">
+              <div class="card-body d-flex flex-column">
+                <h4 class="card-title text-warning">📁 Transferencia de Archivos (FTP)</h4>
+                <p class="card-text flex-grow-1">El Protocolo de Transferencia de Archivos (FTP) permite enviar y
+                  recibir archivos entre un cliente y un servidor a través de una red.</p>
+                <button class="btn btn-outline-warning mt-auto" data-bs-toggle="modal" data-bs-target="#modalFTP">Ver
+                  Más</button>
+              </div>
+            </div>
+          </div>
+          <!-- Modal FTP -->
+          <div class="modal fade" id="modalFTP" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">📁 Transferencia de Archivos (FTP)</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                  <video width="100%" height="315" controls>
+                    <source src="videos/ftp.mp4" type="video/mp4">
+                  </video>
+
+                  <!-- Importancia de FTP -->
+                  <h4 class="mt-3 text-start">🌐 Importancia del FTP</h4>
+                  <p style="text-align: justify;">
+                    El Protocolo de Transferencia de Archivos (FTP) es esencial para la transmisión eficiente de
+                    archivos entre sistemas remotos a través de Internet o redes privadas. Se usa ampliamente en el
+                    alojamiento web, el intercambio de datos empresariales y la administración de servidores. Su
+                    capacidad para manejar grandes volúmenes de información lo convierte en una herramienta clave en
+                    entornos profesionales y de desarrollo.
+                  </p>
+
+                  <!-- Ventajas y Desventajas -->
+                  <h4 class="mt-4 text-start">📌 Ventajas del FTP</h4>
+                  <ul class="text-start">
+                    <li>Permite la transferencia de archivos grandes sin interrupciones.</li>
+                    <li>Soporta autenticación para mayor seguridad.</li>
+                    <li>Facilita la administración remota de servidores.</li>
+                    <li>Compatible con múltiples plataformas y clientes FTP.</li>
+                  </ul>
+
+                  <h4 class="mt-3 text-start">⚠️ Desventajas del FTP</h4>
+                  <ul class="text-start">
+                    <li>Las conexiones FTP no cifradas pueden ser vulnerables a ataques.</li>
+                    <li>Requiere configuración avanzada en algunos entornos.</li>
+                    <li>Depende de la estabilidad de la conexión a Internet.</li>
+                    <li>Alternativas más seguras como SFTP han reducido su uso.</li>
+                  </ul>
+
+                  <!-- Ejemplo Interactivo -->
+                  <h5 class="mt-4 text-center">Ejemplo Interactivo</h5>
+                  <p>Sube un archivo con FTP:</p>
+
+                  <input type="file" id="ftpUpload" class="form-control mb-2" accept=".pdf,.doc,.jpg,.png,.zip">
+                  <button class="btn btn-warning" onclick="simulateFTP()">Subir Archivo</button>
+
+                  <div class="mt-3" id="ftpOutput"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Servicio: Correo Electrónico -->
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="flip-right">
+            <div class="card service-card shadow-lg text-center h-100">
+              <img src="img/email.jpeg" class="card-img-top img-hover" alt="Email"
+                style="height: 200px; object-fit: cover; transition: transform 0.3s ease-in-out;">
+              <div class="card-body d-flex flex-column">
+                <h4 class="card-title text-danger">📧 Correo Electrónico (Email)</h4>
+                <p class="card-text flex-grow-1">El correo electrónico es un servicio de comunicación digital que
+                  permite enviar y recibir mensajes y archivos a través de Internet.</p>
+                <button class="btn btn-outline-danger mt-auto" data-bs-toggle="modal" data-bs-target="#modalEmail">Ver
+                  Más</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Email Mejorado -->
+          <div class="modal fade" id="modalEmail" tabindex="-1" aria-labelledby="modalEmailLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">📧 Envío de Correo Electrónico</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                  <video width="100%" height="315" controls>
+                    <source src="videos/email.mp4" type="video/mp4">
+                  </video>
+
+                  <!-- Importancia del correo electrónico -->
+                  <h4 class="mt-3 text-start">🌐 Importancia del Correo Electrónico</h4>
+                  <p style="text-align: justify;">
+                    El correo electrónico es una de las herramientas de comunicación más utilizadas en el mundo digital.
+                    Es esencial para la comunicación personal y profesional, permitiendo el intercambio de información
+                    de manera rápida, eficiente y económica. Además, es clave en procesos como la verificación de
+                    identidad, el marketing digital y la colaboración en línea.
+                  </p>
+
+                  <!-- Ventajas y Desventajas -->
+                  <h4 class="mt-4 text-start">📌 Ventajas del Correo Electrónico</h4>
+                  <ul class="text-start">
+                    <li>Comunicación rápida y eficiente a nivel global.</li>
+                    <li>Permite adjuntar archivos de distintos formatos.</li>
+                    <li>Facilita el almacenamiento y organización de mensajes.</li>
+                    <li>Es un medio de comunicación accesible y económico.</li>
+                  </ul>
+
+                  <h4 class="mt-3 text-start">⚠️ Desventajas del Correo Electrónico</h4>
+                  <ul class="text-start">
+                    <li>Puede ser un medio de propagación de spam y phishing.</li>
+                    <li>Depende de la conexión a Internet para su uso.</li>
+                    <li>El almacenamiento ilimitado puede generar saturación.</li>
+                    <li>Algunos servicios pueden filtrar correos legítimos como spam.</li>
+                  </ul>
+
+                  <!-- Ejemplo Interactivo -->
+                  <h5 class="mt-4 text-center">Ejemplo Interactivo</h5>
+                  <p>Simula el envío de un correo electrónico:</p>
+
+                  <input type="email" id="emailTo" class="form-control mb-2"
+                    placeholder="Destinatario: ejemplo@correo.com">
+                  <input type="text" id="emailSubject" class="form-control mb-2" placeholder="Asunto">
+                  <textarea id="emailMessage" class="form-control mb-2" rows="3"
+                    placeholder="Escribe tu mensaje"></textarea>
+                  <button class="btn btn-danger" id="emailSendBtn" onclick="simulateEmail()">Enviar</button>
+
+                  <!-- Barra de progreso de envío -->
+                  <div class="progress mt-3 d-none" id="emailProgress">
+                    <div id="emailProgressBar" class="progress-bar progress-bar-striped bg-danger" role="progressbar"
+                      style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                      0%
+                    </div>
+                  </div>
+
+                  <!-- Mensaje de éxito -->
+                  <p class="mt-3 d-none text-success" id="emailSuccessMsg">✅ Correo enviado con éxito.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Servicio: IRC -->
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in-up">
+            <div class="card service-card shadow-lg text-center h-100">
+              <img src="img/irc.png" class="card-img-top img-hover" alt="IRC"
+                style="height: 200px; object-fit: cover; transition: transform 0.3s ease-in-out;">
+              <div class="card-body d-flex flex-column">
+                <h4 class="card-title text-purple">💬 Chat IRC</h4>
+                <p class="card-text flex-grow-1">Internet Relay Chat (IRC) es un protocolo que permite la comunicación
+                  en tiempo real mediante canales de chat en servidores distribuidos.</p>
+                <button class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#modalIRC">Ver
+                  Más</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal IRC Mejorado -->
+          <div class="modal fade" id="modalIRC" tabindex="-1" aria-labelledby="modalIRCLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">💬 Chat IRC</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                  <video width="100%" height="315" controls>
+                    <source src="videos/irc.mp4" type="video/mp4">
+                  </video>
+
+                  <!-- Importancia de IRC -->
+                  <h4 class="mt-3 text-start">🌐 Importancia del Chat IRC</h4>
+                  <p style="text-align: justify;">
+                    El Internet Relay Chat (IRC) fue una de las primeras plataformas de comunicación en tiempo real
+                    utilizadas en Internet. Permitió la creación de comunidades en línea y sigue siendo utilizado en
+                    ciertos entornos técnicos y académicos. Su modelo de canales y servidores facilita la organización
+                    de conversaciones grupales y discusiones especializadas en diversos temas.
+                  </p>
+
+                  <!-- Ventajas y Desventajas -->
+                  <h4 class="mt-4 text-start">📌 Ventajas del IRC</h4>
+                  <ul class="text-start">
+                    <li>Comunicación en tiempo real con múltiples usuarios.</li>
+                    <li>Ligero y de bajo consumo de recursos.</li>
+                    <li>Permite la administración de canales con roles de usuario.</li>
+                    <li>Aún es utilizado en comunidades técnicas y de desarrollo.</li>
+                  </ul>
+
+                  <h4 class="mt-3 text-start">⚠️ Desventajas del IRC</h4>
+                  <ul class="text-start">
+                    <li>No cuenta con cifrado de extremo a extremo por defecto.</li>
+                    <li>Interfaz poco intuitiva para nuevos usuarios.</li>
+                    <li>Depende de servidores que pueden ser vulnerables a ataques.</li>
+                    <li>Ha sido reemplazado en gran parte por plataformas modernas de mensajería.</li>
+                  </ul>
+
+                  <!-- Ejemplo Interactivo -->
+                  <h5 class="mt-4 text-center">Ejemplo Interactivo</h5>
+                  <p>Simula una conversación en un canal IRC:</p>
+
+                  <select id="ircChannel" class="form-select mb-2">
+                    <option value="" selected disabled>Selecciona un canal</option>
+                    <option value="#general">#general</option>
+                    <option value="#tecnologia">#tecnologia</option>
+                    <option value="#ayuda">#ayuda</option>
+                  </select>
+
+                  <input type="text" id="ircUsername" class="form-control mb-2" placeholder="Tu nombre de usuario">
+                  <input type="text" id="ircMessage" class="form-control mb-2" placeholder="Escribe un mensaje">
+                  <button class="btn btn-purple" onclick="simulateIRC()">Enviar</button>
+
+                  <!-- Área de chat -->
+                  <div class="chat-box mt-3 p-3 border rounded bg-light" id="ircChatBox"
+                    style="height: 200px; overflow-y: auto;">
+                    <p class="text-muted">🔹 Únete al chat y comienza la conversación...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Servicio: Telnet -->
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-down">
+            <div class="card service-card shadow-lg text-center h-100">
+              <img src="img/telnet.jpeg" class="card-img-top img-hover" alt="Telnet"
+                style="height: 200px; object-fit: cover; transition: transform 0.3s ease-in-out;">
+              <div class="card-body d-flex flex-column">
+                <h4 class="card-title text-info">🖥️ Telnet</h4>
+                <p class="card-text flex-grow-1">Telnet es un protocolo de red que permite acceder y administrar
+                  servidores remotos a través de una interfaz de línea de comandos.</p>
+                <button class="btn btn-outline-info mt-auto" data-bs-toggle="modal" data-bs-target="#modalTelnet">Ver
+                  Más</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Telnet Mejorado -->
+          <div class="modal fade" id="modalTelnet" tabindex="-1" aria-labelledby="modalTelnetLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">🖥️ Telnet</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                  <video width="100%" height="315" controls>
+                    <source src="videos/telnet.mp4" type="video/mp4">
+                  </video>
+
+                  <!-- Importancia de Telnet -->
+                  <h4 class="mt-3 text-start">🌐 Importancia de Telnet</h4>
+                  <p style="text-align: justify;">
+                    Telnet es un protocolo de red que permite la comunicación remota con servidores y dispositivos a
+                    través de una interfaz de línea de comandos. Aunque ha sido reemplazado en gran medida por
+                    protocolos más seguros como SSH, sigue siendo útil en redes privadas y dispositivos de control
+                    industrial donde no se requiere cifrado. Telnet permite administrar sistemas y ejecutar comandos en
+                    un host remoto con una conexión basada en texto.
+                  </p>
+
+                  <!-- Ventajas y Desventajas -->
+                  <h4 class="mt-4 text-start">📌 Ventajas de Telnet</h4>
+                  <ul class="text-start">
+                    <li>Permite la administración remota de servidores y dispositivos.</li>
+                    <li>No requiere software adicional en la mayoría de los sistemas operativos.</li>
+                    <li>Es liviano y rápido en comparación con otros protocolos.</li>
+                    <li>Puede ser útil en redes internas sin riesgos de seguridad.</li>
+                  </ul>
+
+                  <h4 class="mt-3 text-start">⚠️ Desventajas de Telnet</h4>
+                  <ul class="text-start">
+                    <li>No ofrece cifrado, lo que lo hace vulnerable a ataques.</li>
+                    <li>Las credenciales y comandos se envían en texto plano.</li>
+                    <li>Es obsoleto para entornos con requisitos de seguridad altos.</li>
+                    <li>Ha sido reemplazado por SSH en la mayoría de los casos.</li>
+                  </ul>
+
+                  <!-- Ejemplo Interactivo -->
+                  <h5 class="mt-4 text-center">Ejemplo Interactivo</h5>
+                  <p>Simula una conexión Telnet a un servidor:</p>
+
+                  <input type="text" id="telnetHost" class="form-control mb-2"
+                    placeholder="Introduce la IP o dominio del servidor">
+                  <input type="text" id="telnetUser" class="form-control mb-2" placeholder="Nombre de usuario">
+                  <button class="btn btn-info" onclick="simulateTelnet()">Conectar</button>
+
+                  <!-- Terminal Telnet Simulada -->
+                  <div class="terminal-box mt-3 p-3 border rounded bg-dark text-success" id="telnetTerminal"
+                    style="height: 250px; overflow-y: auto; font-family: monospace; display: none;">
+                    <p id="telnetTerminalOutput">Esperando conexión...</p>
+                  </div>
+
+                  <input type="text" id="telnetCommand" class="form-control mt-2 bg-dark text-success border-0"
+                    placeholder="Escribe el comando 'ping': " onkeypress="handleTelnetCommand(event)" disabled>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-4">
+        <center>
+          <button id="toggleButton" class="btn btn-primary" onclick="toggleForm()" style="
+              background: linear-gradient(45deg, #ffb400, #ff6f00);
+              color: white;
+              padding: 15px 30px;
+              font-size: 1.2rem;
+              font-weight: bold;
+              border: none;
+              border-radius: 10px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+              transition: transform 0.3s ease, background 0.3s ease;
+            "
+            onmouseover="this.style.transform='scale(1.1)'; this.style.background='linear-gradient(45deg, #ff6f00, #ffb400)';"
+            onmouseout="this.style.transform='scale(1)'; this.style.background='linear-gradient(45deg, #ffb400, #ff6f00)';">
+            Cuestionario Servicios
+          </button>
+        </center>
+      </div>
+
+
+      <!-- Hidden form for the questionnaire (servicios.html) -->
+      <div id="formContainer" style="display: none;" class="container mt-4">
+        <iframe src="cuestionarios/serv.html" style="width: 100%; height: 600px; border: none;"></iframe>
+      </div>
+      </div>
+    </section>
+
+    <script>
+      // Simulación de carga de una página web (WWW)
+      function simulateWebLoad() {
+        let site = document.getElementById('webSelect').value;
+        let output = document.getElementById('webOutput');
+
+        if (!site) {
+          alert("⚠️ Selecciona un sitio web.");
+          return;
+        }
+
+        // Mapeo de opciones con sus respectivas imágenes
+        let images = {
+          "facebook": "img/facebook.jpg",
+          "twitter": "img/twitter.png",
+          "gmail": "img/gmail.png"
+        };
+
+        // Obtener la imagen correspondiente
+        let siteImage = images[site] || "img/default.png"; // Si no hay imagen, usa una por defecto
+
+        output.innerHTML = `🌍 Conectando a www.${site}.com...`;
+        setTimeout(() => {
+          output.innerHTML = `<p>✅ Página cargada correctamente: www.${site}.com</p>
+                            <img src="${siteImage}" alt="${site}" class="img-fluid mt-2" style="max-width: 400px;">`;
+        }, 3000);
+      }
+
+      // Simulación de transferencia de archivos con FTP con barra de progreso
+      function simulateFTP() {
+        let fileInput = document.getElementById('ftpUpload');
+        let ftpOutput = document.getElementById('ftpOutput');
+
+        if (fileInput.files.length > 0) {
+          let file = fileInput.files[0];
+          let progress = 0;
+
+          ftpOutput.innerHTML = `<p>📤 Iniciando transferencia...</p>
+                                 <div class="progress mt-2" style="width: 50%; margin: auto;">
+                                   <div id="ftpProgressBar" class="progress-bar progress-bar-striped bg-warning" 
+                                   role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                   0%</div>
+                                 </div>`;
+
+          let interval = setInterval(() => {
+            progress += 20;
+            let progressBar = document.getElementById('ftpProgressBar');
+            progressBar.style.width = progress + "%";
+            progressBar.innerText = progress + "%";
+
+            if (progress >= 100) {
+              clearInterval(interval);
+              ftpOutput.innerHTML = `<p>✅ Archivo subido exitosamente!</p>
+                                     <span>${file.name}</span>`;
+            }
+          }, 1000);
+        } else {
+          alert("⚠️ Selecciona un archivo antes de subirlo.");
+        }
+      }
+
+      // Simulación de chat en IRC
+      function simulateIRC() {
+        let ircChannel = document.getElementById('ircChannel').value;
+        let ircUsername = document.getElementById('ircUsername').value.trim();
+        let ircMessage = document.getElementById('ircMessage').value.trim();
+        let ircChatBox = document.getElementById('ircChatBox');
+
+        if (!ircChannel) {
+          alert("⚠️ Selecciona un canal IRC.");
+        } else if (ircUsername === "" || ircMessage === "") {
+          alert("⚠️ Ingresa un nombre de usuario y un mensaje.");
+        } else {
+          let timestamp = new Date().toLocaleTimeString();
+          ircChatBox.innerHTML += `<p><strong>[${timestamp}] ${ircUsername} (${ircChannel}):</strong> ${ircMessage}</p>`;
+          ircChatBox.scrollTop = ircChatBox.scrollHeight;
+        }
+      }
+
+      // Simulación del envío de un correo electrónico con barra de progreso
+      function simulateEmail() {
+        let emailTo = document.getElementById('emailTo').value.trim();
+        let emailSubject = document.getElementById('emailSubject').value.trim();
+        let emailMessage = document.getElementById('emailMessage').value.trim();
+        let emailProgress = document.getElementById('emailProgress');
+        let emailProgressBar = document.getElementById('emailProgressBar');
+        let emailSuccessMsg = document.getElementById('emailSuccessMsg');
+        let emailSendBtn = document.getElementById('emailSendBtn');
+        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(emailTo)) {
+          alert("⚠️ Ingresa un correo válido.");
+        } else if (emailSubject === "" || emailMessage === "") {
+          alert("⚠️ El asunto y el mensaje no pueden estar vacíos.");
+        } else {
+          emailSendBtn.disabled = true;
+          emailProgress.classList.remove("d-none");
+          let progress = 0;
+
+          let interval = setInterval(() => {
+            progress += 25;
+            emailProgressBar.style.width = progress + "%";
+            emailProgressBar.innerText = progress + "%";
+            if (progress >= 100) {
+              clearInterval(interval);
+              emailSuccessMsg.classList.remove("d-none");
+              emailProgress.classList.add("d-none");
+              emailSendBtn.disabled = false;
+            }
+          }, 1000);
+        }
+      }
+
+      // Simulación de Telnet con comandos corregidos
+      function simulateTelnet() {
+        let telnetHost = document.getElementById('telnetHost').value.trim();
+        let telnetUser = document.getElementById('telnetUser').value.trim();
+        let telnetTerminal = document.getElementById('telnetTerminal');
+        let telnetTerminalOutput = document.getElementById('telnetTerminalOutput');
+        let telnetCommandInput = document.getElementById('telnetCommand');
+
+        if (telnetHost === "" || telnetUser === "") {
+          alert("⚠️ Ingresa una dirección IP/Dominio y un usuario.");
+        } else {
+          telnetTerminal.style.display = "block";
+          telnetTerminalOutput.innerHTML = `🖥️ Conectando a ${telnetHost} como ${telnetUser}...`;
+          setTimeout(() => {
+            telnetTerminalOutput.innerHTML += `<br>✅ Conexión establecida.<br>${telnetUser}@${telnetHost}:~$ `;
+            telnetCommandInput.disabled = false;
+            telnetCommandInput.focus();
+          }, 3000);
+        }
+      }
+
+      // Manejo de comandos en Telnet, incluyendo 'ping'
+      function handleTelnetCommand(event) {
+        if (event.key === "Enter") {
+          let command = event.target.value.trim();
+          let output = document.getElementById('telnetTerminalOutput');
+          let telnetUser = document.getElementById('telnetUser').value;
+          let telnetHost = document.getElementById('telnetHost').value;
+
+          output.innerHTML += `<br>${telnetUser}@${telnetHost}:~$ ${command}`;
+
+          if (command === "ls") {
+            output.innerHTML += "<br>📂 archivo1.txt 📂 archivo2.log 📂 script.sh";
+          } else if (command === "whoami") {
+            output.innerHTML += `<br>👤 ${telnetUser}`;
+          } else if (command.startsWith("ping")) {
+            output.innerHTML += `<br>📡 Haciendo ping a ${command.split(" ")[1]}...<br>📡 Respuesta recibida.`;
+          } else {
+            output.innerHTML += `<br>❌ Comando no reconocido.`;
+          }
+          event.target.value = "";
+        }
+      }
+
+      // Limpieza de los modales sin ocultarlos
+      document.addEventListener('DOMContentLoaded', function () {
+        let modals = document.querySelectorAll('.modal');
+
+        modals.forEach(modal => {
+          modal.addEventListener('hidden.bs.modal', function () {
+            modal.querySelectorAll("input, textarea, select").forEach(input => input.value = "");
+            modal.querySelectorAll("p").forEach(output => output.innerHTML = "");
+          });
+        });
+      });
+    </script>
+
+
+
+
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section"
+      style="background: linear-gradient(to bottom, #f9f9f9, #e0e0e0); color: #333;">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up" style="text-align: center; color: #444;">
+        <h2 style="color: #000000;">Usos Relacionados</h2>
+        <p>Los servicios más populares que hacen del Internet una herramienta imprescindible.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="resume-item pb-0"
+              style="background: #f5f5f5; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+              <h4 style="color: #4caf50;">Hosting y Dominios</h4>
+              <p><em>Registra y administra tus dominios y sitios web con facilidad. Ideal para negocios y proyectos
+                  personales.</em></p>
+              <div class="position-relative">
+                <img src="img/hosting.jpeg" alt="Hosting" class="img-fluid mt-3 rounded shadow-lg clickable-image"
+                  style="height: 300px; object-fit: cover; width: 100%; border-radius: 10px;" data-bs-toggle="modal"
+                  data-bs-target="#modalHosting">
+              </div>
+            </div>
+
+            <!-- Modal for Hosting -->
+            <div class="modal fade" id="modalHosting" tabindex="-1" aria-labelledby="modalHostingLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header" style="background: #4caf50; color: white;">
+                    <h5 class="modal-title" id="modalHostingLabel">Hosting y Dominios</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <video controls style="width: 100%; border-radius: 10px;">
+                      <source src="videos/hosting.mp4" type="video/mp4">
+                      Tu navegador no soporta la reproducción de videos.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="resume-item pb-0"
+              style="background: #f5f5f5; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+              <h4 style="color: #e91e63;">Streaming</h4>
+              <p><em>Disfruta de tus películas y series favoritas en cualquier dispositivo. Plataformas populares como
+                  Netflix y YouTube lideran este campo.</em></p>
+              <div class="position-relative">
+                <img src="img/stream.jpeg" alt="Streaming" class="img-fluid mt-3 rounded shadow-lg clickable-image"
+                  style="height: 300px; object-fit: cover; width: 100%; border-radius: 10px;" data-bs-toggle="modal"
+                  data-bs-target="#modalStreaming">
+              </div>
+            </div>
+
+            <!-- Modal for Streaming -->
+            <div class="modal fade" id="modalStreaming" tabindex="-1" aria-labelledby="modalStreamingLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header" style="background: #e91e63; color: white;">
+                    <h5 class="modal-title" id="modalStreamingLabel">Streaming</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <video controls style="width: 100%; border-radius: 10px;">
+                      <source src="videos/streaming.mp4" type="video/mp4">
+                      Tu navegador no soporta la reproducción de videos.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="resume-item pb-0"
+              style="background: #f5f5f5; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+              <h4 style="color: #2196f3;">Aprendizaje en Línea</h4>
+              <p><em>Accede a cursos, webinars y materiales educativos en cualquier momento. Plataformas como Coursera y
+                  Udemy están revolucionando la educación.</em></p>
+              <div class="position-relative">
+                <img src="img/aprendizaje.jpeg" alt="E-learning"
+                  class="img-fluid mt-3 rounded shadow-lg clickable-image"
+                  style="height: 300px; object-fit: cover; width: 100%; border-radius: 10px;" data-bs-toggle="modal"
+                  data-bs-target="#modalAprendizaje">
+              </div>
+            </div>
+
+            <!-- Modal for E-learning -->
+            <div class="modal fade" id="modalAprendizaje" tabindex="-1" aria-labelledby="modalAprendizajeLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header" style="background: #2196f3; color: white;">
+                    <h5 class="modal-title" id="modalAprendizajeLabel">Aprendizaje en Línea</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <video controls style="width: 100%; border-radius: 10px;">
+                      <source src="videos/aprendizaje.mp4" type="video/mp4">
+                      Tu navegador no soporta la reproducción de videos.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="resume-item pb-0"
+              style="background: #f5f5f5; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+              <h4 style="color: #ff9800;">Videoconferencias</h4>
+              <p><em>Conéctate con tu equipo y clientes sin importar la distancia. Herramientas como Zoom y Microsoft
+                  Teams lideran.</em></p>
+              <div class="position-relative">
+                <img src="img/videoconferencia.png" alt="Videoconferencia"
+                  class="img-fluid mt-3 rounded shadow-lg clickable-image"
+                  style="height: 300px; object-fit: cover; width: 100%; border-radius: 10px;" data-bs-toggle="modal"
+                  data-bs-target="#modalVideoconferencia">
+              </div>
+            </div>
+
+            <!-- Modal for Videoconferencia -->
+            <div class="modal fade" id="modalVideoconferencia" tabindex="-1"
+              aria-labelledby="modalVideoconferenciaLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header" style="background: #ff9800; color: white;">
+                    <h5 class="modal-title" id="modalVideoconferenciaLabel">Videoconferencias</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <video controls style="width: 100%; border-radius: 10px;">
+                      <source src="videos/videoconferencia.mp4" type="video/mp4">
+                      Tu navegador no soporta la reproducción de videos.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="resume-item pb-0"
+              style="background: #f5f5f5; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+              <h4 style="color: #673ab7;">E-commerce</h4>
+              <p><em>Compra y vende productos desde la comodidad de tu hogar. Amazon, eBay y Mercado Libre son ejemplos
+                  destacados.</em></p>
+              <div class="position-relative">
+                <img src="img/ecomerce.jpeg" alt="E-commerce" class="img-fluid mt-3 rounded shadow-lg clickable-image"
+                  style="height: 300px; object-fit: cover; width: 100%; border-radius: 10px;" data-bs-toggle="modal"
+                  data-bs-target="#modalEcommerce">
+              </div>
+            </div>
+
+            <!-- Modal for E-commerce -->
+            <div class="modal fade" id="modalEcommerce" tabindex="-1" aria-labelledby="modalEcommerceLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header" style="background: #673ab7; color: white;">
+                    <h5 class="modal-title" id="modalEcommerceLabel">E-commerce</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <video controls style="width: 100%; border-radius: 10px;">
+                      <source src="videos/ecommerce.mp4" type="video/mp4">
+                      Tu navegador no soporta la reproducción de videos.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="resume-item pb-0"
+              style="background: #f5f5f5; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+              <h4 style="color: #ff5722;">Almacenamiento en la Nube</h4>
+              <p><em>Protege tus datos con soluciones de almacenamiento seguro como Google Drive y Dropbox.</em></p>
+              <div class="position-relative">
+                <img src="img/nube.jpg" alt="Seguridad en la Nube"
+                  class="img-fluid mt-3 rounded shadow-lg clickable-image"
+                  style="height: 300px; object-fit: cover; width: 100%; border-radius: 10px;" data-bs-toggle="modal"
+                  data-bs-target="#modalNube">
+              </div>
+            </div>
+
+            <!-- Modal for Seguridad en la Nube -->
+            <div class="modal fade" id="modalNube" tabindex="-1" aria-labelledby="modalNubeLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header" style="background: #ff5722; color: white;">
+                    <h5 class="modal-title" id="modalNubeLabel">Seguridad en la Nube</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <video controls style="width: 100%; border-radius: 10px;">
+                      <source src="videos/nube.mp4" type="video/mp4">
+                      Tu navegador no soporta la reproducción de videos.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <script>
+      function toggleForm() {
+        const formContainer = document.getElementById('formContainer');
+        const toggleButton = document.getElementById('toggleButton');
+
+        // Toggle the form visibility
+        if (formContainer.style.display === 'none') {
+          formContainer.style.display = 'block';
+          toggleButton.textContent = 'Ocultar';
+        } else {
+          formContainer.style.display = 'none';
+          toggleButton.textContent = 'Cuestionario Servicios';
+        }
+      }
+
+      // Modal video pause functionality remains unchanged
+      document.querySelectorAll('.modal').forEach(modal => {
+        modal.addEventListener('hidden.bs.modal', event => {
+          const video = modal.querySelector('video');
+          if (video) {
+            video.pause();
+            video.currentTime = 0;
+          }
+        });
+      });
+    </script>
+
+    <!-- Script to Pause Video -->
+    <script>
+      document.querySelectorAll('.modal').forEach(modal => {
+        modal.addEventListener('hidden.bs.modal', event => {
+          const video = modal.querySelector('video');
+          if (video) {
+            video.pause();
+            video.currentTime = 0;
+          }
+        });
+      });
+    </script>
+
+    </section><!-- /Portfolio Section -->
+
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Protocolos que se utilizan en Internet</h2>
+        <p>Un protocolo es un conjunto de reglas para formatear y procesar datos. Los protocolos de red son como un
+          lengua franca para los ordenadores. Los ordenadores de una red pueden utilizar software y hardware muy
+          diferentes; sin embargo, el uso de protocolos les permite comunicarse entre sí.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 1000000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 1
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Es un protocolo de red utilizado para la transferencia de archivos entre un cliente y un
+                    servidor en una red TCP/IP. Funciona en los puertos 20 y 21 y permite la carga, descarga y gestión
+                    de archivos de manera remota. </span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="./img/ftpp.png" class="testimonial-img" alt="">
+                <h3>FTP</h3>
+                <h4>File Transfer Protocol</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Es un protocolo de correo electrónico que permite acceder y gestionar mensajes almacenados en un
+                    servidor de correo. IMAP mantiene los correos en el servidor, permitiendo la sincronización en
+                    múltiples dispositivos.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="./img/imap.png" class="testimonial-img" alt="">
+                <h3>IMAP</h3>
+                <h4>Internet Message Access Protocol</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>El Protocolo de Transferencia de Hipertexto (HTTP) es la base de la comunicación web. Permite
+                    la
+                    transmisión de páginas web desde servidores a navegadores.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="./img/http.png" class="testimonial-img" alt="">
+                <h3>HTTP</h3>
+                <h4>Hypertext Transfer Protocol</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Permite la transferencia segura de información entre un cliente (navegador) y un servidor web.
+                    Se basa en HTTP pero incorpora cifrado para proteger la privacidad y seguridad de los datos.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="./img/https.jpeg" class="testimonial-img" alt="">
+                <h3>HTTPS</h3>
+                <h4>HTTP Secure</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Es un protocolo de correo electrónico que permite la descarga de los mensajes desde un servidor
+                    de correo a un dispositivo local. A diferencia de IMAP, generalmente elimina los correos del
+                    servidor después de descargarlos.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="./img/pop3.jpg" class="testimonial-img" alt="">
+                <h3>POP3 </h3>
+                <h4>Post Office Protocol v3</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+      <br>
+      <div class="container mt-5">
+        <h1 class="text-center mb-4">Da click y juega</h1>
+        <!-- Botón para mostrar/ocultar -->
+        <div class="text-center">
+          <button class="btn btn-primary btn-lg shadow rounded-pill px-5" id="toggleIframeButtonn"
+            style="background: linear-gradient(45deg, #ff5722, #ff9800); color: white; border: none;">JUGAR</button>
+        </div>
+
+        <!-- Contenedor del iframe -->
+        <div class="iframe-container mt-4" id="iframeContainerr" style="display: none;">
+          <iframe src="./juegos/protocolos.html" width="100%" height="750px" style="border: none;"></iframe>
+        </div>
+      </div>
+
+
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+        // Obtener referencias a los elementos
+        const toggleButtonn = document.getElementById("toggleIframeButtonn");
+        const iframeContainerr = document.getElementById("iframeContainerr");
+
+        // Función para mostrar/ocultar el iframe
+        toggleButtonn.addEventListener("click", () => {
+          if (iframeContainerr.style.display === "none") {
+            iframeContainerr.style.display = "block"; // Mostrar el iframe
+            toggleButtonn.textContent = "OCULTAR";
+          } else {
+            iframeContainerr.style.display = "none"; // Ocultar el iframe
+            toggleButtonn.textContent = "JUGAR";
+          }
+        });
+
+        // Verificación al cargar la página
+        window.onload = () => {
+          iframeContainerr.style.display = "none"; // Asegurar que el iframe esté oculto al inicio
+        };
+      </script>
+
+
+      <!-- Portfolio Section -->
+      <section id="portfolio2" class="portfolio section light-background">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Navegadores WEB</h2>
+          <p>Los navegadores web son programas o aplicaciones que permiten a los usuarios acceder, recuperar y mostrar
+            contenido alojado en servidores web. Actúan como un puente entre el usuario y la web, interpretando código
+            HTML, CSS, JavaScript y otros lenguajes para presentar páginas web de manera interactiva y visual.</p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+
+          <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+            <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+              <li data-filter="*" class="filter-active">TODOS</li>
+              <li data-filter=".filter-chrome">Google Chrome</li>
+              <li data-filter=".filter-firefox">Mozilla Firefox</li>
+              <li data-filter=".filter-safari">Safari</li>
+              <li data-filter=".filter-edge">Microsoft Edge</li>
+              <li data-filter=".filter-opera">Opera</li>
+              <li data-filter=".filter-brave">Brave</li>
+
+            </ul><!-- End Portfolio Filters -->
+
+            <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item isotope-item filter-chrome">
+                <div class="portfolio-content h-100">
+                  <img src="./img/chrome.jpeg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Google Chrome</h4>
+                    <p>Lanzado en 2008 por Google</p>
+                    <a href="./img/chrome.jpeg" title="Google Chrome" data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a href="./Chrome.html" title="More Details" class="details-link"><i
+                        class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+
+              <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item isotope-item filter-firefox">
+                <div class="portfolio-content h-100">
+                  <img src="./img/firefox.jpeg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Mozilla Firefox</h4>
+                    <p>Lanzado en 2004 por Mozilla Foundation</p>
+                    <a href="./img/firefox.jpeg" title="Mozilla Firefox" data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a href="./Firefox.html" title="More Details" class="details-link"><i
+                        class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+
+              <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item isotope-item filter-safari">
+                <div class="portfolio-content h-100">
+                  <img src="./img/safari.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Safari</h4>
+                    <p>Navegador desarrollado por Apple</p>
+                    <a href="./img/safari.jpg" title="Safari" data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a href="./Safari.html" title="More Details" class="details-link"><i
+                        class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+
+              <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item isotope-item filter-edge">
+                <div class="portfolio-content h-100">
+                  <img src="./img/edge.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Microsoft Edge</h4>
+                    <p>Basado en Chromium desde 2020</p>
+                    <a href="./img/edge.jpg" title="Microsoft Edge" data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a href="./Edge.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+
+              <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item isotope-item filter-opera">
+                <div class="portfolio-content h-100">
+                  <img src="./img/Opera.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Opera</h4>
+                    <p>Lanzado en 1995, basado actualmente en Chromium</p>
+                    <a href="./img/Opera.jpg" title="Opera" data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a href="./Opera.html" title="More Details" class="details-link"><i
+                        class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+
+              <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item isotope-item filter-brave">
+                <div class="portfolio-content h-100">
+                  <img src="./img/brave.jpeg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Brave</h4>
+                    <p>Enfocado en la privacidad, con bloqueo de anuncios y rastreadores</p>
+                    <a href="./img/brave.jpeg" title="Brave" data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a href="./Brave.html" title="More Details" class="details-link"><i
+                        class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+
+
+
+
+            </div><!-- End Portfolio Container -->
+
+          </div>
+
+        </div>
+       
+      </section><!-- /Portfolio Section -->
+
+
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section service-details section py-5">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2 style="color: #000000;">Backbone</h2>
+          <p style="color: #313232; font-size: 20px;">
+            El backbone (columna vertebral en español) es una línea de transmisión más grande que transporta los datos
+            recogidos de líneas más pequeñas que con las que se interconecta.
+          </p>
+        </div><!-- End Section Title -->
+
+
+        <div class="container">
+          <div class="row gy-4">
+
+            <!-- Contenido de Texto -->
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100"
+              style="background: #1565c0; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); padding: 20px; color: #ffffff; text-align: justify;">
+              <h4 style="color: #bbdefb;">En el ámbito local</h4>
+              <p style="color: #e3f2fd;">
+                Un backbone es una línea o conjunto de líneas a las que las redes de área local se conectan para tener
+                conexión de red de área amplia (WAN) o dentro de una red de área local (LAN) para abarcar distancias de
+                manera eficiente (por ejemplo, entre los edificios).
+              </p>
+
+              <h4 style="color: #bbdefb;">En internet u otra red de área amplia</h4>
+              <p style="color: #e3f2fd;">
+                Un backbone es un conjunto de caminos a los que las redes locales o regionales se conectan para tener
+                interconexión de larga distancia. Los puntos de conexión son conocidos como nodos de la red o
+                intercambios de conmutación de datos (DSE) de telecomunicaciones.
+              </p>
+
+              <h4 style="color: #bbdefb;">¿Quién posee y controla Internet?</h4>
+              <p style="color: #e3f2fd;">
+                Si bien la red troncal de Internet constituye la columna vertebral de la red, ninguna entidad posee ni
+                controla la totalidad de la red. Incluso el control de Internet no está regulado a nivel común, aunque
+                algunos gobiernos han intentado introducir una Internet más controlada para su ubicación específica,
+                pero a nivel global no existe un control organizado.
+              </p>
+            </div>
+
+            <!-- Video Responsive -->
+            <div class="container col-lg-8">
+              <center>
+                <h2>Video:</h2>
+              </center>
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                  <div class="ratio ratio-16x9">
+                    <video controls>
+                      <source src="./videos/Los cables submarinos.mp4" type="video/mp4">
+                      Tu navegador no soporta la reproducción de videos.
+                    </video>
+                  </div>
+                </div>
+              </div>
+              <br><br>
+              <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200" style="height: 400px;">
+                <!-- Define altura -->
+                <center>
+                  <h3>Mapa de la red troncal de Internet</h3>
+                </center>
+                <div class="container mt-4 h-100"> <!-- Contenedor que ocupa toda la altura -->
+                  <div id="map-container" class="rounded h-100" style="position: relative; overflow: hidden;">
+                    <img id="map" src="./img/backbone.jpg" alt="Submarine Cables Map"
+                      style="width: 100%; height: 100%; object-fit: cover;">
+                    <div id="controls">
+                      <button class="btn btn-light btn-sm control-button" id="zoom-in">+</button>
+                      <button class="btn btn-light btn-sm control-button" id="zoom-out">-</button>
+                      <button class="btn btn-light btn-sm control-button" id="reset">Reset</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </section>
+
+      <section id="prov"><iframe class="sin-scroll" src="./Proveedores.html" style="height: 750px;"></iframe>
+      </section>
+
+
+
+      <section id="cuestionario" class="contact section service-details section py-5"
+        style="background: linear-gradient(to bottom, #f9f9f9, #e8e8e8); color: #2c3e50; margin-top: -150px">
+        <div class="container text-center mt-5">
+          <br><br>
+          <h1 class="mb-4 text-primary">¿Quieres evaluar tus conocimientos?</h1>
+          <p class="mb-4">Haz clic en los botones para mostrar los cuestionarios.</p>
+
+          <!-- Botones para mostrar/ocultar -->
+          <div id="cuestionarios" class="d-flex justify-content-center gap-3">
+            <button id="toggleIframe1" class="btn btn-custom-primary">CUESTIONARIO INTERNET</button>
+            <button id="toggleIframe2" class="btn btn-custom-secondary">CUESTIONARIO PROTOCOLOS</button>
+          </div>
+
+          <!-- Contenedor del iframe 1 -->
+          <div id="iframeContainer1" class="mt-4 d-none">
+            <div class="ratio ratio-16x9">
+              <iframe src="./cuestionarios/internet.html" title="Iframe 1"></iframe>
+            </div>
+          </div>
+
+          <!-- Contenedor del iframe 2 -->
+          <div id="iframeContainer2" class="mt-4 d-none">
+            <div class="ratio ratio-16x9">
+              <iframe src="./cuestionarios/protocolos.html" title="Iframe 2"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+          // Obtener referencias a los botones y contenedores de los iframes
+          const toggleButton1 = document.getElementById("toggleIframe1");
+          const toggleButton2 = document.getElementById("toggleIframe2");
+          const iframeContainer1 = document.getElementById("iframeContainer1");
+          const iframeContainer2 = document.getElementById("iframeContainer2");
+
+          // Función para mostrar/ocultar iframe 1 y desplazarse a la sección
+          toggleButton1.addEventListener("click", () => {
+            iframeContainer1.classList.toggle("d-none");
+            toggleButton1.textContent = iframeContainer1.classList.contains("d-none")
+              ? "CUESTIONARIO INTERNET"
+              : "OCULTAR CUESTIONARIO";
+
+            // Desplazarse a la sección del iframe
+            if (!iframeContainer1.classList.contains("d-none")) {
+              iframeContainer1.scrollIntoView({ behavior: "smooth" });
+            }
+          });
+
+          // Función para mostrar/ocultar iframe 2 y desplazarse a la sección
+          toggleButton2.addEventListener("click", () => {
+            iframeContainer2.classList.toggle("d-none");
+            toggleButton2.textContent = iframeContainer2.classList.contains("d-none")
+              ? "CUESTIONARIO PROTOCOLOS"
+              : "OCULTAR CUESTIONARIO";
+
+            // Desplazarse a la sección del iframe
+            if (!iframeContainer2.classList.contains("d-none")) {
+              iframeContainer2.scrollIntoView({ behavior: "smooth" });
+            }
+          });
+        </script>
+      </section>
+
+
+  </main>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="js/dino.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/mapa.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conexiones a Internet - Juego Interactivo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      color: #fff;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: rgba(17, 25, 39, 0.95);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      color: #00d4ff;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    p {
+      color: #9baacf;
+    }
+
+    .drag-item {
+      padding: 10px 15px;
+      background-color: #0f3460;
+      color: #fff;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      cursor: grab;
+      text-align: center;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+      border: 2px solid #00d4ff;
+      transition: transform 0.3s ease;
+    }
+
+    .drag-item:hover {
+      background-color: #00d4ff;
+      color: #0f3460;
+      transform: scale(1.05);
+    }
+
+    .drop-zone {
+      padding: 20px;
+      border: 2px dashed #00d4ff;
+      border-radius: 10px;
+      background-color: rgba(15, 52, 96, 0.1);
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      color: #9baacf;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .drop-zone.drag-over {
+      background-color: rgba(0, 212, 255, 0.2);
+      color: #00d4ff;
+    }
+
+    .completed {
+      color: #00d4ff;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .reset-btn {
+      margin-top: 20px;
+      background-color: #00d4ff;
+      color: #0f3460;
+      border: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .reset-btn:hover {
+      background-color: #0f3460;
+      color: #00d4ff;
+      border: 2px solid #00d4ff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container text-center">
+    <h1>Conexiones a Internet - Juego de Arrastrar y Soltar</h1>
+    <p>Arrastra los nombres de las conexiones al tipo correcto de descripción.</p>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div id="drag-items" class="d-flex flex-column align-items-start">
+          <div class="drag-item" draggable="true" data-type="DSL">DSL</div>
+          <div class="drag-item" draggable="true" data-type="Fibra">Fibra Óptica</div>
+          <div class="drag-item" draggable="true" data-type="Satélite">Satélite</div>
+          <div class="drag-item" draggable="true" data-type="Móvil">Conexión Móvil</div>
+          <div class="drag-item" draggable="true" data-type="Cable">Conexión por Cable</div>
+          <div class="drag-item" draggable="true" data-type="Inalámbrica">Conexión Inalámbrica</div>
+        </div>
+      </div>
+
+      <div id="drop-zones" class="col-md-6">
+        <div class="drop-zone" data-type="DSL">Basada en líneas telefónicas</div>
+        <div class="drop-zone" data-type="Fibra">Mayor velocidad promedio</div>
+        <div class="drop-zone" data-type="Satélite">Ideal para áreas rurales</div>
+        <div class="drop-zone" data-type="Móvil">Disponible en dispositivos móviles</div>
+        <div class="drop-zone" data-type="Cable">Requiere instalación física de cables</div>
+        <div class="drop-zone" data-type="Inalámbrica">No requiere cables</div>
+      </div>
+    </div>
+
+    <div id="result" class="completed mt-4" style="display: none;">
+      ¡Felicidades, completaste el juego correctamente! 🎉
+    </div>
+
+    <button id="reset-btn" class="btn reset-btn">Reiniciar Juego</button>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      let correctCount = 0;
+
+      function shuffleDropZones() {
+        const dropZones = $("#drop-zones").children();
+        for (let i = dropZones.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          $(dropZones[i]).insertBefore(dropZones[j]);
+        }
+      }
+
+      shuffleDropZones();
+
+      $(".drag-item").on("dragstart", function (e) {
+        e.originalEvent.dataTransfer.setData("text", $(this).data("type"));
+      });
+
+      $(".drop-zone").on("dragover", function (e) {
+        e.preventDefault();
+        $(this).addClass("drag-over");
+      });
+
+      $(".drop-zone").on("dragleave", function () {
+        $(this).removeClass("drag-over");
+      });
+
+      $(".drop-zone").on("drop", function (e) {
+        e.preventDefault();
+        $(this).removeClass("drag-over");
+
+        const draggedType = e.originalEvent.dataTransfer.getData("text");
+        const dropType = $(this).data("type");
+
+        if (draggedType === dropType) {
+          $(this).text($(".drag-item[data-type='" + draggedType + "']").text());
+          $(this).addClass("bg-success text-white").css("pointer-events", "none");
+          $(".drag-item[data-type='" + draggedType + "']").remove();
+          correctCount++;
+
+          if (correctCount === 6) {
+            $("#result").fadeIn();
+          }
+        } else {
+          alert("¡Incorrecto! Inténtalo nuevamente.");
+        }
+      });
+
+      $("#reset-btn").click(function () {
+        location.reload();
+      });
+
+      $("#reset-btn").click(function () {
+        correctCount = 0;
+        $(".drop-zone").removeClass("bg-success text-white").css("pointer-events", "").text(function () {
+          return $(this).data("type");
+        });
+        $("#result").hide();
+        shuffleDropZones();
+      });
+    });
+  </script>
+</body>
+
+</html>

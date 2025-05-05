@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sopa de Letras - Navegadores Web</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0071E3, #28a745);
+      color: #fff;
+      padding: 20px;
+    }
+
+    .containerr {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .game-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .word-search-container {
+      display: grid;
+      grid-template-columns: repeat(10, 40px);
+      gap: 5px;
+      justify-content: center;
+    }
+
+    .cell {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #0071E3;
+      background-color: #ffffff;
+      font-weight: bold;
+      color: #0071E3;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .cell.selected {
+      background-color: #0071E3;
+      color: #ffffff;
+    }
+
+    .cell.found {
+      background-color: #28a745;
+      color: #ffffff;
+    }
+
+    .word-list {
+      text-align: left;
+    }
+
+    .word-list h4 {
+      color: #0071E3;
+      margin-bottom: 10px;
+    }
+
+    .word {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .word.brave {
+      color: #f97b22;
+    }
+
+    .word.chrome {
+      color: #4285F4;
+    }
+
+    .word.edge {
+      color: #0A95EE;
+    }
+
+    .word.safari {
+      color: #5AC8FA;
+    }
+
+    .word.firefox {
+      color: #FF7139;
+    }
+
+    .word.opera {
+      color: #FF1B2D;
+    }
+
+    .word.found {
+      text-decoration: line-through;
+      color: #28a745 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container text-center">
+    <h1 class="text-primary">Sopa de Letras - Navegadores Web</h1>
+    <p>Encuentra los nombres de los navegadores en la sopa de letras.</p>
+
+    <div class="game-container">
+      <div id="word-search" class="word-search-container"></div>
+
+      <div class="word-list">
+        <h4>Palabras a encontrar:</h4>
+        <div id="words">
+          <span class="word brave"><i class="bi bi-shield"></i> Brave</span>
+          <span class="word chrome"><i class="bi bi-globe"></i> Chrome</span>
+          <span class="word edge"><i class="bi bi-box-arrow-in-right"></i> Edge</span>
+          <span class="word safari"><i class="bi bi-compass"></i> Safari</span>
+          <span class="word firefox"><i class="bi bi-fire"></i> Firefox</span>
+          <span class="word opera"><i class="bi bi-lightning"></i> Opera</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const gridSize = 10;
+    const words = ['BRAVE', 'CHROME', 'EDGE', 'SAFARI', 'FIREFOX', 'OPERA'];
+    let grid = [];
+    const foundWords = new Set();
+
+    function initializeGrid() {
+      grid = Array.from({ length: gridSize }, () => Array(gridSize).fill('X'));
+    }
+
+    function placeWordsInGrid() {
+      shuffleArray(words);
+      words.forEach(word => {
+        let placed = false;
+        while (!placed) {
+          const row = Math.floor(Math.random() * gridSize);
+          const col = Math.floor(Math.random() * (gridSize - word.length + 1));
+
+          if (canPlaceWordHorizontally(word, row, col)) {
+            for (let i = 0; i < word.length; i++) {
+              grid[row][col + i] = word[i];
+            }
+            placed = true;
+          }
+        }
+      });
+    }
+
+    function canPlaceWordHorizontally(word, row, col) {
+      for (let i = 0; i < word.length; i++) {
+        if (grid[row][col + i] !== 'X') {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    function renderGrid() {
+      const container = $('#word-search');
+      container.empty();
+      grid.forEach((row, rowIndex) => {
+        row.forEach((letter, colIndex) => {
+          const cell = $(`<div class="cell" data-row="${rowIndex}" data-col="${colIndex}">${letter}</div>`);
+          container.append(cell);
+        });
+      });
+    }
+
+    function renderWordList() {
+      const wordsContainer = $('#words');
+      wordsContainer.empty();
+      shuffleArray(words);
+      words.forEach(word => {
+        const wordClass = word.toLowerCase();
+        wordsContainer.append(`<span class="word ${wordClass}"><i class="bi bi-circle"></i> ${word}</span>`);
+      });
+    }
+
+    function markWordAsFound(word, selectedCells) {
+      selectedCells.forEach(cell => {
+        $(`.cell[data-row="${cell.row}"][data-col="${cell.col}"]`).addClass('found');
+      });
+      $(`.word:contains(${word})`).addClass('found');
+      foundWords.add(word);
+      if (foundWords.size === words.length) {
+        setTimeout(() => {
+          alert('¡Felicidades! Has encontrado todas las palabras. El juego se reiniciará.');
+          resetGame();
+        }, 500);
+      }
+    }
+
+    function resetGame() {
+      foundWords.clear();
+      initializeGrid();
+      placeWordsInGrid();
+      renderGrid();
+      renderWordList();
+    }
+
+    $(document).ready(function () {
+      initializeGrid();
+      placeWordsInGrid();
+      renderGrid();
+      renderWordList();
+
+      let selectedCells = [];
+      $(document).on('click', '.cell', function () {
+        $(this).toggleClass('selected');
+        const row = $(this).data('row');
+        const col = $(this).data('col');
+        selectedCells.push({ row, col });
+
+        const selectedWord = selectedCells.map(cell => grid[cell.row][cell.col]).join('');
+        if (words.includes(selectedWord)) {
+          markWordAsFound(selectedWord, selectedCells);
+          selectedCells = [];
+        }
+
+        if (selectedCells.length > 0 && !words.some(word => word.startsWith(selectedWord))) {
+          selectedCells.forEach(cell => $(`.cell[data-row="${cell.row}"][data-col="${cell.col}"]`).removeClass('selected'));
+          selectedCells = [];
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

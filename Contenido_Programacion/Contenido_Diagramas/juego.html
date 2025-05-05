@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Arrastrar y Soltar por Niveles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .figures-column {
+            grid-column: span 6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .figures-column img {
+            width: 100px;
+            height: auto;
+            cursor: grab;
+        }
+
+        .interaction-column {
+            grid-column: span 6;
+            text-align: center;
+        }
+
+        .dropzone {
+            width: 300px;
+            height: 150px;
+            border: 4px dashed #666;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #666;
+            background-color: #fff;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .dropzone:hover {
+            border-color: #333;
+            background-color: #e9e9e9;
+        }
+
+        #timer {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        #timer.animated {
+            animation: pulse 0.5s ease-in-out;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                color: red;
+            }
+
+            50% {
+                transform: scale(1.5);
+                color: orange;
+            }
+        }
+
+        #level-control {
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+
+            .figures-column,
+            .interaction-column {
+                grid-column: span 12;
+            }
+        }
+
+        .botonStart {
+            background-color: #1E242C;
+            /* Color base */
+            color: white;
+            /* Texto blanco para contraste */
+            border: none;
+            /* Sin bordes */
+            padding: 10px 20px;
+            /* Espaciado interno */
+            border-radius: 5px;
+            /* Bordes redondeados */
+            cursor: pointer;
+            /* Cambia el cursor al pasar sobre el botón */
+            transition: background-color 0.3s ease;
+            /* Transición suave en el cambio de color */
+        }
+
+        .botonStart:hover {
+            background-color: #2BC5D4;
+            /* Color al pasar el mouse */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="figures-column">
+            <!-- Las figuras se generarán dinámicamente -->
+        </div>
+
+        <div class="interaction-column">
+            <h1 id="instruction">Arrastra la figura al área de validación</h1>
+            <div id="dropzone" class="dropzone">Arrastra aquí</div>
+            <h2 id="result"></h2>
+            <p id="timer"></p>
+            <div id="level-control">
+                <button id="next-level" style="display: none;" class="botonStart">Siguiente Nivel</button>
+                <button id="retry" style="display: none;" class="botonStart">Reintentar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const images = [
+            { id: 'ovalo', name: 'Inicio/Fin' },
+            { id: 'rectangulo', name: 'Proceso' },
+            { id: 'rombo', name: 'Decisión' },
+            { id: 'poligono', name: 'Entrada/Salida' },
+            { id: 'hexagono', name: 'Preparación' },
+            { id: 'flecha', name: 'Conector' }
+        ];
+
+        const dropzone = document.getElementById('dropzone');
+        const result = document.getElementById('result');
+        const instruction = document.getElementById('instruction');
+        const nextLevelButton = document.getElementById('next-level');
+        const retryButton = document.getElementById('retry');
+        const timerElement = document.getElementById('timer');
+
+        let levelQueue = []; // Cola de niveles
+        let currentLevel = 0;
+        let timer;
+        let timeLeft = 10;
+
+        // Función para mezclar un array (Fisher-Yates)
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        // Inicializar niveles
+        function initializeLevels() {
+            levelQueue = [...images]; // Copia del array original
+            shuffleArray(levelQueue); // Mezclar los niveles
+        }
+
+        // Mezclar y mostrar figuras
+        function randomizeFigures() {
+            const figuresColumn = document.querySelector('.figures-column');
+            shuffleArray(images);
+            figuresColumn.innerHTML = '';
+
+            images.forEach(image => {
+                const imgElement = document.createElement('img');
+                imgElement.src = `images/${image.id}.svg`;
+                imgElement.alt = image.name;
+                imgElement.id = image.id;
+                imgElement.classList.add('draggable');
+                imgElement.setAttribute('draggable', 'true');
+                figuresColumn.appendChild(imgElement);
+            });
+
+            // Conectar eventos de dragstart a las figuras
+            document.querySelectorAll('.draggable').forEach(item => {
+                item.addEventListener('dragstart', (e) => {
+                    e.dataTransfer.setData('text/plain', e.target.id);
+                });
+            });
+        }
+
+        // Cargar un nivel
+        function loadLevel() {
+            if (levelQueue.length === 0) {
+                result.textContent = '¡Felicidades! Has completado todos los niveles. ';
+                instruction.textContent = '';
+                nextLevelButton.style.display = 'none';
+                return;
+            }
+
+            randomizeFigures();
+            const currentImage = levelQueue[0];
+            instruction.textContent = `Nivel ${currentLevel + 1}: ${currentImage.name}`;
+            result.textContent = '';
+            nextLevelButton.style.display = 'none';
+            retryButton.style.display = 'none';
+            startTimer();
+        }
+
+        // Iniciar el temporizador
+        function startTimer() {
+            clearInterval(timer);
+            timeLeft = 10;
+            updateTimerDisplay();
+            timer = setInterval(() => {
+                timeLeft--;
+                if (timeLeft > 0) {
+                    updateTimerDisplay();
+                } else {
+                    clearInterval(timer);
+                    result.textContent = '¡Se acabó el tiempo! Vuelves al nivel 1. 😥';
+                    result.style.color = 'red';
+                    retryButton.style.display = 'inline-block';
+                    currentLevel = 0;
+                    initializeLevels();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            timerElement.textContent = timeLeft;
+            if (timeLeft <= 3) {
+                timerElement.classList.add('animated');
+                setTimeout(() => timerElement.classList.remove('animated'), 500);
+            }
+        }
+
+        function handleCorrectDrop() {
+            levelQueue.shift(); // Avanzar al siguiente nivel
+            currentLevel++;
+
+            if (levelQueue.length === 0) {
+                result.textContent = '¡Felicidades! Has completado todos los niveles. 🎉';
+                instruction.textContent = '';
+                nextLevelButton.style.display = 'none';
+            } else {
+                result.textContent = '¡Correcto! Avanza al siguiente nivel ✅';
+                result.style.color = 'green';
+                nextLevelButton.style.display = 'inline-block';
+            }
+        }
+
+        function resetGame() {
+            currentLevel = 0;
+            initializeLevels();
+            loadLevel();
+        }
+
+        dropzone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+        });
+
+        dropzone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            const figuraId = e.dataTransfer.getData('text/plain');
+            const currentImage = levelQueue[0];
+
+            if (figuraId === currentImage.id) {
+                handleCorrectDrop();
+                clearInterval(timer);
+            } else {
+                result.textContent = '¡Incorrecto! Vuelves al nivel 1. 😥';
+                result.style.color = 'red';
+                retryButton.style.display = 'inline-block';
+                clearInterval(timer);
+                currentLevel = 0;
+                initializeLevels();
+            }
+        });
+
+        nextLevelButton.addEventListener('click', loadLevel);
+        retryButton.addEventListener('click', resetGame);
+
+        // Inicializar juego
+        initializeLevels();
+        loadLevel();
+    </script>
+
+    
+</body>
+
+</html>
